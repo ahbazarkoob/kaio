@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable, prefer_const_constructors, use_key_in_widget_constructors
+// ignore_for_file: must_be_immutable, prefer_const_constructors, use_key_in_widget_constructors, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
 
@@ -48,35 +48,29 @@ import '../main.dart';
 //   }
 // }
 
-class BookShape extends StatefulWidget {
-  VoidCallback function;
+class BookShape extends StatelessWidget {
   String imagepath = '';
-  BookShape({required this.function, required this.imagepath});
+  var name;
+  BookShape({required this.name,required this.imagepath, });
 
-  @override
-  State<BookShape> createState() => _BookShapeState();
-}
-
-class _BookShapeState extends State<BookShape> {
   @override
   Widget build(BuildContext context) {
     devH = MediaQuery.of(context).size.height;
     devW = MediaQuery.of(context).size.width;
     return GestureDetector(
       onTap: () {
-        widget.function;
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => name));
       },
       child: Container(
-        height: devW*0.30,
-        width: devW*0.25,
+        height: devW * 0.35,
+        width: devW * 0.3,
         margin: EdgeInsets.all(10),
         decoration: BoxDecoration(
-          border: Border.all(color: Colors.black, width: 2),
-          image: DecorationImage(
-            image:AssetImage(widget.imagepath),
-            fit: BoxFit.fill)
-        ),
-       
+          borderRadius: BorderRadius.circular(10),
+            border: Border.all(color: Colors.black, width: 3),
+            image: DecorationImage(
+                image: AssetImage(imagepath), fit: BoxFit.fill)),
       ),
     );
   }

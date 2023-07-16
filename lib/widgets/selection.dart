@@ -11,7 +11,8 @@ class SelectionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
-        onPressed: function,
+        onPressed: 
+          function,
         child: Text(
           buttonText,
           style: kSelText,

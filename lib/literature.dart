@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, empty_constructor_bodies, must_be_immutable, prefer_const_constructors_in_immutables, non_constant_identifier_names
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, empty_constructor_bodies, must_be_immutable, prefer_const_constructors_in_immutables, non_constant_identifier_names, prefer_typing_uninitialized_variables, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:kaio/Book.dart';
 import 'package:kaio/constants.dart';
 import 'package:kaio/main.dart';
 import 'package:kaio/widgets/bookshape.dart';
@@ -48,13 +49,16 @@ class _LiteraturePageState extends State<LiteraturePage> {
               margin: EdgeInsets.all(20),
               child: TextField(
                 decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.search),
                   hintText: 'Search',
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25),
-                      borderSide: BorderSide(color: Colors.black, width: 3)),
+                      borderSide:
+                          BorderSide(color: Color(0xff85586F), width: 2)),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25),
-                      borderSide: BorderSide(color: Colors.black, width: 3)),
+                      borderSide:
+                          BorderSide(color: Color(0xff85586F), width: 2)),
                 ),
               ),
             ),
@@ -63,18 +67,17 @@ class _LiteraturePageState extends State<LiteraturePage> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-                    BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-                    BookShape(function: () {}, imagepath: 'assets/rahman.jpg'),
-                    BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-                    BookShape(function: () {}, imagepath: 'assets/museeki.jpg'),
+                    BookShape(name: Book(), imagepath: 'assets/argami.jpg'),
+                    BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
+                    BookShape(name: Book(), imagepath: 'assets/rahman.jpg'),
+                    BookShape(name: Book(), imagepath: 'assets/kral.jpg'),
+                    BookShape(name: Book(), imagepath: 'assets/museeki.jpg'),
                   ],
                 )),
             Text(
               'Book Shelf',
               style: kHeading,
             ),
-            SizedBox(height: 10),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -128,10 +131,10 @@ class _LiteraturePageState extends State<LiteraturePage> {
                 ],
               ),
             ),
-            Container(height: devH * 0.45, width: devW * 0.9, 
-            child: 
-            showDefault? Default():widget.i
-            ),
+            Container(
+                height: devH * 0.45,
+                width: devW * 0.9,
+                child: showDefault ? Default() : widget.i),
           ],
         ),
       ),
@@ -147,18 +150,15 @@ class Poetry extends StatelessWidget {
     return GridView.count(
       crossAxisCount: 3,
       children: [
-        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
+        BookShape(name: Book(), imagepath: 'assets/argami.jpg'),
+        BookShape(name: Book(), imagepath: 'assets/argami.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/argami.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/argami.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/argami.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/argami.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/argami.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/argami.jpg'),
+        
       ],
     );
   }
@@ -172,17 +172,14 @@ class Default extends StatelessWidget {
     return GridView.count(
       crossAxisCount: 3,
       children: [
-        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/rasol.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/rasol.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/rasol.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/rasol.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/rasol.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/rasol.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/rasol.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/rasol.jpg'),
       ],
     );
   }
@@ -196,17 +193,12 @@ class History extends StatelessWidget {
     return GridView.count(
       crossAxisCount: 3,
       children: [
-        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
+        BookShape(name: Book() ,imagepath: 'assets/kral.jpg'),
+        BookShape(name: Book() ,imagepath: 'assets/kral.jpg'),
+        BookShape(name: Book() ,imagepath: 'assets/kral.jpg'),
+        BookShape(name: Book() ,imagepath: 'assets/kral.jpg'),
+        BookShape(name: Book() ,imagepath: 'assets/kral.jpg'),
+        BookShape(name: Book() ,imagepath: 'assets/kral.jpg'),
       ],
     );
   }
@@ -215,22 +207,20 @@ class History extends StatelessWidget {
 class FamousWriters extends StatelessWidget {
   const FamousWriters({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 3,
       children: [
-        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
+        BookShape(name: Book() ,imagepath: 'assets/mehjoor.jpg'),
+        BookShape(name: Book() ,imagepath: 'assets/mehjoor.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/mehjoor.jpg'),
+        BookShape(name: Book() ,imagepath: 'assets/mehjoor.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/mehjoor.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
       ],
     );
   }
@@ -244,15 +234,16 @@ class Religion extends StatelessWidget {
     return GridView.count(
       crossAxisCount: 3,
       children: [
-        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
-        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
+        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
       ],
     );
   }
