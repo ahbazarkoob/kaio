@@ -1,21 +1,44 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, empty_constructor_bodies, must_be_immutable
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, empty_constructor_bodies, must_be_immutable, prefer_const_constructors_in_immutables, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:kaio/constants.dart';
+import 'package:kaio/main.dart';
 import 'package:kaio/widgets/bookshape.dart';
 import 'package:kaio/widgets/selection.dart';
 
 class LiteraturePage extends StatefulWidget {
-  bool showPoetry = false, showHistory = false, showFamousWriters = false;
+  var i;
+  void Selection() {
+    if (showPoetry == true) {
+      i = Poetry();
+    } else if (showHistory == true) {
+      i = History();
+    } else if (showFamousWriters == true) {
+      i = FamousWriters();
+    } else if (showReligion == true) {
+      i = Religion();
+    } else {
+      i = Default();
+    }
+  }
+
   LiteraturePage({super.key});
 
   @override
   State<LiteraturePage> createState() => _LiteraturePageState();
 }
 
+bool showDefault = true,
+    showPoetry = false,
+    showHistory = false,
+    showFamousWriters = false,
+    showReligion = false;
+
 class _LiteraturePageState extends State<LiteraturePage> {
   @override
   Widget build(BuildContext context) {
+    devH = MediaQuery.of(context).size.height;
+    devW = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
         body: Column(
@@ -38,7 +61,7 @@ class _LiteraturePageState extends State<LiteraturePage> {
             Text('My Books', style: kHeading),
             SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                child: Row(                                       
+                child: Row(
                   children: [
                     BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
                     BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
@@ -51,45 +74,64 @@ class _LiteraturePageState extends State<LiteraturePage> {
               'Book Shelf',
               style: kHeading,
             ),
-            SizedBox(
-              height: 10,
-            ),
+            SizedBox(height: 10),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
                   SelectionButton(
                       function: () {
+                        showPoetry = true;
+                        showHistory = false;
+                        showFamousWriters = false;
+                        showDefault = false;
                         setState(() {
-                          widget.showPoetry = true;
+                          widget.Selection();
                         });
                       },
                       buttonText: 'Poetry'),
                   SelectionButton(
                       function: () {
-                        widget.showHistory = true;
-                        setState(() {});
+                        showHistory = true;
+                        showPoetry = false;
+                        showFamousWriters = false;
+                        showDefault = false;
+                        setState(() {
+                          widget.Selection();
+                        });
                       },
                       buttonText: 'History'),
                   SelectionButton(
                       function: () {
-                        widget.showFamousWriters = true;
-                        setState(() {});
+                        showFamousWriters = true;
+                        showPoetry = false;
+                        showHistory = false;
+                        showDefault = false;
+                        setState(() {
+                          widget.Selection();
+                        });
                       },
                       buttonText: 'Famous Writers'),
-                  SelectionButton(function: () {}, buttonText: 'Religion'),
+                  SelectionButton(
+                      function: () {
+                        showReligion = true;
+                        showFamousWriters = false;
+                        showPoetry = false;
+                        showHistory = false;
+                        showDefault = false;
+                        setState(() {
+                          widget.Selection();
+                        });
+                      },
+                      buttonText: 'Religion'),
                   SelectionButton(function: () {}, buttonText: 'Folk'),
                 ],
               ),
             ),
-            SingleChildScrollView(
-              child: Column(
-                children: [
-                  widget.showPoetry ? Poetry() : Default(),
-                  widget.showHistory ? History() : Default(),
-                ],
-              ),
-            )
+            Container(height: devH * 0.45, width: devW * 0.9, 
+            child: 
+            showDefault? Default():widget.i
+            ),
           ],
         ),
       ),
@@ -102,18 +144,22 @@ class Poetry extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
-        ],
-      ),
+    return GridView.count(
+      crossAxisCount: 3,
+      children: [
+        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/argami.jpg'),
+      ],
     );
   }
 }
@@ -123,18 +169,21 @@ class Default extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
-        ],
-      ),
+    return GridView.count(
+      crossAxisCount: 3,
+      children: [
+        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/rasol.jpg'),
+      ],
     );
   }
 }
@@ -144,18 +193,21 @@ class History extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
-        ],
-      ),
+    return GridView.count(
+      crossAxisCount: 3,
+      children: [
+        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/kral.jpg'),
+      ],
     );
   }
 }
@@ -165,18 +217,43 @@ class FamousWriters extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-          BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
-        ],
-      ),
+    return GridView.count(
+      crossAxisCount: 3,
+      children: [
+        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/mehjoor.jpg'),
+      ],
+    );
+  }
+}
+
+class Religion extends StatelessWidget {
+  const Religion({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.count(
+      crossAxisCount: 3,
+      children: [
+        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
+        BookShape(function: () {}, imagepath: 'assets/shamas.jpg'),
+      ],
     );
   }
 }
