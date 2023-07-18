@@ -3,10 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:kaio/Book.dart';
 import 'package:kaio/constants.dart';
-import 'package:kaio/main.dart';
 import 'package:kaio/widgets/bookshape.dart';
 import 'package:kaio/widgets/selection.dart';
 
+var devH, devW;
 class LiteraturePage extends StatefulWidget {
   var i;
   void Selection() {

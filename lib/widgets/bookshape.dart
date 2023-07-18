@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../main.dart';
+import '../literature.dart';
+
 
 // class BookShape extends StatelessWidget {
 //   String imagepath = '';

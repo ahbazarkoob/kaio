@@ -5,7 +5,8 @@ import 'package:kaio/constants.dart';
 import 'package:kaio/widgets/ReviewCard.dart';
 
 
-import 'main.dart';
+import 'literature.dart';
+
 import 'widgets/BookShape.dart';
 
 class Book extends StatelessWidget {
