@@ -7,9 +7,48 @@ import 'package:kaio/widgets/Recipe.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Cuisine(),
+    home: HomeScreen(),
   ));
 }
 
 
-
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Kashmir App'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LiteraturePage(),
+                  ),
+                );
+              },
+              child: Text('Kashmiri Literature'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Cuisine(),
+                  ),
+                );
+              },
+              child: Text('Kashmiri Cuisine'),
+            ),
+           
+          ],
+        ),
+      ),
+    );
+  }
+}
