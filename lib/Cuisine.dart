@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:kaio/constants.dart';
+import 'package:kaio/recipe.dart';
 import 'package:kaio/widgets/Recipe.dart';
 import 'package:kaio/widgets/selection.dart';
 
@@ -195,9 +196,9 @@ class Beverages extends StatelessWidget {
       child: Column(
         children: [
           Text('Bev',style: kHeading,),
-          RecipeImage(),
-          RecipeImage(),
-          RecipeImage(),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
         ],
       ),
     );
@@ -214,9 +215,9 @@ class Default extends StatelessWidget {
       child: Column(
         children: [
           Text('Default',style: kHeading,),
-          RecipeImage(),
-          RecipeImage(),
-          RecipeImage(),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
         ],
       ),
     );
@@ -234,9 +235,9 @@ class HomeMade extends StatelessWidget {
       child: Column(
         children: [
           Text('HomeMade',style: kHeading,),
-          RecipeImage(),
-          RecipeImage(),
-          RecipeImage(),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
         ],
       ),
     );
@@ -253,9 +254,9 @@ class Wazwan extends StatelessWidget {
       child: Column(
         children: [
           Text('Wazwan',style: kHeading,),
-          RecipeImage(),
-          RecipeImage(),
-          RecipeImage(),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
         ],
       ),
     );
@@ -272,9 +273,9 @@ class Deserts extends StatelessWidget {
       child: Column(
         children: [
           Text('Deserts',style: kHeading,),
-          RecipeImage(),
-          RecipeImage(),
-          RecipeImage(),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
         ],
       ),
     );
@@ -291,9 +292,9 @@ class Others extends StatelessWidget {
       child: Column(
         children: [
           Text('Others',style: kHeading,),
-          RecipeImage(),
-          RecipeImage(),
-          RecipeImage(),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
         ],
       ),
     );
