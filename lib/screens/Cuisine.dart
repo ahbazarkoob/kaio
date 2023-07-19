@@ -1,35 +1,34 @@
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, unused_import
+// ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names, sized_box_for_whitespace, prefer_typing_uninitialized_variables
 
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:kaio/Hc_papermachie.dart';
-import 'package:kaio/recipe.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:kaio/constants.dart';
+import 'package:kaio/screens/recipe.dart';
 import 'package:kaio/widgets/Recipe.dart';
-import 'package:kaio/widgets/craft.dart';
 import 'package:kaio/widgets/selection.dart';
-import 'constants.dart';
+
 import 'literature.dart';
-import 'main.dart';
+import '../main.dart';
 
 bool showDefault = true,
-    showPaperMac = false,
-    showCRM = false,
-    showEmb = false,
-    showStoneCraft = false,
+    showBev = false,
+    showHomeM = false,
+    showWazwan = false,
+    showDeserts = false,
     showOther = false;
 
 // ignore: must_be_immutable
-class Handicraft extends StatefulWidget {
+class Cuisine extends StatefulWidget {
   var i;
   void Selection() {
-    if (showPaperMac == true) {
-      i = PaperMac();
-    } else if (showCRM == true) {
-      i = CRM();
-    } else if (showEmb == true) {
-      i = Embroidery();
-    } else if (showStoneCraft == true) {
-      i = StoneCraft();
+    if (showBev == true) {
+      i = Beverages();
+    } else if (showHomeM == true) {
+      i = HomeMade();
+    } else if (showWazwan == true) {
+      i = Wazwan();
+    } else if (showDeserts == true) {
+      i = Deserts();
     } else if (showOther == true) {
       i = Others();
     } else {
@@ -37,16 +36,31 @@ class Handicraft extends StatefulWidget {
     }
   }
 
-  Handicraft({super.key});
+  Cuisine({super.key});
 
   @override
-  State<Handicraft> createState() => _HandicraftState();
+  State<Cuisine> createState() => _CuisineState();
 }
 
-class _HandicraftState extends State<Handicraft> {
+class _CuisineState extends State<Cuisine> {
+  var i;
+
+  void Selection() {
+    if (showPoetry == true) {
+      // i = Poetry();
+    } else if (showHistory == true) {
+      // i = History();
+    } else if (showFamousWriters == true) {
+      // i = FamousWriters();
+    } else if (showReligion == true) {
+      // i = Religion();
+    } else {}
+  }
 
   @override
   Widget build(BuildContext context) {
+    devH = MediaQuery.of(context).size.height;
+    devW = MediaQuery.of(context).size.width;
     return SafeArea(
         child: Scaffold(
       body: Column(
@@ -98,23 +112,23 @@ class _HandicraftState extends State<Handicraft> {
                 SelectionButton(
                     function: () {
                       showDefault = false;
-                      showPaperMac = true;
-                      showCRM = false;
-                      showEmb = false;
-                      showStoneCraft = false;
+                      showBev = true;
+                      showHomeM = false;
+                      showWazwan = false;
+                      showDeserts = false;
                       showOther = false;
                       setState(() {
                         widget.Selection();
                       });
                     },
-                    buttonText: 'Papier-Mâché'),
+                    buttonText: 'Beverages'),
                 SelectionButton(
                     function: () {
                       showDefault = false;
-                      showPaperMac = false;
-                      showCRM = true;
-                      showEmb = false;
-                      showStoneCraft = false;
+                      showBev = false;
+                      showHomeM = true;
+                      showWazwan = false;
+                      showDeserts = false;
                       showOther = false;
                       setState(() {
                         widget.Selection();
@@ -124,10 +138,10 @@ class _HandicraftState extends State<Handicraft> {
                 SelectionButton(
                     function: () {
                       showDefault = false;
-                      showPaperMac = false;
-                      showCRM = false;
-                      showEmb = true;
-                      showStoneCraft = false;
+                      showBev = false;
+                      showHomeM = false;
+                      showWazwan = true;
+                      showDeserts = false;
                       showOther = false;
                       setState(() {
                         widget.Selection();
@@ -137,10 +151,10 @@ class _HandicraftState extends State<Handicraft> {
                 SelectionButton(
                     function: () {
                       showDefault = false;
-                      showPaperMac = false;
-                      showCRM = false;
-                      showEmb = false;
-                      showStoneCraft = true;
+                      showBev = false;
+                      showHomeM = false;
+                      showWazwan = false;
+                      showDeserts = true;
                       showOther = false;
                       setState(() {
                         widget.Selection();
@@ -150,10 +164,10 @@ class _HandicraftState extends State<Handicraft> {
                 SelectionButton(
                     function: () {
                       showDefault = false;
-                      showPaperMac = false;
-                      showCRM = false;
-                      showEmb = false;
-                      showStoneCraft = false;
+                      showBev = false;
+                      showHomeM = false;
+                      showWazwan = false;
+                      showDeserts = false;
                       showOther = true;
                       setState(() {
                         widget.Selection();
@@ -173,8 +187,8 @@ class _HandicraftState extends State<Handicraft> {
   }
 }
 
-class PaperMac extends StatelessWidget {
-  const PaperMac({super.key});
+class Beverages extends StatelessWidget {
+  const Beverages({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -182,10 +196,10 @@ class PaperMac extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('PaperMachie',style: kHeading,),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
+          Text('Bev',style: kHeading,),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
         ],
       ),
     );
@@ -202,9 +216,9 @@ class Default extends StatelessWidget {
       child: Column(
         children: [
           Text('Default',style: kHeading,),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
         ],
       ),
     );
@@ -212,8 +226,8 @@ class Default extends StatelessWidget {
 }
 
 
-class CRM extends StatelessWidget {
-  const CRM({super.key});
+class HomeMade extends StatelessWidget {
+  const HomeMade({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -221,18 +235,18 @@ class CRM extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('Carpets, Rugs and Mats',style: kHeading,),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
+          Text('HomeMade',style: kHeading,),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
         ],
       ),
     );
   }
 }
 
-class Embroidery extends StatelessWidget {
-  const Embroidery({super.key});
+class Wazwan extends StatelessWidget {
+  const Wazwan({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -240,18 +254,18 @@ class Embroidery extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('Emboidery Work',style: kHeading,),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
+          Text('Wazwan',style: kHeading,),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
         ],
       ),
     );
   }
 }
 
-class StoneCraft extends StatelessWidget {
-  const StoneCraft({super.key});
+class Deserts extends StatelessWidget {
+  const Deserts({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -259,10 +273,10 @@ class StoneCraft extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('Stone Craft',style: kHeading,),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
+          Text('Deserts',style: kHeading,),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
         ],
       ),
     );
@@ -279,9 +293,9 @@ class Others extends StatelessWidget {
       child: Column(
         children: [
           Text('Others',style: kHeading,),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
+          RecipeImage(name: Recipe(),),
         ],
       ),
     );

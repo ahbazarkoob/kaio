@@ -1,5 +1,5 @@
 
-// ignore_for_file: prefer_const_constructors, must_be_immutable
+// ignore_for_file: prefer_const_constructors, must_be_immutable, use_key_in_widget_constructors, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
 import 'package:kaio/constants.dart';
@@ -7,7 +7,6 @@ import 'package:kaio/constants.dart';
 class CraftCard extends StatelessWidget {
   var name;
   CraftCard({required this.name});
-
   @override
   Widget build(BuildContext context) {
     return Center(

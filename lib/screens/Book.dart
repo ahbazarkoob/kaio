@@ -3,12 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:kaio/constants.dart';
 import 'package:kaio/widgets/ReviewCard.dart';
-
-
-import 'literature.dart';
-
-import 'main.dart';
-import 'widgets/BookShape.dart';
+import '../main.dart';
+import '../widgets/BookShape.dart';
 
 class Book extends StatelessWidget {
   @override

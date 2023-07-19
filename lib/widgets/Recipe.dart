@@ -1,20 +1,26 @@
-// ignore_for_file: prefer_const_constructors, file_names, must_be_immutable, prefer_typing_uninitialized_variables
+// ignore_for_file: prefer_const_constructors, file_names, must_be_immutable, prefer_typing_uninitialized_variables, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 import 'package:kaio/constants.dart';
 
-class RecipeImage extends StatelessWidget {
+class RecipeImage extends StatefulWidget {
   var name;
   RecipeImage({required this.name});
 
   @override
+  State<RecipeImage> createState() => _RecipeImageState();
+}
+
+class _RecipeImageState extends State<RecipeImage> {
+  @override
   Widget build(BuildContext context) {
     return Center(
       child: GestureDetector(
-         onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => name));
-      },
+        onTap: () {
+          print('Hey');
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => widget.name));
+        },
         child: Card(
           child: Container(
             height: 180,

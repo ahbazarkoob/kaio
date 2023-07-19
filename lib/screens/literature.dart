@@ -1,12 +1,12 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, empty_constructor_bodies, must_be_immutable, prefer_const_constructors_in_immutables, non_constant_identifier_names, prefer_typing_uninitialized_variables, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
-import 'package:kaio/Book.dart';
+import 'package:kaio/screens/Book.dart';
 import 'package:kaio/constants.dart';
 import 'package:kaio/widgets/bookshape.dart';
 import 'package:kaio/widgets/selection.dart';
 
-import 'main.dart';
+import '../main.dart';
 
 
 class LiteraturePage extends StatefulWidget {

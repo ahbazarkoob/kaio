@@ -1,34 +1,35 @@
-// ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names, sized_box_for_whitespace, prefer_typing_uninitialized_variables
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, unused_import, non_constant_identifier_names, prefer_typing_uninitialized_variables
 
-import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:kaio/constants.dart';
-import 'package:kaio/recipe.dart';
+import 'package:flutter/material.dart';
+import 'package:kaio/screens/Hc_papermachie.dart';
+import 'package:kaio/screens/recipe.dart';
 import 'package:kaio/widgets/Recipe.dart';
+import 'package:kaio/widgets/craft.dart';
 import 'package:kaio/widgets/selection.dart';
-
+import '../constants.dart';
+import '../main.dart';
 import 'literature.dart';
-import 'main.dart';
 
 bool showDefault = true,
-    showBev = false,
-    showHomeM = false,
-    showWazwan = false,
-    showDeserts = false,
+    showPaperMac = false,
+    showCRM = false,
+    showEmb = false,
+    showStoneCraft = false,
     showOther = false;
 
 // ignore: must_be_immutable
-class Cuisine extends StatefulWidget {
+class Handicraft extends StatefulWidget {
   var i;
   void Selection() {
-    if (showBev == true) {
-      i = Beverages();
-    } else if (showHomeM == true) {
-      i = HomeMade();
-    } else if (showWazwan == true) {
-      i = Wazwan();
-    } else if (showDeserts == true) {
-      i = Deserts();
+    if (showPaperMac == true) {
+      i = PaperMac();
+    } else if (showCRM == true) {
+      i = CRM();
+    } else if (showEmb == true) {
+      i = Embroidery();
+    } else if (showStoneCraft == true) {
+      i = StoneCraft();
     } else if (showOther == true) {
       i = Others();
     } else {
@@ -36,31 +37,16 @@ class Cuisine extends StatefulWidget {
     }
   }
 
-  Cuisine({super.key});
+  Handicraft({super.key});
 
   @override
-  State<Cuisine> createState() => _CuisineState();
+  State<Handicraft> createState() => _HandicraftState();
 }
 
-class _CuisineState extends State<Cuisine> {
-  var i;
-
-  void Selection() {
-    if (showPoetry == true) {
-      // i = Poetry();
-    } else if (showHistory == true) {
-      // i = History();
-    } else if (showFamousWriters == true) {
-      // i = FamousWriters();
-    } else if (showReligion == true) {
-      // i = Religion();
-    } else {}
-  }
+class _HandicraftState extends State<Handicraft> {
 
   @override
   Widget build(BuildContext context) {
-    devH = MediaQuery.of(context).size.height;
-    devW = MediaQuery.of(context).size.width;
     return SafeArea(
         child: Scaffold(
       body: Column(
@@ -112,23 +98,23 @@ class _CuisineState extends State<Cuisine> {
                 SelectionButton(
                     function: () {
                       showDefault = false;
-                      showBev = true;
-                      showHomeM = false;
-                      showWazwan = false;
-                      showDeserts = false;
+                      showPaperMac = true;
+                      showCRM = false;
+                      showEmb = false;
+                      showStoneCraft = false;
                       showOther = false;
                       setState(() {
                         widget.Selection();
                       });
                     },
-                    buttonText: 'Beverages'),
+                    buttonText: 'Papier-Mâché'),
                 SelectionButton(
                     function: () {
                       showDefault = false;
-                      showBev = false;
-                      showHomeM = true;
-                      showWazwan = false;
-                      showDeserts = false;
+                      showPaperMac = false;
+                      showCRM = true;
+                      showEmb = false;
+                      showStoneCraft = false;
                       showOther = false;
                       setState(() {
                         widget.Selection();
@@ -138,10 +124,10 @@ class _CuisineState extends State<Cuisine> {
                 SelectionButton(
                     function: () {
                       showDefault = false;
-                      showBev = false;
-                      showHomeM = false;
-                      showWazwan = true;
-                      showDeserts = false;
+                      showPaperMac = false;
+                      showCRM = false;
+                      showEmb = true;
+                      showStoneCraft = false;
                       showOther = false;
                       setState(() {
                         widget.Selection();
@@ -151,10 +137,10 @@ class _CuisineState extends State<Cuisine> {
                 SelectionButton(
                     function: () {
                       showDefault = false;
-                      showBev = false;
-                      showHomeM = false;
-                      showWazwan = false;
-                      showDeserts = true;
+                      showPaperMac = false;
+                      showCRM = false;
+                      showEmb = false;
+                      showStoneCraft = true;
                       showOther = false;
                       setState(() {
                         widget.Selection();
@@ -164,10 +150,10 @@ class _CuisineState extends State<Cuisine> {
                 SelectionButton(
                     function: () {
                       showDefault = false;
-                      showBev = false;
-                      showHomeM = false;
-                      showWazwan = false;
-                      showDeserts = false;
+                      showPaperMac = false;
+                      showCRM = false;
+                      showEmb = false;
+                      showStoneCraft = false;
                       showOther = true;
                       setState(() {
                         widget.Selection();
@@ -187,8 +173,8 @@ class _CuisineState extends State<Cuisine> {
   }
 }
 
-class Beverages extends StatelessWidget {
-  const Beverages({super.key});
+class PaperMac extends StatelessWidget {
+  const PaperMac({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -196,10 +182,10 @@ class Beverages extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('Bev',style: kHeading,),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
+          Text('PaperMachie',style: kHeading,),
+          CraftCard(name: Paper_machie(),),
+          CraftCard(name: Paper_machie(),),
+          CraftCard(name: Paper_machie(),),
         ],
       ),
     );
@@ -216,9 +202,9 @@ class Default extends StatelessWidget {
       child: Column(
         children: [
           Text('Default',style: kHeading,),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
+          CraftCard(name: Paper_machie(),),
+          CraftCard(name: Paper_machie(),),
+          CraftCard(name: Paper_machie(),),
         ],
       ),
     );
@@ -226,8 +212,8 @@ class Default extends StatelessWidget {
 }
 
 
-class HomeMade extends StatelessWidget {
-  const HomeMade({super.key});
+class CRM extends StatelessWidget {
+  const CRM({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -235,18 +221,18 @@ class HomeMade extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('HomeMade',style: kHeading,),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
+          Text('Carpets, Rugs and Mats',style: kHeading,),
+          CraftCard(name: Paper_machie(),),
+          CraftCard(name: Paper_machie(),),
+          CraftCard(name: Paper_machie(),),
         ],
       ),
     );
   }
 }
 
-class Wazwan extends StatelessWidget {
-  const Wazwan({super.key});
+class Embroidery extends StatelessWidget {
+  const Embroidery({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -254,18 +240,18 @@ class Wazwan extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('Wazwan',style: kHeading,),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
+          Text('Emboidery Work',style: kHeading,),
+          CraftCard(name: Paper_machie(),),
+          CraftCard(name: Paper_machie(),),
+          CraftCard(name: Paper_machie(),),
         ],
       ),
     );
   }
 }
 
-class Deserts extends StatelessWidget {
-  const Deserts({super.key});
+class StoneCraft extends StatelessWidget {
+  const StoneCraft({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -273,10 +259,10 @@ class Deserts extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('Deserts',style: kHeading,),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
+          Text('Stone Craft',style: kHeading,),
+          CraftCard(name: Paper_machie(),),
+          CraftCard(name: Paper_machie(),),
+          CraftCard(name: Paper_machie(),),
         ],
       ),
     );
@@ -293,9 +279,9 @@ class Others extends StatelessWidget {
       child: Column(
         children: [
           Text('Others',style: kHeading,),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
+          CraftCard(name: Paper_machie(),),
+          CraftCard(name: Paper_machie(),),
+          CraftCard(name: Paper_machie(),),
         ],
       ),
     );

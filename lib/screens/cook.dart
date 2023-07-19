@@ -2,11 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:kaio/widgets/CookCard.dart';
-
-
-import '../constants.dart';
-import 'literature.dart';
-import 'main.dart';
+import '../../constants.dart';
+import '../main.dart';
 
 
 

@@ -1,21 +1,10 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, prefer_const_constructors_in_immutables
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:kaio/Hc_papermachie.dart';
 import 'package:kaio/main.dart';
 import 'package:kaio/widgets/Travel.dart';
-import 'package:kaio/widgets/craft.dart';
-import 'package:kaio/widgets/selection.dart';
-import 'constants.dart';
-import 'literature.dart';
-
-bool showDefault = true,
-    showPaperMac = false,
-    showCRM = false,
-    showEmb = false,
-    showStoneCraft = false,
-    showOther = false;
+import '../constants.dart';
 
 // ignore: must_be_immutable
 class Destination extends StatefulWidget {
@@ -80,7 +69,10 @@ class _DestinationState extends State<Destination> {
             height: devH * 0.5,
             child: SingleChildScrollView(
               child: Column(
-                children: [Travel(), Travel(), Travel()],
+                children: [
+                  Travel(), 
+                  Travel(), 
+                  Travel()],
               ),
             ),
           )
