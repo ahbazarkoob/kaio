@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:kaio/constants.dart';
-import 'package:kaio/literature.dart';
 
 import '../main.dart';
 
