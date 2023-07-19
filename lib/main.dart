@@ -2,10 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:kaio/Cuisine.dart';
+import 'package:kaio/destinations.dart';
 import 'package:kaio/handicrafts.dart';
 import 'package:kaio/literature.dart';
 import 'package:kaio/recipe.dart';
 import 'package:kaio/widgets/Recipe.dart';
+import 'package:kaio/widgets/Travel.dart';
 
 import 'cook.dart';
 
@@ -16,6 +18,7 @@ void main() {
 }
 
 var devH, devW;
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -61,6 +64,17 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: Text('Kashmiri Handicrafts'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Destination(),
+                  ),
+                );
+              },
+              child: Text('Destinations'),
             ),
           ],
         ),

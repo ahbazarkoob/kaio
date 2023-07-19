@@ -7,13 +7,12 @@ import 'package:kaio/widgets/ReviewCard.dart';
 
 import 'literature.dart';
 
+import 'main.dart';
 import 'widgets/BookShape.dart';
 
 class Book extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-     devH = MediaQuery.of(context).size.height;
-    devW = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.grey.shade400,
       appBar: AppBar(

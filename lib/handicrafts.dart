@@ -9,6 +9,7 @@ import 'package:kaio/widgets/craft.dart';
 import 'package:kaio/widgets/selection.dart';
 import 'constants.dart';
 import 'literature.dart';
+import 'main.dart';
 
 bool showDefault = true,
     showPaperMac = false,
@@ -46,8 +47,6 @@ class _HandicraftState extends State<Handicraft> {
 
   @override
   Widget build(BuildContext context) {
-    devH = MediaQuery.of(context).size.height;
-    devW = MediaQuery.of(context).size.width;
     return SafeArea(
         child: Scaffold(
       body: Column(

@@ -6,7 +6,9 @@ import 'package:kaio/constants.dart';
 import 'package:kaio/widgets/bookshape.dart';
 import 'package:kaio/widgets/selection.dart';
 
-var devH, devW;
+import 'main.dart';
+
+
 class LiteraturePage extends StatefulWidget {
   var i;
   void Selection() {
@@ -38,8 +40,6 @@ bool showDefault = true,
 class _LiteraturePageState extends State<LiteraturePage> {
   @override
   Widget build(BuildContext context) {
-    devH = MediaQuery.of(context).size.height;
-    devW = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
         body: Column(

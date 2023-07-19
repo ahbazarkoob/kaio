@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../literature.dart';
+import '../main.dart';
 
 
 // class BookShape extends StatelessWidget {
@@ -56,8 +57,6 @@ class BookShape extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    devH = MediaQuery.of(context).size.height;
-    devW = MediaQuery.of(context).size.width;
     return GestureDetector(
       onTap: () {
         Navigator.push(
