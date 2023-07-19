@@ -76,6 +76,28 @@ class HomeScreen extends StatelessWidget {
               },
               child: Text('Destinations'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Cuisine(),
+                  ),
+                );
+              },
+              child: Text('Kashmiri Cuisine'),
+            ),
+           ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Handicraft(),
+                  ),
+                );
+              },
+              child: Text('Kashmiri Culture'),
+            ),
           ],
         ),
       ),
