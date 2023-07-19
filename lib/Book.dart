@@ -17,10 +17,9 @@ class Book extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey.shade400,
       appBar: AppBar(
-        leading: Icon(
-          Icons.arrow_back_sharp,
-          color: Colors.black,
-        ),
+        leading: IconButton(onPressed: (){Navigator.pop(context);},icon: Icon(Icons.arrow_back_sharp),color: Color(0xff85586F),
+            
+          ),
         title: Text(
           'Back',
           style: TextStyle(color: Colors.black),

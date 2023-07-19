@@ -1,11 +1,12 @@
-// ignore_for_file: prefer_const_constructors, file_names, must_be_immutable, prefer_typing_uninitialized_variables
+
+// ignore_for_file: prefer_const_constructors, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:kaio/constants.dart';
 
-class RecipeImage extends StatelessWidget {
+class CraftCard extends StatelessWidget {
   var name;
-  RecipeImage({required this.name});
+  CraftCard({required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class RecipeImage extends StatelessWidget {
                   top: 60,
                   child: Center(
                       child: Text(
-                    'Recipe',
+                    'Craft',
                     style: kHeading,
                   )),
                 ),
@@ -36,10 +37,6 @@ class RecipeImage extends StatelessWidget {
                   child: CircleAvatar(
                     radius: 80,
                     backgroundColor: Colors.amber.shade300,
-                    child: CircleAvatar(
-                      radius: 60,
-                      backgroundColor: const Color.fromRGBO(255, 152, 0, 1),
-                    ),
                   ),
                 )
               ],

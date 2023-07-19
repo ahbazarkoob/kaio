@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:kaio/Cuisine.dart';
+import 'package:kaio/handicrafts.dart';
 import 'package:kaio/literature.dart';
 import 'package:kaio/recipe.dart';
 import 'package:kaio/widgets/Recipe.dart';
@@ -10,14 +11,16 @@ import 'cook.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: HomeScreen(),
-  ));
+    home: HomeScreen()),
+  );
 }
 
-
+var devH, devW;
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    devH = MediaQuery.of(context).size.height;
+  devW = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         title: Text('Kashmir App'),
@@ -48,7 +51,17 @@ class HomeScreen extends StatelessWidget {
               },
               child: Text('Kashmiri Cuisine'),
             ),
-           
+           ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Handicraft(),
+                  ),
+                );
+              },
+              child: Text('Kashmiri Handicrafts'),
+            ),
           ],
         ),
       ),
