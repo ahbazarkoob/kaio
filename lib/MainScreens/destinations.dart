@@ -17,7 +17,6 @@ class Destination extends StatefulWidget {
 class _DestinationState extends State<Destination> {
   @override
   Widget build(BuildContext context) {
-    devH = MediaQuery.of(context).size.height;
     return SafeArea(
         child: Scaffold(
       body: Column(

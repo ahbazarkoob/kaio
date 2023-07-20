@@ -2,14 +2,13 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:kaio/screens/Hc_papermachie.dart';
-import 'package:kaio/screens/recipe.dart';
+import 'package:kaio/Handicrafts/Hc_papermachie.dart';
+import 'package:kaio/Cuisines/recipe.dart';
 import 'package:kaio/widgets/Recipe.dart';
 import 'package:kaio/widgets/craft.dart';
 import 'package:kaio/widgets/selection.dart';
 import '../constants.dart';
 import '../main.dart';
-import 'literature.dart';
 
 bool showDefault = true,
     showPaperMac = false,

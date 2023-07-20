@@ -11,6 +11,7 @@ class SelectionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
+      style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.purple.shade200)),
         onPressed: 
           function,
         child: Text(

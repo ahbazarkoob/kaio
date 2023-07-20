@@ -3,11 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:kaio/constants.dart';
-import 'package:kaio/screens/recipe.dart';
+import 'package:kaio/Cuisines/recipe.dart';
 import 'package:kaio/widgets/Recipe.dart';
 import 'package:kaio/widgets/selection.dart';
-
-import 'literature.dart';
 import '../main.dart';
 
 bool showDefault = true,
@@ -43,24 +41,11 @@ class Cuisine extends StatefulWidget {
 }
 
 class _CuisineState extends State<Cuisine> {
-  var i;
-
-  void Selection() {
-    if (showPoetry == true) {
-      // i = Poetry();
-    } else if (showHistory == true) {
-      // i = History();
-    } else if (showFamousWriters == true) {
-      // i = FamousWriters();
-    } else if (showReligion == true) {
-      // i = Religion();
-    } else {}
-  }
+ 
 
   @override
   Widget build(BuildContext context) {
-    devH = MediaQuery.of(context).size.height;
-    devW = MediaQuery.of(context).size.width;
+    
     return SafeArea(
         child: Scaffold(
       body: Column(

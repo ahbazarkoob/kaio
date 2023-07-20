@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:kaio/constants.dart';
-import 'package:kaio/screens/Destinationdesc.dart';
+import 'package:kaio/Destinations/Destinationdesc.dart';
 import '../main.dart';
 
 class Travel extends StatelessWidget {
