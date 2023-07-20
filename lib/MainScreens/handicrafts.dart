@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, unused_import, non_constant_identifier_names, prefer_typing_uninitialized_variables
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, unused_import, non_constant_identifier_names, prefer_typing_uninitialized_variables, prefer_const_literals_to_create_immutables
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -10,31 +10,9 @@ import 'package:kaio/widgets/selection.dart';
 import '../constants.dart';
 import '../main.dart';
 
-bool showDefault = true,
-    showPaperMac = false,
-    showCRM = false,
-    showEmb = false,
-    showStoneCraft = false,
-    showOther = false;
 
 // ignore: must_be_immutable
 class Handicraft extends StatefulWidget {
-  var i;
-  void Selection() {
-    if (showPaperMac == true) {
-      i = PaperMac();
-    } else if (showCRM == true) {
-      i = CRM();
-    } else if (showEmb == true) {
-      i = Embroidery();
-    } else if (showStoneCraft == true) {
-      i = StoneCraft();
-    } else if (showOther == true) {
-      i = Others();
-    } else {
-      i = Default();
-    }
-  }
 
   Handicraft({super.key});
 
@@ -89,86 +67,43 @@ class _HandicraftState extends State<Handicraft> {
           SizedBox(
             height: 20,
           ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SelectionButton(
-                    function: () {
-                      showDefault = false;
-                      showPaperMac = true;
-                      showCRM = false;
-                      showEmb = false;
-                      showStoneCraft = false;
-                      showOther = false;
-                      setState(() {
-                        widget.Selection();
-                      });
-                    },
-                    buttonText: 'Papier-Mâché'),
-                SelectionButton(
-                    function: () {
-                      showDefault = false;
-                      showPaperMac = false;
-                      showCRM = true;
-                      showEmb = false;
-                      showStoneCraft = false;
-                      showOther = false;
-                      setState(() {
-                        widget.Selection();
-                      });
-                    },
-                    buttonText: 'HomeMade'),
-                SelectionButton(
-                    function: () {
-                      showDefault = false;
-                      showPaperMac = false;
-                      showCRM = false;
-                      showEmb = true;
-                      showStoneCraft = false;
-                      showOther = false;
-                      setState(() {
-                        widget.Selection();
-                      });
-                    },
-                    buttonText: 'Wazwan'),
-                SelectionButton(
-                    function: () {
-                      showDefault = false;
-                      showPaperMac = false;
-                      showCRM = false;
-                      showEmb = false;
-                      showStoneCraft = true;
-                      showOther = false;
-                      setState(() {
-                        widget.Selection();
-                      });
-                    },
-                    buttonText: 'Deserts'),
-                SelectionButton(
-                    function: () {
-                      showDefault = false;
-                      showPaperMac = false;
-                      showCRM = false;
-                      showEmb = false;
-                      showStoneCraft = false;
-                      showOther = true;
-                      setState(() {
-                        widget.Selection();
-                      });
-                    },
-                    buttonText: 'Other'),
-              ],
+           DefaultTabController(
+            length: 5,
+            child: Expanded(
+              child: Column(
+                children: [
+                  Container(height: 45,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade200,
+                    borderRadius: BorderRadius.circular(25.0)),
+                  child: TabBar( indicator: BoxDecoration(
+                    color: Color(0xff85586F),
+                    borderRadius:  BorderRadius.circular(25.0)
+                  ) ,
+                tabs: [
+                  Tab(text: 'Paper-Mache'),
+                  Tab(text: 'Carpets, Rugs and Mats'),
+                  Tab(text: 'Embroidery Work'),
+                  Tab(text: 'Stone Craft'),
+                  Tab(text: 'Others'),
+                ],
+                labelColor: Colors.black,
+            ),),
+             Expanded(
+              child: TabBarView(
+                children: [
+                  PaperMac(),
+                  CRM(),
+                  Embroidery(),
+                  StoneCraft(),
+                  Others()
+                ],
+              ),
             ),
-          ),
-          Container(
-              height: devH * 0.45,
-              width: devW * 0.9,
-              child: showDefault ? Default() : widget.i),
-        ],
+          ],),
+                    ),
       ),
-    ));
+    ])));
   }
 }
 

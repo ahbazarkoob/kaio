@@ -5,8 +5,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:kaio/constants.dart';
 import 'package:kaio/Cuisines/recipe.dart';
 import 'package:kaio/widgets/Recipe.dart';
-import 'package:kaio/widgets/selection.dart';
-import '../main.dart';
+
 
 bool showDefault = true,
     showBev = false,
@@ -89,83 +88,42 @@ class _CuisineState extends State<Cuisine> {
           SizedBox(
             height: 20,
           ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SelectionButton(
-                    function: () {
-                      showDefault = false;
-                      showBev = true;
-                      showHomeM = false;
-                      showWazwan = false;
-                      showDeserts = false;
-                      showOther = false;
-                      setState(() {
-                        widget.Selection();
-                      });
-                    },
-                    buttonText: 'Beverages'),
-                SelectionButton(
-                    function: () {
-                      showDefault = false;
-                      showBev = false;
-                      showHomeM = true;
-                      showWazwan = false;
-                      showDeserts = false;
-                      showOther = false;
-                      setState(() {
-                        widget.Selection();
-                      });
-                    },
-                    buttonText: 'HomeMade'),
-                SelectionButton(
-                    function: () {
-                      showDefault = false;
-                      showBev = false;
-                      showHomeM = false;
-                      showWazwan = true;
-                      showDeserts = false;
-                      showOther = false;
-                      setState(() {
-                        widget.Selection();
-                      });
-                    },
-                    buttonText: 'Wazwan'),
-                SelectionButton(
-                    function: () {
-                      showDefault = false;
-                      showBev = false;
-                      showHomeM = false;
-                      showWazwan = false;
-                      showDeserts = true;
-                      showOther = false;
-                      setState(() {
-                        widget.Selection();
-                      });
-                    },
-                    buttonText: 'Deserts'),
-                SelectionButton(
-                    function: () {
-                      showDefault = false;
-                      showBev = false;
-                      showHomeM = false;
-                      showWazwan = false;
-                      showDeserts = false;
-                      showOther = true;
-                      setState(() {
-                        widget.Selection();
-                      });
-                    },
-                    buttonText: 'Other'),
-              ],
+          DefaultTabController(
+            length: 5,
+            child: Expanded(
+              child: Column(
+                children: [
+                  Container(height: 45,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade200,
+                    borderRadius: BorderRadius.circular(25.0)),
+                  child: TabBar( indicator: BoxDecoration(
+                    color: Color(0xff85586F),
+                    borderRadius:  BorderRadius.circular(25.0)
+                  ) ,
+                tabs: [
+                  Tab(text: 'Beverages'),
+                  Tab(text: 'HomeMade'),
+                  Tab(text: 'Wazwan'),
+                  Tab(text: 'Deserts'),
+                  Tab(text: 'Others'),
+                ],
+                labelColor: Colors.black,
+            ),),
+             Expanded(
+              child: TabBarView(
+                children: [
+                  Beverages(),
+                  HomeMade(),
+                  Wazwan(),
+                  Deserts(),
+                  Others()
+                ],
+              ),
             ),
-          ),
-          Container(
-              height: devH * 0.45,
-              width: devW * 0.9,
-              child: showDefault ? Default() : widget.i),
+          ],),
+                    ),
+      ),
         ],
       ),
     ));
