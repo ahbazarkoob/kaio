@@ -3,9 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:kaio/Literature/Book.dart';
 import 'package:kaio/constants.dart';
-import 'package:kaio/litera.dart';
+import 'package:kaio/Literature/litera.dart';
 import 'package:kaio/widgets/bookshape.dart';
-import 'package:kaio/widgets/selection.dart';
 import '../../main.dart';
 
 class LiteraturePage extends StatefulWidget {
@@ -43,12 +42,12 @@ class _LiteraturePageState extends State<LiteraturePage> {
   devW = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
+        body:  Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+             children: [
+              // Cult(),
               Container(
-                margin: EdgeInsets.all(20),
+                margin: EdgeInsets.only(top: 20, right: 20, left: 20),
                 child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.search),
@@ -63,6 +62,9 @@ class _LiteraturePageState extends State<LiteraturePage> {
                             BorderSide(color: Color(0xff85586F), width: 2)),
                   ),
                 ),
+              ),
+              SizedBox(
+                height: devH*0.009,
               ),
               Text('My Books', style: kHeading),
               SizedBox(
@@ -90,76 +92,12 @@ class _LiteraturePageState extends State<LiteraturePage> {
               SizedBox(
                 height: devH*0.009,
               ),
-              // SingleChildScrollView(
-              //   scrollDirection: Axis.horizontal,
-              //   child: Row(
-              //     mainAxisAlignment: MainAxisAlignment.center,
-              //     children: [
-              //       SelectionButton(
-              //           function: () {
-              //             showPoetry = true;
-              //             showHistory = false;
-              //             showFamousWriters = false;
-              //             showDefault = false;
-              //             setState(() {
-              //               widget.Selection();
-              //             });
-              //           },
-              //           buttonText: 'Poetry'),
-              //       SizedBox(width: 10,),
-              //       SelectionButton(
-              //           function: () {
-              //             showHistory = true;
-              //             showPoetry = false;
-              //             showFamousWriters = false;
-              //             showDefault = false;
-              //             setState(() {
-              //               widget.Selection();
-              //             });
-              //           },
-              //           buttonText: 'History'),
-              //       SizedBox(width: 10,),
-              //       SelectionButton(
-              //           function: () {
-              //             showFamousWriters = true;
-              //             showPoetry = false;
-              //             showHistory = false;
-              //             showDefault = false;
-              //             setState(() {
-              //               widget.Selection();
-              //             });
-              //           },
-              //           buttonText: 'Famous Writers'),
-              //       SizedBox(width: 10,),
-              //       SelectionButton(
-              //           function: () {
-              //             showReligion = true;
-              //             showFamousWriters = false;
-              //             showPoetry = false;
-              //             showHistory = false;
-              //             showDefault = false;
-              //             setState(() {
-              //               widget.Selection();
-              //             });
-              //           },
-              //           buttonText: 'Religion'),
-              //       SizedBox(width: 10,),
-              //       SelectionButton(function: () {}, buttonText: 'Folk'),
-              //     ],
-              //   ),
-              // ),
-              // SizedBox(
-              //   height: devH*0.009,
-              // ),
-              // Center(
-              //   child: Container(
-              //       height: devH * 0.50,
-              //       width: devW * 0.9,
-              //       child: showDefault ? Default() : widget.i),
-              // ),
-            LiteratureTab()
-            ],
-          ),
+          Container(
+            height: devH*0.45,
+            child: LiteratureSelection())
+            
+         ],
+          
         ),
       ),
     );
@@ -270,3 +208,72 @@ class Religion extends StatelessWidget {
     );
   }
 }
+
+
+  // SingleChildScrollView(
+              //   scrollDirection: Axis.horizontal,
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.center,
+              //     children: [
+              //       SelectionButton(
+              //           function: () {
+              //             showPoetry = true;
+              //             showHistory = false;
+              //             showFamousWriters = false;
+              //             showDefault = false;
+              //             setState(() {
+              //               widget.Selection();
+              //             });
+              //           },
+              //           buttonText: 'Poetry'),
+              //       SizedBox(width: 10,),
+              //       SelectionButton(
+              //           function: () {
+              //             showHistory = true;
+              //             showPoetry = false;
+              //             showFamousWriters = false;
+              //             showDefault = false;
+              //             setState(() {
+              //               widget.Selection();
+              //             });
+              //           },
+              //           buttonText: 'History'),
+              //       SizedBox(width: 10,),
+              //       SelectionButton(
+              //           function: () {
+              //             showFamousWriters = true;
+              //             showPoetry = false;
+              //             showHistory = false;
+              //             showDefault = false;
+              //             setState(() {
+              //               widget.Selection();
+              //             });
+              //           },
+              //           buttonText: 'Famous Writers'),
+              //       SizedBox(width: 10,),
+              //       SelectionButton(
+              //           function: () {
+              //             showReligion = true;
+              //             showFamousWriters = false;
+              //             showPoetry = false;
+              //             showHistory = false;
+              //             showDefault = false;
+              //             setState(() {
+              //               widget.Selection();
+              //             });
+              //           },
+              //           buttonText: 'Religion'),
+              //       SizedBox(width: 10,),
+              //       SelectionButton(function: () {}, buttonText: 'Folk'),
+              //     ],
+              //   ),
+              // ),
+              // SizedBox(
+              //   height: devH*0.009,
+              // ),
+              // Center(
+              //   child: Container(
+              //       height: devH * 0.50,
+              //       width: devW * 0.9,
+              //       child: showDefault ? Default() : widget.i),
+              // ),

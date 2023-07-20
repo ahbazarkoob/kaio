@@ -2,47 +2,57 @@
 
 import 'package:flutter/material.dart';
 import 'package:kaio/Literature/Book.dart';
-import 'package:kaio/constants.dart';
 import 'package:kaio/widgets/bookshape.dart';
-import '../../main.dart';
 
-class LiteratureTab extends StatelessWidget {
-
-  LiteratureTab({super.key});
+class LiteratureSelection extends StatelessWidget {
+  const LiteratureSelection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: DefaultTabController(
-        length: 5, // Number of tabs
-        child: Scaffold(
-            body: Column(
-              children: [
-                TabBar(
-                  tabs: [
-                    Tab(text: 'Poetry'),
-                    Tab(text: 'History'),
-                    Tab(text: 'Famous Writers'),
-                    Tab(text: 'Religion'),
-                    Tab(text: 'Folk'),
-                  ],
-                  labelColor: Color(0xff85586F),
-                ),
-              TabBarView(
+    return DefaultTabController(
+      length: 5,
+      child: Scaffold(
+        body: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
             children: [
-              Poetry(),
-              History(),
-              FamousWriters(),
-              Religion(),
-              Default(),
+              Container(
+                height: 45,
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(25.0)
+                ),
+                child:  TabBar(
+                  indicator: BoxDecoration(
+                    color: Color(0xff85586F),
+                    borderRadius:  BorderRadius.circular(25.0)
+                  ) ,
+                  labelColor: Colors.white,
+                  unselectedLabelColor: Colors.black,
+                  tabs: const  [
+                    Tab(text: 'Poetry',),
+                    Tab(text: 'History',),
+                    Tab(text: 'Famous Writers',),
+                    Tab(text: 'Religion',),
+                    Tab(text: 'Folk',),
+                  ],
+                ),
+              ),
+              const Expanded(
+                  child: TabBarView(
+                    children:  [
+                      Poetry(),
+                      History(),
+                      FamousWriters(),
+                      Religion(),
+                      History()
+                    ],
+                  )
+              )
             ],
           ),
-              ],
-            ),
-
-        ),
-      ),
-    );
+        )
+      ));
   }
 }
 
@@ -150,5 +160,3 @@ class Religion extends StatelessWidget {
     );
   }
 }
-
-

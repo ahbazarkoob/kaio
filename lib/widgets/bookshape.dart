@@ -20,8 +20,8 @@ class BookShape extends StatelessWidget {
         Navigator.push(context, MaterialPageRoute(builder: (context) => name));
       },
       child: Container(
-        height: devH * 0.5,
-        width: devW * 0.45,
+        height: devW * 0.5,
+        width: devW * 0.5,
         margin: EdgeInsets.all(devW * 0.01),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
