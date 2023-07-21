@@ -93,7 +93,7 @@ class _LiteraturePageState extends State<LiteraturePage> {
                 height: devH*0.009,
               ),
           Container(
-            height: devH*0.45,
+            height: devH*0.50,
             child: LiteratureSelection())
             
          ],
@@ -110,6 +110,7 @@ class Poetry extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
+      childAspectRatio: 0.8,
       crossAxisCount: 2,
       children: [
         BookShape(name: Book(), imagepath: 'assets/argami.jpg'),
@@ -125,26 +126,6 @@ class Poetry extends StatelessWidget {
   }
 }
 
-class Default extends StatelessWidget {
-  const Default({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return GridView.count(
-      crossAxisCount: 2,
-      children: [
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-      ],
-    );
-  }
-}
 
 class History extends StatelessWidget {
   const History({super.key});
@@ -153,6 +134,7 @@ class History extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 2,
+      childAspectRatio: 0.8,
       children: [
         BookShape(name: Book(), imagepath: 'assets/kral.jpg'),
         BookShape(name: Book(), imagepath: 'assets/kral.jpg'),
@@ -172,6 +154,7 @@ class FamousWriters extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 2,
+      childAspectRatio: 0.8,
       children: [
         BookShape(name: Book(), imagepath: 'assets/mehjoor.jpg'),
         BookShape(name: Book(), imagepath: 'assets/mehjoor.jpg'),
@@ -193,6 +176,7 @@ class Religion extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 2,
+      childAspectRatio: 0.8,
       children: [
         BookShape(name: Book(), imagepath: 'assets/shamas.jpg'),
         BookShape(name: Book(), imagepath: 'assets/shamas.jpg'),
