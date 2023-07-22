@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, avoid_unnecessary_containers, sized_box_for_whitespace, unnecessary_string_interpolations
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, avoid_unnecessary_containers, sized_box_for_whitespace, unnecessary_string_interpolations, unused_local_variable, empty_statements, file_names, unused_import
 
 import 'package:flutter/material.dart';
 import 'package:kaio/constants.dart';
@@ -64,22 +64,23 @@ class Book extends StatelessWidget {
                             color: Colors.black,
                           ),
                           iconSize: 30,
-                          onSelected: (String value) {
+                          onSelected: (String value) async {
                             if (value == 'Read') {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Read(),
-                                ),
-                              );
-                            } else if (value == 'Download') {
+                               var url = 'https://drive.google.com/file/d/1EaESB3vjDe6vHT5k9aw5WBvFn0nHRuce/view?usp=sharing';
+                               if (!await canLaunchUrlString(url)) {
+                                await launchUrlString(url);
+                                } else {
+                                  throw 'Could not launch $url';
+                                  }
+                                  }
+                            else if (value == 'Download') {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => Download(),
                                 ),
                               );
-                            }
+                            };
                           },
                           itemBuilder: (BuildContext context) => [
                             PopupMenuItem(
@@ -186,13 +187,14 @@ class Read extends StatelessWidget {
         body: Center(
             child: GestureDetector(
       onTap: () async {
-       //var url ='https://drive.google.com/drive/u/3/folders/1K8kVk1YNyN3fSftQAk6ydou9LvIWmI2R';
-         var url = 'https://mega.nz/fm/FvEUkLAQ';
+        //var url ='https://drive.google.com/drive/u/3/folders/1K8kVk1YNyN3fSftQAk6ydou9LvIWmI2R';
+        //var url = 'https://mega.nz/fm/FvEUkLAQ';
+        var url = 'https://blog.logrocket.com/launching-urls-flutter-url_launcher/';
         if (await canLaunchUrlString(url)) {
           await launchUrlString(url);
         } else {
           throw 'Could not launch $url';
-      }
+        }
       },
       child: Center(
         child: Text(
@@ -204,6 +206,21 @@ class Read extends StatelessWidget {
     )));
   }
 }
+
+// TextButton(
+//   onPressed: () async {
+//     String telephoneNumber = '+2347012345678';
+//     String telephoneUrl = "tel:$telephoneNumber";
+//     if (await canLaunch(telephoneUrl)) {
+//       await launch(telephoneUrl);
+//     } else {
+//       throw "Error occured trying to call that number.";
+//     }
+//     child: const CustomWidget(
+//       icon: Icons.call,
+//       label: 'Call a phone\nnumber',
+//     ),
+// ),
 
 //  GestureDetector(
 //             onTap: () async {
@@ -246,4 +263,3 @@ class Reload extends StatelessWidget {
     ));
   }
 }
-
