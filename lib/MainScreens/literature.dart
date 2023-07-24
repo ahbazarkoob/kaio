@@ -273,17 +273,51 @@ class Religion extends StatelessWidget {
     return GridView.count(
       crossAxisCount: 3,
       children: [
-        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
-        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
-        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
-        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
-        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
-        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
-        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
-        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
-        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
-        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
-      ],
+        BookShape(
+            name: BookTemplate(
+                finalPath: 'assets/thecollaborator.jpg',
+                bookName: 'THE COLLABORATOR',
+                author: 'Mirza Waheed',
+                link:
+                    'https://drive.google.com/file/d/1HiGfnZE7ruFbMx653-FdsO5JCFsQJRw7/view?usp=drivesdk',
+                descriptionText:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id viverra libero. Donec ut diam ante. Mauris blandit diam id finibus venenatis. Suspendisse non rhoncus arcu. Fusce rhoncus vehicula scelerisque. Nam suscipit dapibus ante, sed volutpat mauris mollis sed. Integer dignissim volutpat tristique. Vivamus consequat justo quis nulla varius, vel posuere ante porta. Aenean non molestie metus. Mauris imperdiet, leo sed pulvinar sodales, lectus massa interdum lacus, sit amet dictum ante lectus nec dui. Sed in libero porttitor, posuere ligula et, elementum justo.'),
+            imagepath: 'assets/thecollaborator.jpg'
+            ),
+        BookShape(
+            name: BookTemplate(
+                finalPath: 'assets/curfewednight.jpg',
+                bookName: 'CURFEWED NIGHT',
+                author: 'Basharat Peer',
+                link:
+                    'https://drive.google.com/file/d/1WrH65LWqxfbvL2-aqQRM1pR09XjJHpQR/view?usp=drivesdk',
+                descriptionText:
+                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id viverra libero. Donec ut diam ante. Mauris blandit diam id finibus venenatis. Suspendisse non rhoncus arcu. Fusce rhoncus vehicula scelerisque. Nam suscipit dapibus ante, sed volutpat mauris mollis sed. Integer dignissim volutpat tristique. Vivamus consequat justo quis nulla varius, vel posuere ante porta. Aenean non molestie metus. Mauris imperdiet, leo sed pulvinar sodales, lectus massa interdum lacus, sit amet dictum ante lectus nec dui. Sed in libero porttitor, posuere ligula et, elementum justo.' ),
+            imagepath: 'assets/curfewednight.jpg'
+            ),
+         BookShape(
+            name: BookTemplate(
+                finalPath: 'assets/ourmoonhasbloodclots.jpg',
+                bookName: 'OUR MOON HAS BLOOD CLOTS',
+                author: 'Rahul Pandita',
+                link:
+                    'https://drive.google.com/file/d/1HiGfnZE7ruFbMx653-FdsO5JCFsQJRw7/view?usp=drivesdk',
+                descriptionText:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id viverra libero. Donec ut diam ante. Mauris blandit diam id finibus venenatis. Suspendisse non rhoncus arcu. Fusce rhoncus vehicula scelerisque. Nam suscipit dapibus ante, sed volutpat mauris mollis sed. Integer dignissim volutpat tristique. Vivamus consequat justo quis nulla varius, vel posuere ante porta. Aenean non molestie metus. Mauris imperdiet, leo sed pulvinar sodales, lectus massa interdum lacus, sit amet dictum ante lectus nec dui. Sed in libero porttitor, posuere ligula et, elementum justo.'),
+            imagepath: 'assets/ourmoonhasbloodclots.jpg'
+            ),
+        BookShape(
+            name: BookTemplate(
+                finalPath: 'assets/kashmiradisputedlegacy.jpg',
+                bookName: 'KASHMIR A DISPUTED LEGACY',
+                author: 'Alstair Lamb',
+                link:
+                    'https://drive.google.com/file/d/1CNo2fpz57D5MliyuojW_ShssQSkDmS6m/view?usp=drivesdk',
+                descriptionText:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id viverra libero. Donec ut diam ante. Mauris blandit diam id finibus venenatis. Suspendisse non rhoncus arcu. Fusce rhoncus vehicula scelerisque. Nam suscipit dapibus ante, sed volutpat mauris mollis sed. Integer dignissim volutpat tristique. Vivamus consequat justo quis nulla varius, vel posuere ante porta. Aenean non molestie metus. Mauris imperdiet, leo sed pulvinar sodales, lectus massa interdum lacus, sit amet dictum ante lectus nec dui. Sed in libero porttitor, posuere ligula et, elementum justo.'),
+            imagepath: 'assets/kashmiradisputedlegacy.jpg'
+            ),
+     ],
     );
   }
 }

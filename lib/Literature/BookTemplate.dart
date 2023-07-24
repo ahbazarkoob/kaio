@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable, use_key_in_widget_constructors, prefer_const_constructors, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:kaio/Literature/Widget_Book.dart';
 import 'package:kaio/constants.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import '../../main.dart';
@@ -14,11 +15,11 @@ btn(String text1, String text2, IconData icon) {
 }
 
 class BookTemplate extends StatelessWidget {
-  String finalPath = '',
+  String finalPath = '', //imagepath
       bookName = '',
       author = '',
       link = '',
-      descriptionText = ''; //imagepath
+      descriptionText = ''; 
   BookTemplate(
       {required this.finalPath,
       required this.bookName,
@@ -50,66 +51,66 @@ class BookTemplate extends StatelessWidget {
         body: Padding(
           padding: EdgeInsets.all(8.0),
           child: Column(children: [
-            Row(children: [
-              BookShape(name: Cook(), imagepath: finalPath),
-              SizedBox(
-                width: devW * 0.04,
-              ),
-              Column(
+            BookShape2(imagepath: finalPath),  //BookShape without Navigator
+            SizedBox(
+              width: devW * 0.04,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Text(
+                      bookName,
+                      style: kHeading,
+                    ),
+                     Text(
+                  author,
+                  style: kSelText,
+                )
+                  ],
+                ),
+                IconButton(
+                  onPressed: () async {
+                    var url = link;
+                    if (!await canLaunchUrlString(url)) {
+                      await launchUrlString(url);
+                    }
+                  },
+                  icon: Icon(
+                    Icons.arrow_drop_down_circle_outlined,
+                    color: Colors.black,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: devH * 0.01),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                btn('GENRE', 'POETRY', Icons.book_rounded),
+                btn('LENGTH', 'PAGES', Icons.four_k_outlined),
+                btn('LANG', 'KASHMIRI', Icons.language),
+              ],
+            ),
+            SizedBox(height: devH * 0.01),
+            Container(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    bookName,
+                    'Description',
                     style: kHeading,
-                  ),
-                  Text(
-                    author,
-                    style: kSelText,
                   ),
                   SizedBox(
                     height: devH * 0.01,
                   ),
-                  IconButton(
-                    onPressed: () async {
-                      var url = link;
-                      if (!await canLaunchUrlString(url)) {
-                        await launchUrlString(url);
-                      }
-                    },
-                    icon: Icon(
-                      Icons.arrow_drop_down_circle_outlined,
-                      color: Colors.black,
-                    ),
-                  ),
-                  Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Description',
-                          style: kHeading,
-                        ),
-                        SizedBox(
-                          height: devH * 0.01,
-                        ),
-                        Text(descriptionText
-                            // Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                            )
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: devH * 0.02),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      btn('GENRE', 'POETRY', Icons.book_rounded),
-                      btn('LENGTH', 'PAGES', Icons.four_k_outlined),
-                      btn('LANG', 'KASHMIRI', Icons.language),
-                    ],
-                  ),
+                  Text(descriptionText
+                      // Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                      )
                 ],
               ),
-            ])
+            ),
           ]),
         ));
   }
