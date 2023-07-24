@@ -13,7 +13,7 @@ class LiteratureSelection extends StatelessWidget {
       length: 5,
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(10.0),
           child: Column(
             children: [
               Container(

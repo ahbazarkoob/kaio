@@ -66,21 +66,15 @@ class Book extends StatelessWidget {
                           iconSize: 30,
                           onSelected: (String value) async {
                             if (value == 'Read') {
-                               var url = 'https://drive.google.com/file/d/1EaESB3vjDe6vHT5k9aw5WBvFn0nHRuce/view?usp=sharing';
-                               if (!await canLaunchUrlString(url)) {
+                              var url =
+                                  'https://drive.google.com/file/d/1EaESB3vjDe6vHT5k9aw5WBvFn0nHRuce/view?usp=sharing';
+                              if (!await canLaunchUrlString(url)) {
                                 await launchUrlString(url);
-                                } else {
-                                  throw 'Could not launch $url';
-                                  }
-                                  }
-                            else if (value == 'Download') {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Download(),
-                                ),
-                              );
-                            };
+                              } else {
+                                throw 'Could not launch $url';
+                              }
+                            } 
+                            ;
                           },
                           itemBuilder: (BuildContext context) => [
                             PopupMenuItem(
@@ -173,93 +167,5 @@ class Book extends StatelessWidget {
     return Column(
       children: [Text(text1), Icon(icon), Text(text2)],
     );
-  }
-}
-
-//  read and download  book
-
-class Read extends StatelessWidget {
-  const Read({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
-            child: GestureDetector(
-      onTap: () async {
-        //var url ='https://drive.google.com/drive/u/3/folders/1K8kVk1YNyN3fSftQAk6ydou9LvIWmI2R';
-        //var url = 'https://mega.nz/fm/FvEUkLAQ';
-        var url = 'https://blog.logrocket.com/launching-urls-flutter-url_launcher/';
-        if (await canLaunchUrlString(url)) {
-          await launchUrlString(url);
-        } else {
-          throw 'Could not launch $url';
-        }
-      },
-      child: Center(
-        child: Text(
-          "Want Read Article Tap Here",
-          style: TextStyle(
-              color: Colors.green, fontSize: 25, fontWeight: FontWeight.w400),
-        ),
-      ),
-    )));
-  }
-}
-
-// TextButton(
-//   onPressed: () async {
-//     String telephoneNumber = '+2347012345678';
-//     String telephoneUrl = "tel:$telephoneNumber";
-//     if (await canLaunch(telephoneUrl)) {
-//       await launch(telephoneUrl);
-//     } else {
-//       throw "Error occured trying to call that number.";
-//     }
-//     child: const CustomWidget(
-//       icon: Icons.call,
-//       label: 'Call a phone\nnumber',
-//     ),
-// ),
-
-//  GestureDetector(
-//             onTap: () async {
-//               const url = 'https://www.geeksforgeeks.org/';
-//               if (await canLaunch(url)) {
-//                 await launch(url, forceWebView: true, enableJavaScript: true);
-//               } else {
-//                 throw 'Could not launch $url';
-//               }
-//             },
-//             child: Center(
-//               child: Text(
-//                 "Want Read Article Tap Here",
-//                 style: TextStyle(
-//                     color: Colors.green,
-//                     fontSize: 25,
-//                     fontWeight: FontWeight.w400),
-//               ),
-
-class Download extends StatelessWidget {
-  const Download({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
-      child: Text('DOWNLOAD BOOK'),
-    ));
-  }
-}
-
-class Reload extends StatelessWidget {
-  const Reload({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
-      child: Text('Failed'),
-    ));
   }
 }

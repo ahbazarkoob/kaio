@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:kaio/Literature/BookTemplate.dart';
-import 'package:kaio/Literature/Poetry/museeki.dart';
 import 'package:kaio/constants.dart';
+import 'package:kaio/main.dart';
 import 'package:kaio/widgets/bookshape.dart';
 import '../Literature/Book.dart';
 
@@ -62,50 +62,45 @@ class _LiteraturePageState extends State<LiteraturePage> {
               style: kHeading,
             ),
             DefaultTabController(
-                      length: 5,
-                      child: Expanded(
-                        child: 
-                            Column(
-                              children: [
-                                Container(height: 45,
-                                decoration: BoxDecoration(color: Colors.grey.shade200,borderRadius: BorderRadius.circular(25.0)),
-                                  child: TabBar( indicator: BoxDecoration(
-                                                    color: Color(0xff85586F),
-                                                    borderRadius:  BorderRadius.circular(25.0)
-                                                  ) ,
-                                    tabs: [
-                                      Tab(text: 'Poetry'),
-                                      Tab(text: 'History'),
-                                       Tab(text: 'Famous Writers'),
-                                      Tab(text: 'Religion'),
-                                       Tab(text: 'Folk'),
-                                       
-                                      
-                                    ],
-                                    labelColor: Colors.black,
-                                    
-                                   
-                                  ),
-                                ),
-                                Expanded(
-                              child: TabBarView(
-                                children: [
-                                  Poetry(),
-                                  History(),
-                                  FamousWriters(),
-                                  Religion(),
-                                  History()
-                                  
-                                  
-                                ],
-                              ),
-                            ),
-                              ],
-                            ),
-                            
-                          
-                      ),
+              length: 4,
+              child: Expanded(
+                child: Column(
+                  children: [
+                    Container(
+                      height: 45,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade200,
+                      borderRadius: BorderRadius.circular(25.0)),
+                      child: TabBar( indicator: BoxDecoration(
+                        color: Color(0xff85586F),
+                        borderRadius:  BorderRadius.circular(25.0)) ,
+                      tabs: [
+                        Tab(text: 'Poetry'),
+                        Tab(text: 'Prose'),
+                        Tab(text: 'History'),
+                        Tab(text: 'New'),
+                        
+                      ],
+                      labelColor: Colors.black,
                     ),
+                    ),
+               Container(
+                height: devH*0.40,
+                width: devW*0.85,
+                 child: TabBarView(
+                    children: [
+                      Poetry(),
+                      Prose(),
+                      History(),
+                      New(),
+                     ],
+                    ),
+               ),
+              
+              ],
+              ),
+            ),
+              ),
             ],
         ),
       ),
@@ -127,7 +122,8 @@ class Poetry extends StatelessWidget {
           bookName: 'Museeki', 
           author: 'Museeki Kashmiri', 
           link: 'https://drive.google.com/file/d/1EaESB3vjDe6vHT5k9aw5WBvFn0nHRuce/view?usp=sharing', 
-          descriptionText: 'descriptionText'), imagepath: 'assets/museeki.jpg'),
+          descriptionText: 'descriptionText'), 
+        imagepath: 'assets/museeki.jpg'),
       BookShape(
             name: BookTemplate(
                 finalPath: 'assets/rasol.jpg',
@@ -203,27 +199,6 @@ class Poetry extends StatelessWidget {
   }
 }
 
-class Default extends StatelessWidget {
-  const Default({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return GridView.count(
-      crossAxisCount: 3,
-      children: [
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/rasol.jpg'),
-      ],
-    );
-  }
-}
-
 class History extends StatelessWidget {
   const History({super.key});
 
@@ -232,41 +207,135 @@ class History extends StatelessWidget {
     return GridView.count(
       crossAxisCount: 3,
       children: [
-        BookShape(name: Book(), imagepath: 'assets/kral.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/kral.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/kral.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/kral.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/kral.jpg'),
-        BookShape(name: Book(), imagepath: 'assets/kral.jpg'),
+        BookShape(name: BookTemplate(
+          author: 'Alastair Lamb', 
+          bookName: 'Kashmir- A Disputed Legacy', 
+          descriptionText: '', 
+          finalPath: 'assets/KashmirAlas.jpg', 
+          link: 'https://drive.google.com/file/d/12P49VpcwBhX0Zd2WGw3La91YMdgpJnwa/view?usp=sharing',), 
+        imagepath: 'assets/KashmirAlas.jpg'),
+        BookShape(name: BookTemplate(
+          author: 'Mridu Rai', 
+          bookName: 'Hindu Rulers, Muslim Subjects', 
+          descriptionText: '', 
+          finalPath: 'assets/HinduRulers.jpg', 
+          link: 'https://drive.google.com/file/d/1fqKP6Ngkko9KgvBXCOuGXR0gdIMQwrTZ/view?usp=sharing',), 
+        imagepath: 'assets/HinduRulers.jpg'),
+        BookShape(
+            name: BookTemplate(
+              author: 'Prem Nath Bazaz',
+              bookName: 'The History Of Struggle for Freedom in Kashmir',
+              descriptionText: '',
+              finalPath: 'assets/Struggle.jpg',
+              link: 'https://drive.google.com/file/d/1DSNEBDY3gOabEWSauYNs46NYXD7Smjhj/view?usp=sharing',
+            ),
+        imagepath: 'assets/Struggle.jpg'),
+        BookShape(
+            name: BookTemplate(
+              author: 'S.R Bakshi',
+              bookName: 'Kashmir: History and People',
+              descriptionText: '',
+              finalPath: 'assets/KashmirHistory.jpg',
+              link: 'https://drive.google.com/file/d/1L51gNjpzZfTGeowlRNO86bfpjBILL5k4/view?usp=sharing',
+            ),
+        imagepath: 'assets/KashmirHistory.jpg'),
+        BookShape(name: BookTemplate(
+          author: 'Rajataranggini(Translation)', 
+          bookName: 'Jogesh Chunder Dutt', 
+          descriptionText: '', 
+          finalPath: 'assets/Rajantarangni.jpg', 
+          link: 'https://drive.google.com/file/d/1-_LjlaMk65876p_ofw72FflpVGkirLxg/view?usp=sharing'), 
+        imagepath: 'assets/Rajantarangni.jpg'),
+        BookShape(
+            name: BookTemplate(
+              author: 'Walter R. Lawrence',
+              bookName: 'The Valley Of Kashmir',
+              descriptionText: '',
+              finalPath: 'assets/ValleyOfKashmir.jpg',
+              link: 'https://drive.google.com/file/d/1gyRXbPRPZqJ2p8raAA58H2X0Dl1HkdQg/view?usp=sharing',
+            ),
+        imagepath: 'assets/ValleyOfKashmir.jpg'),
       ],
     );
   }
 }
-
-class FamousWriters extends StatelessWidget {
-  const FamousWriters({super.key});
-
+class Prose extends StatelessWidget {
+  const Prose({super.key});
 
   @override
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 3,
       children: [
-        BookShape(name: Book() ,imagepath: 'assets/mehjoor.jpg'),
-        BookShape(name: Book() ,imagepath: 'assets/mehjoor.jpg'),
-        BookShape(name: Book() , imagepath: 'assets/mehjoor.jpg'),
-        BookShape(name: Book() ,imagepath: 'assets/mehjoor.jpg'),
-        BookShape(name: Book() , imagepath: 'assets/mehjoor.jpg'),
-        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
-        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
-        BookShape(name: Book() , imagepath: 'assets/shamas.jpg'),
+       BookShape(
+        name: BookTemplate(
+          finalPath: 'assets/RaaiTraai.jpg', 
+          bookName: 'RAAI TRAAI', 
+          author: 'Abdul Ahad Hajini', 
+          link: 'https://drive.google.com/file/d/1ajbDTWWI5JG_aev3nW4OxuV_P85bgz4t/view?usp=sharing', 
+          descriptionText: 'descriptionText'), 
+        imagepath: 'assets/RaaiTraai.jpg'),
+      BookShape(
+        name:BookTemplate(
+          finalPath: 'assets/TyothPazr.jpg', 
+          bookName: 'TIYUTH PAZAR', 
+          author: 'Abdul Ahad Hajini', 
+          link: 'https://drive.google.com/file/d/1hewjHCXvfQXcyMHUiqo_IF0ixU2gLwDd/view?usp=sharing', 
+          descriptionText: 'descriptionText') ,
+        imagepath: 'assets/TyothPazr.jpg'),
+      BookShape(
+        name: BookTemplate(
+          finalPath: 'assets/Akhyaadakhqayamat.jpg', 
+          bookName:  'AKH YAAD AKH QAYAMAT', 
+          author: 'Abdul Ahad Hajini', 
+          link: 'https://drive.google.com/file/d/1B0UfQpedtLBr-QDXKzBNUpMNevEjtcy4/view?usp=sharing', 
+          descriptionText: 'descriptionText'), 
+        imagepath: 'assets/Akhyaadakhqayamat.jpg'),
+      BookShape(
+            name: BookTemplate(
+              finalPath: 'assets/Hawas.jpg',
+              bookName: 'HAWAS',
+              author: 'Abdul Ahad Hajini',
+              link:
+                    'https://drive.google.com/file/d/15zBPvr9eZlCY5GQOviXhx78GRRbyAQzA/view?usp=sharing',
+              descriptionText: 'descriptionText'),
+            imagepath: 'assets/Hawas.jpg'),
+      BookShape(
+        name: BookTemplate(
+          finalPath: 'assets/rahman.jpg',
+          bookName: 'KHEWAT',
+          author:  'Rahman Rahi',
+          link:
+            'https://drive.google.com/file/d/1GWL9f-xYvtYrupI7C62qV-UyRsox4wEX/view?usp=sharing',
+          descriptionText: 'descriptionText'),
+        imagepath: 'assets/rahman.jpg'),
+      BookShape(
+        name: BookTemplate(
+          finalPath: 'assets/DiltiDewar.jpg',
+          bookName:  'DIL TI DEWAR',
+          author:  'Lateef Aashiq',
+          link:
+            'https://drive.google.com/file/d/1Jnub_OBe36yZCV7UxO1y6OgWHqmsIkh3/view?usp=sharing',
+          descriptionText: 'descriptionText'),
+        imagepath: 'assets/DiltiDewar.jpg'),
+      BookShape(
+        name: BookTemplate(
+          finalPath: 'assets/Yetinooresarearzwasamaa.jpg',
+          bookName: 'YATI NOOR SER ARAZ O SAMA',
+          author: 'Abdul Ahad Hajini',
+          link:
+           'https://drive.google.com/file/d/1Zhi9paW8rq16fZo4ky8jfv5pz5LD8SEg/view?usp=sharing',
+          descriptionText: 'descriptionText'),
+        imagepath: 'assets/Yetinooresarearzwasamaa.jpg'),
+
       ],
     );
   }
 }
 
-class Religion extends StatelessWidget {
-  const Religion({super.key});
+
+class New extends StatelessWidget {
+  const New({super.key});
 
   @override
   Widget build(BuildContext context) {

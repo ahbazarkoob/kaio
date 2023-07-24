@@ -1,12 +1,10 @@
-// ignore_for_file: must_be_immutable, use_key_in_widget_constructors, prefer_const_constructors, avoid_unnecessary_containers
+// ignore_for_file: must_be_immutable, use_key_in_widget_constructors, prefer_const_constructors, avoid_unnecessary_containers, file_names
 
 import 'package:flutter/material.dart';
 import 'package:kaio/Literature/Widget_Book.dart';
 import 'package:kaio/constants.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import '../../main.dart';
-import '../../widgets/bookshape.dart';
-import '../Cuisines/cook.dart';
 
 btn(String text1, String text2, IconData icon) {
   return Column(
@@ -60,14 +58,18 @@ class BookTemplate extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Text(
-                      bookName,
-                      style: kHeading,
+                    Center(
+                      child: Text(
+                        bookName, 
+                        style: kHeading, textScaleFactor: devW * 0.0013,
+                      ),
                     ),
-                     Text(
-                  author,
-                  style: kSelText,
-                )
+                     Center(
+                       child: Text(
+                          author,
+                          style: kSelText, textScaleFactor: devW * 0.003,
+                      ),
+                     )
                   ],
                 ),
                 IconButton(
@@ -106,7 +108,6 @@ class BookTemplate extends StatelessWidget {
                     height: devH * 0.01,
                   ),
                   Text(descriptionText
-                      // Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
                       )
                 ],
               ),
