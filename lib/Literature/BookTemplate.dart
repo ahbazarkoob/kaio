@@ -17,13 +17,19 @@ class BookTemplate extends StatelessWidget {
       bookName = '',
       author = '',
       link = '',
-      descriptionText = ''; 
+      descriptionText = '',
+      lang='',
+      pages='',
+      genre=''; 
   BookTemplate(
       {required this.finalPath,
       required this.bookName,
       required this.author,
       required this.link,
-      required this.descriptionText});
+      required this.descriptionText,
+      required this.genre,
+      required this.pages,
+      required this.lang});
 
   @override
   Widget build(BuildContext context) {
@@ -90,9 +96,9 @@ class BookTemplate extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                btn('GENRE', 'POETRY', Icons.book_rounded),
-                btn('LENGTH', 'PAGES', Icons.four_k_outlined),
-                btn('LANG', 'KASHMIRI', Icons.language),
+                btn('GENRE', genre, Icons.book_rounded),
+                btn('LENGTH', pages, Icons.menu_book),
+                btn('LANG', lang, Icons.language),
               ],
             ),
             SizedBox(height: devH * 0.01),

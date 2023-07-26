@@ -3,21 +3,30 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
 
-class BookShape extends StatelessWidget {
+List<Widget> myBook = [];
+
+class BookShape extends StatefulWidget {
   String imagepath = '';
   var name;
+  
   BookShape({
     required this.name,
-    required this.imagepath,
+    required this.imagepath, 
   });
 
+  @override
+  State<BookShape> createState() => _BookShapeState();
+}
+
+class _BookShapeState extends State<BookShape> {
   @override
   Widget build(BuildContext context) {
     devH = MediaQuery.of(context).size.height;
     devW = MediaQuery.of(context).size.width;
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => name));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => widget.name));
+       
       },
       child: Container(
         height: devW * 0.5,
@@ -27,7 +36,7 @@ class BookShape extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             border: Border.all(color: Colors.black, width: 3),
             image: DecorationImage(
-                image: AssetImage(imagepath), fit: BoxFit.fill)),
+                image: AssetImage(widget.imagepath), fit: BoxFit.fill)),
       ),
     );
   }
