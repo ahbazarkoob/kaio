@@ -9,11 +9,8 @@ import 'package:kaio/widgets/bookshape.dart';
 import '../Literature/Book.dart';
 
 class LiteraturePage extends StatefulWidget {
-  
-
 
   LiteraturePage({super.key});
-
   @override
   State<LiteraturePage> createState() => _LiteraturePageState();
 }
@@ -338,7 +335,7 @@ class Prose extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      crossAxisCount: 3,
+      crossAxisCount: 2,
       children: [
         BookShape(
             name: BookTemplate(
@@ -350,61 +347,62 @@ class Prose extends StatelessWidget {
                 author: 'Abdul Ahad Hajini',
                 link:
                     'https://drive.google.com/file/d/1ajbDTWWI5JG_aev3nW4OxuV_P85bgz4t/view?usp=sharing',
-                descriptionText: 'descriptionText'),
+                descriptionText: 'The highly acclaimed critic, translator, essayist , prose writer , columnist and much more , Abdul Ahad Hajini is considered to be one of the best Kashmiri writer not only in the state of Jammu & Kashmir but all over the India as well. Ahad Saab has left no stone unturned to modify and reshape the Kashmiri Language and Literature .“Raai Traai” ( criticism 2016) is one of his fine works.'),
             imagepath: 'assets/RaaiTraai.jpg'),
         BookShape(
             name: BookTemplate(
                genre: 'PROSE',
                 lang: 'KASHMIRI',
-                pages: '200',
+                pages: '124',
                 finalPath: 'assets/TyothPazr.jpg',
                 bookName: 'TIYUTH PAZAR',
                 author: 'Abdul Ahad Hajini',
                 link:
                     'https://drive.google.com/file/d/1hewjHCXvfQXcyMHUiqo_IF0ixU2gLwDd/view?usp=sharing',
-                descriptionText: 'descriptionText'),
+                descriptionText: 'The highly acclaimed critic, translator, essayist , prose writer , columnist and much more , Abdul Ahad Hajini is considered to be one of the best Kashmiri writer not only in the state of Jammu & Kashmir but all over the India as well. Ahad Saab has left no stone unturned to modify and reshape the Kashmiri Language and Literature .In 2013 Hajini was awarded the Sahitya Academy Translator award for his book “TEUTH PAZAR”. The book is a translation in Kashmiri of short stories of various Indian regional languages including Assamese, Kannada, Telugu and Dogri. '),
             imagepath: 'assets/TyothPazr.jpg'),
         BookShape(
             name: BookTemplate(
                genre: 'PROSE',
                 lang: 'KASHMIRI',
-                pages: '200',
+                pages: '175',
                 finalPath: 'assets/Akhyaadakhqayamat.jpg',
                 bookName: 'AKH YAAD AKH QAYAMAT',
                 author: 'Abdul Ahad Hajini',
                 link:
                     'https://drive.google.com/file/d/1B0UfQpedtLBr-QDXKzBNUpMNevEjtcy4/view?usp=sharing',
-                descriptionText: 'descriptionText'),
+                descriptionText:
+                    'The highly acclaimed critic, translator, essayist , prose writer , columnist and much more , Abdul Ahad Hajini is considered to be one of the best Kashmiri writer not only in the state of Jammu & Kashmir but all over the India as well. Ahad Saab has left no stone unturned to modify and reshape the Kashmiri Language and Literature . His award-winning book “AKH YAAD AKH QAYAMAT” is a collection of Kashmiri short stories embedded in the Kashmiri spirit and atmosphere. The stories reflect the social environment of Kashmir and revolve around human relationships and principles.'),
             imagepath: 'assets/Akhyaadakhqayamat.jpg'),
         BookShape(
             name: BookTemplate(
                genre: 'PROSE',
                 lang: 'KASHMIRI',
-                pages: '200',
+                pages: '103',
                 finalPath: 'assets/Hawas.jpg',
                 bookName: 'HAWAS',
                 author: 'Abdul Ahad Hajini',
                 link:
                     'https://drive.google.com/file/d/15zBPvr9eZlCY5GQOviXhx78GRRbyAQzA/view?usp=sharing',
-                descriptionText: 'descriptionText'),
+                descriptionText:  'The highly acclaimed critic, translator, essayist , prose writer , columnist and much more , Abdul Ahad Hajini is considered to be one of the best Kashmiri writer not only in the state of Jammu & Kashmir but all over the India as well. Ahad Saab has left no stone unturned to modify and reshape the Kashmiri Language and Literature . In his collection of essays titled “HAWAS”, Hajini has been able to inspire his readers not only aesthetically, spiritually and morally but intellectually as well.'),
             imagepath: 'assets/Hawas.jpg'),
         BookShape(
             name: BookTemplate(
                genre: 'PROSE',
                 lang: 'KASHMIRI',
-                pages: '200',
+                pages: '313',
                 finalPath: 'assets/rahman.jpg',
                 bookName: 'KHEWAT',
                 author: 'Rahman Rahi',
                 link:
                     'https://drive.google.com/file/d/1GWL9f-xYvtYrupI7C62qV-UyRsox4wEX/view?usp=sharing',
-                descriptionText: 'descriptionText'),
+                descriptionText:  'Abdur Rehman Rahi (Kashmiri: رَحمان راہی; 6 May 1925 to 9 January 2023) was an Kashmiri poet, translator and critic. He was awarded the Indian Sahitya Akademi Award in 1961 for his poetry collection Nawroz-i-Saba, the Padma Shri in 2000, and India\'s highest literary award, the Jnanpith Award (for the year 2004) in 2007. He is the first Kashmiri writer to be awarded the Jnanpith, India\'s highest literary award for his poetic collection Siyah Rood Jaeren Manz (In Black Drizzle). He was honoured with Sahitya Akademi Fellowship in 2000 by Sahitya Akademi, New Delhi. Kehwat is also one of his famous works.'),
             imagepath: 'assets/rahman.jpg'),
         BookShape(
             name: BookTemplate(
                genre: 'PROSE',
                 lang: 'KASHMIRI',
-                pages: '200',
+                pages: '107',
                 finalPath: 'assets/DiltiDewar.jpg',
                 bookName: 'DIL TI DEWAR',
                 author: 'Lateef Aashiq',
@@ -416,13 +414,13 @@ class Prose extends StatelessWidget {
             name: BookTemplate(
                genre: 'PROSE',
                 lang: 'KASHMIRI',
-                pages: '200',
+                pages: '290',
                 finalPath: 'assets/Yetinooresarearzwasamaa.jpg',
                 bookName: 'YATI NOOR SER ARAZ O SAMA',
                 author: 'Abdul Ahad Hajini',
                 link:
                     'https://drive.google.com/file/d/1Zhi9paW8rq16fZo4ky8jfv5pz5LD8SEg/view?usp=sharing',
-                descriptionText: 'descriptionText'),
+                descriptionText:   'The highly acclaimed critic, translator, essayist , prose writer , columnist and much more , Abdul Ahad Hajini is considered to be one of the best Kashmiri writer not only in the state of Jammu & Kashmir but all over the India as well. Ahad Saab has left no stone unturned to modify and reshape the Kashmiri Language and Literature . He shows this spirit in his famous travelogue \'Pilgrimage to Mecca\', (YAETI NOOR SIER ARZO SAMA).'),
             imagepath: 'assets/Yetinooresarearzwasamaa.jpg'),
       ],
     );
@@ -435,59 +433,59 @@ class New extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      crossAxisCount: 3,
+      crossAxisCount: 2,
       children: [
         BookShape(
             name: BookTemplate(
-               genre: 'New Books',
+               genre: 'FICTION',
                 lang: 'ENGLISH',
-                pages: '200',
+                pages: '285',
                 finalPath: 'assets/thecollaborator.jpg',
                 bookName: 'THE COLLABORATOR',
                 author: 'Mirza Waheed',
                 link:
                     'https://drive.google.com/file/d/1HiGfnZE7ruFbMx653-FdsO5JCFsQJRw7/view?usp=drivesdk',
                 descriptionText:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id viverra libero. Donec ut diam ante. Mauris blandit diam id finibus venenatis. Suspendisse non rhoncus arcu. Fusce rhoncus vehicula scelerisque. Nam suscipit dapibus ante, sed volutpat mauris mollis sed. Integer dignissim volutpat tristique. Vivamus consequat justo quis nulla varius, vel posuere ante porta. Aenean non molestie metus. Mauris imperdiet, leo sed pulvinar sodales, lectus massa interdum lacus, sit amet dictum ante lectus nec dui. Sed in libero porttitor, posuere ligula et, elementum justo.'),
+                      'The Collaborator is the 2011 debut novel by Mirza Waheed. The novel is set on the Indian side of the Line of Control that separates Indian Kashmir from Pakistani Kashmir. The first-person narrator is a young man who ends up working for the Indian Army, counting the number of dead militants, killed in encounters, with the Indian army.'),
             imagepath: 'assets/thecollaborator.jpg'),
         BookShape(
             name: BookTemplate(
-               genre: 'New Books',
+               genre: 'MEMOIR',
                 lang: 'ENGLISH',
-                pages: '200',
+                pages: '258',
                 finalPath: 'assets/curfewednight.jpg',
                 bookName: 'CURFEWED NIGHT',
                 author: 'Basharat Peer',
                 link:
                     'https://drive.google.com/file/d/1WrH65LWqxfbvL2-aqQRM1pR09XjJHpQR/view?usp=drivesdk',
                 descriptionText:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id viverra libero. Donec ut diam ante. Mauris blandit diam id finibus venenatis. Suspendisse non rhoncus arcu. Fusce rhoncus vehicula scelerisque. Nam suscipit dapibus ante, sed volutpat mauris mollis sed. Integer dignissim volutpat tristique. Vivamus consequat justo quis nulla varius, vel posuere ante porta. Aenean non molestie metus. Mauris imperdiet, leo sed pulvinar sodales, lectus massa interdum lacus, sit amet dictum ante lectus nec dui. Sed in libero porttitor, posuere ligula et, elementum justo.'),
+                  'Curfewed Night: A Frontline Memoir of Life, Love and War in Kashmir is a memoir on the Kashmir conflict between India and Pakistan, written by Indian American journalist Basharat Peer. It primarily focuses on the impact of the ongoing anti-India insurgency in Jammu and Kashmir.'),
             imagepath: 'assets/curfewednight.jpg'),
         BookShape(
             name: BookTemplate(
-               genre: 'New Books',
+               genre: 'BIOGRAPHY',
                 lang: 'ENGLISH',
                 pages: '200',
                 finalPath: 'assets/ourmoonhasbloodclots.jpg',
                 bookName: 'OUR MOON HAS BLOOD CLOTS',
                 author: 'Rahul Pandita',
                 link:
-                    'https://drive.google.com/file/d/1HiGfnZE7ruFbMx653-FdsO5JCFsQJRw7/view?usp=drivesdk',
+                    'https://drive.google.com/file/d/1Zn4Ld1s0Gm8uJxQ2N7asYP7n0SRwqxRk/view?usp=drivesdk',
                 descriptionText:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id viverra libero. Donec ut diam ante. Mauris blandit diam id finibus venenatis. Suspendisse non rhoncus arcu. Fusce rhoncus vehicula scelerisque. Nam suscipit dapibus ante, sed volutpat mauris mollis sed. Integer dignissim volutpat tristique. Vivamus consequat justo quis nulla varius, vel posuere ante porta. Aenean non molestie metus. Mauris imperdiet, leo sed pulvinar sodales, lectus massa interdum lacus, sit amet dictum ante lectus nec dui. Sed in libero porttitor, posuere ligula et, elementum justo.'),
+                   '' ),
             imagepath: 'assets/ourmoonhasbloodclots.jpg'),
         BookShape(
             name: BookTemplate(
-               genre: 'New Books',
+               genre: 'HISTORY',
                 lang: 'ENGLISH',
-                pages: '200',
+                pages: '382',
                 finalPath: 'assets/kashmiradisputedlegacy.jpg',
                 bookName: 'KASHMIR A DISPUTED LEGACY',
                 author: 'Alstair Lamb',
                 link:
                     'https://drive.google.com/file/d/1CNo2fpz57D5MliyuojW_ShssQSkDmS6m/view?usp=drivesdk',
                 descriptionText:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id viverra libero. Donec ut diam ante. Mauris blandit diam id finibus venenatis. Suspendisse non rhoncus arcu. Fusce rhoncus vehicula scelerisque. Nam suscipit dapibus ante, sed volutpat mauris mollis sed. Integer dignissim volutpat tristique. Vivamus consequat justo quis nulla varius, vel posuere ante porta. Aenean non molestie metus. Mauris imperdiet, leo sed pulvinar sodales, lectus massa interdum lacus, sit amet dictum ante lectus nec dui. Sed in libero porttitor, posuere ligula et, elementum justo.'),
+                     'The author provides a detailed account of the history of the Northern Frontier in the final years of the British Raj, and shows how this may well have set the scene for the British policy towards the State of Jammu and Kashmir.'),
             imagepath: 'assets/kashmiradisputedlegacy.jpg'),
       ],
     );
