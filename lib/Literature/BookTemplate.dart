@@ -52,73 +52,78 @@ class BookTemplate extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
-        body: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Column(children: [
-            BookShape2(imagepath: finalPath),  //BookShape without Navigator
-            SizedBox(
-              width: devW * 0.04,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  children: [
-                    Center(
-                      child: Text(
-                        bookName, 
-                        style: kHeading, textScaleFactor: devW * 0.0013,
-                      ),
-                    ),
-                     Center(
-                       child: Text(
-                          author,
-                          style: kSelText, textScaleFactor: devW * 0.003,
-                      ),
-                     )
-                  ],
-                ),
-                IconButton(
-                  onPressed: () async {
-                    var url = link;
-                    if (!await canLaunchUrlString(url)) {
-                      await launchUrlString(url);
-                    }
-                  },
-                  icon: Icon(
-                    Icons.arrow_drop_down_circle_outlined,
-                    color: Colors.black,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: devH * 0.01),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                btn('GENRE', genre, Icons.book_rounded),
-                btn('LENGTH', pages, Icons.menu_book),
-                btn('LANG', lang, Icons.language),
-              ],
-            ),
-            SizedBox(height: devH * 0.01),
-            Container(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Column(children: [
+              BookShape2(imagepath: finalPath),  //BookShape without Navigator
+              SizedBox(
+                width: devW * 0.04,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    'Description',
-                    style: kHeading,
+                  Column(
+                    children: [
+                      Center(
+                        child: Text(
+                          bookName, 
+                          style: kHeading, textScaleFactor: devW * 0.0013,
+                        ),
+                      ),
+                       Center(
+                         child: Text(
+                            author,
+                            style: kSelText, textScaleFactor: devW * 0.003,
+                        ),
+                       )
+                    ],
                   ),
-                  SizedBox(
-                    height: devH * 0.01,
+                  IconButton(
+                    onPressed: () async {
+                      var url = link;
+                      if (!await canLaunchUrlString(url)) {
+                        await launchUrlString(url);
+                      }
+                    },
+                    icon: Icon(
+                      Icons.arrow_drop_down_circle_outlined,
+                      color: Colors.black,
+                    ),
                   ),
-                  Text(descriptionText
-                      )
                 ],
               ),
-            ),
-          ]),
+              SizedBox(height: devH * 0.01),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  btn('GENRE', genre, Icons.book_rounded),
+                  btn('LENGTH', pages, Icons.menu_book),
+                  btn('LANG', lang, Icons.language),
+                ],
+              ),
+              SizedBox(height: devH * 0.01),
+              Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Description',
+                      style: kHeading,
+                    ),
+                    SizedBox(
+                      height: devH * 0.01,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(devW*0.01),
+                      child: Text(descriptionText
+                          ),
+                    )
+                  ],
+                ),
+              ),
+            ]),
+          ),
         ));
   }
 }
