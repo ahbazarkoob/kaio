@@ -1,12 +1,10 @@
-// ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names, sized_box_for_whitespace, prefer_typing_uninitialized_variables
+// ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names, sized_box_for_whitespace, prefer_typing_uninitialized_variables, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:kaio/constants.dart';
 import 'package:kaio/Cuisines/recipe.dart';
 import 'package:kaio/widgets/Recipe.dart';
-
-
 
 // ignore: must_be_immutable
 class Cuisine extends StatefulWidget {
@@ -17,10 +15,8 @@ class Cuisine extends StatefulWidget {
 }
 
 class _CuisineState extends State<Cuisine> {
-  
   @override
   Widget build(BuildContext context) {
-    
     return SafeArea(
         child: Scaffold(
       body: Column(
@@ -69,39 +65,41 @@ class _CuisineState extends State<Cuisine> {
             child: Expanded(
               child: Column(
                 children: [
-                  Container(height: 45,
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.circular(25.0)),
-                  child: TabBar( 
-                    isScrollable: true,
-                    indicator: BoxDecoration(
-                    color: Color(0xff85586F),
-                    borderRadius:  BorderRadius.circular(25.0)
-                  ) ,
-                tabs: [
-                  Tab(text: 'Beverages'),
-                  Tab(text: 'HomeMade'),
-                  Tab(text: 'Wazwan'),
-                  Tab(text: 'Deserts'),
-                  Tab(text: 'Others'),
-                ],
-                labelColor: Colors.black,
-            ),),
-             Expanded(
-              child: TabBarView(
-                children: [
-                  Beverages(),
-                  HomeMade(),
-                  Wazwan(),
-                  Deserts(),
-                  Others()
+                  Container(
+                    height: 45,
+                    decoration: BoxDecoration(
+                        color: Colors.grey.shade200,
+                        borderRadius: BorderRadius.circular(25.0)),
+                    child: TabBar(
+                      isScrollable: true,
+                      indicator: BoxDecoration(
+                          color: Color(0xff85586F),
+                          borderRadius: BorderRadius.circular(25.0)),
+                      tabs: [
+                        Tab(text: 'Beverages'),
+                        Tab(text: 'HomeMade'),
+                        Tab(text: 'Wazwan'),
+                        Tab(text: 'Deserts'),
+                        Tab(text: 'Others'),
+                      ],
+                      labelColor: Colors.black,
+                    ),
+                  ),
+                  Expanded(
+                    child: TabBarView(
+                      children: [
+                        Beverages(),
+                        HomeMade(),
+                        Wazwan(),
+                        Deserts(),
+                        Others()
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
-          ],),
-                    ),
-      ),
+          ),
         ],
       ),
     ));
@@ -117,7 +115,10 @@ class Beverages extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('Bev',style: kHeading,),
+          Text(
+            'Bev',
+            style: kHeading,
+          ),
           // RecipeImage(name: Recipe(),),
           // RecipeImage(name: Recipe(),),
           // RecipeImage(name: Recipe(),),
@@ -126,26 +127,6 @@ class Beverages extends StatelessWidget {
     );
   }
 }
-
-class Default extends StatelessWidget {
-  const Default({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Column(
-        children: [
-          Text('Default',style: kHeading,),
-          // RecipeImage(name: Recipe(),),
-          // RecipeImage(name: Recipe(),),
-          // RecipeImage(name: Recipe(),),
-        ],
-      ),
-    );
-  }
-}
-
 
 class HomeMade extends StatelessWidget {
   const HomeMade({super.key});
@@ -156,10 +137,58 @@ class HomeMade extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('HomeMade',style: kHeading,),
-          // RecipeImage(name: Recipe(),),
-          // RecipeImage(name: Recipe(),),
-          // RecipeImage(name: Recipe(),),
+          Text(
+            'HomeMade',
+            style: kHeading,
+          ),
+          RecipeImage(
+            name: Recipe(
+              buttonTexts: ['Kashmiri Rajma','Onion','Tomato','Tomato Puree','Ginger Garlic Paste','Asafoetida/Hing','Dry Ginger Powder','Cumin'],
+              itemCount: 8,
+            ),
+          ),
+          RecipeImage(
+            name: Recipe(
+              buttonTexts: ['Bottle Gourd','Oil','Yogurt','Cloves','Black Cardamom','Cinnamon Stick','Fennel Powder','Ginger Powder','Cumin Seeds','Salt','Shahi Jeera'],
+              itemCount: 11,
+            ),
+          ),
+          RecipeImage(
+            name: Recipe(
+              buttonTexts: ['Paneer','Mustard Oil','Cloves','Cardamoms','Cumin Seeds','Cinnamon Sticks','Red Chilli Powder','Cardamoms','Bay Leaves','Salt','Ground Ginger','Coriander Powder'],
+              itemCount: 12,
+            ),
+          ),
+          RecipeImage(
+              name: Recipe(
+            buttonTexts: ['Baby Potatoes','Yogurt','Maida','Oil','Cloves','Dry Red Chillies','Black Cardamoms', 'Black Peppercorn','Kashmiri Red Chilli Powder','Turmeric Powder','Dry Ginger Powder', 'Cumin Powder','Fennel Powder','Garam Masala',],
+            itemCount: 14,
+          )),
+          RecipeImage(
+              name: Recipe(
+            buttonTexts: ['Whole Spinach','Kashmiri Chillies','Mustard Oil','Cardamom','Garlic','Salt'],
+            itemCount: 6,
+          )),
+          RecipeImage(
+              name: Recipe(
+            buttonTexts: ['Brinjals','Onion','Tomato','Lime','Mustard Oil','Cinnamon Stick','Cumin Seeds','Cardamom','Kashmiri Red Chilli','Asafoetida','Turmeric Powder','Coriander Powder','Salt','Dry Ginger Powder','Fennel Seeds','Corainder Leaves'],
+            itemCount: 16,
+          )),
+          RecipeImage(
+              name: Recipe(
+            buttonTexts: ['Fish Fillets','Radish','Red Chilli Powder','Asafoetida/Hing','Oil','Green Chillies','Black Cardamom','Cloves','Turmeric Powder','Dry Ginger Powder','Veer','Aniseed/Saunf','Salt','Tamarind Pulp'],
+            itemCount: 14,
+          )),
+          RecipeImage(
+              name: Recipe(
+            buttonTexts: ['Brinjal','Mustard Oil','Curd','Dry Ginger Powder','Kashmiri Red Chilli Powder','Turmeric Powder','Fennel Seeds','Cardamom','Asafoetida/Hing','Salt'],
+            itemCount: 10,
+          )),
+          RecipeImage(
+              name: Recipe(
+            buttonTexts: ['Mutton Chopped','Curd','Cardamoms','Cloves','Cinnamom Sticks','Dry Ginger Powder','Mint Leaves','Salt'],
+            itemCount: 8,
+          )),
         ],
       ),
     );
@@ -175,7 +204,10 @@ class Wazwan extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('Wazwan',style: kHeading,),
+          Text(
+            'Wazwan',
+            style: kHeading,
+          ),
           // RecipeImage(name: Recipe(),),
           // RecipeImage(name: Recipe(),),
           // RecipeImage(name: Recipe(),),
@@ -194,7 +226,10 @@ class Deserts extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('Deserts',style: kHeading,),
+          Text(
+            'Deserts',
+            style: kHeading,
+          ),
           // RecipeImage(name: Recipe(),),
           // RecipeImage(name: Recipe(),),
           // RecipeImage(name: Recipe(),),
@@ -213,7 +248,10 @@ class Others extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('Others',style: kHeading,),
+          Text(
+            'Others',
+            style: kHeading,
+          ),
           // RecipeImage(name: Recipe(),),
           // RecipeImage(name: Recipe(),),
           // RecipeImage(name: Recipe(),),
