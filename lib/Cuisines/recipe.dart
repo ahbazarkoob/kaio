@@ -6,9 +6,10 @@ import 'cook.dart';
 import '../main.dart';
 
 class Recipe extends StatelessWidget {
+  String RecipeName;
   int itemCount;
   List buttonTexts = [];
-  Recipe({required this.itemCount, required this.buttonTexts});
+  Recipe({required this.RecipeName,required this.itemCount, required this.buttonTexts});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +41,7 @@ class Recipe extends StatelessWidget {
                         radius: devW * 0.3,
                       ),
                       Text(
-                        'KASHMIRI KEHWA',
+                        RecipeName,
                         style: kHeading,
                       ),
                       Text(
