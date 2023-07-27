@@ -104,20 +104,23 @@ class Recipe extends StatelessWidget {
                         SizedBox(
                           height: devH * 0.02,
                         ),
-                        SizedBox(
-                          height: devH * 0.07,
-                          width: devW,
-                          child: FilledButton(
-                            onPressed: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (_) => Cook()));
-                            },
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
-                                  Color(0xff85586F)), // Change the color here
-                            ),
-                            child: Text(
-                              "Let's cook this recipie",
+                        Align(
+                          alignment: Alignment.bottomCenter,
+                          child: SizedBox(
+                            height: devH * 0.07,
+                            width: devW,
+                            child: FilledButton(
+                              onPressed: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (_) => Cook()));
+                              },
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color(0xff85586F)), // Change the color here
+                              ),
+                              child: Text(
+                                "Let's cook this recipie",
+                              ),
                             ),
                           ),
                         )

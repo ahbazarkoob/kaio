@@ -125,7 +125,7 @@ class Beverages extends StatelessWidget {
               imagePath: 'assets/kehwa.jpg',
               RecipeName: 'KASHMIRI KEHWA',
               RecipeDescription:
-                  'The Kashmiri Kahwa is an exotic mix of Kashmiri green tea leaves, whole spices, nuts and saffron traditionally prepared in a brass kettle known as a samovar. The samovar has a central cavity to place the hot coal while boiling water and other tea ingredients is added in the surrounding space. There are different types of Kahwa tea with different combinations and distinct flavour and aroma.',
+                  'The Kashmiri Kahwa is an exotic mix of Kashmiri green tea leaves, whole spices, nuts and saffron traditionally prepared in a brass kettle known as a samovar.',
               buttonTexts: ['Water','Cardamom','Cinnamon','Saffron','Sugar','Kashmiri tea leaves','Chopped Almonds'],
               itemCount: 7,
             ), recipeName: 'KASHMIRI KEHWA: The Aromatic Elixir',
@@ -135,7 +135,7 @@ class Beverages extends StatelessWidget {
               Category: 'BEVERAGES',
               imagePath: 'assets/kehwa.jpg',
               RecipeName: 'KASHMIRI NOON CHAI: The Pink Elixir',
-              RecipeDescription: 'Kashmiris are known to be the connoisseurs of tea and the pink-coloured noon chai or sheer chai is one of their traditional beverages. The chai is prepared with gunpowder tea (green tea leaves rolled into small balls), sea salt, milk and baking soda. Noon chai is a morning drink for the Kashmiris, and they also like to sip it during the working hours. ',
+              RecipeDescription: 'Kashmiris are known to be the connoisseurs of tea and the pink-coloured noon chai or sheer chai is one of their traditional beverages.',
               buttonTexts: ['Water','Milk','Kashmiri tea leaves','Salt','Baking Soda'],
               itemCount: 5,
             ), recipeName: 'KASHMIRI NOON CHAI',
@@ -145,7 +145,7 @@ class Beverages extends StatelessWidget {
                Category: 'BEVERAGES',
               imagePath: 'assets/kehwa.jpg',
               RecipeName: 'KASHMIRI BABRIBYOL SHARBAT',
-              RecipeDescription: 'Babribyol is a ubiquitous drink in Kashmir during the holy month of Ramadhan. The drink enhances the beauty of iftaar. Prepared with basil seeds, raisins and cardamom, the drink has many health benefits. It helps reduce inflammation, high cholesterol and improve heart health. ',
+              RecipeDescription: 'Babribyol is a ubiquitous drink in Kashmir during the holy month of Ramadhan.',
               buttonTexts: ['Water','Milk','Basil seeds','Saffron','Cardamom','Sugar','Dry Fruits'],
               itemCount: 7,
             ), recipeName: 'BABRIBYOL SHARBAT',
@@ -210,7 +210,7 @@ class HomeMade extends StatelessWidget {
           ),
           RecipeImage(
             name: Recipe(
-              Category: 'BEVERAGES',
+              Category: 'HOME MADE',
               imagePath: 'assets/kehwa.jpg',
               RecipeName:'Kashmiri Rajma' ,
               RecipeDescription: 'A lip-smacking dish flavoured by tomato puree slow-cooked in a loch full of tasty Indian spice, the Rajma Kashmiri is a much-loved curry. ',
@@ -220,7 +220,7 @@ class HomeMade extends StatelessWidget {
           ),
           RecipeImage(
             name: Recipe(
-              Category: 'BEVERAGES',
+              Category: 'HOME MADE',
               imagePath: 'assets/kehwa.jpg',
               RecipeName: 'Kashmiri Al Yakni',
               RecipeDescription: 'Kashmiri Al Yakhni is a popular recipe that is prepared in Kashmiri households for their everyday meals. Here, Al means “lauki” and yakhni means “yogurt based gravy”.',
@@ -231,7 +231,7 @@ class HomeMade extends StatelessWidget {
           ),
           RecipeImage(
             name: Recipe(
-              Category: 'BEVERAGES',
+              Category: 'HOME MADE',
               imagePath: 'assets/kehwa.jpg',
               RecipeName: 'Kashmiri Laal Paneer',
               RecipeDescription: 'Kashmiri Laal Paneer (also called laal chaman) is a super delicious and quick paneer dish. As the name suggests, this curry is fiery red, and the appealing red color comes with the use of Kashmiri red chili powder.',
@@ -242,7 +242,7 @@ class HomeMade extends StatelessWidget {
           ),
           RecipeImage(
               name: Recipe(
-                Category: 'BEVERAGES',
+                Category: 'HOME MADE',
                 imagePath: 'assets/kehwa.jpg',
                 RecipeName: 'Kashmir Dum Aloo',
                 RecipeDescription: 'A traditional Kashmiri potato recipe where baby potatoes are boiled, fried, and then added to a spicy and rich yogurt-based gravy. This curry is subtly flavored with dry ginger powder which gives it a very distinct taste',
