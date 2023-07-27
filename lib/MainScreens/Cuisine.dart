@@ -7,32 +7,9 @@ import 'package:kaio/Cuisines/recipe.dart';
 import 'package:kaio/widgets/Recipe.dart';
 
 
-bool showDefault = true,
-    showBev = false,
-    showHomeM = false,
-    showWazwan = false,
-    showDeserts = false,
-    showOther = false;
 
 // ignore: must_be_immutable
 class Cuisine extends StatefulWidget {
-  var i;
-  void Selection() {
-    if (showBev == true) {
-      i = Beverages();
-    } else if (showHomeM == true) {
-      i = HomeMade();
-    } else if (showWazwan == true) {
-      i = Wazwan();
-    } else if (showDeserts == true) {
-      i = Deserts();
-    } else if (showOther == true) {
-      i = Others();
-    } else {
-      i = Default();
-    }
-  }
-
   Cuisine({super.key});
 
   @override
@@ -40,8 +17,7 @@ class Cuisine extends StatefulWidget {
 }
 
 class _CuisineState extends State<Cuisine> {
- 
-
+  
   @override
   Widget build(BuildContext context) {
     
@@ -97,7 +73,9 @@ class _CuisineState extends State<Cuisine> {
                   decoration: BoxDecoration(
                     color: Colors.grey.shade200,
                     borderRadius: BorderRadius.circular(25.0)),
-                  child: TabBar( indicator: BoxDecoration(
+                  child: TabBar( 
+                    isScrollable: true,
+                    indicator: BoxDecoration(
                     color: Color(0xff85586F),
                     borderRadius:  BorderRadius.circular(25.0)
                   ) ,

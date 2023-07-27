@@ -19,7 +19,7 @@ class _RecipeImageState extends State<RecipeImage> {
         onTap: () {
           print('Hey');
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => widget.name));
+              context, MaterialPageRoute(builder: (context) => widget.name));//widget.name navigates to Recipe
         },
         child: Card(
           child: Container(

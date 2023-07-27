@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, use_key_in_widget_constructors, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:kaio/constants.dart';
@@ -6,7 +6,9 @@ import 'cook.dart';
 import '../main.dart';
 
 class Recipe extends StatelessWidget {
-  const Recipe({super.key});
+  int itemCount;
+  List buttonTexts = [];
+  Recipe({required this.itemCount, required this.buttonTexts});
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +18,12 @@ class Recipe extends StatelessWidget {
         backgroundColor: Colors.grey.shade400,
         appBar: AppBar(
           leading: IconButton(
-            onPressed: (){
-              Navigator.pop(context);},
-              icon: Icon(Icons.arrow_back_sharp),
-              color: Color(0xff85586F),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back_sharp),
+            color: Color(0xff85586F),
           ),
-          
           title: const Text('BEVERAGES', style: kHeading),
           centerTitle: true,
           backgroundColor: Colors.transparent,
@@ -57,23 +59,14 @@ class Recipe extends StatelessWidget {
                         width: devW,
                         height: devH * 0.3,
                         child: GridView.builder(
-                          itemCount: 7,
+                          itemCount: itemCount,
                           gridDelegate:
                               SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 3,
                             childAspectRatio: 2,
                           ),
                           itemBuilder: (context, index) {
-                            List buttonTexts = [
-                              'Water',
-                              'Cardamom',
-                              'Cinnamon',
-                              'Saffron',
-                              'Sugar',
-                              'Kashmiri tea leaves',
-                              'Chopped Almonds',
-                            ];
-
+                            buttonTexts;
                             return Padding(
                               padding: EdgeInsets.symmetric(
                                   horizontal: 5, vertical: 5),
