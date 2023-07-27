@@ -89,18 +89,16 @@ class _LiteraturePageState extends State<LiteraturePage> {
                         labelColor: Colors.black,
                       ),
                     ),
-                    Container(
-                      height: devH*0.5,
-                      width: devW * 0.85,
-                      child: TabBarView(
-                        children: [
-                          Poetry(),
-                          Prose(),
-                          History(),
-                          New(),
-                        ],
+                      Expanded(
+                        child: TabBarView(
+                          children: [
+                            Poetry(),
+                            Prose(),
+                            History(),
+                            New(),
+                          ],
+                        ),
                       ),
-                    ),
                   ],
                 ),
               ),
