@@ -144,6 +144,7 @@ class HomeMade extends StatelessWidget {
           RecipeImage(
             name: Recipe(
               RecipeName:'Kashmiri Rajma' ,
+              description: 'A lip-smacking dish flavoured by tomato puree slow-cooked in a loch full of tasty Indian spice, the Rajma Kashmiri is a much-loved curry. ',
               buttonTexts: ['Kashmiri Rajma','Onion','Tomato','Tomato Puree','Ginger Garlic Paste','Asafoetida/Hing','Dry Ginger Powder','Cumin'],
               itemCount: 8,
             ),
@@ -151,13 +152,15 @@ class HomeMade extends StatelessWidget {
           RecipeImage(
             name: Recipe(
               RecipeName: 'Kashmiri Al Yakni',
-              buttonTexts: ['Bottle Gourd','Oil','Yogurt','Cloves','Black Cardamom','Cinnamon Stick','Fennel Powder','Ginger Powder','Cumin Seeds','Salt','Shahi Jeera'],
+              description: 'Kashmiri Al Yakhni is a popular recipe that is prepared in Kashmiri households for their everyday meals. Here, Al means “lauki” and yakhni means “yogurt based gravy”.',
+              buttonTexts: ['Bottle Gourd','Oil','Yogurt','Cloves','Cardamom','Cinnamon','Fennel Powder','Ginger Powder','Cumin Seeds','Salt','Shahi Jeera'],
               itemCount: 11,
             ),
           ),
           RecipeImage(
             name: Recipe(
               RecipeName: 'Kashmiri Laal Paneer',
+              description: 'Kashmiri Laal Paneer (also called laal chaman) is a super delicious and quick paneer dish. As the name suggests, this curry is fiery red, and the appealing red color comes with the use of Kashmiri red chili powder.',
               buttonTexts: ['Paneer','Mustard Oil','Cloves','Cardamoms','Cumin Seeds','Cinnamon Sticks','Red Chilli Powder','Cardamoms','Bay Leaves','Salt','Ground Ginger','Coriander Powder'],
               itemCount: 12,
             ),
@@ -165,36 +168,42 @@ class HomeMade extends StatelessWidget {
           RecipeImage(
               name: Recipe(
                 RecipeName: 'Kashmir Dum Aloo',
+                description: 'A traditional Kashmiri potato recipe where baby potatoes are boiled, fried, and then added to a spicy and rich yogurt-based gravy. This curry is subtly flavored with dry ginger powder which gives it a very distinct taste',
             buttonTexts: ['Baby Potatoes','Yogurt','Maida','Oil','Cloves','Dry Red Chillies','Black Cardamoms', 'Black Peppercorn','Kashmiri Red Chilli Powder','Turmeric Powder','Dry Ginger Powder', 'Cumin Powder','Fennel Powder','Garam Masala',],
             itemCount: 14,
           )),
           RecipeImage(
               name: Recipe(
                 RecipeName: 'Kashmiri Saag',
+                description: 'The quintessential winter recipe! All you need is 6 ingredients and 20 minutes to cook up this warm, dish on a chilly winter night. Cooked in mustard oil, kashmiri saag can be paired with makki ki roti.',
             buttonTexts: ['Whole Spinach','Kashmiri Chillies','Mustard Oil','Cardamom','Garlic','Salt'],
             itemCount: 6,
           )),
           RecipeImage(
               name: Recipe(
                 RecipeName: 'Kashmiri Cxoch Wagan',
+                description: 'This is usually served as a side dish in Kashmiri feasts and ceremonies for it\'s pop flavours. It\'s essentially golden fried aubergines laced in a thick, spicy and zingy gravy.',
             buttonTexts: ['Brinjals','Onion','Tomato','Lime','Mustard Oil','Cinnamon Stick','Cumin Seeds','Cardamom','Kashmiri Red Chilli','Asafoetida','Turmeric Powder','Coriander Powder','Salt','Dry Ginger Powder','Fennel Seeds','Corainder Leaves'],
             itemCount: 16,
           )),
           RecipeImage(
               name: Recipe(
                 RecipeName: 'Kashmiri Muji Gaad',
+                description: 'Muji gaad or machhli mooli as commonly known is a very special regional specialty from Kashmir. This delicacy from Kashmiri Pundit cuisine is also hugely popular during winters.',
             buttonTexts: ['Fish Fillets','Radish','Red Chilli Powder','Asafoetida/Hing','Oil','Green Chillies','Black Cardamom','Cloves','Turmeric Powder','Dry Ginger Powder','Veer','Aniseed/Saunf','Salt','Tamarind Pulp'],
             itemCount: 14,
           )),
           RecipeImage(
               name: Recipe(
                 RecipeName: 'Kashmiri Dahi Bhaingan',
+                description: 'Kashmiri Dahi Baingan Recipe is a lip smacking dish where the eggplant is diced and cooked in a simple yogurt gravy, which ideally is the Kashmiri style of cooking. ',
             buttonTexts: ['Brinjal','Mustard Oil','Curd','Dry Ginger Powder','Kashmiri Red Chilli Powder','Turmeric Powder','Fennel Seeds','Cardamom','Asafoetida/Hing','Salt'],
             itemCount: 10,
           )),
           RecipeImage(
               name: Recipe(
                 RecipeName: 'Kashmiri Mutton Yakni',
+                description: 'A lip-smacking yoghurt based dish made with mutton cooked in a variety of spices and curd. The dish is very easy to prepare and can be made for lunch or dinner. Serve with plain rice, jeera rice or a simple pulao.',
             buttonTexts: ['Mutton Chopped','Curd','Cardamoms','Cloves','Cinnamom Sticks','Dry Ginger Powder','Mint Leaves','Salt'],
             itemCount: 8,
           )),
