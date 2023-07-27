@@ -123,15 +123,72 @@ class Beverages extends StatelessWidget {
             name: Recipe(
               Category: 'BEVERAGES',
               imagePath: 'assets/kehwa.jpg',
-              RecipeName: 'KASHMIRI KEHWA: The Aromatic Elixir',
+              RecipeName: 'KASHMIRI KEHWA',
               RecipeDescription:
                   'The Kashmiri Kahwa is an exotic mix of Kashmiri green tea leaves, whole spices, nuts and saffron traditionally prepared in a brass kettle known as a samovar. The samovar has a central cavity to place the hot coal while boiling water and other tea ingredients is added in the surrounding space. There are different types of Kahwa tea with different combinations and distinct flavour and aroma.',
               buttonTexts: ['Water','Cardamom','Cinnamon','Saffron','Sugar','Kashmiri tea leaves','Chopped Almonds'],
               itemCount: 7,
             ), recipeName: 'KASHMIRI KEHWA: The Aromatic Elixir',
           ),
-          // RecipeImage(name: Recipe(),),
-          // RecipeImage(name: Recipe(),),
+           RecipeImage(
+            name: Recipe(
+              Category: 'BEVERAGES',
+              imagePath: 'assets/kehwa.jpg',
+              RecipeName: 'KASHMIRI NOON CHAI: The Pink Elixir',
+              RecipeDescription: 'Kashmiris are known to be the connoisseurs of tea and the pink-coloured noon chai or sheer chai is one of their traditional beverages. The chai is prepared with gunpowder tea (green tea leaves rolled into small balls), sea salt, milk and baking soda. Noon chai is a morning drink for the Kashmiris, and they also like to sip it during the working hours. ',
+              buttonTexts: ['Water','Milk','Kashmiri tea leaves','Salt','Baking Soda'],
+              itemCount: 5,
+            ), recipeName: 'KASHMIRI NOON CHAI',
+          ),
+          RecipeImage(
+            name: Recipe(
+               Category: 'BEVERAGES',
+              imagePath: 'assets/kehwa.jpg',
+              RecipeName: 'KASHMIRI BABRIBYOL SHARBAT',
+              RecipeDescription: 'Babribyol is a ubiquitous drink in Kashmir during the holy month of Ramadhan. The drink enhances the beauty of iftaar. Prepared with basil seeds, raisins and cardamom, the drink has many health benefits. It helps reduce inflammation, high cholesterol and improve heart health. ',
+              buttonTexts: ['Water','Milk','Basil seeds','Saffron','Cardamom','Sugar','Dry Fruits'],
+              itemCount: 7,
+            ), recipeName: 'BABRIBYOL SHARBAT',
+          ),
+           RecipeImage(
+            name: Recipe(
+               Category: 'BEVERAGES',
+              imagePath: 'assets/kehwa.jpg',
+              RecipeName: 'KESAR DOODH',
+              RecipeDescription: 'Kashmir is extremely popular for its production of saffron or kesar. A mere pinch of the beautiful and delicate orange-crimson threads of saffron can turn any dish around both flavour and colour. Kashmiris add saffron to milk prepare Kesar Doodh which is not only delicious to taste but incredibly nutritious. Saffron has various healing properties and is warm in nature that helps reduce the risk of catching a cold.',
+              buttonTexts: ['Milk','Sugar','Dry Fruits'],
+              itemCount: 3,
+            ), recipeName: 'KESAR DOODH',
+          ),
+          RecipeImage(
+            name: Recipe(
+               Category: 'BEVERAGES',
+              imagePath: 'assets/kehwa.jpg',
+              RecipeName: 'KASHMIRI LASSI',
+              RecipeDescription: 'Any afternoon meals in Kashmir is never complete without a tall glass of buttermilk. Prepared with mint leaves, yoghurt and cumin powder, it is the ultimate elixir for the digestive system. It is typically a summer drink, but in winters, Kashmiris heat up the water a bit and then add it to the yoghurt.',
+              buttonTexts: ['Yogurt','Water','Dried mint leaves','Salt','Roasted cumin powder'],
+              itemCount: 5,
+            ), recipeName: 'KASHMIRI LASSI',
+          ),
+          RecipeImage(
+            name: Recipe(
+               Category: 'BEVERAGES',
+              imagePath: 'assets/kehwa.jpg',
+              RecipeName: 'KANJI',
+              RecipeDescription: 'It is a healthy drink made by boiling black carrots in water and adding a few herbs and spices to give it a delicious flavour. Kanji should be enjoyed either cold or at room temperature.',
+              buttonTexts: ['Carrots','Mustard seeds','Black salt','Red chilli powder','Beetroot','Water'],
+              itemCount: 6,
+            ), recipeName: 'KANJI',
+          ),
+          RecipeImage(
+            name: Recipe(
+               Category: 'BEVERAGES',
+              imagePath: 'assets/kehwa.jpg',
+              RecipeName: 'GUD CHAI: The Sweetened Elixir',
+              RecipeDescription: 'Gud Chai, also known as "Jaggery Tea," is a sweetened version of Kashmiri tea that uses jaggery as a natural sweetener instead of sugar. The deep, caramel-like flavours of jaggery infuse the tea, creating a warm and comforting elixir. Gud Chai is a popular choice during winters when its sweetness helps to keep the cold at bay.',
+              buttonTexts: ['Water','Powdered jaggery','Cardamom','Milk','Pepper corns','Tea leaves'],
+              itemCount: 6,
+            ), recipeName: 'GUD CHAI',)
         ],
       ),
     );
