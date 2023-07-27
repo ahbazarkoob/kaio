@@ -118,9 +118,9 @@ class Beverages extends StatelessWidget {
       child: Column(
         children: [
           Text('Bev',style: kHeading,),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
         ],
       ),
     );
@@ -137,9 +137,9 @@ class Default extends StatelessWidget {
       child: Column(
         children: [
           Text('Default',style: kHeading,),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
         ],
       ),
     );
@@ -157,9 +157,9 @@ class HomeMade extends StatelessWidget {
       child: Column(
         children: [
           Text('HomeMade',style: kHeading,),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
         ],
       ),
     );
@@ -176,9 +176,9 @@ class Wazwan extends StatelessWidget {
       child: Column(
         children: [
           Text('Wazwan',style: kHeading,),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
         ],
       ),
     );
@@ -195,9 +195,9 @@ class Deserts extends StatelessWidget {
       child: Column(
         children: [
           Text('Deserts',style: kHeading,),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
         ],
       ),
     );
@@ -214,9 +214,9 @@ class Others extends StatelessWidget {
       child: Column(
         children: [
           Text('Others',style: kHeading,),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
-          RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
+          // RecipeImage(name: Recipe(),),
         ],
       ),
     );
