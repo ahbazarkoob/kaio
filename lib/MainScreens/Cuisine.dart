@@ -216,7 +216,7 @@ class HomeMade extends StatelessWidget {
               RecipeDescription: 'A lip-smacking dish flavoured by tomato puree slow-cooked in a loch full of tasty Indian spice, the Rajma Kashmiri is a much-loved curry. ',
               buttonTexts: ['Kashmiri Rajma','Onion','Tomato','Tomato Puree','Ginger Garlic Paste','Asafoetida/Hing','Dry Ginger Powder','Cumin'],
               itemCount: 8,
-            ), recipeName: 'Kashmiri Rajma',
+            ), recipeName: 'Rajma',
           ),
           RecipeImage(
             name: Recipe(
@@ -227,7 +227,7 @@ class HomeMade extends StatelessWidget {
               buttonTexts: ['Bottle Gourd','Oil','Yogurt','Cloves','Cardamom','Cinnamon','Fennel Powder','Ginger Powder','Cumin Seeds','Salt','Shahi Jeera'],
               itemCount: 11,
             ),
-            recipeName: 'Kashmiri Rajma',
+            recipeName: 'Al Yakni',
           ),
           RecipeImage(
             name: Recipe(
@@ -238,7 +238,7 @@ class HomeMade extends StatelessWidget {
               buttonTexts: ['Paneer','Mustard Oil','Cloves','Cardamoms','Cumin Seeds','Cinnamon Sticks','Red Chilli Powder','Cardamoms','Bay Leaves','Salt','Ground Ginger','Coriander Powder'],
               itemCount: 12,
             ),
-            recipeName: 'Kashmiri Rajma',
+            recipeName: 'Laal Paneer',
           ),
           RecipeImage(
               name: Recipe(
@@ -249,7 +249,7 @@ class HomeMade extends StatelessWidget {
             buttonTexts: ['Baby Potatoes','Yogurt','Maida','Oil','Cloves','Dry Red Chillies','Black Cardamoms', 'Black Peppercorn','Kashmiri Red Chilli Powder','Turmeric Powder','Dry Ginger Powder', 'Cumin Powder','Fennel Powder','Garam Masala',],
             itemCount: 14,
           ),
-          recipeName: 'Kashmiri Rajma',
+          recipeName: 'Dum Aloo',
           ),
           
           RecipeImage(
@@ -261,7 +261,7 @@ class HomeMade extends StatelessWidget {
             buttonTexts: ['Whole Spinach','Kashmiri Chillies','Mustard Oil','Cardamom','Garlic','Salt'],
             itemCount: 6,
           ),
-          recipeName: 'Kashmiri Rajma',
+          recipeName: 'Kashmiri Saag',
           ),
           RecipeImage(
               name: Recipe(
@@ -272,7 +272,7 @@ class HomeMade extends StatelessWidget {
             buttonTexts: ['Brinjals','Onion','Tomato','Lime','Mustard Oil','Cinnamon Stick','Cumin Seeds','Cardamom','Kashmiri Red Chilli','Asafoetida','Turmeric Powder','Coriander Powder','Salt','Dry Ginger Powder','Fennel Seeds','Corainder Leaves'],
             itemCount: 16,
           ),
-            recipeName: 'Kashmiri Rajma',
+            recipeName: 'Cxoch Wagan',
           ),
           RecipeImage(
               name: Recipe(
@@ -283,7 +283,7 @@ class HomeMade extends StatelessWidget {
             buttonTexts: ['Fish Fillets','Radish','Red Chilli Powder','Asafoetida/Hing','Oil','Green Chillies','Black Cardamom','Cloves','Turmeric Powder','Dry Ginger Powder','Veer','Aniseed/Saunf','Salt','Tamarind Pulp'],
             itemCount: 14,
           ),
-            recipeName: 'Kashmiri Rajma',
+            recipeName: 'Muji Gaad',
           ),
           RecipeImage(
               name: Recipe(
@@ -294,7 +294,7 @@ class HomeMade extends StatelessWidget {
             buttonTexts: ['Brinjal','Mustard Oil','Curd','Dry Ginger Powder','Kashmiri Red Chilli Powder','Turmeric Powder','Fennel Seeds','Cardamom','Asafoetida/Hing','Salt'],
             itemCount: 10,
           ),
-            recipeName: 'Kashmiri Rajma',
+            recipeName: 'Dahi Bhaingan',
           ),
           RecipeImage(
               name: Recipe(
@@ -305,7 +305,31 @@ class HomeMade extends StatelessWidget {
             buttonTexts: ['Mutton Chopped','Curd','Cardamoms','Cloves','Cinnamom Sticks','Dry Ginger Powder','Mint Leaves','Salt'],
             itemCount: 8,
           ),
-            recipeName: 'Kashmiri Rajma',
+            recipeName: 'Mutton Yakni',
+          ),
+           RecipeImage(
+            name: Recipe(
+              Category: 'HOME MADE',
+              imagePath: 'assets/kehwa.jpg',
+              RecipeName: 'Kashmiri Moje Maaz',
+              RecipeDescription:
+                  'Kashmiri Al Yakhni is a popular recipe that is prepared in Kashmiri households for their everyday meals. Here, Al means “lauki” and yakhni means “yogurt based gravy”.',
+              buttonTexts: [
+                'Mutton',
+                'Kadam',
+                'Fennel Seeds',
+                'Garlic',
+                'Oil',
+                'Salt',
+                'Badi Elachi',
+                'Choti Elachi',
+                'Dalchini',
+                'Zeera Powder',
+                'Onion'
+              ],
+              itemCount: 11,
+            ),
+            recipeName: 'Moje Maaz',
           ),
         ],
       ),
