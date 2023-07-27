@@ -128,7 +128,7 @@ class Beverages extends StatelessWidget {
                   'The Kashmiri Kahwa is an exotic mix of Kashmiri green tea leaves, whole spices, nuts and saffron traditionally prepared in a brass kettle known as a samovar.',
               buttonTexts: ['Water','Cardamom','Cinnamon','Saffron','Sugar','Kashmiri tea leaves','Chopped Almonds'],
               itemCount: 7,
-            ), recipeName: 'KASHMIRI KEHWA: The Aromatic Elixir',
+            ), recipeName: 'KEHWA',
           ),
            RecipeImage(
             name: Recipe(
@@ -138,7 +138,7 @@ class Beverages extends StatelessWidget {
               RecipeDescription: 'Kashmiris are known to be the connoisseurs of tea and the pink-coloured noon chai or sheer chai is one of their traditional beverages.',
               buttonTexts: ['Water','Milk','Kashmiri tea leaves','Salt','Baking Soda'],
               itemCount: 5,
-            ), recipeName: 'KASHMIRI NOON CHAI',
+            ), recipeName: 'NOON CHAI',
           ),
           RecipeImage(
             name: Recipe(
@@ -148,7 +148,7 @@ class Beverages extends StatelessWidget {
               RecipeDescription: 'Babribyol is a ubiquitous drink in Kashmir during the holy month of Ramadhan.',
               buttonTexts: ['Water','Milk','Basil seeds','Saffron','Cardamom','Sugar','Dry Fruits'],
               itemCount: 7,
-            ), recipeName: 'BABRIBYOL SHARBAT',
+            ), recipeName: 'BABRIBYOL',
           ),
            RecipeImage(
             name: Recipe(
@@ -168,7 +168,7 @@ class Beverages extends StatelessWidget {
               RecipeDescription: 'Any afternoon meals in Kashmir is never complete without a tall glass of buttermilk. Prepared with mint leaves, yoghurt and cumin powder, it is the ultimate elixir for the digestive system. It is typically a summer drink, but in winters, Kashmiris heat up the water a bit and then add it to the yoghurt.',
               buttonTexts: ['Yogurt','Water','Dried mint leaves','Salt','Roasted cumin powder'],
               itemCount: 5,
-            ), recipeName: 'KASHMIRI LASSI',
+            ), recipeName: 'LASSI',
           ),
           RecipeImage(
             name: Recipe(
