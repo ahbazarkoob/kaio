@@ -73,13 +73,6 @@ class Recipe extends StatelessWidget {
                               child: SizedBox(
                                 width: devW * 0.01,
                                 height: devH * 0.03,
-                                child: OutlinedButton(
-                                  child: Text(
-                                    buttonTexts[index],
-                                    style: kSelText,
-                                  ),
-                                  onPressed: () {},
-                                ),
                               ),
                             );
                           },
