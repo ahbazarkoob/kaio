@@ -43,7 +43,7 @@ class Recipe extends StatelessWidget {
                         ),
                         Text(
                           RecipeName,
-                          style: kHeading,
+                          style: kSelText,
                         ),
                         Padding(
                           padding:  EdgeInsets.all(devW*0.005),
