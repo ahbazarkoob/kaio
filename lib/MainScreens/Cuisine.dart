@@ -143,49 +143,58 @@ class HomeMade extends StatelessWidget {
           ),
           RecipeImage(
             name: Recipe(
+              RecipeName:'Kashmiri Rajma' ,
               buttonTexts: ['Kashmiri Rajma','Onion','Tomato','Tomato Puree','Ginger Garlic Paste','Asafoetida/Hing','Dry Ginger Powder','Cumin'],
               itemCount: 8,
             ),
           ),
           RecipeImage(
             name: Recipe(
+              RecipeName: 'Kashmiri Al Yakni',
               buttonTexts: ['Bottle Gourd','Oil','Yogurt','Cloves','Black Cardamom','Cinnamon Stick','Fennel Powder','Ginger Powder','Cumin Seeds','Salt','Shahi Jeera'],
               itemCount: 11,
             ),
           ),
           RecipeImage(
             name: Recipe(
+              RecipeName: 'Kashmiri Laal Paneer',
               buttonTexts: ['Paneer','Mustard Oil','Cloves','Cardamoms','Cumin Seeds','Cinnamon Sticks','Red Chilli Powder','Cardamoms','Bay Leaves','Salt','Ground Ginger','Coriander Powder'],
               itemCount: 12,
             ),
           ),
           RecipeImage(
               name: Recipe(
+                RecipeName: 'Kashmir Dum Aloo',
             buttonTexts: ['Baby Potatoes','Yogurt','Maida','Oil','Cloves','Dry Red Chillies','Black Cardamoms', 'Black Peppercorn','Kashmiri Red Chilli Powder','Turmeric Powder','Dry Ginger Powder', 'Cumin Powder','Fennel Powder','Garam Masala',],
             itemCount: 14,
           )),
           RecipeImage(
               name: Recipe(
+                RecipeName: 'Kashmiri Saag',
             buttonTexts: ['Whole Spinach','Kashmiri Chillies','Mustard Oil','Cardamom','Garlic','Salt'],
             itemCount: 6,
           )),
           RecipeImage(
               name: Recipe(
+                RecipeName: 'Kashmiri Cxoch Wagan',
             buttonTexts: ['Brinjals','Onion','Tomato','Lime','Mustard Oil','Cinnamon Stick','Cumin Seeds','Cardamom','Kashmiri Red Chilli','Asafoetida','Turmeric Powder','Coriander Powder','Salt','Dry Ginger Powder','Fennel Seeds','Corainder Leaves'],
             itemCount: 16,
           )),
           RecipeImage(
               name: Recipe(
+                RecipeName: 'Kashmiri Muji Gaad',
             buttonTexts: ['Fish Fillets','Radish','Red Chilli Powder','Asafoetida/Hing','Oil','Green Chillies','Black Cardamom','Cloves','Turmeric Powder','Dry Ginger Powder','Veer','Aniseed/Saunf','Salt','Tamarind Pulp'],
             itemCount: 14,
           )),
           RecipeImage(
               name: Recipe(
+                RecipeName: 'Kashmiri Dahi Bhaingan',
             buttonTexts: ['Brinjal','Mustard Oil','Curd','Dry Ginger Powder','Kashmiri Red Chilli Powder','Turmeric Powder','Fennel Seeds','Cardamom','Asafoetida/Hing','Salt'],
             itemCount: 10,
           )),
           RecipeImage(
               name: Recipe(
+                RecipeName: 'Kashmiri Mutton Yakni',
             buttonTexts: ['Mutton Chopped','Curd','Cardamoms','Cloves','Cinnamom Sticks','Dry Ginger Powder','Mint Leaves','Salt'],
             itemCount: 8,
           )),
