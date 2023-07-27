@@ -115,10 +115,6 @@ class Beverages extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text(
-            'Bev',
-            style: kHeading,
-          ),
            RecipeImage(
             name: Recipe(
               Category: 'BEVERAGES',
@@ -204,10 +200,6 @@ class HomeMade extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text(
-            'HomeMade',
-            style: kHeading,
-          ),
           RecipeImage(
             name: Recipe(
               Category: 'HOME MADE',
@@ -246,7 +238,7 @@ class HomeMade extends StatelessWidget {
                 imagePath: 'assets/kehwa.jpg',
                 RecipeName: 'Kashmir Dum Aloo',
                 RecipeDescription: 'A traditional Kashmiri potato recipe where baby potatoes are boiled, fried, and then added to a spicy and rich yogurt-based gravy. This curry is subtly flavored with dry ginger powder which gives it a very distinct taste',
-            buttonTexts: ['Baby Potatoes','Yogurt','Maida','Oil','Cloves','Dry Red Chillies','Black Cardamoms', 'Black Peppercorn','Kashmiri Red Chilli Powder','Turmeric Powder','Dry Ginger Powder', 'Cumin Powder','Fennel Powder','Garam Masala',],
+            buttonTexts: ['Baby Potatoes','Yogurt','Maida','Oil','Cloves','Dry Red Chillies','Black Cardamom', 'Black Peppercorn','Kashmiri Red Chilli Powder','Turmeric Powder','Dry Ginger Powder', 'Cumin Powder','Fennel Powder','Garam Masala',],
             itemCount: 14,
           ),
           recipeName: 'Dum Aloo',
@@ -311,7 +303,7 @@ class HomeMade extends StatelessWidget {
             name: Recipe(
               Category: 'HOME MADE',
               imagePath: 'assets/kehwa.jpg',
-              RecipeName: 'Kashmiri Moje Maaz',
+              RecipeName: 'Kashmiri Monje Maaz',
               RecipeDescription:
                   'Kashmiri Al Yakhni is a popular recipe that is prepared in Kashmiri households for their everyday meals. Here, Al means “lauki” and yakhni means “yogurt based gravy”.',
               buttonTexts: [
@@ -329,7 +321,7 @@ class HomeMade extends StatelessWidget {
               ],
               itemCount: 11,
             ),
-            recipeName: 'Moje Maaz',
+            recipeName: 'Monje Maaz',
           ),
         ],
       ),

@@ -42,7 +42,7 @@ class Recipe extends StatelessWidget {
         body: SingleChildScrollView(
           child: Center(
               child: Padding(
-                  padding: EdgeInsets.all(6.0),
+                  padding: EdgeInsets.all(10.0),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -50,9 +50,15 @@ class Recipe extends StatelessWidget {
                           backgroundImage: AssetImage(imagePath),
                           radius: devW * 0.3,
                         ),
+                        SizedBox(
+                          height: devH * 0.009,
+                        ),
                         Text(
                           RecipeName,
-                          style: kSelText,
+                          style: kHeading,
+                        ),
+                        SizedBox(
+                          height: devH * 0.001,
                         ),
                         Padding(
                           padding: EdgeInsets.all(devW * 0.005),
@@ -66,7 +72,7 @@ class Recipe extends StatelessWidget {
                         ),
                         Text(
                           'Ingredients:',
-                          style: kHeading,
+                          style: kSubHeading,
                         ),
                         Container(
                           // color: Colors.amber,
