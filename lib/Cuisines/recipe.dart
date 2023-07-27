@@ -6,10 +6,18 @@ import 'cook.dart';
 import '../main.dart';
 
 class Recipe extends StatelessWidget {
-  String RecipeName='', description='';
+  String RecipeName = '', RecipeDescription = '', Category='';
   int itemCount;
+  var imagePath;
   List buttonTexts = [];
-  Recipe({required this.RecipeName,required this.description,required this.itemCount, required this.buttonTexts});
+  Recipe(
+      {
+      required this.Category,
+      required this.imagePath,
+      required this.RecipeName,
+      required this.RecipeDescription,
+      required this.itemCount,
+      required this.buttonTexts});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +33,8 @@ class Recipe extends StatelessWidget {
             icon: Icon(Icons.arrow_back_sharp),
             color: Color(0xff85586F),
           ),
-          title: const Text('BEVERAGES', style: kHeading),
+          title: Text(
+           Category, style: kHeading),
           centerTitle: true,
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -38,7 +47,7 @@ class Recipe extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         CircleAvatar(
-                          backgroundImage: AssetImage('assets/kehwa.jpg'),
+                          backgroundImage: AssetImage(imagePath),
                           radius: devW * 0.3,
                         ),
                         Text(
@@ -46,9 +55,9 @@ class Recipe extends StatelessWidget {
                           style: kSelText,
                         ),
                         Padding(
-                          padding:  EdgeInsets.all(devW*0.005),
+                          padding: EdgeInsets.all(devW * 0.005),
                           child: Text(
-                            description,
+                            RecipeDescription,
                             style: kSelText,
                           ),
                         ),
