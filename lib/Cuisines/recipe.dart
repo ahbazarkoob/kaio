@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, use_key_in_widget_constructors, must_be_immutable, non_constant_identifier_names
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, use_key_in_widget_constructors, must_be_immutable, non_constant_identifier_names, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
 import 'package:kaio/constants.dart';
@@ -42,7 +42,7 @@ class Recipe extends StatelessWidget {
         body: SingleChildScrollView(
           child: Center(
               child: Padding(
-                  padding: EdgeInsets.all(10.0),
+                  padding: EdgeInsets.only(top: 10,right: 10,left: 10),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -77,7 +77,7 @@ class Recipe extends StatelessWidget {
                         Container(
                           // color: Colors.amber,
                           width: devW,
-                          height: devH * 0.3,
+                          height: devH * 0.4,
                           child: GridView.builder(
                             itemCount: itemCount,
                             gridDelegate:
@@ -110,23 +110,20 @@ class Recipe extends StatelessWidget {
                         SizedBox(
                           height: devH * 0.02,
                         ),
-                        Align(
-                          alignment: Alignment.bottomCenter,
-                          child: SizedBox(
-                            height: devH * 0.07,
-                            width: devW,
-                            child: FilledButton(
-                              onPressed: () {
-                                Navigator.push(context,
-                                    MaterialPageRoute(builder: (_) => Cook()));
-                              },
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    Color(0xff85586F)), // Change the color here
-                              ),
-                              child: Text(
-                                "Let's cook this recipie",
-                              ),
+                        SizedBox(
+                          height: devH * 0.07,
+                          width: devW,
+                          child: FilledButton(
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (_) => Cook()));
+                            },
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                  Color(0xff85586F)), // Change the color here
+                            ),
+                            child: Text(
+                              "Let's cook this recipie",
                             ),
                           ),
                         )
