@@ -338,10 +338,6 @@ class Wazwan extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text(
-            'Wazwan',
-            style: kHeading,
-          ),
           RecipeImage(
             name: Recipe(
               Category: 'WAZWAN', 
