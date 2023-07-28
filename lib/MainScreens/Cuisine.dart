@@ -342,9 +342,80 @@ class Wazwan extends StatelessWidget {
             'Wazwan',
             style: kHeading,
           ),
-          // RecipeImage(name: Recipe(),),
-          // RecipeImage(name: Recipe(),),
-          // RecipeImage(name: Recipe(),),
+          RecipeImage(
+            name: Recipe(
+              Category: 'WAZWAN', 
+              RecipeDescription: 'Tender lamb cooked with Kashmiri spices', 
+              RecipeName: 'Rogan Josh', 
+              buttonTexts: ['Mutton','Curd','Salt','Oil','Black Cardamom','Cardamom','Cloves','Cinnamon Stick','Bay Leaf','Black Pepper Powder','Fennel Powder','Asafoetida/Hing','Kashmiri Chilli Powder','Ratan Jot'], 
+              imagePath: 'assets/kehwa.jpg', 
+              itemCount: 14,
+          ), recipeName: 'Rogan Josh',),
+          RecipeImage(
+            name: Recipe(
+              Category: 'WAZWAN', 
+              RecipeName: 'Rista', 
+              RecipeDescription: 'Rista-Meatballs in a fiery red gravy', 
+              imagePath: 'assets/kehwa.jpg', 
+              buttonTexts: ['Boneless Mutton','Red Chilli Powder','Ginger Powder','Meat Fat','Moval Extract','Asafoetida Liquid','Brown Cardamom','Fennel Powder','Bay Leaves','Cloves','Cinnamon Stick','Mustard Oil','Salt'], 
+              itemCount: 13,
+            ), recipeName: 'Rista',
+          ),
+          RecipeImage(
+            name: Recipe(
+              Category: 'WAZWAN', 
+              RecipeName: 'Goshtaba', 
+              RecipeDescription: 'A velvety textured meatball in white yogurt gravy', 
+              imagePath: 'assets/kehwa.jpg',
+              buttonTexts: ['Boneless Mutton','Cardamom Powder','Ginger','Yogurt','Milk','Bay Leaf','Cinnamon Stick','Cloves','Fennel Seeds','Cumin Seeds','Dry Ginger Powder','Turmeric Powder','Salt','Ghee'], 
+              itemCount: 14, 
+            ), recipeName: 'Goshtaba',
+          ),
+          RecipeImage(
+            name: Recipe(
+              Category: 'WAZWAN', 
+              imagePath: 'assets/kehwa.jpg', 
+              RecipeName: 'Tabak Maaz', 
+              RecipeDescription: 'Ribs of lamb simmered in yogurt till tender, then fried', 
+              buttonTexts: ['Rib Cage','Water','Ground Garlic','Salt','Dry Ginger Powder','Cloves','Black Cardamom','Turmeric Powder','Ghee'],
+              itemCount: 9), 
+            recipeName: 'Tabak Maaz'),
+          RecipeImage(
+              name: Recipe(
+                  Category: 'WAZWAN',
+                  imagePath: 'assets/kehwa.jpg',
+                  RecipeName: 'Daniwal korma',
+                  RecipeDescription:
+                      'A mutton curry with coriander',
+                  buttonTexts: [
+                    'Yogurt','Water','Mutton(Lamb Leg)','Ghee','Onion','Garlic','Cloves','Cardamom','Salt','Saffron','Turmeric Powder','Coriander Powder','Black Pepper Powder','Green Coriander'
+                  ],
+                  itemCount: 14),
+              recipeName: 'Daniwal korma'),
+              RecipeImage(
+              name: Recipe(
+                  Category: 'WAZWAN',
+                  imagePath: 'assets/kehwa.jpg',
+                  RecipeName: 'Lahabi kabab or Moachi kabab',
+                  RecipeDescription:
+                      'Flattened mutton kababs cooked in yogurt',
+                  buttonTexts: [
+                    'Minced Lamb','Garam Masala Powder','Ginger Paste','Chilli Powder','Mint Leaves','Egg','Nutmeg Powder','Onion','Garlic Paste','Salt','Oil'
+                  ],
+                  itemCount: 11),
+              recipeName: 'Lahabi kabab'),
+              RecipeImage(
+              name: Recipe(
+                  Category: 'WAZWAN',
+                  imagePath: 'assets/kehwa.jpg',
+                  RecipeName: 'Aab Gosht Or Doudha ras ',
+                  RecipeDescription:
+                      'Mutton cooked in sweet milk gravy',
+                  buttonTexts: [
+                    'Milk','Cardamom Powder','Cloves','Mutton','Salt','Fennel Powder','Ginger Powder','Garlic Crushed','Onion','Ghee','Pepper Powder','Water'
+                  ],
+                  itemCount: 12),
+              recipeName: 'Aab Gosht'),
         ],
       ),
     );
