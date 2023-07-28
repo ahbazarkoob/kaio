@@ -218,7 +218,7 @@ class HomeMade extends StatelessWidget {
               RecipeDescription: 'A lip-smacking dish flavoured by tomato puree slow-cooked in a loch full of tasty Indian spice, the Rajma Kashmiri is a much-loved curry. ',
               buttonTexts: ['Kashmiri Rajma','Onion','Tomato','Tomato Puree','Ginger Garlic Paste','Asafoetida/Hing','Dry Ginger Powder','Cumin'],
               itemCount: 8,
-            ), recipeName: 'Rajma', 
+            ), recipeName: 'Kashmiri Rajma', 
             assetName: 'assets/Rajma.jpeg',
           ),
           RecipeImage(
@@ -230,7 +230,7 @@ class HomeMade extends StatelessWidget {
               buttonTexts: ['Bottle Gourd','Oil','Yogurt','Cloves','Cardamom','Cinnamon','Fennel Powder','Ginger Powder','Cumin Seeds','Salt','Shahi Jeera'],
               itemCount: 11,
             ),
-            recipeName: 'Al Yakni',
+            recipeName: '\t Kashmiri Al Yakni',
             assetName: 'assets/Alyakhni.jpg',
           ),
           RecipeImage(
@@ -542,7 +542,7 @@ class Deserts extends StatelessWidget {
               ],
               itemCount: 9,
             ),
-            recipeName: 'KASHMIRI SEVAIYAN',
+            recipeName: 'SEVAIYAN',
             assetName: 'assets/kehwa.jpg',
           ),
           RecipeImage(
@@ -564,7 +564,7 @@ class Deserts extends StatelessWidget {
               ],
               itemCount: 8,
             ),
-            recipeName: 'KASHMIRI FALOODA',
+            recipeName: 'FALOODA',
             assetName: 'assets/kehwa.jpg',
           ),
           RecipeImage(
@@ -607,7 +607,7 @@ class Deserts extends StatelessWidget {
               ],
               itemCount: 7,
             ),
-            recipeName: 'KASHMIRI HALWA',
+            recipeName: 'HALWA',
             assetName: 'assets/kehwa.jpg',
           ),
           RecipeImage(
