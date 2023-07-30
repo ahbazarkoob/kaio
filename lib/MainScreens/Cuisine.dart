@@ -118,83 +118,138 @@ class Beverages extends StatelessWidget {
       child: Column(
         children: [
            RecipeImage(
+            recipeName: 'KASHMIRI KEHWA',
             name: Recipe(
               Category: 'BEVERAGES',
               imagePath: 'assets/kehwa.jpg',
-              RecipeName: 'KASHMIRI KEHWA',
+              RecipeName: 'KASHMIRI KEHWA: The Aromatic Elixir',
               RecipeDescription:
                   'The Kashmiri Kahwa is an exotic mix of Kashmiri green tea leaves, whole spices, nuts and saffron traditionally prepared in a brass kettle known as a samovar.',
-              buttonTexts: ['Water','Cardamom','Cinnamon','Saffron','Sugar','Kashmiri tea leaves','Chopped Almonds'],
+              buttonTexts: [
+                'Water',
+                'Cardamom',
+                'Cinnamon',
+                'Saffron',
+                'Sugar',
+                'Kashmiri tea leaves',
+                'Chopped Almonds'
+              ],
               itemCount: 7,
-            ), recipeName: 'KEHWA',
+            ),
             assetName: 'assets/kehwa.jpg',
           ),
-           RecipeImage(
+          RecipeImage(
+            recipeName: 'NOON CHAI',
             name: Recipe(
               Category: 'BEVERAGES',
-              imagePath: 'assets/kehwa.jpg',
+              imagePath: 'assets/KashmiriNoonChai.jpg',
               RecipeName: 'KASHMIRI NOON CHAI: The Pink Elixir',
-              RecipeDescription: 'Kashmiris are known to be the connoisseurs of tea and the pink-coloured noon chai or sheer chai is one of their traditional beverages.',
-              buttonTexts: ['Water','Milk','Kashmiri tea leaves','Salt','Baking Soda'],
+              RecipeDescription:
+                  'Kashmiris are known to be the connoisseurs of tea and the pink-coloured noon chai or sheer chai is one of their traditional beverages.',
+              buttonTexts: [
+                'Water',
+                'Milk',
+                'Kashmiri tea leaves',
+                'Salt',
+                'Baking Soda'
+              ],
               itemCount: 5,
-            ), recipeName: 'NOON CHAI',
-            assetName: 'assets/kehwa.jpg',
+            ),
+            assetName: 'assets/KashmiriNoonChai.jpg',
           ),
           RecipeImage(
+            recipeName: 'BABRIBYOL',
             name: Recipe(
-               Category: 'BEVERAGES',
-              imagePath: 'assets/kehwa.jpg',
+              Category: 'BEVERAGES',
+              imagePath: 'assets/Babribyol.jpg',
               RecipeName: 'KASHMIRI BABRIBYOL SHARBAT',
-              RecipeDescription: 'Babribyol is a ubiquitous drink in Kashmir during the holy month of Ramadhan.',
-              buttonTexts: ['Water','Milk','Basil seeds','Saffron','Cardamom','Sugar','Dry Fruits'],
+              RecipeDescription:
+                  'Babribyol is a ubiquitous drink in Kashmir during the holy month of Ramadhan.',
+              buttonTexts: [
+                'Water',
+                'Milk',
+                'Basil seeds',
+                'Saffron',
+                'Cardamom',
+                'Sugar',
+                'Dry Fruits'
+              ],
               itemCount: 7,
-            ), recipeName: 'BABRIBYOL',
-            assetName: 'assets/kehwa.jpg',
+            ),
+            assetName: 'assets/Babribyol.jpg',
           ),
-           RecipeImage(
+          RecipeImage(
+            recipeName: 'KESAR DOODH',
             name: Recipe(
-               Category: 'BEVERAGES',
-              imagePath: 'assets/kehwa.jpg',
+              Category: 'BEVERAGES',
+              imagePath: 'assets/KesarDoodh.jpg',
               RecipeName: 'KESAR DOODH',
-              RecipeDescription: 'Kesar Doodh is delicious to taste and incredibly nutritious.',
-              buttonTexts: ['Milk','Sugar','Dry Fruits'],
+              RecipeDescription:
+                  'Kesar Doodh is delicious to taste and incredibly nutritious.',
+              buttonTexts: ['Milk', 'Sugar', 'Dry Fruits'],
               itemCount: 3,
-            ), recipeName: 'KESAR DOODH',
-            assetName: 'assets/kehwa.jpg',
+            ),
+            assetName: 'assets/KesarDoodh.jpg',
           ),
           RecipeImage(
+            recipeName: 'KASHMIRI LASSI',
             name: Recipe(
-               Category: 'BEVERAGES',
-              imagePath: 'assets/kehwa.jpg',
+              Category: 'BEVERAGES',
+              imagePath: 'assets/KashmiriLassi.jpg',
               RecipeName: 'KASHMIRI LASSI',
-              RecipeDescription: 'Prepared with mint leaves, yoghurt and cumin powder, it is the ultimate elixir for the digestive system.',
-              buttonTexts: ['Yogurt','Water','Dried mint leaves','Salt','Roasted cumin powder'],
+              RecipeDescription:
+                  'Prepared with mint leaves, yoghurt and cumin powder, it is the ultimate elixir for the digestive system.',
+              buttonTexts: [
+                'Yogurt',
+                'Water',
+                'Dried mint leaves',
+                'Salt',
+                'Roasted cumin powder'
+              ],
               itemCount: 5,
-            ), recipeName: 'LASSI',
-            assetName: 'assets/kehwa.jpg',
+            ),
+            assetName: 'assets/KashmiriLassi.jpg',
           ),
           RecipeImage(
+            recipeName: 'KANJI',
             name: Recipe(
-               Category: 'BEVERAGES',
-              imagePath: 'assets/kehwa.jpg',
+              Category: 'BEVERAGES',
+              imagePath: 'assets/KashmiriKanji.jpg',
               RecipeName: 'KANJI',
-              RecipeDescription: 'Kanji is a healthy drink made by boiling black carrots in water and adding a few herbs and spices to give it a delicious flavour.',
-              buttonTexts: ['Carrots','Mustard seeds','Black salt','Red chilli powder','Beetroot','Water'],
+              RecipeDescription:
+                  'Kanji is a healthy drink made by boiling black carrots in water and adding a few herbs and spices to give it a delicious flavour.',
+              buttonTexts: [
+                'Carrots',
+                'Mustard seeds',
+                'Black salt',
+                'Red chilli powder',
+                'Beetroot',
+                'Water'
+              ],
               itemCount: 6,
-            ), recipeName: 'KANJI',
-            assetName: 'assets/kehwa.jpg',
+            ),
+            assetName: 'assets/KashmiriKanji.jpg',
           ),
           RecipeImage(
+            recipeName: 'GUD CHAI',
             name: Recipe(
-               Category: 'BEVERAGES',
-              imagePath: 'assets/kehwa.jpg',
+              Category: 'BEVERAGES',
+              imagePath: 'assets/KashmiriGudChai.jpg',
               RecipeName: 'GUD CHAI: The Sweetened Elixir',
-              RecipeDescription: 'Gud Chai, also known as "Jaggery Tea," is a sweetened version of Kashmiri tea that uses jaggery as a natural sweetener instead of sugar.',
-              buttonTexts: ['Water','Powdered jaggery','Cardamom','Milk','Pepper corns','Tea leaves'],
+              RecipeDescription:
+                  'Gud Chai, also known as "Jaggery Tea," is a sweetened version of Kashmiri tea that uses jaggery as a natural sweetener instead of sugar.',
+              buttonTexts: [
+                'Water',
+                'Powdered jaggery',
+                'Cardamom',
+                'Milk',
+                'Pepper corns',
+                'Tea leaves'
+              ],
               itemCount: 6,
-            ), recipeName: 'GUD CHAI',
-            assetName: 'assets/kehwa.jpg',),
-            
+            ),
+            assetName: 'assets/KashmiriGudChai.jpg',
+          ),
         ],
       ),
     );
@@ -297,31 +352,31 @@ class HomeMade extends StatelessWidget {
           RecipeImage(
               name: Recipe(
                 Category: 'HOME MADE',
-                imagePath: 'assets/kehwa.jpg',
+                imagePath: 'assets/KashmiriDahiBaingan.jpg',
                 RecipeName: 'Kashmiri Dahi Bhaingan',
                 RecipeDescription: 'Kashmiri Dahi Baingan Recipe is a lip smacking dish where the eggplant is diced and cooked in a simple yogurt gravy, which ideally is the Kashmiri style of cooking. ',
             buttonTexts: ['Brinjal','Mustard Oil','Curd','Dry Ginger Powder','Kashmiri Red Chilli Powder','Turmeric Powder','Fennel Seeds','Cardamom','Asafoetida/Hing','Salt'],
             itemCount: 10,
           ),
             recipeName: 'Dahi Bhaingan',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/KashmiriDahiBaingan.jpg',
           ),
           RecipeImage(
               name: Recipe(
                 Category: 'HOME MADE',
-                imagePath: 'assets/kehwa.jpg',
+                imagePath: 'assets/MuttonYakni.jpg',
                 RecipeName: 'Kashmiri Mutton Yakni',
                 RecipeDescription: 'A lip-smacking yoghurt based dish made with mutton cooked in a variety of spices and curd. The dish is very easy to prepare and can be made for lunch or dinner. Serve with plain rice, jeera rice or a simple pulao.',
             buttonTexts: ['Mutton Chopped','Curd','Cardamoms','Cloves','Cinnamom Sticks','Dry Ginger Powder','Mint Leaves','Salt'],
             itemCount: 8,
           ),
             recipeName: 'Mutton Yakni',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/MuttonYakni.jpg',
           ),
            RecipeImage(
             name: Recipe(
               Category: 'HOME MADE',
-              imagePath: 'assets/kehwa.jpg',
+              imagePath: 'assets/MonjeMaaz.jpg',
               RecipeName: 'Kashmiri Monje Maaz',
               RecipeDescription:
                   'Kashmiri Al Yakhni is a popular recipe that is prepared in Kashmiri households for their everyday meals. Here, Al means “lauki” and yakhni means “yogurt based gravy”.',
@@ -341,7 +396,7 @@ class HomeMade extends StatelessWidget {
               itemCount: 11,
             ),
             recipeName: 'Monje Maaz',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/MonjeMaaz.jpg',
           ),
         ],
       ),
@@ -364,48 +419,48 @@ class Wazwan extends StatelessWidget {
               RecipeDescription: 'Tender lamb cooked with Kashmiri spices', 
               RecipeName: 'Rogan Josh', 
               buttonTexts: ['Mutton','Curd','Salt','Oil','Black Cardamom','Cardamom','Cloves','Cinnamon Stick','Bay Leaf','Black Pepper Powder','Fennel Powder','Asafoetida/Hing','Kashmiri Chilli Powder','Ratan Jot'], 
-              imagePath: 'assets/kehwa.jpg', 
+              imagePath: 'assets/RoganJosh.jpg', 
               itemCount: 14,
           ), recipeName: 'Rogan Josh',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/RoganJosh.jpg',
           ),
           RecipeImage(
             name: Recipe(
               Category: 'WAZWAN', 
               RecipeName: 'Rista', 
               RecipeDescription: 'Rista-Meatballs in a fiery red gravy', 
-              imagePath: 'assets/kehwa.jpg', 
+              imagePath: 'assets/rista.jpeg', 
               buttonTexts: ['Boneless Mutton','Red Chilli Powder','Ginger Powder','Meat Fat','Moval Extract','Asafoetida Liquid','Brown Cardamom','Fennel Powder','Bay Leaves','Cloves','Cinnamon Stick','Mustard Oil','Salt'], 
               itemCount: 13,
             ), recipeName: 'Rista',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/rista.jpeg',
           ),
           RecipeImage(
             name: Recipe(
               Category: 'WAZWAN', 
               RecipeName: 'Goshtaba', 
               RecipeDescription: 'A velvety textured meatball in white yogurt gravy', 
-              imagePath: 'assets/kehwa.jpg',
+              imagePath: 'assets/Goshtaba.jpg',
               buttonTexts: ['Boneless Mutton','Cardamom Powder','Ginger','Yogurt','Milk','Bay Leaf','Cinnamon Stick','Cloves','Fennel Seeds','Cumin Seeds','Dry Ginger Powder','Turmeric Powder','Salt','Ghee'], 
               itemCount: 14, 
             ), recipeName: 'Goshtaba',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/Goshtaba.jpg',
           ),
           RecipeImage(
             name: Recipe(
               Category: 'WAZWAN', 
-              imagePath: 'assets/kehwa.jpg', 
+              imagePath: 'assets/TabakMaaz.jpeg', 
               RecipeName: 'Tabak Maaz', 
               RecipeDescription: 'Ribs of lamb simmered in yogurt till tender, then fried', 
               buttonTexts: ['Rib Cage','Water','Ground Garlic','Salt','Dry Ginger Powder','Cloves','Black Cardamom','Turmeric Powder','Ghee'],
               itemCount: 9), 
             recipeName: 'Tabak Maaz',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/TabakMaaz.jpeg',
           ),
           RecipeImage(
               name: Recipe(
                   Category: 'WAZWAN',
-                  imagePath: 'assets/kehwa.jpg',
+                  imagePath: 'assets/DaniwalKorma.jpeg',
                   RecipeName: 'Daniwal korma',
                   RecipeDescription:
                       'A mutton curry with coriander',
@@ -414,12 +469,12 @@ class Wazwan extends StatelessWidget {
                   ],
                   itemCount: 14),
               recipeName: 'Daniwal korma',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/DaniwalKorma.jpeg',
           ),
               RecipeImage(
               name: Recipe(
                   Category: 'WAZWAN',
-                  imagePath: 'assets/kehwa.jpg',
+                  imagePath: 'assets/LahabiKebab.jpeg',
                   RecipeName: 'Lahabi kabab or Moachi kabab',
                   RecipeDescription:
                       'Flattened mutton kababs cooked in yogurt',
@@ -428,12 +483,12 @@ class Wazwan extends StatelessWidget {
                   ],
                   itemCount: 11),
               recipeName: 'Lahabi kabab',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/LahabiKebab.jpeg',
           ),
               RecipeImage(
               name: Recipe(
                   Category: 'WAZWAN',
-                  imagePath: 'assets/kehwa.jpg',
+                  imagePath: 'assets/AabGosht.jpg',
                   RecipeName: 'Aab Gosht Or Doudha ras ',
                   RecipeDescription:
                       'Mutton cooked in sweet milk gravy',
@@ -442,7 +497,7 @@ class Wazwan extends StatelessWidget {
                   ],
                   itemCount: 12),
               recipeName: 'Aab Gosht',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/AabGosht.jpg',
           ),
         ],
       ),
@@ -462,7 +517,7 @@ class Deserts extends StatelessWidget {
           RecipeImage(
             name: Recipe(
               Category: 'DESSERTS',
-              imagePath: 'assets/kehwa.jpg',
+              imagePath: 'assets/KashmiriKesarPhirni.jpg',
               RecipeName: 'KESAR PHIRNI',
               RecipeDescription:
                   'This scrumptious traditional kashmiri dessert is perfect for any special occasions. ',
@@ -477,15 +532,15 @@ class Deserts extends StatelessWidget {
               itemCount: 6,
             ),
             recipeName: 'KESAR PHIRNI',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/KashmiriKesarPhirni.jpg',
           ),
           RecipeImage(
             name: Recipe(
               Category: 'DESSERTS',
-              imagePath: 'assets/kehwa.jpg',
+              imagePath: 'assets/KashmiriAppleKheer.jpg',
               RecipeName: 'APPLE KHEER',
               RecipeDescription:
-                  'Kashmiri Apple Kheer is super delicious and very famous recipe.',
+                  'Kashmiri apple kheer is super delicious and very famous recipe.',
               buttonTexts: [
                 'Milk',
                 'Grated kashmiri apples',
@@ -498,12 +553,12 @@ class Deserts extends StatelessWidget {
               itemCount: 7,
             ),
             recipeName: 'APPLE KHEER',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/KashmiriAppleKheer.jpg',
           ),
           RecipeImage(
             name: Recipe(
               Category: 'DESSERTS',
-              imagePath: 'assets/kehwa.jpg',
+              imagePath: 'assets/KashmiriLyde.jpg',
               RecipeName: 'KASHMIRI LYDE',
               RecipeDescription:
                   'Kashmiri Lyde is a delectable, delicious and unique dessert which is an integral part of its Cuisine.',
@@ -520,12 +575,12 @@ class Deserts extends StatelessWidget {
               itemCount: 7,
             ),
             recipeName: 'KASHMIRI LYDE',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/KashmiriLyde.jpg',
           ),
           RecipeImage(
             name: Recipe(
               Category: 'DESSERTS',
-              imagePath: 'assets/kehwa.jpg',
+              imagePath: 'assets/KashmiriSevaiyan.jpg',
               RecipeName: 'KASHMIRI SEVAIYAN',
               RecipeDescription:
                   'Kashmiri sevaiyan , the sweet of Kashmiri cuisine is made with sevai, dry fruits and nuts and cooked in milk till thick! It\'s texture and taste are beautiful and mouthwatering!',
@@ -543,12 +598,12 @@ class Deserts extends StatelessWidget {
               itemCount: 9,
             ),
             recipeName: 'SEVAIYAN',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/KashmiriSevaiyan.jpg',
           ),
           RecipeImage(
             name: Recipe(
               Category: 'DESSERTS',
-              imagePath: 'assets/kehwa.jpg',
+              imagePath: 'assets/KashmiriFalooda.jpg',
               RecipeName: 'KASHMIRI FALOODA',
               RecipeDescription:
                   'Very delicious and yummy beverage dessert that is flavored with Rose syrup.',
@@ -565,12 +620,12 @@ class Deserts extends StatelessWidget {
               itemCount: 8,
             ),
             recipeName: 'FALOODA',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/KashmiriFalooda.jpg',
           ),
           RecipeImage(
             name: Recipe(
               Category: 'DESSERTS',
-              imagePath: 'assets/kehwa.jpg',
+              imagePath: 'assets/KashmiriShufta.jpg',
               RecipeName: 'KASHMIRI SHUFTA',
               RecipeDescription:
                   'Kashmiri Badam Paneer ka Shufta is traditional Desserts of Kashmir, prepared during weddings and special occasions.',
@@ -586,13 +641,13 @@ class Deserts extends StatelessWidget {
               ],
               itemCount: 8,
             ),
-            recipeName: 'KASHMIRI SHUFTA',
-            assetName: 'assets/kehwa.jpg',
+            recipeName: 'SHUFTA',
+            assetName: 'assets/KashmiriShufta.jpg',
           ),
           RecipeImage(
             name: Recipe(
               Category: 'DESSERTS',
-              imagePath: 'assets/kehwa.jpg',
+              imagePath: 'assets/KashmiriHalwa.jpg',
               RecipeName: 'KASHMIRI HALWA',
               RecipeDescription:
                   'A delicious, easy and quick halwa recipe for the festive season. ',
@@ -607,13 +662,13 @@ class Deserts extends StatelessWidget {
               ],
               itemCount: 7,
             ),
-            recipeName: 'HALWA',
-            assetName: 'assets/kehwa.jpg',
+            recipeName: 'KASHMIRI HALWA',
+            assetName: 'assets/KashmiriHalwa.jpg',
           ),
           RecipeImage(
             name: Recipe(
               Category: 'DESSERTS',
-              imagePath: 'assets/kehwa.jpg',
+              imagePath: 'assets/KashmiriBasrakh.jpg',
               RecipeName: 'BASRAKH',
               RecipeDescription:
                   'Basrakh, the crispy sugar coated ball of Maida cooked in Ghee.',
@@ -625,12 +680,12 @@ class Deserts extends StatelessWidget {
               itemCount: 3,
             ),
             recipeName: 'BASRAKH',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/KashmiriBasrakh.jpg',
           ),
           RecipeImage(
             name: Recipe(
               Category: 'DESSERTS',
-              imagePath: 'assets/kehwa.jpg',
+              imagePath: 'assets/KashmiriTosha.jpg',
               RecipeName: 'TOSHA',
               RecipeDescription:
                   'Tosha is usually made as a symbol of respect on the occasion of joy or grief and has religious values and sentiments attached to it.',
@@ -638,7 +693,7 @@ class Deserts extends StatelessWidget {
               itemCount: 3,
             ),
             recipeName: 'TOSHA',
-            assetName: 'assets/kehwa.jpg',
+            assetName: 'assets/KashmiriTosha.jpg',
           ),
         ],
       ),

@@ -37,7 +37,7 @@ class _RecipeImageState extends State<RecipeImage> {
               child: Stack(
                 children: [
                   Positioned(
-                    right: 50,
+                    left: 220,
                     top: 80,
                     child: Text(
                       widget.recipeName,
