@@ -5,6 +5,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:kaio/constants.dart';
 import 'package:kaio/Cuisines/recipe.dart';
 import 'package:kaio/main.dart';
+import 'package:kaio/test.dart';
 import 'package:kaio/widgets/Recipe.dart';
 
 // ignore: must_be_immutable
@@ -39,9 +40,7 @@ class _CuisineState extends State<Cuisine> {
           ),
           CarouselSlider(
             items: [
-              Container(
-                color: Colors.blue,
-              ),
+              Test(),
               Container(
                 color: Colors.pink,
               ),
@@ -50,12 +49,12 @@ class _CuisineState extends State<Cuisine> {
               ),
             ],
             options: CarouselOptions(
-              height: 160.0,
+              height: 250,
               enlargeCenterPage: true,
               enlargeFactor: 0.5,
               aspectRatio: 16 / 9,
               enableInfiniteScroll: true,
-              viewportFraction: 0.5,
+              viewportFraction: 0.6,
             ),
           ),
           SizedBox(
