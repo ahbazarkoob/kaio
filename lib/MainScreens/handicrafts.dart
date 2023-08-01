@@ -137,10 +137,10 @@ class CRM extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('Carpets, Rugs and Mats',style: kHeading,),
-          // CraftCard(),
-          // CraftCard(name: Paper_machie(),),
-          // CraftCard(name: Paper_machie(),),
+          CraftCard(imagePath: 'assets/Carpet1.png'),
+          CraftCard(imagePath: 'assets/Carpet2.png'),
+          CraftCard(imagePath: 'assets/Carpet3.png'),
+          CraftCard(imagePath: 'assets/Carpet4.png')
         ],
       ),
     );
