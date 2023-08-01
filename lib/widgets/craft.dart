@@ -2,44 +2,23 @@
 // ignore_for_file: prefer_const_constructors, must_be_immutable, use_key_in_widget_constructors, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
-import 'package:kaio/constants.dart';
+import 'package:kaio/main.dart';
 
 class CraftCard extends StatelessWidget {
-  var name;
-  CraftCard({required this.name});
+  String imagePath;
+  CraftCard({required this.imagePath});
   @override
   Widget build(BuildContext context) {
     return Center(
       child: GestureDetector(
          onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => name));
       },
         child: Card(
           child: Container(
-            height: 180,
+            height: devH*0.3,
+            width: devW*0.9,
             decoration: BoxDecoration(border: Border.all(color: Colors.black)),
-            child: Stack(
-              children: [
-                Positioned(
-                  left: 60,
-                  top: 60,
-                  child: Center(
-                      child: Text(
-                    'Craft',
-                    style: kHeading,
-                  )),
-                ),
-                Positioned(
-                  right: -40,
-                  top: 5,
-                  child: CircleAvatar(
-                    radius: 80,
-                    backgroundColor: Colors.amber.shade300,
-                  ),
-                )
-              ],
-            ),
+            child: Image(image: AssetImage(imagePath))
           ),
         ),
       ),

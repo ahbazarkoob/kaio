@@ -4,39 +4,35 @@ import 'package:flutter/material.dart';
 import 'package:flip_carousel/flip_carousel.dart';
 import 'package:kaio/main.dart';
 
-class Test extends StatefulWidget {
+class Harrisa extends StatefulWidget {
   List<dynamic> cardItems = [
-    'assets/HarrisaRecipie.png',
-    Container(color: Colors.amber, child: Image(image: AssetImage('assets/HARRISA.png'))),
+    'assets/HARRISA.png',
+    Container(child: Image(image: AssetImage('assets/HarrisaRecipie.png'))),
   ];
-  Test({super.key});
+  Harrisa({super.key});
   @override
-  State<Test> createState() => _TestState();
+  State<Harrisa> createState() => _HarrisaState();
 }
 
-class _TestState extends State<Test> {
+class _HarrisaState extends State<Harrisa> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: FlipCarousel(
-          items: widget.cardItems,
-          transitionDuration: const Duration(milliseconds: 400),
-          isAssetImage: true,
-          border: Border.all(width: 5, color: const Color(0xFFFFFFFF)),
-          width: devW*0.9,
-          height: 330,
-          fit: BoxFit.fill,
-          perspectiveFactor: 0.002,
-          layersGap: 30,
-          onChange: (int pageIndex) {
-            print(pageIndex);
-          },
-          onTap: () {
-            print("tap");
-          },
-        ),
-      ),
-    );
+    return  FlipCarousel(
+        borderRadius: BorderRadius.circular(10),
+        items: widget.cardItems,
+        transitionDuration: const Duration(milliseconds: 400),
+        isAssetImage: true,
+        border: Border.all(width: 1, color: const Color(0xFFFFFFFF)),
+        fit: BoxFit.fill,
+        perspectiveFactor: 0.002,
+        layersGap: 30,
+        onChange: (int pageIndex) {
+          print(pageIndex);
+        },
+        onTap: () {
+          print("tap");
+        },
+      );
   }
 }
+

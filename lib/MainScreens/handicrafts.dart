@@ -2,6 +2,7 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:kaio/Cuisines/FlipCarousel.dart';
 import 'package:kaio/Handicrafts/Hc_papermachie.dart';
 import 'package:kaio/Cuisines/recipe.dart';
 import 'package:kaio/widgets/Recipe.dart';
@@ -76,7 +77,7 @@ class _HandicraftState extends State<Handicraft> {
                   decoration: BoxDecoration(
                     color: Colors.grey.shade200,
                     borderRadius: BorderRadius.circular(25.0)),
-                  child: TabBar( indicator: BoxDecoration(
+                  child: TabBar( isScrollable: true,indicator: BoxDecoration(
                     color: Color(0xff85586F),
                     borderRadius:  BorderRadius.circular(25.0)
                   ) ,
@@ -116,29 +117,10 @@ class PaperMac extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('PaperMachie',style: kHeading,),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
-        ],
-      ),
-    );
-  }
-}
-
-class Default extends StatelessWidget {
-  const Default({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Column(
-        children: [
-          Text('Default',style: kHeading,),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
+          CraftCard(imagePath: 'assets/FlowerVase.png'),
+          CraftCard(imagePath: 'assets/TableLamp.png'),
+          CraftCard(imagePath: 'assets/Clutch.png'),
+          CraftCard(imagePath: 'assets/FruitBowl.png')
         ],
       ),
     );
@@ -156,9 +138,9 @@ class CRM extends StatelessWidget {
       child: Column(
         children: [
           Text('Carpets, Rugs and Mats',style: kHeading,),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
+          // CraftCard(),
+          // CraftCard(name: Paper_machie(),),
+          // CraftCard(name: Paper_machie(),),
         ],
       ),
     );
@@ -175,9 +157,9 @@ class Embroidery extends StatelessWidget {
       child: Column(
         children: [
           Text('Emboidery Work',style: kHeading,),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
+          // CraftCard(name: Paper_machie(),),
+          // CraftCard(name: Paper_machie(),),
+          // CraftCard(name: Paper_machie(),),
         ],
       ),
     );
@@ -194,9 +176,9 @@ class StoneCraft extends StatelessWidget {
       child: Column(
         children: [
           Text('Stone Craft',style: kHeading,),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
+          // CraftCard(name: Paper_machie(),),
+          // CraftCard(name: Paper_machie(),),
+          // CraftCard(name: Paper_machie(),),
         ],
       ),
     );
@@ -213,9 +195,9 @@ class Others extends StatelessWidget {
       child: Column(
         children: [
           Text('Others',style: kHeading,),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
-          CraftCard(name: Paper_machie(),),
+          // CraftCard(name: Paper_machie(),),
+          // CraftCard(name: Paper_machie(),),
+          // CraftCard(name: Paper_machie(),),
         ],
       ),
     );
