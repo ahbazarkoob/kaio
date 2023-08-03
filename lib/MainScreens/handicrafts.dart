@@ -56,7 +56,7 @@ class _HandicraftState extends State<Handicraft> {
           ),
           HandicraftCard(
             imagePath: 'assets/tilla.png',
-            widgetName: CarpetPage(),
+            widgetName: TillaPage(),
           ),
           HandicraftCard(
             imagePath: 'assets/Copper.png',
@@ -932,6 +932,104 @@ class CopperPage extends StatelessWidget {
                 ],
               ),
             )
+          ],
+        ),
+      )),
+    );
+  }
+}
+
+
+/////////////////////////////////////TILLA WORK///////////////////////
+
+class TillaPage extends StatelessWidget {
+  const TillaPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+          child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Center(
+              child: Text(
+                'Tilla Work',
+                style: kHeading,
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(10),
+              child: Text(
+                'Kashmiri Tilla embroidery, also known as Zari work, is a form of embroidery that has its roots in the Kashmir Valley in India. The technique is unique and distinct from other forms of embroidery due to its intricate use of metallic threads, primarily gold and silver, to create exquisite patterns and designs on various fabrics.',
+                style: kSelText,
+                textAlign: TextAlign.justify,
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Image(image: AssetImage('assets/tilla.png')),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              margin: EdgeInsets.all(10.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'History of Kashmiri Tilla',
+                    style: kHeading,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    'Kashmiri Tilla embroidery has been a significant part of the rich cultural heritage of Kashmir for centuries. Its origins can be traced back to the Mughal era, when it was used to embellish the garments of kings and royalty. Over time, the art form became more popular and accessible, and was incorporated into the traditional dress of the Kashmiri people, including the pheran, the traditional Kashmiri robe.',
+                    style: kSelText,
+                    textAlign: TextAlign.justify,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(10.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Process',
+                    style: kHeading,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  SizedBox(
+                      width: devW,
+                      height: 300,
+                      child: Image(
+                        image: AssetImage('assets/tilla2.jpg'),
+                        fit: BoxFit.fill,
+                      )),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    'The process of Tilla Dozi begins with the Naqash or the designer, who draws the design over the trace paper, and perforates this paper with the help of a specialized needle, the process known as “Trombun”. Meanwhile, his assistants prepare the white and blue inks, by mixing sand from the river of Jhelum with some kerosene. The trace paper is placed carefully on the cloth and a paper weight placed over it. It is then that a duster dipped in ink (blue for dark shaded cloth and white for light shaded ones) is passed. The result causes prints of chinar leaves, paisleys and different types of Kashmiri flowers to befall these pieces of plain cloth. This, “Chaamp Traavun” is the second step in casting the beautiful embroidery.This imprinted cloth is then passed onto a Tilla artisan who uses two threads – one of staple and the other of Tilla and embroiders the plain canvas awaiting his strokes. The technique involves threading the Tilla over the fabric using a specialized needle and fastening this embellishment with a camouflaging cotton thread for a perfect and long lasting finesse. The thread of Tilla is altogether a new dimension, where malleable copper is used as an underwire and coated with silver or gold hues to achieve the desired thickness for the embroidery to be done. The Tilla threads hence obtained are of varying types – the Angora, Hiran, Murga and Peacock. Of these, the most commonly used thread is of the Hiran for it does not age, its sheen remaining unaffected across the folds of time. Once embroidered, the apparel or accessories are sent for washing and ironing for the finished piece to reflect elegance. Special care is taken that a hot iron does not come in direct contact with the Tilla, lest its sheen gets damaged by the heat.',
+                    style: kSelText,
+                    textAlign: TextAlign.justify,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                ],
+              ),
+            ),
+            Image(image: AssetImage('assets/Tilla1.webp')),
           ],
         ),
       )),
