@@ -60,7 +60,7 @@ class _HandicraftState extends State<Handicraft> {
           ),
           HandicraftCard(
             imagePath: 'assets/Copper.png',
-            widgetName: CarpetPage(),
+            widgetName: CopperPage(),
           ),
           HandicraftCard(
             imagePath: 'assets/Wood.png',
@@ -694,6 +694,241 @@ class ShawlPage extends StatelessWidget {
                     style: kSelText,
                     textAlign: TextAlign.justify,
                   )
+                ],
+              ),
+            )
+          ],
+        ),
+      )),
+    );
+  }
+}
+
+class CopperPage extends StatelessWidget {
+  const CopperPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+          body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 20,
+            ),
+            Center(
+                child: Text(
+              'The Craft of Copperware- TRAM',
+              style: kHeading,
+            )),
+            Container(
+              margin: EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  Text(
+                    'Kashmiri Copperware is a renowned and exquisite form of metal craft that has been practiced in the Kashmir Valley of India for centuries. The artisans of Kashmir are skilled in the art of handcrafting beautiful copper items, known for their intricate designs, unmatched craftsmanship, and rich cultural heritage. The tradition of crafting copperware in Kashmir has been passed down through generations, and it continues to be an essential part of the region\'s artistic and cultural identity.',
+                    style: kSelText,
+                    textAlign: TextAlign.justify,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Image(image: AssetImage('assets/Copper.png'))
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(10.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'History',
+                    style: kHeading,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    'The history of Kashmiri Copperware dates back to ancient times, with evidence of copper artifacts found in archaeological excavations. The craft gained prominence during the Mughal period in the 15th and 16th centuries when the Mughal emperors showed immense appreciation for the fine craftsmanship of the Kashmiri artisans.\n During the Mughal era, the art of copperware witnessed significant refinement, with artisans incorporating delicate floral patterns, intricate engravings, and fine detailing into their creations. The demand for Kashmiri Copperware spread beyond the region\'s boundaries, and it became a prized possession for nobility and royalty across the Indian subcontinent. \n With time, the craft evolved and adapted to changing tastes and preferences, but its essence remained intact. Today, Kashmiri Copperware stands as a symbol of artistic expression and a reflection of the region\'s vibrant cultural heritage.',
+                    style: kSelText,
+                    textAlign: TextAlign.justify,
+                  )
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(10.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'The  Process of Making Kashmiri Copperware',
+                    style: kHeading,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    'Creating Kashmiri Copperware is a meticulous and time-consuming process that involves several intricate steps. The artisans, known as "Kansaras," skillfully execute each stage to produce the exquisite final products. Here is an overview of the traditional process:',
+                    style: kSelText,
+                    textAlign: TextAlign.justify,
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text('1.   Raw Material Selection:', style: kSubHeading,),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    'Kashmiri shawls are made from different types of wool, such as fine Merino wool and Pashmina. Pashmina wool, derived from the undercoat of Changthangi goats found in the high-altitude regions of the Himalayas, is highly prized for its exceptional softness and warmth.',
+                    style: kSelText,
+                    textAlign: TextAlign.justify,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Image(image: AssetImage('assets/Rawcopper.jpg')),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    '2.   Sheet Hammering:',
+                    style: kSubHeading,
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    'The selected copper sheets are then heated to make them malleable. The artisans skillfully hammer the heated copper sheets to achieve the desired shape and thickness. This process requires precision and experience to avoid any deformities.',
+                    style: kSelText,
+                    textAlign: TextAlign.justify,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Center(child: Image(image: AssetImage('assets/CopperHammer.jpg'))),
+                  SizedBox(
+                    height: 20,
+                  ),
+                   SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    '3.   Cutting and Shaping:',
+                    style: kSubHeading,
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    'Once the copper sheet has been adequately hammered, the artisans cut it into specific shapes based on the intended design of the final product. Traditional tools like chisels and hammers are used for this purpose.',
+                    style: kSelText,
+                    textAlign: TextAlign.justify,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Image(image: AssetImage('assets/CopperShape.jpg')),
+                  SizedBox(
+                    height: 20,
+                  ),
+                   Text(
+                    '4.   Engraving and Embossing:',
+                    style: kSubHeading,
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    'This is the most intricate and artistic stage of the process. The artisans meticulously engrave intricate patterns and motifs onto the surface of the copper using specialized tools. The designs often depict floral patterns, Islamic geometric motifs, and scenes from nature or local culture.',
+                    style: kSelText,
+                    textAlign: TextAlign.justify,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Image(image: AssetImage('assets/CopperEngrave.jpeg')),
+                  SizedBox(
+                    height: 20,
+                  ),
+                 Text(
+                    '5.   Annealing and Tempering:',
+                    style: kSubHeading,
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    'To enhance the strength and durability of the copperware, the partially completed item is heated and then cooled slowly in a process known as annealing and tempering. This ensures that the copperware can withstand everyday use and maintain its shape.',
+                    style: kSelText,
+                    textAlign: TextAlign.justify,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Image(image: AssetImage('assets/CopperAnneal.jpg')),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    '6.   Buffing and Polishing:',
+                    style: kSubHeading,
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    'After annealing, the copperware is polished to achieve a smooth and lustrous finish. The buffing process enhances the shine of the metal and brings out the intricate engravings.',
+                    style: kSelText,
+                    textAlign: TextAlign.justify,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Center(child: Image(image: AssetImage('assets/CopperKalai.png'))),
+                  SizedBox(
+                    height: 20,
+                  ), 
+                  Text(
+                    '7.   Tinning and Lacquering:',
+                    style: kSubHeading,
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    'In some cases, the interior of the copperware is lined with a layer of tin to prevent any reaction with food or beverages. Additionally, to preserve the shine and prevent tarnishing, a coat of lacquer is applied to the exterior.',
+                    style: kSelText,
+                    textAlign: TextAlign.justify,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    '8.   Final Finishing:',
+                    style: kSubHeading,
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    'The last step involves giving the copperware its final touches, ensuring that it meets the desired quality standards. The finished product is now ready to be admired and cherished by art connoisseurs and enthusiasts alike.',
+                    style: kSelText,
+                    textAlign: TextAlign.justify,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Image(image: AssetImage('assets/CoppweFinal.jpg')),
+                  SizedBox(
+                    height: 20,
+                  ), 
+                  Text('Kashmiri Copperware is not merely a decorative piece; it is an embodiment of the artistic legacy of Kashmir and a testament to the skill and dedication of its artisans. The craft continues to thrive in the modern era, attracting admirers from all around the world who appreciate the beauty and cultural significance of this remarkable art form.',
+                  style: kSelText,
+                  textAlign: TextAlign.justify,)
                 ],
               ),
             )
