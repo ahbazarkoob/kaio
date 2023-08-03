@@ -132,10 +132,10 @@ class PaperMac extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          CraftCard(imagePath: 'assets/FlowerVase.png'),
-          CraftCard(imagePath: 'assets/TableLamp.png'),
-          CraftCard(imagePath: 'assets/Clutch.png'),
-          CraftCard(imagePath: 'assets/FruitBowl.png')
+          CraftCard(imagePath: 'assets/FlowerVase.png',urlLink: 'https://www.instagram.com/direct/t/111793230220980',),
+          CraftCard(imagePath: 'assets/TableLamp.png',urlLink: 'https://www.instagram.com/direct/t/111793230220980',),
+          CraftCard(imagePath: 'assets/Clutch.png',urlLink: 'https://www.instagram.com/direct/t/111793230220980'),
+          CraftCard(imagePath: 'assets/FruitBowl.png', urlLink: 'https://www.instagram.com/direct/t/111793230220980')
         ],
       ),
     );
@@ -151,10 +151,10 @@ class CRM extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          CraftCard(imagePath: 'assets/Carpet1.png'),
-          CraftCard(imagePath: 'assets/Carpet2.png'),
-          CraftCard(imagePath: 'assets/Carpet3.png'),
-          CraftCard(imagePath: 'assets/Carpet4.png')
+          CraftCard(imagePath: 'assets/Carpet1.png', urlLink: ''),
+          CraftCard(imagePath: 'assets/Carpet2.png', urlLink: ''),
+          CraftCard(imagePath: 'assets/Carpet3.png', urlLink: ''),
+          CraftCard(imagePath: 'assets/Carpet4.png', urlLink: '')
         ],
       ),
     );
@@ -192,10 +192,10 @@ class CopperWork extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          CraftCard(imagePath: 'assets/Samavar.png'),
-          CraftCard(imagePath: 'assets/Izbandsoz.png'),
-          CraftCard(imagePath: 'assets/Tramisarposh.png'),
-          CraftCard(imagePath: 'assets/Dryfruitbowl.png'),
+          CraftCard(imagePath: 'assets/Samavar.png', urlLink: ''),
+          CraftCard(imagePath: 'assets/Izbandsoz.png', urlLink: ''),
+          CraftCard(imagePath: 'assets/Tramisarposh.png', urlLink: ''),
+          CraftCard(imagePath: 'assets/Dryfruitbowl.png', urlLink: ''),
         ],
       ),
     );
@@ -213,6 +213,7 @@ class WoodCarving extends StatelessWidget {
         children: [
           CraftCard(
             imagePath: 'assets/AyatUlKursi.png',
+            urlLink: ''
           ),
           // CraftCard(name: Paper_machie(),),
           // CraftCard(name: Paper_machie(),),
