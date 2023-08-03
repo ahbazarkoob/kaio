@@ -132,10 +132,10 @@ class PaperMac extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          CraftCard(imagePath: 'assets/FlowerVase.png',urlLink: 'https://www.instagram.com/direct/t/111793230220980',),
-          CraftCard(imagePath: 'assets/TableLamp.png',urlLink: 'https://www.instagram.com/direct/t/111793230220980',),
-          CraftCard(imagePath: 'assets/Clutch.png',urlLink: 'https://www.instagram.com/direct/t/111793230220980'),
-          CraftCard(imagePath: 'assets/FruitBowl.png', urlLink: 'https://www.instagram.com/direct/t/111793230220980')
+          CraftCard(imagePath: 'assets/FlowerVase.png',urlLink: 'https://www.instagram.com/mir___arts/',),
+          CraftCard(imagePath: 'assets/TableLamp.png',urlLink: 'https://www.instagram.com/mir___arts/',),
+          CraftCard(imagePath: 'assets/Clutch.png',urlLink: 'https://www.instagram.com/mir___arts/'),
+          CraftCard(imagePath: 'assets/FruitBowl.png', urlLink: 'https://www.instagram.com/mir___arts/')
         ],
       ),
     );
@@ -151,10 +151,10 @@ class CRM extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          CraftCard(imagePath: 'assets/Carpet1.png', urlLink: 'https://www.instagram.com/direct/t/17843313347428201/'),
-          CraftCard(imagePath: 'assets/Carpet2.png', urlLink: 'https://www.instagram.com/direct/t/17843313347428201/'),
-          CraftCard(imagePath: 'assets/Carpet3.png', urlLink: 'https://www.instagram.com/direct/t/17843313347428201/'),
-          CraftCard(imagePath: 'assets/Carpet4.png', urlLink: 'https://www.instagram.com/direct/t/17843313347428201/')
+          CraftCard(imagePath: 'assets/Carpet1.png', urlLink: 'https://www.instagram.com/houseofkashmiricarpets/'),
+          CraftCard(imagePath: 'assets/Carpet2.png', urlLink: 'https://www.instagram.com/houseofkashmiricarpets/'),
+          CraftCard(imagePath: 'assets/Carpet3.png', urlLink: 'https://www.instagram.com/houseofkashmiricarpets/'),
+          CraftCard(imagePath: 'assets/Carpet4.png', urlLink: 'https://www.instagram.com/houseofkashmiricarpets/')
         ],
       ),
     );
@@ -192,10 +192,10 @@ class CopperWork extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          CraftCard(imagePath: 'assets/Samavar.png', urlLink: ''),
-          CraftCard(imagePath: 'assets/Izbandsoz.png', urlLink: ''),
-          CraftCard(imagePath: 'assets/Tramisarposh.png', urlLink: ''),
-          CraftCard(imagePath: 'assets/Dryfruitbowl.png', urlLink: ''),
+          CraftCard(imagePath: 'assets/Samavar.png', urlLink: 'https://www.instagram.com/copper.hub/'),
+          CraftCard(imagePath: 'assets/Izbandsoz.png', urlLink: 'https://www.instagram.com/copper.hub/'),
+          CraftCard(imagePath: 'assets/Tramisarposh.png', urlLink: 'https://www.instagram.com/copper.hub/'),
+          CraftCard(imagePath: 'assets/Dryfruitbowl.png', urlLink: 'https://www.instagram.com/copper.hub/'),
         ],
       ),
     );
@@ -213,7 +213,7 @@ class WoodCarving extends StatelessWidget {
         children: [
           CraftCard(
             imagePath: 'assets/AyatUlKursi.png',
-            urlLink: 'https://www.instagram.com/direct/t/108818283845085'
+            urlLink: 'https://www.instagram.com/p/CGU4FEuMxSv/'
           ),
           // CraftCard(name: Paper_machie(),),
           // CraftCard(name: Paper_machie(),),
