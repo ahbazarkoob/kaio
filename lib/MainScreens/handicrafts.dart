@@ -151,10 +151,10 @@ class CRM extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          CraftCard(imagePath: 'assets/Carpet1.png', urlLink: ''),
-          CraftCard(imagePath: 'assets/Carpet2.png', urlLink: ''),
-          CraftCard(imagePath: 'assets/Carpet3.png', urlLink: ''),
-          CraftCard(imagePath: 'assets/Carpet4.png', urlLink: '')
+          CraftCard(imagePath: 'assets/Carpet1.png', urlLink: 'https://www.instagram.com/direct/t/17843313347428201/'),
+          CraftCard(imagePath: 'assets/Carpet2.png', urlLink: 'https://www.instagram.com/direct/t/17843313347428201/'),
+          CraftCard(imagePath: 'assets/Carpet3.png', urlLink: 'https://www.instagram.com/direct/t/17843313347428201/'),
+          CraftCard(imagePath: 'assets/Carpet4.png', urlLink: 'https://www.instagram.com/direct/t/17843313347428201/')
         ],
       ),
     );
@@ -213,7 +213,7 @@ class WoodCarving extends StatelessWidget {
         children: [
           CraftCard(
             imagePath: 'assets/AyatUlKursi.png',
-            urlLink: ''
+            urlLink: 'https://www.instagram.com/direct/t/108818283845085'
           ),
           // CraftCard(name: Paper_machie(),),
           // CraftCard(name: Paper_machie(),),
