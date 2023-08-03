@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, unused_import, non_constant_identifier_names, prefer_typing_uninitialized_variables, prefer_const_literals_to_create_immutables, prefer_const_constructors_in_immutables
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, unused_import, non_constant_identifier_names, prefer_typing_uninitialized_variables, prefer_const_literals_to_create_immutables, prefer_const_constructors_in_immutables, must_be_immutable, use_key_in_widget_constructors
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -11,8 +11,6 @@ import 'package:kaio/widgets/selection.dart';
 import '../constants.dart';
 import '../main.dart';
 
-
-// ignore: must_be_immutable
 class Handicraft extends StatefulWidget {
 
   Handicraft({super.key});
@@ -46,15 +44,12 @@ class _HandicraftState extends State<Handicraft> {
           ),
           CarouselSlider(
             items: [
-              Container(
-                color: Colors.blue,
-              ),
-              Container(
-                color: Colors.pink,
-              ),
-              Container(
-                color: Colors.yellow,
-              ),
+            HandicraftCard(imagePath: 'assets/Carpet.png'),
+            HandicraftCard(imagePath: 'assets/PaperMache.png'),
+            HandicraftCard(imagePath: 'assets/Shawl.png'),
+            HandicraftCard(imagePath: 'assets/tilla.png'),
+            HandicraftCard(imagePath: 'assets/Copper.png'),
+            HandicraftCard(imagePath: 'assets/Wood.png'),
             ],
             options: CarouselOptions(
               height: 160.0,
@@ -85,8 +80,8 @@ class _HandicraftState extends State<Handicraft> {
                   Tab(text: 'Paper-Mache'),
                   Tab(text: 'Carpets, Rugs and Mats'),
                   Tab(text: 'Embroidery Work'),
-                  Tab(text: 'Stone Craft'),
-                  Tab(text: 'Others'),
+                  Tab(text: 'Copper Work'),
+                  Tab(text: 'Wood Carving'),
                 ],
                 labelColor: Colors.black,
             ),),
@@ -96,8 +91,8 @@ class _HandicraftState extends State<Handicraft> {
                   PaperMac(),
                   CRM(),
                   Embroidery(),
-                  StoneCraft(),
-                  Others()
+                  CopperWork(),
+                  WoodCarving()
                 ],
               ),
             ),
@@ -166,8 +161,8 @@ class Embroidery extends StatelessWidget {
   }
 }
 
-class StoneCraft extends StatelessWidget {
-  const StoneCraft({super.key});
+class CopperWork extends StatelessWidget {
+  const CopperWork({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -175,8 +170,26 @@ class StoneCraft extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text('Stone Craft',style: kHeading,),
-          // CraftCard(name: Paper_machie(),),
+          CraftCard(imagePath: 'assets/Samavar.png'),
+          CraftCard(imagePath: 'assets/Izbandsoz.png'),
+          CraftCard(imagePath: 'assets/Tramisarposh.png'),
+          CraftCard(imagePath: 'assets/Dryfruitbowl.png'),
+        ],
+      ),
+    );
+  }
+}
+
+class WoodCarving extends StatelessWidget {
+  const WoodCarving({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        children: [
+          CraftCard(imagePath: 'assets/AyatUlKursi.png',),
           // CraftCard(name: Paper_machie(),),
           // CraftCard(name: Paper_machie(),),
         ],
@@ -185,20 +198,21 @@ class StoneCraft extends StatelessWidget {
   }
 }
 
-class Others extends StatelessWidget {
-  const Others({super.key});
+
+class HandicraftCard extends StatelessWidget {
+  String imagePath = '';
+  HandicraftCard({required this.imagePath});
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Column(
-        children: [
-          Text('Others',style: kHeading,),
-          // CraftCard(name: Paper_machie(),),
-          // CraftCard(name: Paper_machie(),),
-          // CraftCard(name: Paper_machie(),),
-        ],
+    return GestureDetector(
+      onTap: () {},
+      child: Card(
+        child: Container(
+            height: devH * 0.3,
+            width: devW * 0.9,
+            decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+            child: Image(fit: BoxFit.fill, image: AssetImage(imagePath))),
       ),
     );
   }

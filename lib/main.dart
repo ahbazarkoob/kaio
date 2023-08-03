@@ -9,8 +9,6 @@ import 'package:kaio/MainScreens/destinations.dart';
 import 'package:kaio/MainScreens/handicrafts.dart';
 import 'package:kaio/Cuisines/recipe.dart';
 import 'package:kaio/Literature/litera.dart';
-import 'package:kaio/Test1.dart';
-import 'package:kaio/test.dart';
 import 'package:kaio/widgets/CultureCard.dart';
 import 'package:kaio/widgets/Recipe.dart';
 import 'package:kaio/widgets/Travel.dart';

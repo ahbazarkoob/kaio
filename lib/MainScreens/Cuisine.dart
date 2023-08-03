@@ -5,7 +5,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:kaio/constants.dart';
 import 'package:kaio/Cuisines/recipe.dart';
 import 'package:kaio/main.dart';
-import 'package:kaio/test.dart';
 import 'package:kaio/widgets/Recipe.dart';
 
 // ignore: must_be_immutable
@@ -40,15 +39,8 @@ class _CuisineState extends State<Cuisine> {
           ),
           CarouselSlider(
             items: [
-              Harrisa(),
-              OutlinedButton(
-                  onPressed: () {
-                    Image(image: AssetImage('assets/MasalaDesc.png'));
-                    setState(() {
-                      
-                    });
-                  },
-                  child: Image(image: AssetImage('assets/MASALA TCHOT.png'))),
+              
+              Image(image: AssetImage('assets/MASALA TCHOT.png')),
               Container(
                 child: Image(image: AssetImage('assets/LAAYE.png')),
               ),
