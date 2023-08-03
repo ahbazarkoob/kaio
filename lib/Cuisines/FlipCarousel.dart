@@ -1,5 +1,5 @@
 
-// ignore_for_file: use_key_in_widget_constructors, avoid_unnecessary_containers, avoid_print
+// ignore_for_file: use_key_in_widget_constructors, avoid_unnecessary_containers, avoid_print, file_names, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
 import 'package:flip_carousel/flip_carousel.dart';
