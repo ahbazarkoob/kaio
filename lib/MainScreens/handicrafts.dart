@@ -64,7 +64,7 @@ class _HandicraftState extends State<Handicraft> {
           ),
           HandicraftCard(
             imagePath: 'assets/Wood.png',
-            widgetName: CarpetPage(),
+            widgetName: WoodCarvingPage(),
           ),
         ],
         options: CarouselOptions(
@@ -170,13 +170,10 @@ class Embroidery extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Text(
-            'Emboidery Work',
-            style: kHeading,
-          ),
-          // CraftCard(name: Paper_machie(),),
-          // CraftCard(name: Paper_machie(),),
-          // CraftCard(name: Paper_machie(),),
+          CraftCard(imagePath: 'assets/EmbTilla1.png', urlLink: 'https://www.instagram.com/p/CvgaXtQP2Qg/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=='),
+          CraftCard(imagePath: 'assets/EmbTilla2.png', urlLink: 'https://www.instagram.com/p/CuHgMKJPk9r/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=='),
+          CraftCard(imagePath: 'assets/EmbTilla3.png', urlLink: 'https://www.instagram.com/p/Ck0Y5UBPOpP/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=='),
+          CraftCard(imagePath: 'assets/EmbTilla4.png', urlLink: 'https://www.instagram.com/kashur_handicraft/'),
         ],
       ),
     );
@@ -1034,6 +1031,256 @@ class TillaPage extends StatelessWidget {
           ],
         ),
       )),
+    );
+  }
+}
+
+///////////////////////WOODCARVINGPAGE////////////////////////////
+
+class WoodCarvingPage extends StatelessWidget {
+  const WoodCarvingPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 10,
+              ),
+              Center(
+                child: Text(
+                  'Wood Carving',
+                  style: kHeading,
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                margin: EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Kashmiri Wood Carving is an exquisite and ancient form of craftsmanship that has flourished in the picturesque valley of Kashmir, India, for centuries. Renowned for its intricate designs, delicate motifs, and skilled artistry, Kashmiri wood carving has been an integral part of the region\'s cultural heritage. This traditional craft showcases the remarkable talent of Kashmiri artisans who transform blocks of wood into beautiful masterpieces that reflect the rich artistic legacy and creativity of the Kashmiri people.',
+                      style: kSelText,
+                      textAlign: TextAlign.justify,
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                margin: EdgeInsets.all(10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'History',
+                      style: kHeading,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'The history of wood carving in Kashmir can be traced back to ancient times when skilled artisans carved wooden structures for temples, palaces, and other architectural marvels. The artform gained significant patronage and encouragement during the Mughal era, which lasted from the 15th to the 18th century. The Mughal emperors, particularly Emperor Akbar, admired the intricate woodwork of the region and encouraged the growth of this craft.During the Mughal period, the craft of wood carving reached its zenith, with artisans showcasing their expertise by adorning various structures and artifacts with mesmerizing carvings. Over time, wood carving evolved and integrated with local Kashmiri culture, blending traditional motifs and Islamic designs, which gave the craft a distinct identity of its own.Despite facing challenges and changes throughout history, Kashmiri wood carving has managed to retain its artistic brilliance, and today it stands as a symbol of the region\'s cultural heritage and artistic prowess.',
+                      style: kSelText,
+                      textAlign: TextAlign.justify,
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'The Process of Making Kashmiri Wood Carving',
+                      style: kHeading,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Kashmiri wood carving is a painstaking and intricate process that requires immense skill, precision, and patience. The artisans, known as "Kashmiri Karkhanedars," follow a step-by-step approach to transform raw blocks of wood into finely detailed carved pieces. Here is an overview of the traditional process:',
+                      style: kSelText,
+                      textAlign: TextAlign.justify,
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      '1.   Wood Selection::',
+                      style: kSubHeading,
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'The process begins with selecting the appropriate wood for carving. The artisans often use softwood varieties like walnut, deodar, or chinar for their work. These woods are chosen for their fine grain, which makes carving intricate patterns easier.',
+                      style: kSelText,
+                      textAlign: TextAlign.justify,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Image(image: AssetImage('assets/woodselection.jpeg')),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      '2.   Design Creation:',
+                      style: kSubHeading,
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'The next step involves designing the patterns and motifs that will adorn the wooden piece. The designs are usually based on traditional Kashmiri motifs, such as the chinar leaf, floral patterns, birds, and geometric shapes. The artisans meticulously draw the designs on the wood surface as a reference for carving.',
+                      style: kSelText,
+                      textAlign: TextAlign.justify,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Center(
+                        child: Image(
+                            image: AssetImage('assets/designcreation.jpeg'))),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      '3.   Wood Blocking:',
+                      style: kSubHeading,
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'The wooden block is roughly shaped according to the intended design. The artisan uses traditional tools like chisels, gouges, and mallets to carve out the basic form of the piece.',
+                      style: kSelText,
+                      textAlign: TextAlign.justify,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Image(image: AssetImage('assets/woodblocking.jpeg')),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      '4.   Intricate Carving:',
+                      style: kSubHeading,
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'With the basic outline complete, the artisan moves on to the intricate carving stage. This is a highly skilled and time-consuming process, where the artisan carves delicate and detailed patterns into the wood, following the drawn designs.',
+                      style: kSelText,
+                      textAlign: TextAlign.justify,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Image(image: AssetImage('assets/intricatecarving.jpeg')),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      '5.   Finishing and Polishing:',
+                      style: kSubHeading,
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'Once the carving is complete, the wooden piece undergoes a thorough sanding process to smoothen the surface and refine the details. The artisan uses fine sandpaper and abrasive materials to achieve a flawless finish.',
+                      style: kSelText,
+                      textAlign: TextAlign.justify,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Image(
+                        image: AssetImage('assets/finishingandpolishing.jpeg')),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      '6.   Staining and Varnishing:',
+                      style: kSubHeading,
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'After sanding, the wood carving is stained to enhance its color and bring out the natural beauty of the wood. Then, a coat of varnish or lacquer is applied to protect the surface and provide a glossy appearance.',
+                      style: kSelText,
+                      textAlign: TextAlign.justify,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Image(image: AssetImage('assets/ShawlWash.png')),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      '7.   Assembling (if applicable):',
+                      style: kSubHeading,
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      ' In some cases, Kashmiri wood carvings are used to decorate furniture, doors, windows, or other wooden structures. In such cases, the carved components are assembled to create the final product.',
+                      style: kSelText,
+                      textAlign: TextAlign.justify,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      '8.   Final Inspection:',
+                      style: kSubHeading,
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'The completed wood carving undergoes a final inspection to ensure the quality and craftsmanship meet the highest standards.',
+                      style: kSelText,
+                      textAlign: TextAlign.justify,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Image(image: AssetImage('assets/finalproductwood.png')),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      'Kashmiri wood carving stands as a testament to the artistic excellence and cultural heritage of the region. The dedication of the artisans, combined with the timeless beauty of the craft, continues to captivate art enthusiasts and collectors worldwide, making it a cherished and valued form of art.',
+                      style: kSelText,
+                      textAlign: TextAlign.justify,
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
