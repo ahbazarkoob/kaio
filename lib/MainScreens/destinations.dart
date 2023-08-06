@@ -1,9 +1,10 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, prefer_const_constructors_in_immutables, non_constant_identifier_names, unused_import, unused_element, avoid_unnecessary_containers, must_be_immutable
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, prefer_const_constructors_in_immutables, non_constant_identifier_names, unused_import, unused_element, avoid_unnecessary_containers, must_be_immutable, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 import 'package:kaio/Destinations/Features.dart';
 import 'package:kaio/Destinations/PageView.dart';
 import 'package:kaio/Destinations/Tab.dart';
+import 'package:kaio/MainScreens/literature.dart';
 import 'package:kaio/constants.dart';
 import 'package:kaio/main.dart';
 import 'package:kaio/widgets/craft.dart';
@@ -13,17 +14,14 @@ PageController controller = PageController();
 class Destination extends StatelessWidget {
   final controller = PageController();
   int selectedPage = 0;
-  String imagePath = '';
+
   Destination({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: [
-          _DestinationPage(), 
-          _GradientWidget(), 
-          _topLayerWidget()],
+        children: [_DestinationPage(), _GradientWidget(), _topLayerWidget()],
       ),
     );
   }
@@ -75,14 +73,16 @@ class Destination extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      _destinationContainer(
-                          imagePath: 'assets/baramulla.png'),
-                      _destinationContainer(
-                          imagePath: 'assets/ganderbal.png'),
-                      _destinationContainer(
-                          imagePath: 'assets/bandipora.png'),
-                      _destinationContainer(
-                          imagePath: 'assets/kashWidlife.png'),
+                      DestinationContainer(imagePath: 'assets/baramulla.png',nextPage: LiteraturePage(),),
+                      DestinationContainer(imagePath: 'assets/ganderbal.png',
+                        nextPage: LiteraturePage(),
+                      ),
+                      DestinationContainer(imagePath: 'assets/bandipora.png',
+                        nextPage: LiteraturePage(),
+                      ),
+                      DestinationContainer(imagePath: 'assets/kupwara.png',
+                        nextPage: LiteraturePage(),
+                      ),
                     ],
                   ),
                 ),
@@ -99,13 +99,18 @@ class Destination extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      _destinationContainer(imagePath:'assets/kulgam.png'),
-                      _destinationContainer(
-                          imagePath: 'assets/pulwama.png'),
-                      _destinationContainer(
-                          imagePath: 'assets/kashWidlife.png'),
-                      _destinationContainer(
-                          imagePath: 'assets/kashWidlife.png'),
+                      DestinationContainer(imagePath: 'assets/kulgam.png',
+                        nextPage: LiteraturePage(),
+                      ),
+                      DestinationContainer(imagePath: 'assets/pulwama.png',
+                        nextPage: LiteraturePage(),
+                      ),
+                      DestinationContainer(imagePath: 'assets/shopian.png',
+                        nextPage: LiteraturePage(),
+                      ),
+                      DestinationContainer(imagePath: 'assets/anantnag.png',
+                        nextPage: LiteraturePage(),
+                      ),
                     ],
                   ),
                 ),
@@ -122,14 +127,12 @@ class Destination extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      _destinationContainer(
-                          imagePath: 'assets/kashWidlife.png'),
-                      _destinationContainer(
-                          imagePath: 'assets/kashWidlife.png'),
-                      _destinationContainer(
-                          imagePath: 'assets/kashWidlife.png'),
-                      _destinationContainer(
-                          imagePath: 'assets/kashWidlife.png'),
+                      DestinationContainer(imagePath: 'assets/srinagar.png',
+                        nextPage: LiteraturePage(),
+                      ),
+                      DestinationContainer(imagePath: 'assets/budgam.png',
+                        nextPage: LiteraturePage(),
+                      ),
                     ],
                   ),
                 ),
@@ -140,12 +143,25 @@ class Destination extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget _destinationContainer({required String imagePath}) {
-    return Container(
-        margin: EdgeInsets.all(devW * 0.02),
-        width: devW * 0.7,
-        height: devH * 0.3,
-        child: Image.asset(fit: BoxFit.fill, imagePath));
+class DestinationContainer extends StatelessWidget {
+  String imagePath = '';
+  var nextPage;
+  DestinationContainer({required this.imagePath, required this.nextPage});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (_) => nextPage));
+      },
+      child: Container(
+          margin: EdgeInsets.all(devW * 0.02),
+          width: devW * 0.7,
+          height: devH * 0.3,
+          child: Image.asset(imagePath)),
+    );
   }
 }
