@@ -209,11 +209,21 @@ class WoodCarving extends StatelessWidget {
       child: Column(
         children: [
           CraftCard(
-            imagePath: 'assets/AyatUlKursi.png',
-            urlLink: 'https://www.instagram.com/p/CGU4FEuMxSv/'
-          ),
-          // CraftCard(name: Paper_machie(),),
-          // CraftCard(name: Paper_machie(),),
+              imagePath: 'assets/WoodAyat.png',
+              urlLink:
+                  'https://instagram.com/elkhattstore?igshid=MzRlODBiNWFlZA=='),
+          CraftCard(
+              imagePath: 'assets/WoodChair.png',
+              urlLink: 'https://www.instagram.com/parayswalnutwoodcarvings/'),
+          CraftCard(
+              imagePath: 'assets/WoodDesk.png',
+              urlLink: 'https://www.instagram.com/parayswalnutwoodcarvings/'),
+          CraftCard(
+              imagePath: 'assets/WoodScreen.png',
+              urlLink: 'https://www.instagram.com/parayswalnutwoodcarvings/'),
+          CraftCard(
+              imagePath: 'assets/WoodTable.png',
+              urlLink: 'https://www.instagram.com/parayswalnutwoodcarvings/'),
         ],
       ),
     );

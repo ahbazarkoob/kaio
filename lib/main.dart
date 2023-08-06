@@ -4,14 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:kaio/MainScreens/Culture.dart';
 import 'package:kaio/MainScreens/literature.dart';
 import 'package:kaio/MainScreens/Cuisine.dart';
-import 'package:kaio/Destinations/Destinationdesc.dart';
 import 'package:kaio/MainScreens/destinations.dart';
 import 'package:kaio/MainScreens/handicrafts.dart';
 import 'package:kaio/Cuisines/recipe.dart';
 import 'package:kaio/Literature/litera.dart';
 import 'package:kaio/widgets/CultureCard.dart';
 import 'package:kaio/widgets/Recipe.dart';
-import 'package:kaio/widgets/Travel.dart';
 
 import 'Cuisines/cook.dart';
 
