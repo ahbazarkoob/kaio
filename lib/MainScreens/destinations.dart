@@ -1,8 +1,8 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, prefer_const_constructors_in_immutables, non_constant_identifier_names, unused_import, unused_element, avoid_unnecessary_containers, must_be_immutable, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, prefer_const_constructors_in_immutables, non_constant_identifier_names, unused_import, unused_element, avoid_unnecessary_containers, must_be_immutable, use_key_in_widget_constructors, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
 import 'package:kaio/Destinations/Features.dart';
-import 'package:kaio/Destinations/PageView.dart';
+import 'package:kaio/Destinations/Container.dart';
 import 'package:kaio/Destinations/Tab.dart';
 import 'package:kaio/MainScreens/literature.dart';
 import 'package:kaio/constants.dart';
@@ -145,23 +145,3 @@ class Destination extends StatelessWidget {
   }
 }
 
-class DestinationContainer extends StatelessWidget {
-  String imagePath = '';
-  var nextPage;
-  DestinationContainer({required this.imagePath, required this.nextPage});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (_) => nextPage));
-      },
-      child: Container(
-          margin: EdgeInsets.all(devW * 0.02),
-          width: devW * 0.7,
-          height: devH * 0.3,
-          child: Image.asset(imagePath)),
-    );
-  }
-}
