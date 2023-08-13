@@ -14,34 +14,29 @@ class DestinationFeatures extends StatelessWidget {
       children: [
         CarouselSlider(
           items: [
-            Container(clipBehavior: Clip.hardEdge,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15)
-              ),
-                width: devW,
-                child: Image(fit: BoxFit.fill,
-                  image: AssetImage('assets/Destination/Main/kashWidlife.png'))),
-              Container(
-                width: devW,
-                child: Image.asset('assets/Destination/Main/kashShrines.png')),
-              Container(
-                width: devW,
-                child: Image.asset('assets/Destination/Main/kashTreks.png')),
-              Container(
-                width: devW, 
-                child: Image.asset('assets/Destination/Main/kashPilgrims.png')),
-              Container(
-                width: devW, 
-                child: Image.asset('assets/Destination/Main/kashHeriatge.png')),
-          ], 
+            featureContainer('assets/Destination/Main/kashWidlife.png'),
+            featureContainer('assets/Destination/Main/kashShrines.png'),
+            featureContainer('assets/Destination/Main/kashTreks.png'),
+            featureContainer('assets/Destination/Main/kashPilgrims.png'),
+            featureContainer('assets/Destination/Main/kashHeriatge.png'),
+          ],
           options: CarouselOptions(
-            autoPlay: true,
-            autoPlayInterval: Duration(seconds: 2),
-            scrollDirection: Axis.horizontal
-          ),
-
+              autoPlay: true,
+              autoPlayInterval: Duration(seconds: 2),
+              scrollDirection: Axis.horizontal),
         ),
       ],
     );
+  }
+
+  Widget featureContainer(String imagePath) {
+    return Container(
+      margin: EdgeInsets.all(devW*0.03),
+      clipBehavior: Clip.hardEdge,
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
+      width: devW*0.8,
+      child: Image(
+            fit: BoxFit.fill,
+            image: AssetImage(imagePath)));
   }
 }

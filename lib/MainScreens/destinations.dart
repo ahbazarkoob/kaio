@@ -22,7 +22,10 @@ class Destination extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: [_DestinationPage(), _GradientWidget(), _topLayerWidget()],
+        children: [
+          _DestinationPage(),
+           _GradientWidget(),
+            _topLayerWidget()],
       ),
     );
   }
