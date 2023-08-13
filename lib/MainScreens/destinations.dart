@@ -31,7 +31,7 @@ class Destination extends StatelessWidget {
     return SizedBox(
       height: devH * 0.5,
       width: devW,
-      child: Image.asset(fit: BoxFit.cover, 'assets/kashmir.png'),
+      child: Image.asset(fit: BoxFit.cover, 'assets/Destination/Main/kashmir.png'),
     );
   }
 
@@ -74,14 +74,14 @@ class Destination extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      DestinationContainer(imagePath: 'assets/baramulla.png',nextPage: LiteraturePage(),),
-                      DestinationContainer(imagePath: 'assets/ganderbal.png',
+                      DestinationContainer(imagePath: 'assets/Destination/Main/baramulla.png',nextPage: LiteraturePage(),),
+                      DestinationContainer(imagePath: 'assets/Destination/Main/ganderbal.png',
                         nextPage: SecondPage(),
                       ),
-                      DestinationContainer(imagePath: 'assets/bandipora.png',
+                      DestinationContainer(imagePath: 'assets/Destination/Main/bandipora.png',
                         nextPage: LiteraturePage(),
                       ),
-                      DestinationContainer(imagePath: 'assets/kupwara.png',
+                      DestinationContainer(imagePath: 'assets/Destination/Main/kupwara.png',
                         nextPage: LiteraturePage(),
                       ),
                     ],
@@ -100,16 +100,16 @@ class Destination extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      DestinationContainer(imagePath: 'assets/kulgam.png',
+                      DestinationContainer(imagePath: 'assets/Destination/Main/kulgam.png',
                         nextPage: LiteraturePage(),
                       ),
-                      DestinationContainer(imagePath: 'assets/pulwama.png',
+                      DestinationContainer(imagePath: 'assets/Destination/Main/pulwama.png',
                         nextPage: LiteraturePage(),
                       ),
-                      DestinationContainer(imagePath: 'assets/shopian.png',
+                      DestinationContainer(imagePath: 'assets/Destination/Main/shopian.png',
                         nextPage: LiteraturePage(),
                       ),
-                      DestinationContainer(imagePath: 'assets/anantnag.png',
+                      DestinationContainer(imagePath: 'assets/Destination/Main/anantnag.png',
                         nextPage: LiteraturePage(),
                       ),
                     ],
@@ -128,10 +128,10 @@ class Destination extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      DestinationContainer(imagePath: 'assets/srinagar.png',
+                      DestinationContainer(imagePath: 'assets/Destination/Main/srinagar.png',
                         nextPage: LiteraturePage(),
                       ),
-                      DestinationContainer(imagePath: 'assets/budgam.png',
+                      DestinationContainer(imagePath: 'assets/Destination/Main/budgam.png',
                         nextPage: LiteraturePage(),
                       ),
                     ],

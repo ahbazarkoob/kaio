@@ -43,27 +43,27 @@ class _HandicraftState extends State<Handicraft> {
       CarouselSlider(
         items: [
           HandicraftCard(
-            imagePath: 'assets/Carpet.png',
+            imagePath: 'assets/Handicrafts/Carousel/Carpet/Carpet.png',
             widgetName: CarpetPage(),
           ),
           HandicraftCard(
-            imagePath: 'assets/PaperMache.png',
+            imagePath: 'assets/Handicrafts/Carousel/Paper-Mache/PaperMache.png',
             widgetName: PaperMachePage(),
           ),
           HandicraftCard(
-            imagePath: 'assets/Shawl.png',
+            imagePath: 'assets/Handicrafts/Carousel/Shawl/Shawl.png',
             widgetName: ShawlPage(),
           ),
           HandicraftCard(
-            imagePath: 'assets/tilla.png',
+            imagePath: 'assets/Handicrafts/Carousel/Tilla/tilla.png',
             widgetName: TillaPage(),
           ),
           HandicraftCard(
-            imagePath: 'assets/Copper.png',
+            imagePath: 'assets/Handicrafts/Carousel/Copper/Copper.png',
             widgetName: CopperPage(),
           ),
           HandicraftCard(
-            imagePath: 'assets/Wood.png',
+            imagePath: 'assets/Handicrafts/Carousel/Wood/Wood.png',
             widgetName: WoodCarvingPage(),
           ),
         ],
@@ -132,10 +132,10 @@ class PaperMac extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          CraftCard(imagePath: 'assets/FlowerVase.png',urlLink: 'https://www.instagram.com/mir___arts/',),
-          CraftCard(imagePath: 'assets/TableLamp.png',urlLink: 'https://www.instagram.com/mir___arts/',),
-          CraftCard(imagePath: 'assets/Clutch.png',urlLink: 'https://www.instagram.com/mir___arts/'),
-          CraftCard(imagePath: 'assets/FruitBowl.png', urlLink: 'https://www.instagram.com/mir___arts/')
+          CraftCard(imagePath: 'assets/Handicrafts/Paper-Mache/FlowerVase.png',urlLink: 'https://www.instagram.com/mir___arts/',),
+          CraftCard(imagePath: 'assets/Handicrafts/Paper-Mache/TableLamp.png',urlLink: 'https://www.instagram.com/mir___arts/',),
+          CraftCard(imagePath: 'assets/Handicrafts/Paper-Mache/Clutch.png',urlLink: 'https://www.instagram.com/mir___arts/'),
+          CraftCard(imagePath: 'assets/Handicrafts/Paper-Mache/FruitBowl.png', urlLink: 'https://www.instagram.com/mir___arts/')
         ],
       ),
     );
@@ -151,10 +151,10 @@ class CRM extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          CraftCard(imagePath: 'assets/Carpet1.png', urlLink: 'https://www.instagram.com/houseofkashmiricarpets/'),
-          CraftCard(imagePath: 'assets/Carpet2.png', urlLink: 'https://www.instagram.com/houseofkashmiricarpets/'),
-          CraftCard(imagePath: 'assets/Carpet3.png', urlLink: 'https://www.instagram.com/houseofkashmiricarpets/'),
-          CraftCard(imagePath: 'assets/Carpet4.png', urlLink: 'https://www.instagram.com/houseofkashmiricarpets/')
+          CraftCard(imagePath: 'assets/Handicrafts/Carpet/Carpet1.png', urlLink: 'https://www.instagram.com/houseofkashmiricarpets/'),
+          CraftCard(imagePath: 'assets/Handicrafts/Carpet/Carpet2.png', urlLink: 'https://www.instagram.com/houseofkashmiricarpets/'),
+          CraftCard(imagePath: 'assets/Handicrafts/Carpet/Carpet3.png', urlLink: 'https://www.instagram.com/houseofkashmiricarpets/'),
+          CraftCard(imagePath: 'assets/Handicrafts/Carpet/Carpet4.png', urlLink: 'https://www.instagram.com/houseofkashmiricarpets/')
         ],
       ),
     );
@@ -170,10 +170,10 @@ class Embroidery extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          CraftCard(imagePath: 'assets/EmbTilla1.png', urlLink: 'https://www.instagram.com/p/CvgaXtQP2Qg/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=='),
-          CraftCard(imagePath: 'assets/EmbTilla2.png', urlLink: 'https://www.instagram.com/p/CuHgMKJPk9r/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=='),
-          CraftCard(imagePath: 'assets/EmbTilla3.png', urlLink: 'https://www.instagram.com/p/Ck0Y5UBPOpP/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=='),
-          CraftCard(imagePath: 'assets/EmbTilla4.png', urlLink: 'https://www.instagram.com/kashur_handicraft/'),
+          CraftCard(imagePath: 'assets/Handicrafts/Embroidery/EmbTilla1.png', urlLink: 'https://www.instagram.com/p/CvgaXtQP2Qg/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=='),
+          CraftCard(imagePath: 'assets/Handicrafts/Embroidery/EmbTilla2.png', urlLink: 'https://www.instagram.com/p/CuHgMKJPk9r/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=='),
+          CraftCard(imagePath: 'assets/Handicrafts/Embroidery/EmbTilla3.png', urlLink: 'https://www.instagram.com/p/Ck0Y5UBPOpP/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=='),
+          CraftCard(imagePath: 'assets/Handicrafts/Embroidery/EmbTilla4.png', urlLink: 'https://www.instagram.com/kashur_handicraft/'),
         ],
       ),
     );
@@ -189,10 +189,10 @@ class CopperWork extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          CraftCard(imagePath: 'assets/Samavar.png', urlLink: 'https://www.instagram.com/copper.hub/'),
-          CraftCard(imagePath: 'assets/Izbandsoz.png', urlLink: 'https://www.instagram.com/copper.hub/'),
-          CraftCard(imagePath: 'assets/Tramisarposh.png', urlLink: 'https://www.instagram.com/copper.hub/'),
-          CraftCard(imagePath: 'assets/Dryfruitbowl.png', urlLink: 'https://www.instagram.com/copper.hub/'),
+          CraftCard(imagePath: 'assets/Handicrafts/Copper/Samavar.png', urlLink: 'https://www.instagram.com/copper.hub/'),
+          CraftCard(imagePath: 'assets/Handicrafts/Copper/Izbandsoz.png', urlLink: 'https://www.instagram.com/copper.hub/'),
+          CraftCard(imagePath: 'assets/Handicrafts/Copper/Tramisarposh.png', urlLink: 'https://www.instagram.com/copper.hub/'),
+          CraftCard(imagePath: 'assets/Handicrafts/Copper/Dryfruitbowl.png', urlLink: 'https://www.instagram.com/copper.hub/'),
         ],
       ),
     );
@@ -209,20 +209,20 @@ class WoodCarving extends StatelessWidget {
       child: Column(
         children: [
           CraftCard(
-              imagePath: 'assets/WoodAyat.png',
+              imagePath: 'assets/Handicrafts/Wood/WoodAyat.png',
               urlLink:
                   'https://instagram.com/elkhattstore?igshid=MzRlODBiNWFlZA=='),
           CraftCard(
-              imagePath: 'assets/WoodChair.png',
+              imagePath: 'assets/Handicrafts/Wood/WoodChair.png',
               urlLink: 'https://www.instagram.com/parayswalnutwoodcarvings/'),
           CraftCard(
-              imagePath: 'assets/WoodDesk.png',
+              imagePath: 'assets/Handicrafts/Wood/WoodDesk.png',
               urlLink: 'https://www.instagram.com/parayswalnutwoodcarvings/'),
           CraftCard(
-              imagePath: 'assets/WoodScreen.png',
+              imagePath: 'assets/Handicrafts/Wood/WoodScreen.png',
               urlLink: 'https://www.instagram.com/parayswalnutwoodcarvings/'),
           CraftCard(
-              imagePath: 'assets/WoodTable.png',
+              imagePath: 'assets/Handicrafts/Wood/WoodTable.png',
               urlLink: 'https://www.instagram.com/parayswalnutwoodcarvings/'),
         ],
       ),
@@ -285,7 +285,7 @@ class CarpetPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/Carpet.png'))
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Carpet/Carpet.png'))
                 ],
               ),
             ),
@@ -344,7 +344,7 @@ class CarpetPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/Talim.png')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Carpet/Talim.png')),
                   SizedBox(
                     height: 20,
                   ),
@@ -363,7 +363,7 @@ class CarpetPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/Yarn.png')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Carpet/Yarn.png')),
                   SizedBox(
                     height: 20,
                   ),
@@ -382,7 +382,7 @@ class CarpetPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/Weave.png')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Carpet/Weave.png')),
                   SizedBox(
                     height: 20,
                   ),
@@ -393,7 +393,7 @@ class CarpetPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/Weave1.png')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Carpet/Weave1.png')),
                   SizedBox(
                     height: 20,
                   ),
@@ -405,7 +405,7 @@ class CarpetPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/kaleen.png')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Carpet/kaleen.png')),
                   SizedBox(
                     height: 20,
                   ),
@@ -448,7 +448,7 @@ class PaperMachePage extends StatelessWidget {
                   style: kSelText,
                   textAlign: TextAlign.justify,),
                   SizedBox(height: 20,),
-                  Image(image: AssetImage('assets/PaperMache.png')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Paper-Mache/PaperMache.png')),
                 ],
               ),
             ),
@@ -488,7 +488,7 @@ class PaperMachePage extends StatelessWidget {
                   SizedBox(
                   height: 10,
                 ),
-                Image(image: AssetImage('assets/Sakthsazi.png')),
+                Image(image: AssetImage('assets/Handicrafts/Carousel/Paper-Mache/Sakthsazi.png')),
                  SizedBox(
                   height: 20,
                 ),
@@ -503,7 +503,7 @@ class PaperMachePage extends StatelessWidget {
                   SizedBox(
                   height: 10,
                 ),
-                 Image(image: AssetImage('assets/Naqashi.png')),
+                 Image(image: AssetImage('assets/Handicrafts/Carousel/Paper-Mache/Naqashi.png')),
                 SizedBox(
                   height: 20,
                 ),
@@ -552,7 +552,7 @@ class ShawlPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/Shawl.png'))
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Shawl/Shawl.png'))
                 ],
               ),
             ),
@@ -611,7 +611,7 @@ class ShawlPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/ShawlRaw.jpeg')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Shawl/ShawlRaw.jpeg')),
                   SizedBox(
                     height: 20,
                   ),
@@ -630,11 +630,11 @@ class ShawlPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/ShawlSpin.jpeg')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Shawl/ShawlSpin.jpeg')),
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/ShawlThread.png')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Shawl/ShawlThread.png')),
                   SizedBox(
                     height: 20,
                   ),
@@ -653,7 +653,7 @@ class ShawlPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/ShawlDye.jpeg')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Shawl/ShawlDye.jpeg')),
                   SizedBox(
                     height: 20,
                   ),
@@ -671,7 +671,7 @@ class ShawlPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/ShawlWeave.jpg')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Shawl/ShawlWeave.jpg')),
                   SizedBox(
                     height: 20,
                   ),
@@ -693,7 +693,7 @@ class ShawlPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/ShawlWash.png')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Shawl/ShawlWash.png')),
                   SizedBox(
                     height: 20,
                   ),
@@ -742,7 +742,7 @@ class CopperPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/Copper.png'))
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Copper/Copper.png'))
                 ],
               ),
             ),
@@ -798,7 +798,7 @@ class CopperPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/Rawcopper.jpg')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Copper/Rawcopper.jpg')),
                   SizedBox(
                     height: 20,
                   ),
@@ -817,7 +817,7 @@ class CopperPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Center(child: Image(image: AssetImage('assets/CopperHammer.jpg'))),
+                  Center(child: Image(image: AssetImage('assets/Handicrafts/Carousel/Copper/CopperHammer.jpg'))),
                   SizedBox(
                     height: 20,
                   ),
@@ -839,7 +839,7 @@ class CopperPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/CopperShape.jpg')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Copper/CopperShape.jpg')),
                   SizedBox(
                     height: 20,
                   ),
@@ -858,7 +858,7 @@ class CopperPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/CopperEngrave.jpeg')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Copper/CopperEngrave.jpeg')),
                   SizedBox(
                     height: 20,
                   ),
@@ -877,7 +877,7 @@ class CopperPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/CopperAnneal.jpg')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Copper/CopperAnneal.jpg')),
                   SizedBox(
                     height: 20,
                   ),
@@ -896,7 +896,7 @@ class CopperPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Center(child: Image(image: AssetImage('assets/CopperKalai.png'))),
+                  Center(child: Image(image: AssetImage('assets/Handicrafts/Carousel/Copper/CopperKalai.png'))),
                   SizedBox(
                     height: 20,
                   ), 
@@ -930,7 +930,7 @@ class CopperPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Image(image: AssetImage('assets/CoppweFinal.jpg')),
+                  Image(image: AssetImage('assets/Handicrafts/Carousel/Copper/CoppweFinal.jpg')),
                   SizedBox(
                     height: 20,
                   ), 
@@ -977,7 +977,7 @@ class TillaPage extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            Image(image: AssetImage('assets/tilla.png')),
+            Image(image: AssetImage('assets/Handicrafts/Carousel/Tilla/tilla.png')),
             SizedBox(
               height: 10,
             ),
@@ -1020,7 +1020,7 @@ class TillaPage extends StatelessWidget {
                       width: devW,
                       height: 300,
                       child: Image(
-                        image: AssetImage('assets/tilla2.jpg'),
+                        image: AssetImage('assets/Handicrafts/Carousel/Tilla/tilla2.jpg'),
                         fit: BoxFit.fill,
                       )),
                   SizedBox(
@@ -1037,7 +1037,7 @@ class TillaPage extends StatelessWidget {
                 ],
               ),
             ),
-            Image(image: AssetImage('assets/Tilla1.webp')),
+            Image(image: AssetImage('assets/Handicrafts/Carousel/Tilla/Tilla1.webp')),
           ],
         ),
       )),
@@ -1140,7 +1140,7 @@ class WoodCarvingPage extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    Image(image: AssetImage('assets/woodselection.jpeg')),
+                    Image(image: AssetImage('assets/Handicrafts/Carousel/Wood/woodselection.jpeg')),
                     SizedBox(
                       height: 20,
                     ),
@@ -1161,7 +1161,7 @@ class WoodCarvingPage extends StatelessWidget {
                     ),
                     Center(
                         child: Image(
-                            image: AssetImage('assets/designcreation.jpeg'))),
+                            image: AssetImage('assets/Handicrafts/Carousel/Wood/designcreation.jpg'))),
                     SizedBox(
                       height: 20,
                     ),
@@ -1183,7 +1183,7 @@ class WoodCarvingPage extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    Image(image: AssetImage('assets/woodblocking.jpeg')),
+                    Image(image: AssetImage('assets/Handicrafts/Carousel/Wood/woodblocking.jpeg')),
                     SizedBox(
                       height: 20,
                     ),
@@ -1202,7 +1202,7 @@ class WoodCarvingPage extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    Image(image: AssetImage('assets/intricatecarving.jpeg')),
+                    Image(image: AssetImage('assets/Handicrafts/Carousel/Wood/intricatecarving.jpeg')),
                     SizedBox(
                       height: 20,
                     ),
@@ -1222,7 +1222,7 @@ class WoodCarvingPage extends StatelessWidget {
                       height: 20,
                     ),
                     Image(
-                        image: AssetImage('assets/finishingandpolishing.jpeg')),
+                        image: AssetImage('assets/Handicrafts/Carousel/Wood/finishingandpolishing.jpeg')),
                     SizedBox(
                       height: 20,
                     ),
@@ -1241,7 +1241,7 @@ class WoodCarvingPage extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    Image(image: AssetImage('assets/ShawlWash.png')),
+                    Image(image: AssetImage('assets/Handicrafts/Carousel/Shawl/ShawlWash.png')),
                     SizedBox(
                       height: 20,
                     ),
@@ -1275,7 +1275,7 @@ class WoodCarvingPage extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    Image(image: AssetImage('assets/finalproductwood.png')),
+                    Image(image: AssetImage('assets/Handicrafts/Carousel/Wood/finalproductwood.png')),
                     SizedBox(
                       height: 20,
                     ),

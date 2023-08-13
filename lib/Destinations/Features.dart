@@ -14,21 +14,25 @@ class DestinationFeatures extends StatelessWidget {
       children: [
         CarouselSlider(
           items: [
-            Container(
+            Container(clipBehavior: Clip.hardEdge,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15)
+              ),
                 width: devW,
-                child: Image.asset('assets/kashWidlife.png')),
+                child: Image(fit: BoxFit.fill,
+                  image: AssetImage('assets/Destination/Main/kashWidlife.png'))),
               Container(
                 width: devW,
-                child: Image.asset('assets/kashShrines.png')),
+                child: Image.asset('assets/Destination/Main/kashShrines.png')),
               Container(
                 width: devW,
-                child: Image.asset('assets/kashTreks.png')),
+                child: Image.asset('assets/Destination/Main/kashTreks.png')),
               Container(
                 width: devW, 
-                child: Image.asset('assets/kashPilgrims.png')),
+                child: Image.asset('assets/Destination/Main/kashPilgrims.png')),
               Container(
                 width: devW, 
-                child: Image.asset('assets/kashHeriatge.png')),
+                child: Image.asset('assets/Destination/Main/kashHeriatge.png')),
           ], 
           options: CarouselOptions(
             autoPlay: true,

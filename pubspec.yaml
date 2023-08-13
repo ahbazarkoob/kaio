@@ -63,7 +63,30 @@ flutter:
   uses-material-design: true
   assets:
    - assets/
-  #   - images/a_dot_ham.jpeg
+   - assets/Cuisine/Beverages/
+   - assets/Cuisine/Carousel/
+   - assets/Cuisine/Deserts/
+   - assets/Cuisine/HomeMade/
+   - assets/Cuisine/Wazwan/
+   - assets/Handicrafts/Carousel/Carpet/
+   - assets/Handicrafts/Carousel/Copper/
+   - assets/Handicrafts/Carousel/Paper-Mache/
+   - assets/Handicrafts/Carousel/Shawl/
+   - assets/Handicrafts/Carousel/Tilla/
+   - assets/Handicrafts/Carousel/Wood/
+   - assets/Handicrafts/Carpet/
+   - assets/Handicrafts/Copper/
+   - assets/Handicrafts/Embroidery/
+   - assets/Handicrafts/Paper-Mache/
+   - assets/Handicrafts/Wood/
+   - assets/Literature/Prose/
+   - assets/Literature/Poetry/
+   - assets/Literature/New/
+   - assets/Literature/History/
+   - assets/Destination/Main/
+   - assets/Destination/Srinagar/Carousel/
+   - assets/Destination/Srinagar/Place/
+   - assets/Destination/Srinagar/Things/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

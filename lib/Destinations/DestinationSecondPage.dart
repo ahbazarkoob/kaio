@@ -36,19 +36,19 @@ class _SecondPageState extends State<SecondPage> {
               CarouselSlider(
                 items: [
                   PlaceCard(
-                      imagePath: 'assets/srinagar1.jpg',
+                      imagePath: 'assets/Destination/Srinagar/Carousel/srinagar1.jpg',
                       widgetName: Handicraft()),
                   PlaceCard(
-                      imagePath: 'assets/srinagar2.avif',
+                      imagePath: 'assets/Destination/Srinagar/Carousel/srinagar2.avif',
                       widgetName: Handicraft()),
                   PlaceCard(
-                      imagePath: 'assets/srinagar3.jpg',
+                      imagePath: 'assets/Destination/Srinagar/Carousel/srinagar3.jpg',
                       widgetName: Handicraft()),
                   PlaceCard(
-                      imagePath: 'assets/srinagar4.png',
+                      imagePath: 'assets/Destination/Srinagar/Carousel/srinagar4.png',
                       widgetName: Handicraft()),
                   PlaceCard(
-                      imagePath: 'assets/srinagar5.jpg',
+                      imagePath: 'assets/Destination/Srinagar/Carousel/srinagar5.jpg',
                       widgetName: Handicraft()),
                 ],
                 options: CarouselOptions(
@@ -131,19 +131,19 @@ class _SecondPageState extends State<SecondPage> {
                             child: Column(
                               children: [
                                 PlaceCard(
-                                    imagePath: 'assets/Shalimar.png',
+                                    imagePath: 'assets/Destination/Srinagar/Place/Shalimar.png',
                                     widgetName: Handicraft()),
                                 PlaceCard(
-                                    imagePath: 'assets/Tulipgarden.png',
+                                    imagePath: 'assets/Destination/Srinagar/Place/Tulipgarden.png',
                                     widgetName: Handicraft()),
                                 PlaceCard(
-                                    imagePath: 'assets/Parimahal.png',
+                                    imagePath: 'assets/Destination/Srinagar/Place/Parimahal.png',
                                     widgetName: Handicraft()),
                                 PlaceCard(
-                                    imagePath: 'assets/Chashmashahi.png',
+                                    imagePath: 'assets/Destination/Srinagar/Place/Chashmashahi.png',
                                     widgetName: Handicraft()),
                                 PlaceCard(
-                                    imagePath: 'assets/Badamwari.png',
+                                    imagePath: 'assets/Destination/Srinagar/Place/Badamwari.png',
                                     widgetName: Handicraft())
                               ],
                             ),
@@ -154,19 +154,19 @@ class _SecondPageState extends State<SecondPage> {
                             child: Column(
                               children: [
                                 PlaceCard(
-                                    imagePath: 'assets/Shikara.png',
+                                    imagePath: 'assets/Destination/Srinagar/Things/Shikara.png',
                                     widgetName: Cuisine()),
                                 PlaceCard(
-                                    imagePath: 'assets/paragliding.png',
+                                    imagePath: 'assets/Destination/Srinagar/Things/paragliding.png',
                                     widgetName: Cuisine()),
                                 PlaceCard(
-                                    imagePath: 'assets/heritage.png',
+                                    imagePath: 'assets/Destination/Srinagar/Things/heritage.png',
                                     widgetName: Cuisine()),
                                 PlaceCard(
-                                    imagePath: 'assets/houseboat.png',
+                                    imagePath: 'assets/Destination/Srinagar/Things/houseboat.png',
                                     widgetName: Cuisine()),
                                 PlaceCard(
-                                    imagePath: 'assets/birds.png',
+                                    imagePath: 'assets/Destination/Srinagar/Things/birds.png',
                                     widgetName: Cuisine())
                               ],
                             ),
@@ -208,7 +208,9 @@ class PlaceCard extends StatelessWidget {
         child: Container(
             height: devH * 0.3,
             width: devW * 0.9,
-            decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+            decoration: BoxDecoration(
+              border: Border.all(width: 3,
+                color: Color((0xff85586F)))),
             child: Image(fit: BoxFit.fill, image: AssetImage(imagePath))),
       ),
     );
