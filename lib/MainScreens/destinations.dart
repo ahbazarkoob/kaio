@@ -5,6 +5,7 @@ import 'package:kaio/Destinations/DestinationSecondPage.dart';
 import 'package:kaio/Destinations/Features.dart';
 import 'package:kaio/Destinations/Container.dart';
 import 'package:kaio/Destinations/Tab.dart';
+import 'package:kaio/Destinations/desttemplate.dart';
 import 'package:kaio/MainScreens/literature.dart';
 import 'package:kaio/constants.dart';
 import 'package:kaio/main.dart';
@@ -22,10 +23,7 @@ class Destination extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: [
-          _DestinationPage(),
-           _GradientWidget(),
-            _topLayerWidget()],
+        children: [_DestinationPage(), _GradientWidget(), _topLayerWidget()],
       ),
     );
   }
@@ -34,7 +32,8 @@ class Destination extends StatelessWidget {
     return SizedBox(
       height: devH * 0.5,
       width: devW,
-      child: Image.asset(fit: BoxFit.cover, 'assets/Destination/Main/kashmir.png'),
+      child:
+          Image.asset(fit: BoxFit.cover, 'assets/Destination/Main/kashmir.png'),
     );
   }
 
@@ -77,15 +76,20 @@ class Destination extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      DestinationContainer(imagePath: 'assets/Destination/Main/baramulla.png',nextPage: LiteraturePage(),),
-                      DestinationContainer(imagePath: 'assets/Destination/Main/ganderbal.png',
-                        nextPage: SecondPage(),
+                      DestinationContainer(
+                          imagePath: 'assets/Destination/Main/baramulla.png',
+                          nextPage: Baramulla()),
+                      DestinationContainer(
+                        imagePath: 'assets/Destination/Main/ganderbal.png',
+                        nextPage: Ganderbal(),
                       ),
-                      DestinationContainer(imagePath: 'assets/Destination/Main/bandipora.png',
-                        nextPage: LiteraturePage(),
+                      DestinationContainer(
+                        imagePath: 'assets/Destination/Main/bandipora.png',
+                        nextPage: Bandipora(),
                       ),
-                      DestinationContainer(imagePath: 'assets/Destination/Main/kupwara.png',
-                        nextPage: LiteraturePage(),
+                      DestinationContainer(
+                        imagePath: 'assets/Destination/Main/kupwara.png',
+                        nextPage: Kupwara(),
                       ),
                     ],
                   ),
@@ -103,16 +107,20 @@ class Destination extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      DestinationContainer(imagePath: 'assets/Destination/Main/kulgam.png',
+                      DestinationContainer(
+                        imagePath: 'assets/Destination/Main/kulgam.png',
                         nextPage: LiteraturePage(),
                       ),
-                      DestinationContainer(imagePath: 'assets/Destination/Main/pulwama.png',
+                      DestinationContainer(
+                        imagePath: 'assets/Destination/Main/pulwama.png',
                         nextPage: LiteraturePage(),
                       ),
-                      DestinationContainer(imagePath: 'assets/Destination/Main/shopian.png',
+                      DestinationContainer(
+                        imagePath: 'assets/Destination/Main/shopian.png',
                         nextPage: LiteraturePage(),
                       ),
-                      DestinationContainer(imagePath: 'assets/Destination/Main/anantnag.png',
+                      DestinationContainer(
+                        imagePath: 'assets/Destination/Main/anantnag.png',
                         nextPage: LiteraturePage(),
                       ),
                     ],
@@ -131,10 +139,12 @@ class Destination extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      DestinationContainer(imagePath: 'assets/Destination/Main/srinagar.png',
+                      DestinationContainer(
+                        imagePath: 'assets/Destination/Main/srinagar.png',
                         nextPage: LiteraturePage(),
                       ),
-                      DestinationContainer(imagePath: 'assets/Destination/Main/budgam.png',
+                      DestinationContainer(
+                        imagePath: 'assets/Destination/Main/budgam.png',
                         nextPage: LiteraturePage(),
                       ),
                     ],
@@ -147,5 +157,92 @@ class Destination extends StatelessWidget {
       ),
     );
   }
-}
 
+  Widget Baramulla() {
+    return DestTemplate(
+        DescriptionPlace: "hey",
+        BestTime: 'Summer',
+        cimage1: 'assets/Destination/Main/anantnag.png',
+        cimage2: 'assets/Destination/Main/anantnag.png',
+        cimage3: 'assets/Destination/Main/anantnag.png',
+        cimage4: 'assets/Destination/Main/anantnag.png',
+        cimage5: 'assets/Destination/Main/anantnag.png',
+        place1: 'assets/Destination/Baramulla/Gulmarg.png',
+        place2: 'assets/Destination/Baramulla/DrungWaterfall.png',
+        place3: 'assets/Destination/Baramulla/RaniTemple.png',
+        place4: 'assets/Destination/Baramulla/NingleNallah.png',
+        place5: 'assets/Destination/Baramulla/ApharwatPeak.png',
+        placeName: 'Baramulla',
+        thing1: 'assets/Destination/Main/anantnag.png',
+        thing2: 'assets/Destination/Main/anantnag.png',
+        thing3: 'assets/Destination/Main/anantnag.png',
+        thing4: 'assets/Destination/Main/anantnag.png',
+        thing5: 'assets/Destination/Main/anantnag.png');
+  }
+
+  Widget Ganderbal() {
+    return DestTemplate(
+        placeName: 'Ganderbal',
+        cimage1: '',
+        cimage2: '',
+        cimage3: '',
+        cimage4: '',
+        cimage5: '',
+        DescriptionPlace: 'DescriptionPlace',
+        place1: 'assets/Destination/Ganderbal/Sonamarg.png',
+        place2: 'assets/Destination/Ganderbal/Harmukh.png',
+        place3: 'assets/Destination/Ganderbal/ManasbalLake.png',
+        place4: 'assets/Destination/Ganderbal/Prang.png',
+        place5: 'assets/Destination/Ganderbal/MohandMarg.png',
+        thing1: '',
+        thing2: '',
+        thing3: '',
+        thing4: '',
+        thing5: '',
+        BestTime: '');
+  }
+
+  Widget Bandipora() {
+    return DestTemplate(
+        placeName: 'Ganderbal',
+        cimage1: '',
+        cimage2: '',
+        cimage3: '',
+        cimage4: '',
+        cimage5: '',
+        DescriptionPlace: 'DescriptionPlace',
+        place1: 'assets/Destination/Bandipora/WullarLake.png',
+        place2: 'assets/Destination/Bandipora/GurezValley.png',
+        place3: 'assets/Destination/Bandipora/ChotaAmarnath.png',
+        place4: 'assets/Destination/Bandipora/NishatPark.png',
+        place5: 'assets/Destination/Bandipora/Watlab.png',
+        thing1: '',
+        thing2: '',
+        thing3: '',
+        thing4: '',
+        thing5: '',
+        BestTime: '');
+  }
+
+  Widget Kupwara() {
+    return DestTemplate(
+        placeName: 'Ganderbal',
+        cimage1: '',
+        cimage2: '',
+        cimage3: '',
+        cimage4: '',
+        cimage5: '',
+        DescriptionPlace: 'DescriptionPlace',
+        place1: 'assets/Destination/Kupwara/Lolab.png',
+        place2: 'assets/Destination/Kupwara/SadhnaPass.png',
+        place3: 'assets/Destination/Kupwara/BungusValley.png',
+        place4: 'assets/Destination/Kupwara/Kalaroos.png',
+        place5: '',
+        thing1: '',
+        thing2: '',
+        thing3: '',
+        thing4: '',
+        thing5: '',
+        BestTime: '');
+  }
+}
