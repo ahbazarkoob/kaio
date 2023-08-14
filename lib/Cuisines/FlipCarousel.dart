@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers, use_key_in_widget_constructors, file_names, must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:flip_carousel/flip_carousel.dart';
 
