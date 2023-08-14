@@ -86,16 +86,34 @@ flutter:
    - assets/Destination/Main/
    - assets/Destination/Srinagar/Carousel/
    - assets/Destination/Srinagar/Place/
-   - assets/Destination/Srinagar/Things/
+   - assets/Destination/Srinagar/thing/
    - assets/Destination/Baramulla/place/
+   - assets/Destination/Baramulla/thing/
+   - assets/Destination/Baramulla/carousel/
    - assets/Destination/Ganderbal/place/
+   - assets/Destination/Ganderbal/thing/
+   - assets/Destination/Ganderbal/carousel/
    - assets/Destination/Bandipora/place/
+   - assets/Destination/Bandipora/thing/
+   - assets/Destination/Bandipora/carousel/
    - assets/Destination/Kupwara/place/
+   - assets/Destination/Kupwara/thing/
+   - assets/Destination/Kupwara/carousel/
    - assets/Destination/Kulgam/place/
+   - assets/Destination/Kulgam/thing/
+   - assets/Destination/Kulgam/carousel/
    - assets/Destination/Pulwama/place/
+   - assets/Destination/Pulwama/thing/
+   - assets/Destination/Pulwama/carousel/
    - assets/Destination/Shopain/place/
+   - assets/Destination/Shopain/thing/
+   - assets/Destination/Shopian/carousel/
    - assets/Destination/Anantnag/place/
+   - assets/Destination/Anantnag/thing/
+   - assets/Destination/Anantnag/carousel/
    - assets/Destination/Budgam/place/
+   - assets/Destination/Budgam/thing/
+   - assets/Destination/Budgam/carousel/
 
 
 
