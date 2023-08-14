@@ -216,7 +216,7 @@ class Destination extends StatelessWidget {
     return DestTemplate(
         placeName: 'Shopian',
         cimages: ShopianCImages,
-        DescriptionPlace: 'DescriptionPlace',
+        DescriptionPlace: '\n-Historical town situated in the South of Kashmir at the foot hills of \'Peer-Panchal\' mountain range.\n\n-Famously known as Apple Town in the sub-continent',
         places: ShopianPlaceImages,
         things: ShopianThingImages);
   }
@@ -232,7 +232,7 @@ class Destination extends StatelessWidget {
 
   Widget Budgam() {
     return DestTemplate(
-        placeName: 'Bandipora',
+        placeName: 'Budgam',
         cimages: BudgamCImages,
         DescriptionPlace: '\n-Came into existence in 1979, prior to which it was part of Srinagar district.\n\n-Tourist attractions are Doodhpathri,Yusmarg,Tosamaidan,Nilnag\n\n-Shrine of Sheikh Noor-ud-din Wali can also be found in Charari Sharief.',
         places: BudgamPlaceImages,
@@ -333,19 +333,17 @@ List<String> KulgamPlaceImages = [
   'assets/Destination/Kulgam/place/Panchanpathri.png',
   'assets/Destination/Kulgam/place/vasaknagkund.png',
 ];
+
 List<String> KulgamThingImages = [
-  'assets/Destination/Kulgam/place/badibahek.png',
-  'assets/Destination/Kulgam/place/chiranbal.png',
-  'assets/Destination/Kulgam/place/houenheng.png',
-  'assets/Destination/Kulgam/place/Panchanpathri.png',
-  'assets/Destination/Kulgam/place/vasaknagkund.png',
+  'assets/Destination/Kulgam/thing/kulgamtrek.png',
+  'assets/Destination/Kulgam/thing/kulgamwildlife.png',
+  'assets/Destination/Kulgam/thing/kulgamsightseeing.png',
 ];
 List<String> KulgamCImages = [
-  'assets/Destination/Kulgam/place/badibahek.png',
-  'assets/Destination/Kulgam/place/chiranbal.png',
-  'assets/Destination/Kulgam/place/houenheng.png',
-  'assets/Destination/Kulgam/place/Panchanpathri.png',
-  'assets/Destination/Kulgam/place/vasaknagkund.png',
+  'assets/Destination/Kulgam/carousel/kulgam1.jpg',
+  'assets/Destination/Kulgam/carousel/kulgam2.jpg',
+  'assets/Destination/Kulgam/carousel/kulgam3.png',
+  'assets/Destination/Kulgam/carousel/kulgam4.jpg',
 ];
 
 List<String> PulwamaPlaceImages = [
@@ -356,18 +354,15 @@ List<String> PulwamaPlaceImages = [
   'assets/Destination/Pulwama/place/payertemple.png',
 ];
 List<String> PulwamaThingImages = [
-  'assets/Destination/Pulwama/place/avantishwartemple.png',
-  'assets/Destination/Pulwama/place/hundurgompa.png',
-  'assets/Destination/Pulwama/place/kungwattan.png',
-  'assets/Destination/Pulwama/place/marsartarsar.png',
-  'assets/Destination/Pulwama/place/payertemple.png',
+  'assets/Destination/Pulwama/thing/pulwamacamping.png',
+  'assets/Destination/Pulwama/thing/pulwamasightseeing.png',
+  'assets/Destination/Pulwama/thing/pulwamatrek.png',
 ];
 List<String> PulwamaCImages = [
-  'assets/Destination/Pulwama/place/avantishwartemple.png',
-  'assets/Destination/Pulwama/place/hundurgompa.png',
-  'assets/Destination/Pulwama/place/kungwattan.png',
-  'assets/Destination/Pulwama/place/marsartarsar.png',
-  'assets/Destination/Pulwama/place/payertemple.png',
+  'assets/Destination/Pulwama/carousel/pulwama1.jpg',
+  'assets/Destination/Pulwama/carousel/pulwama2.jpg',
+  'assets/Destination/Pulwama/carousel/pulwama3.jpg',
+  'assets/Destination/Pulwama/carousel/pulwama4.jpg',
 ];
 List<String> ShopianPlaceImages = [
   'assets/Destination/Shopain/place/aharbal.png',
@@ -442,17 +437,14 @@ List<String> BudgamPlaceImages = [
 ];
 
 List<String> BudgamThingImages = [
-  'assets/Destination/Budgam/place/Doodhpathri.png',
-  'assets/Destination/Budgam/place/naranag.png',
-  'assets/Destination/Budgam/place/nilnag.png',
-  'assets/Destination/Budgam/place/tosamadan.png',
-  'assets/Destination/Budgam/place/yusmarg.png',
+  'assets/Destination/Budgam/thing/budgamcamping.png',
+  'assets/Destination/Budgam/thing/budgamfishing.png',
+  'assets/Destination/Budgam/thing/budgamhorseride.png',
+  'assets/Destination/Budgam/thing/budgamtrek.png',
 ];
-
 List<String> BudgamCImages = [
-  'assets/Destination/Budgam/place/Doodhpathri.png',
-  'assets/Destination/Budgam/place/naranag.png',
-  'assets/Destination/Budgam/place/nilnag.png',
-  'assets/Destination/Budgam/place/tosamadan.png',
-  'assets/Destination/Budgam/place/yusmarg.png',
+  'assets/Destination/Budgam/carousel/budgam1.jpg',
+  'assets/Destination/Budgam/carousel/budgam2.jpg',
+  'assets/Destination/Budgam/carousel/budgam3.jpg',
+  'assets/Destination/Budgam/carousel/budgam4.jpg',
 ];
