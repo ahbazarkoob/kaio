@@ -264,11 +264,10 @@ List<String> BaramullaThingImages = [
   'assets/Destination/Baramulla/thing/Snowboarding.png',
 ];
 List<String> BaramullaCImages = [
-  'assets/Destination/Baramulla/place/Gulmarg.png',
-  'assets/Destination/Baramulla/place/DrungWaterfall.png',
-  'assets/Destination/Baramulla/place/RaniTemple.png',
-  'assets/Destination/Baramulla/place/NingleNallah.png',
-  'assets/Destination/Baramulla/place/ApharwatPeak.png',
+  'assets/Destination/Baramulla/place/baramulla.jpg',
+  'assets/Destination/Baramulla/place/baramulla1.jpg',
+  'assets/Destination/Baramulla/place/baramulla2.jpeg',
+  'assets/Destination/Baramulla/place/baramulla3.jpg',
 ];
 
 List<String> GanderbalPlaceImages = [
