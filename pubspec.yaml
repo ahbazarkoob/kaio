@@ -87,10 +87,15 @@ flutter:
    - assets/Destination/Srinagar/Carousel/
    - assets/Destination/Srinagar/Place/
    - assets/Destination/Srinagar/Things/
-   - assets/Destination/Baramulla/
-   - assets/Destination/Ganderbal/
-   - assets/Destination/Bandipora/
-   - assets/Destination/Kupwara/
+   - assets/Destination/Baramulla/place/
+   - assets/Destination/Ganderbal/place/
+   - assets/Destination/Bandipora/place/
+   - assets/Destination/Kupwara/place/
+   - assets/Destination/Kulgam/place/
+   - assets/Destination/Pulwama/place/
+   - assets/Destination/Shopain/place/
+   - assets/Destination/Anantnag/place/
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

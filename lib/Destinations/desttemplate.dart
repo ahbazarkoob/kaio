@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable, non_constant_identifier_names, use_key_in_widget_constructors
+// ignore_for_file: must_be_immutable, non_constant_identifier_names, use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, prefer_typing_uninitialized_variables
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -10,43 +10,19 @@ import '../main.dart';
 
 class DestTemplate extends StatefulWidget {
   String placeName = '';
-  var cimage1 = '';
-  var cimage2 = '';
-  var cimage3 = '';
-  var cimage4 = '';
-  var cimage5 = '';
+  List<String> cimages = [];
   String DescriptionPlace = '';
-  var place1 = '';
-  var place2 = '';
-  var place3 = '';
-  var place4 = '';
-  var place5 = '';
-  var thing1 = '';
-  var thing2 = '';
-  var thing3 = '';
-  var thing4 = '';
-  var thing5 = '';
-  String BestTime = '';
+  List<String> places = [];
+  List<String> things = [];
 
   DestTemplate(
-      {required this.placeName,
-      required this.cimage1,
-      required this.cimage2,
-      required this.cimage3,
-      required this.cimage4,
-      required this.cimage5,
-      required this.DescriptionPlace,
-      required this.place1,
-      required this.place2,
-      required this.place3,
-      required this.place4,
-      required this.place5,
-      required this.thing1,
-      required this.thing2,
-      required this.thing3,
-      required this.thing4,
-      required this.thing5,
-      required this.BestTime});
+      {
+    required this.placeName,
+    required this.cimages,
+    required this.DescriptionPlace,
+    required this.places,
+    required this.things,
+  });
 
   @override
   State<DestTemplate> createState() => _DestTemplateState();
@@ -55,9 +31,6 @@ class DestTemplate extends StatefulWidget {
 class _DestTemplateState extends State<DestTemplate> {
   @override
   Widget build(BuildContext context) {
-    devH = MediaQuery.of(context).size.height;
-    devW = MediaQuery.of(context).size.width;
-
     return Scaffold(
         body: SafeArea(
       child: Column(
@@ -65,25 +38,15 @@ class _DestTemplateState extends State<DestTemplate> {
           Center(
             child: Text(
               widget.placeName,
-              // 'Srinagar',
               style: kHeading,
             ),
           ),
           Stack(
             children: [
               CarouselSlider(
-                items: [
-                  PlaceCard(
-                      imagePath: widget.cimage1, widgetName: Handicraft()),
-                  PlaceCard(
-                      imagePath: widget.cimage2, widgetName: Handicraft()),
-                  PlaceCard(
-                      imagePath: widget.cimage3, widgetName: Handicraft()),
-                  PlaceCard(
-                      imagePath: widget.cimage4, widgetName: Handicraft()),
-                  PlaceCard(
-                      imagePath: widget.cimage5, widgetName: Handicraft()),
-                ],
+                items: widget.cimages.map((cimage) {
+                  return PlaceCard(imagePath: cimage, widgetName: Handicraft());
+                }).toList(),
                 options: CarouselOptions(
                   height: 300.0,
                   autoPlay: true,
@@ -130,7 +93,7 @@ class _DestTemplateState extends State<DestTemplate> {
             ],
           ),
           DefaultTabController(
-            length: 3,
+            length: 2,
             child: Expanded(
               child: Column(
                 children: [
@@ -146,7 +109,6 @@ class _DestTemplateState extends State<DestTemplate> {
                       tabs: [
                         Tab(text: 'Places to visit'),
                         Tab(text: 'Things to do'),
-                        Tab(text: 'Best time to visit'),
                       ],
                       labelColor: Colors.black,
                     ),
@@ -160,60 +122,22 @@ class _DestTemplateState extends State<DestTemplate> {
                         SingleChildScrollView(
                           child: Container(
                             child: Column(
-                              children: [
-                                PlaceCard(
-                                    imagePath: widget.place1,
-                                    widgetName: Handicraft()),
-                                PlaceCard(
-                                    imagePath: widget.place2,
-                                    widgetName: Handicraft()),
-                                PlaceCard(
-                                    imagePath: widget.place3,
-                                    widgetName: Handicraft()),
-                                PlaceCard(
-                                    imagePath: widget.place4,
-                                    widgetName: Handicraft()),
-                                PlaceCard(
-                                    imagePath: widget.place5,
-                                    widgetName: Handicraft())
-                              ],
+                              children: widget.places.map((place) {
+                                return PlaceCard(
+                                    imagePath: place, widgetName: Handicraft());
+                              }).toList(),
                             ),
                           ),
                         ),
                         SingleChildScrollView(
                           child: Container(
                             child: Column(
-                              children: [
-                                PlaceCard(
-                                    imagePath: widget.thing1,
-                                    widgetName: Cuisine()),
-                                PlaceCard(
-                                    imagePath: widget.thing2,
-                                    widgetName: Cuisine()),
-                                PlaceCard(
-                                    imagePath: widget.thing3,
-                                    widgetName: Cuisine()),
-                                PlaceCard(
-                                    imagePath: widget.thing4,
-                                    widgetName: Cuisine()),
-                                PlaceCard(
-                                    imagePath: widget.thing5,
-                                    widgetName: Cuisine())
-                              ],
+                              children: widget.things.map((thing) {
+                                return PlaceCard(
+                                    imagePath: thing, widgetName: Cuisine());
+                              }).toList(),
+
                             ),
-                          ),
-                        ),
-                        SingleChildScrollView(
-                          child: Container(
-                            margin: EdgeInsets.all(10),
-                            child: Column(children: [
-                              Text(
-                                widget.BestTime,
-                                style:
-                                    kSubHeading.copyWith(color: Colors.black),
-                                textAlign: TextAlign.justify,
-                              )
-                            ]),
                           ),
                         ),
                       ],
