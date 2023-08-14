@@ -1,0 +1,163 @@
+Date : 2023-08-14 21:43:52
+Directory : c:\Users\ahbaz\StudioProjects\kaio
+Total : 79 files,  6438 codes, 399 comments, 558 blanks, all 7395 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| Dart       |         31 |      4,875 |        126 |        270 |      5,271 |
+| C++        |         16 |        537 |        118 |        181 |        836 |
+| XML        |         10 |        463 |         48 |         12 |        523 |
+| JSON       |          4 |        248 |          0 |          4 |        252 |
+| Gradle     |          3 |         90 |          5 |         22 |        117 |
+| YAML       |          2 |         76 |         79 |         20 |        175 |
+| Swift      |          6 |         52 |          7 |         20 |         79 |
+| CMake      |          2 |         38 |          0 |         12 |         50 |
+| HTML       |          1 |         38 |         16 |          6 |         60 |
+| Markdown   |          2 |         13 |          0 |          9 |         22 |
+| Properties |          2 |          8 |          0 |          2 |         10 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                             | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                |         79 |      6,438 |        399 |        558 |      7,395 |
+| . (Files)                                                                                        |          3 |         86 |         79 |         27 |        192 |
+| android                                                                                          |         12 |        157 |         51 |         33 |        241 |
+| android (Files)                                                                                  |          3 |         38 |          0 |         10 |         48 |
+| android\app                                                                                      |          8 |        114 |         51 |         22 |        187 |
+| android\app (Files)                                                                              |          1 |         55 |          5 |         13 |         73 |
+| android\app\src                                                                                  |          7 |         59 |         46 |          9 |        114 |
+| android\app\src\debug                                                                            |          1 |          3 |          4 |          1 |          8 |
+| android\app\src\main                                                                             |          5 |         53 |         38 |          7 |         98 |
+| android\app\src\main (Files)                                                                     |          1 |         27 |          6 |          1 |         34 |
+| android\app\src\main\res                                                                         |          4 |         26 |         32 |          6 |         64 |
+| android\app\src\main\res\drawable                                                                |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\drawable-v21                                                            |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\values                                                                  |          1 |          9 |          9 |          1 |         19 |
+| android\app\src\main\res\values-night                                                            |          1 |          9 |          9 |          1 |         19 |
+| android\app\src\profile                                                                          |          1 |          3 |          4 |          1 |          8 |
+| android\gradle                                                                                   |          1 |          5 |          0 |          1 |          6 |
+| android\gradle\wrapper                                                                           |          1 |          5 |          0 |          1 |          6 |
+| ios                                                                                              |          8 |        229 |          4 |         13 |        246 |
+| ios\Runner                                                                                       |          7 |        222 |          2 |          9 |        233 |
+| ios\Runner (Files)                                                                               |          2 |         13 |          0 |          3 |         16 |
+| ios\RunnerTests                                                                                  |          1 |          7 |          2 |          4 |         13 |
+| ios\Runner\Assets.xcassets                                                                       |          3 |        148 |          0 |          4 |        152 |
+| ios\Runner\Assets.xcassets\AppIcon.appiconset                                                    |          1 |        122 |          0 |          1 |        123 |
+| ios\Runner\Assets.xcassets\LaunchImage.imageset                                                  |          2 |         26 |          0 |          3 |         29 |
+| ios\Runner\Base.lproj                                                                            |          2 |         61 |          2 |          2 |         65 |
+| lib                                                                                              |         30 |      4,861 |        115 |        262 |      5,238 |
+| lib (Files)                                                                                      |          2 |        111 |          1 |          9 |        121 |
+| lib\Cuisines                                                                                     |          3 |        200 |         27 |         25 |        252 |
+| lib\Culture                                                                                      |          2 |         97 |         37 |         11 |        145 |
+| lib\Destinations                                                                                 |          5 |        487 |          5 |         30 |        522 |
+| lib\Handicrafts                                                                                  |          2 |        109 |          2 |         10 |        121 |
+| lib\Literature                                                                                   |          4 |        459 |          4 |         29 |        492 |
+| lib\MainScreens                                                                                  |          5 |      3,115 |         17 |        103 |      3,235 |
+| lib\widgets                                                                                      |          7 |        283 |         22 |         45 |        350 |
+| linux                                                                                            |          6 |        117 |         27 |         44 |        188 |
+| linux (Files)                                                                                    |          3 |         86 |         18 |         27 |        131 |
+| linux\flutter                                                                                    |          3 |         31 |          9 |         17 |         57 |
+| macos                                                                                            |          6 |        444 |          5 |         16 |        465 |
+| macos\Flutter                                                                                    |          1 |          6 |          3 |          4 |         13 |
+| macos\Runner                                                                                     |          4 |        431 |          0 |          8 |        439 |
+| macos\Runner (Files)                                                                             |          2 |         20 |          0 |          6 |         26 |
+| macos\RunnerTests                                                                                |          1 |          7 |          2 |          4 |         13 |
+| macos\Runner\Assets.xcassets                                                                     |          1 |         68 |          0 |          1 |         69 |
+| macos\Runner\Assets.xcassets\AppIcon.appiconset                                                  |          1 |         68 |          0 |          1 |         69 |
+| macos\Runner\Base.lproj                                                                          |          1 |        343 |          0 |          1 |        344 |
+| test                                                                                             |          1 |         14 |         11 |          8 |         33 |
+| web                                                                                              |          2 |         73 |         16 |          7 |         96 |
+| windows                                                                                          |         11 |        457 |         91 |        148 |        696 |
+| windows\flutter                                                                                  |          3 |         30 |          9 |         17 |         56 |
+| windows\runner                                                                                   |          8 |        427 |         82 |        131 |        640 |
++--------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                         | language   | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\ahbaz\StudioProjects\kaio\README.md                                                     | Markdown   |         10 |          0 |          7 |         17 |
+| c:\Users\ahbaz\StudioProjects\kaio\analysis_options.yaml                                         | YAML       |          3 |         23 |          4 |         30 |
+| c:\Users\ahbaz\StudioProjects\kaio\android\app\build.gradle                                      | Gradle     |         55 |          5 |         13 |         73 |
+| c:\Users\ahbaz\StudioProjects\kaio\android\app\src\debug\AndroidManifest.xml                     | XML        |          3 |          4 |          1 |          8 |
+| c:\Users\ahbaz\StudioProjects\kaio\android\app\src\main\AndroidManifest.xml                      | XML        |         27 |          6 |          1 |         34 |
+| c:\Users\ahbaz\StudioProjects\kaio\android\app\src\main\res\drawable-v21\launch_background.xml   | XML        |          4 |          7 |          2 |         13 |
+| c:\Users\ahbaz\StudioProjects\kaio\android\app\src\main\res\drawable\launch_background.xml       | XML        |          4 |          7 |          2 |         13 |
+| c:\Users\ahbaz\StudioProjects\kaio\android\app\src\main\res\values-night\styles.xml              | XML        |          9 |          9 |          1 |         19 |
+| c:\Users\ahbaz\StudioProjects\kaio\android\app\src\main\res\values\styles.xml                    | XML        |          9 |          9 |          1 |         19 |
+| c:\Users\ahbaz\StudioProjects\kaio\android\app\src\profile\AndroidManifest.xml                   | XML        |          3 |          4 |          1 |          8 |
+| c:\Users\ahbaz\StudioProjects\kaio\android\build.gradle                                          | Gradle     |         27 |          0 |          5 |         32 |
+| c:\Users\ahbaz\StudioProjects\kaio\android\gradle.properties                                     | Properties |          3 |          0 |          1 |          4 |
+| c:\Users\ahbaz\StudioProjects\kaio\android\gradle\wrapper\gradle-wrapper.properties              | Properties |          5 |          0 |          1 |          6 |
+| c:\Users\ahbaz\StudioProjects\kaio\android\settings.gradle                                       | Gradle     |          8 |          0 |          4 |         12 |
+| c:\Users\ahbaz\StudioProjects\kaio\ios\RunnerTests\RunnerTests.swift                             | Swift      |          7 |          2 |          4 |         13 |
+| c:\Users\ahbaz\StudioProjects\kaio\ios\Runner\AppDelegate.swift                                  | Swift      |         12 |          0 |          2 |         14 |
+| c:\Users\ahbaz\StudioProjects\kaio\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json   | JSON       |        122 |          0 |          1 |        123 |
+| c:\Users\ahbaz\StudioProjects\kaio\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json | JSON       |         23 |          0 |          1 |         24 |
+| c:\Users\ahbaz\StudioProjects\kaio\ios\Runner\Assets.xcassets\LaunchImage.imageset\README.md     | Markdown   |          3 |          0 |          2 |          5 |
+| c:\Users\ahbaz\StudioProjects\kaio\ios\Runner\Base.lproj\LaunchScreen.storyboard                 | XML        |         36 |          1 |          1 |         38 |
+| c:\Users\ahbaz\StudioProjects\kaio\ios\Runner\Base.lproj\Main.storyboard                         | XML        |         25 |          1 |          1 |         27 |
+| c:\Users\ahbaz\StudioProjects\kaio\ios\Runner\Runner-Bridging-Header.h                           | C++        |          1 |          0 |          1 |          2 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Cuisines\FlipCarousel.dart                                | Dart       |         26 |          1 |          4 |         31 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Cuisines\cook.dart                                        | Dart       |         46 |         24 |         17 |         87 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Cuisines\recipe.dart                                      | Dart       |        128 |          2 |          4 |        134 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Culture\CultureSelection.dart                             | Dart       |         48 |         36 |          5 |         89 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Culture\Gallery.dart                                      | Dart       |         49 |          1 |          6 |         56 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\Container.dart                               | Dart       |         20 |          1 |          4 |         25 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\DestinationSecondPage.dart                   | Dart       |        210 |          1 |          8 |        219 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\Features.dart                                | Dart       |         37 |          1 |          5 |         43 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\Tab.dart                                     | Dart       |         45 |          1 |          3 |         49 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\desttemplate.dart                            | Dart       |        175 |          1 |         10 |        186 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Handicrafts\Hc_papermachie.dart                           | Dart       |         91 |          1 |          4 |         96 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Handicrafts\desc_Hc_pprmche.dart                          | Dart       |         18 |          1 |          6 |         25 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Literature\Book.dart                                      | Dart       |        167 |          1 |          4 |        172 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Literature\BookTemplate.dart                              | Dart       |        124 |          1 |          5 |        130 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Literature\Widget_Book.dart                               | Dart       |         20 |          1 |          6 |         27 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Literature\litera.dart                                    | Dart       |        148 |          1 |         14 |        163 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\MainScreens\Cuisine.dart                                  | Dart       |        943 |          5 |         13 |        961 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\MainScreens\Culture.dart                                  | Dart       |         11 |          4 |          5 |         20 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\MainScreens\destinations.dart                             | Dart       |        429 |          1 |         33 |        463 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\MainScreens\handicrafts.dart                              | Dart       |      1,257 |          6 |         34 |      1,297 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\MainScreens\literature.dart                               | Dart       |        475 |          1 |         18 |        494 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\constants.dart                                            | Dart       |          7 |          0 |          2 |          9 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\main.dart                                                 | Dart       |        104 |          1 |          7 |        112 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\CookCard.dart                                     | Dart       |         20 |          2 |          3 |         25 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\CultureCard.dart                                  | Dart       |         99 |         14 |         20 |        133 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\Recipe.dart                                       | Dart       |         61 |          1 |          4 |         66 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\ReviewCard.dart                                   | Dart       |         19 |          2 |          3 |         24 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\bookshape.dart                                    | Dart       |         35 |          1 |          8 |         44 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\craft.dart                                        | Dart       |         31 |          1 |          3 |         35 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\selection.dart                                    | Dart       |         18 |          1 |          4 |         23 |
+| c:\Users\ahbaz\StudioProjects\kaio\linux\flutter\generated_plugin_registrant.cc                  | C++        |          7 |          4 |          5 |         16 |
+| c:\Users\ahbaz\StudioProjects\kaio\linux\flutter\generated_plugin_registrant.h                   | C++        |          5 |          5 |          6 |         16 |
+| c:\Users\ahbaz\StudioProjects\kaio\linux\flutter\generated_plugins.cmake                         | CMake      |         19 |          0 |          6 |         25 |
+| c:\Users\ahbaz\StudioProjects\kaio\linux\main.cc                                                 | C++        |          5 |          0 |          2 |          7 |
+| c:\Users\ahbaz\StudioProjects\kaio\linux\my_application.cc                                       | C++        |         74 |         11 |         20 |        105 |
+| c:\Users\ahbaz\StudioProjects\kaio\linux\my_application.h                                        | C++        |          7 |          7 |          5 |         19 |
+| c:\Users\ahbaz\StudioProjects\kaio\macos\Flutter\GeneratedPluginRegistrant.swift                 | Swift      |          6 |          3 |          4 |         13 |
+| c:\Users\ahbaz\StudioProjects\kaio\macos\RunnerTests\RunnerTests.swift                           | Swift      |          7 |          2 |          4 |         13 |
+| c:\Users\ahbaz\StudioProjects\kaio\macos\Runner\AppDelegate.swift                                | Swift      |          8 |          0 |          2 |         10 |
+| c:\Users\ahbaz\StudioProjects\kaio\macos\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json | JSON       |         68 |          0 |          1 |         69 |
+| c:\Users\ahbaz\StudioProjects\kaio\macos\Runner\Base.lproj\MainMenu.xib                          | XML        |        343 |          0 |          1 |        344 |
+| c:\Users\ahbaz\StudioProjects\kaio\macos\Runner\MainFlutterWindow.swift                          | Swift      |         12 |          0 |          4 |         16 |
+| c:\Users\ahbaz\StudioProjects\kaio\pubspec.yaml                                                  | YAML       |         73 |         56 |         16 |        145 |
+| c:\Users\ahbaz\StudioProjects\kaio\test\widget_test.dart                                         | Dart       |         14 |         11 |          8 |         33 |
+| c:\Users\ahbaz\StudioProjects\kaio\web\index.html                                                | HTML       |         38 |         16 |          6 |         60 |
+| c:\Users\ahbaz\StudioProjects\kaio\web\manifest.json                                             | JSON       |         35 |          0 |          1 |         36 |
+| c:\Users\ahbaz\StudioProjects\kaio\windows\flutter\generated_plugin_registrant.cc                | C++        |          6 |          4 |          5 |         15 |
+| c:\Users\ahbaz\StudioProjects\kaio\windows\flutter\generated_plugin_registrant.h                 | C++        |          5 |          5 |          6 |         16 |
+| c:\Users\ahbaz\StudioProjects\kaio\windows\flutter\generated_plugins.cmake                       | CMake      |         19 |          0 |          6 |         25 |
+| c:\Users\ahbaz\StudioProjects\kaio\windows\runner\flutter_window.cpp                             | C++        |         48 |          4 |         15 |         67 |
+| c:\Users\ahbaz\StudioProjects\kaio\windows\runner\flutter_window.h                               | C++        |         20 |          5 |          9 |         34 |
+| c:\Users\ahbaz\StudioProjects\kaio\windows\runner\main.cpp                                       | C++        |         30 |          4 |         10 |         44 |
+| c:\Users\ahbaz\StudioProjects\kaio\windows\runner\resource.h                                     | C++        |          9 |          6 |          2 |         17 |
+| c:\Users\ahbaz\StudioProjects\kaio\windows\runner\utils.cpp                                      | C++        |         54 |          2 |         10 |         66 |
+| c:\Users\ahbaz\StudioProjects\kaio\windows\runner\utils.h                                        | C++        |          8 |          6 |          6 |         20 |
+| c:\Users\ahbaz\StudioProjects\kaio\windows\runner\win32_window.cpp                               | C++        |        210 |         24 |         55 |        289 |
+| c:\Users\ahbaz\StudioProjects\kaio\windows\runner\win32_window.h                                 | C++        |         48 |         31 |         24 |        103 |
+| Total                                                                                            |            |      6,438 |        399 |        558 |      7,395 |
++--------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

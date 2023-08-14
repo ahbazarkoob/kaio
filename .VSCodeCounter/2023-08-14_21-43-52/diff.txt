@@ -1,0 +1,53 @@
+Date : 2023-08-14 21:43:52
+Directory : c:\Users\ahbaz\StudioProjects\kaio
+Total : 20 files,  2677 codes, -10 comments, 58 blanks, all 2725 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |         19 |      2,624 |         -9 |         56 |      2,671 |
+| YAML     |          1 |         53 |         -1 |          2 |         54 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                           | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                              |         20 |      2,677 |        -10 |         58 |      2,725 |
+| . (Files)                                                                      |          1 |         53 |         -1 |          2 |         54 |
+| lib                                                                            |         19 |      2,624 |         -9 |         56 |      2,671 |
+| lib (Files)                                                                    |          2 |         15 |          0 |          2 |         17 |
+| lib\Cuisines                                                                   |          2 |         44 |          1 |          2 |         47 |
+| lib\Destinations                                                               |          6 |        374 |          4 |         27 |        405 |
+| lib\Literature                                                                 |          1 |         11 |          0 |          0 |         11 |
+| lib\MainScreens                                                                |          4 |      2,236 |          6 |         29 |      2,271 |
+| lib\widgets                                                                    |          4 |        -56 |        -20 |         -4 |        -80 |
++--------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                       | language | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Cuisines\FlipCarousel.dart              | Dart     |         26 |          1 |          4 |         31 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Cuisines\recipe.dart                    | Dart     |         18 |          0 |         -2 |         16 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\Container.dart             | Dart     |         20 |          1 |          4 |         25 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\DestinationSecondPage.dart | Dart     |        210 |          1 |          8 |        219 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\Destinationdesc.dart       | Dart     |       -113 |         -1 |         -3 |       -117 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\Features.dart              | Dart     |         37 |          1 |          5 |         43 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\Tab.dart                   | Dart     |         45 |          1 |          3 |         49 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\desttemplate.dart          | Dart     |        175 |          1 |         10 |        186 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Literature\BookTemplate.dart            | Dart     |         11 |          0 |          0 |         11 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\MainScreens\Cuisine.dart                | Dart     |        722 |          3 |        -10 |        715 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\MainScreens\destinations.dart           | Dart     |        353 |         -1 |         28 |        380 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\MainScreens\handicrafts.dart            | Dart     |      1,056 |          4 |         14 |      1,074 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\MainScreens\literature.dart             | Dart     |        105 |          0 |         -3 |        102 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\constants.dart                          | Dart     |          4 |          0 |          1 |          5 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\main.dart                               | Dart     |         11 |          0 |          1 |         12 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\Recipe.dart                     | Dart     |          8 |          0 |         -1 |          7 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\Travel.dart                     | Dart     |        -56 |        -20 |         -7 |        -83 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\bookshape.dart                  | Dart     |          5 |          0 |          4 |          9 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\craft.dart                      | Dart     |        -13 |          0 |          0 |        -13 |
+| c:\Users\ahbaz\StudioProjects\kaio\pubspec.yaml                                | YAML     |         53 |         -1 |          2 |         54 |
+| Total                                                                          |          |      2,677 |        -10 |         58 |      2,725 |
++--------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
