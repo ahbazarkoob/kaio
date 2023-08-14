@@ -35,61 +35,73 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => LiteraturePage(),
-                  ),
-                );
-              },
-              child: Text('Kashmiri Literature'),
+            Expanded(
+              child: OutlinedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LiteraturePage(),
+                    ),
+                  );
+                },
+                child: Container(
+                  width: devW,
+                  child: Center(child: Text('Kashmiri Literature'))),
+              ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Cuisine()
-                  ),
-                );
-              },
-              child: Text('Kashmiri Cuisine'),
+            Expanded(
+              child: OutlinedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Cuisine()
+                    ),
+                  );
+                },
+                child: Container(child: Center(child: Text('Kashmiri Cuisine'))),
+              ),
             ),
-           ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Handicraft(),
-                  ),
-                );
-              },
-              child: Text('Kashmiri Handicrafts'),
+           Expanded(
+             child: OutlinedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Handicraft(),
+                    ),
+                  );
+                },
+                child: Container(child: Center(child: Text('Kashmiri Handicrafts'))),
+              ),
+           ),
+            Expanded(
+              child: OutlinedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Destination(),
+                    ),
+                  );
+                },
+                child: Container(child: Center(child: Text('Destinations'))),
+              ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Destination(),
-                  ),
-                );
-              },
-              child: Text('Destinations'),
-            ),
-             ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Culture(),
-                  ),
-                );
-              },
-              child: Text('Kashmiri Culture'),
-            ),
+             Expanded(
+               child: OutlinedButton (
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Culture(),
+                    ),
+                  );
+                },
+                child: Container(child: Center(child: Text('Kashmiri Culture'))),
+                         ),
+             ),
           ],
         ),
       ),

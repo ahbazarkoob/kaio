@@ -448,23 +448,25 @@ List<String> SrinagarCImages = [
 ];
 
 List<String> BudgamPlaceImages = [
-  'assets/Destination/Bandipora/WullarLake.png',
-  'assets/Destination/Bandipora/GurezValley.png',
-  'assets/Destination/Bandipora/ChotaAmarnath.png',
-  'assets/Destination/Bandipora/NishatPark.png',
-  'assets/Destination/Bandipora/Watlab.png',
+  'assets/Destination/Budgam/place/Doodhpathri.png',
+  'assets/Destination/Budgam/place/naranag.png',
+  'assets/Destination/Budgam/place/nilnag.png',
+  'assets/Destination/Budgam/place/tosamadan.png',
+  'assets/Destination/Budgam/place/yusmarg.png',
 ];
+
 List<String> BudgamThingImages = [
-  'assets/Destination/Bandipora/WullarLake.png',
-  'assets/Destination/Bandipora/GurezValley.png',
-  'assets/Destination/Bandipora/ChotaAmarnath.png',
-  'assets/Destination/Bandipora/NishatPark.png',
-  'assets/Destination/Bandipora/Watlab.png',
+  'assets/Destination/Budgam/place/Doodhpathri.png',
+  'assets/Destination/Budgam/place/naranag.png',
+  'assets/Destination/Budgam/place/nilnag.png',
+  'assets/Destination/Budgam/place/tosamadan.png',
+  'assets/Destination/Budgam/place/yusmarg.png',
 ];
+
 List<String> BudgamCImages = [
-  'assets/Destination/Bandipora/WullarLake.png',
-  'assets/Destination/Bandipora/GurezValley.png',
-  'assets/Destination/Bandipora/ChotaAmarnath.png',
-  'assets/Destination/Bandipora/NishatPark.png',
-  'assets/Destination/Bandipora/Watlab.png',
+  'assets/Destination/Budgam/place/Doodhpathri.png',
+  'assets/Destination/Budgam/place/naranag.png',
+  'assets/Destination/Budgam/place/nilnag.png',
+  'assets/Destination/Budgam/place/tosamadan.png',
+  'assets/Destination/Budgam/place/yusmarg.png',
 ];
