@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, prefer_typing_uninitialized_variables, unused_import, use_key_in_widget_constructors, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
-import 'package:kaio/Destinations/DestinationSecondPage.dart';
+import 'package:kaio/Destinations/carouselDescription.dart';
+import 'package:kaio/Destinations/pilgrims.dart';
+import 'package:kaio/Destinations/treks.dart';
 import 'package:kaio/Destinations/wildlife.dart';
 import 'package:kaio/MainScreens/Culture.dart';
 import 'package:kaio/MainScreens/literature.dart';
@@ -90,19 +92,19 @@ class HomeScreen extends StatelessWidget {
                 child: Container(child: Center(child: Text('Destinations'))),
               ),
             ),
-            //  Expanded(
-            //    child: OutlinedButton (
-            //     onPressed: () {
-            //       Navigator.push(
-            //         context,
-            //         MaterialPageRoute(
-            //           builder: (context) => FeatureTemp(imagePath: 'assets/Destination/Ganderbal/thing/gangbalTrek.png'),
-            //         ),
-            //       );
-            //     },
-            //     child: Container(child: Center(child: Text('Kashmiri Culture'))),
-            //              ),
-            //  ),
+             Expanded(
+               child: OutlinedButton (
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Pilgrim(),
+                    ),
+                  );
+                },
+                child: Container(child: Center(child: Text('Kashmiri Culture'))),
+                         ),
+             ),
           ],
         ),
       ),

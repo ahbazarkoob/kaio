@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, prefer_const_constructors_in_immutables, non_constant_identifier_names, unused_import, unused_element, avoid_unnecessary_containers, must_be_immutable, use_key_in_widget_constructors, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
-import 'package:kaio/Destinations/DestinationSecondPage.dart';
+import 'package:kaio/Destinations/carouselDescription.dart';
 import 'package:kaio/Destinations/Features.dart';
 import 'package:kaio/Destinations/Container.dart';
 import 'package:kaio/Destinations/Tab.dart';
