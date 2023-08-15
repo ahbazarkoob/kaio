@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:kaio/Destinations/DestinationSecondPage.dart';
+import 'package:kaio/Destinations/wildlife.dart';
 import 'package:kaio/MainScreens/Culture.dart';
 import 'package:kaio/MainScreens/literature.dart';
 import 'package:kaio/MainScreens/Cuisine.dart';
@@ -89,19 +90,19 @@ class HomeScreen extends StatelessWidget {
                 child: Container(child: Center(child: Text('Destinations'))),
               ),
             ),
-             Expanded(
-               child: OutlinedButton (
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Culture(),
-                    ),
-                  );
-                },
-                child: Container(child: Center(child: Text('Kashmiri Culture'))),
-                         ),
-             ),
+            //  Expanded(
+            //    child: OutlinedButton (
+            //     onPressed: () {
+            //       Navigator.push(
+            //         context,
+            //         MaterialPageRoute(
+            //           builder: (context) => FeatureTemp(imagePath: 'assets/Destination/Ganderbal/thing/gangbalTrek.png'),
+            //         ),
+            //       );
+            //     },
+            //     child: Container(child: Center(child: Text('Kashmiri Culture'))),
+            //              ),
+            //  ),
           ],
         ),
       ),

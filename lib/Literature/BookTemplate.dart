@@ -8,7 +8,13 @@ import '../../main.dart';
 
 btn(String text1, String text2, IconData icon) {
   return Column(
-    children: [Text(text1), Icon(icon), Text(text2)],
+    children: [Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Text(text1),
+    ), Icon(icon), Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Text(text2),
+    )],
   );
 }
 

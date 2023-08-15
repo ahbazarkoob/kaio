@@ -14,8 +14,7 @@ import 'package:kaio/widgets/craft.dart';
 PageController controller = PageController();
 
 class Destination extends StatelessWidget {
-  final controller = PageController();
-  int selectedPage = 0;
+
 
   Destination({super.key});
 
