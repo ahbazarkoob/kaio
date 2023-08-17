@@ -29,8 +29,8 @@ class Destination extends StatelessWidget {
     return SizedBox(
       height: devH * 0.5,
       width: devW,
-      child:
-          Image.asset(fit: BoxFit.cover, 'assets/Destination/Main/kashmir.png'),
+      child: Image.asset(
+          fit: BoxFit.cover, 'assets/images/Destination/Main/kashmir.png'),
     );
   }
 
@@ -48,6 +48,7 @@ class Destination extends StatelessWidget {
                   end: Alignment.topCenter)),
         ));
   }
+
   Widget _topLayerWidget() {
     return SingleChildScrollView(
       child: Padding(
@@ -112,6 +113,7 @@ class Destination extends StatelessWidget {
     );
   }
 }
+
 Widget Baramulla() {
   return DestTemplate(
       placeName: 'Baramulla',
@@ -121,6 +123,7 @@ Widget Baramulla() {
       places: BaramullaPlaceImages,
       things: BaramullaThingImages);
 }
+
 Widget Ganderbal() {
   return DestTemplate(
       placeName: 'Ganderbal',
@@ -130,6 +133,7 @@ Widget Ganderbal() {
       places: GanderbalPlaceImages,
       things: GanderbalThingImages);
 }
+
 Widget Bandipora() {
   return DestTemplate(
       placeName: 'Bandipora',
@@ -139,6 +143,7 @@ Widget Bandipora() {
       places: BandiporaPlaceImages,
       things: BandiporaThingImages);
 }
+
 Widget Kupwara() {
   return DestTemplate(
       placeName: 'Kupwara',
@@ -148,6 +153,7 @@ Widget Kupwara() {
       places: KupwaraPlaceImages,
       things: KupwaraThingImages);
 }
+
 Widget Kulgam() {
   return DestTemplate(
       placeName: 'Kulgam',
@@ -157,6 +163,7 @@ Widget Kulgam() {
       places: KulgamPlaceImages,
       things: KulgamThingImages);
 }
+
 Widget Pulwama() {
   return DestTemplate(
       placeName: 'Pulwama',
@@ -166,6 +173,7 @@ Widget Pulwama() {
       places: PulwamaPlaceImages,
       things: PulwamaThingImages);
 }
+
 Widget Shopian() {
   return DestTemplate(
       placeName: 'Shopain',
@@ -175,6 +183,7 @@ Widget Shopian() {
       places: ShopianPlaceImages,
       things: ShopianThingImages);
 }
+
 Widget Anantnag() {
   return DestTemplate(
       placeName: 'Anantnag',
@@ -184,6 +193,7 @@ Widget Anantnag() {
       places: AnantnagPlaceImages,
       things: AnantnagThingImages);
 }
+
 Widget Budgam() {
   return DestTemplate(
       placeName: 'Budgam',
@@ -193,6 +203,7 @@ Widget Budgam() {
       places: BudgamPlaceImages,
       things: BudgamThingImages);
 }
+
 Widget Srinagar() {
   return DestTemplate(
       placeName: 'Srinagar',

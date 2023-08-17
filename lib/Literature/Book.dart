@@ -36,7 +36,7 @@ class Book extends StatelessWidget {
           children: [
             Row(
               children: [
-                BookShape(name: Book(), imagepath: 'assets/rahman.jpg'),
+                BookShape(name: Book(), imagepath: 'assets/images/Literature/Prose/rahman.jpg'),
                 SizedBox(
                   width: devW * 0.04,
                 ),
