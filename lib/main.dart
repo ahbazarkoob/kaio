@@ -2,9 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:kaio/Destinations/carouselDescription.dart';
-import 'package:kaio/Destinations/pilgrims.dart';
-import 'package:kaio/Destinations/treks.dart';
-import 'package:kaio/Destinations/wildlife.dart';
 import 'package:kaio/MainScreens/Culture.dart';
 import 'package:kaio/MainScreens/literature.dart';
 import 'package:kaio/MainScreens/Cuisine.dart';
@@ -98,7 +95,7 @@ class HomeScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Pilgrim(),
+                      builder: (context) => Culture(),
                     ),
                   );
                 },
