@@ -207,6 +207,7 @@ class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: Colors.transparent,
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
@@ -242,7 +243,18 @@ class AppDrawer extends StatelessWidget {
               ),
             ),
           ),
-       Column(children: items,)
+       Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.white,
+                    Theme.of(context).scaffoldBackgroundColor,
+                  ],
+                ),
+        ),
+        child: Column(children: items,))
         ],
       ),
     );
