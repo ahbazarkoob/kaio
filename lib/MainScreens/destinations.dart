@@ -6,21 +6,29 @@ import 'package:kaio/Destinations/desttemplate.dart';
 import 'package:kaio/constants.dart';
 import 'package:kaio/data/destination.dart';
 import 'package:kaio/main.dart';
-import 'package:kaio/widgets/craft.dart';
 
-PageController controller = PageController();
+// PageController controller = PageController();
 
 class Destination extends StatelessWidget {
-  final controller = PageController();
-  int selectedPage = 0;
+  // final controller = PageController();
+  // int selectedPage = 0;
 
   Destination({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [_DestinationPage(), _GradientWidget(), _topLayerWidget()],
+    return SafeArea(
+      child: Scaffold(
+         appBar: AppBar(
+            title: Text(
+              'Kaio',
+              style: kSubHeading,
+            ),
+            backgroundColor: Theme.of(context).primaryColor,
+          ),
+        body: Stack(
+          children: [_DestinationPage(), _GradientWidget(), _topLayerWidget()],
+        ),
       ),
     );
   }
@@ -29,8 +37,8 @@ class Destination extends StatelessWidget {
     return SizedBox(
       height: devH * 0.5,
       width: devW,
-      child: Image.asset(
-          fit: BoxFit.cover, 'assets/images/Destination/Main/kashmir.png'),
+      child:
+          Image.asset(fit: BoxFit.cover, 'assets/images/Destination/Main/kashmir.png'),
     );
   }
 
@@ -38,7 +46,7 @@ class Destination extends StatelessWidget {
     return Align(
         alignment: Alignment.bottomCenter,
         child: Container(
-          height: devH * 0.7,
+          height: devH * 0.6,
           width: devW,
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -48,7 +56,6 @@ class Destination extends StatelessWidget {
                   end: Alignment.topCenter)),
         ));
   }
-
   Widget _topLayerWidget() {
     return SingleChildScrollView(
       child: Padding(
@@ -113,7 +120,6 @@ class Destination extends StatelessWidget {
     );
   }
 }
-
 Widget Baramulla() {
   return DestTemplate(
       placeName: 'Baramulla',
@@ -123,7 +129,6 @@ Widget Baramulla() {
       places: BaramullaPlaceImages,
       things: BaramullaThingImages);
 }
-
 Widget Ganderbal() {
   return DestTemplate(
       placeName: 'Ganderbal',
@@ -133,7 +138,6 @@ Widget Ganderbal() {
       places: GanderbalPlaceImages,
       things: GanderbalThingImages);
 }
-
 Widget Bandipora() {
   return DestTemplate(
       placeName: 'Bandipora',
@@ -143,7 +147,6 @@ Widget Bandipora() {
       places: BandiporaPlaceImages,
       things: BandiporaThingImages);
 }
-
 Widget Kupwara() {
   return DestTemplate(
       placeName: 'Kupwara',
@@ -153,7 +156,6 @@ Widget Kupwara() {
       places: KupwaraPlaceImages,
       things: KupwaraThingImages);
 }
-
 Widget Kulgam() {
   return DestTemplate(
       placeName: 'Kulgam',
@@ -163,7 +165,6 @@ Widget Kulgam() {
       places: KulgamPlaceImages,
       things: KulgamThingImages);
 }
-
 Widget Pulwama() {
   return DestTemplate(
       placeName: 'Pulwama',
@@ -173,7 +174,6 @@ Widget Pulwama() {
       places: PulwamaPlaceImages,
       things: PulwamaThingImages);
 }
-
 Widget Shopian() {
   return DestTemplate(
       placeName: 'Shopain',
@@ -183,7 +183,6 @@ Widget Shopian() {
       places: ShopianPlaceImages,
       things: ShopianThingImages);
 }
-
 Widget Anantnag() {
   return DestTemplate(
       placeName: 'Anantnag',
@@ -193,7 +192,6 @@ Widget Anantnag() {
       places: AnantnagPlaceImages,
       things: AnantnagThingImages);
 }
-
 Widget Budgam() {
   return DestTemplate(
       placeName: 'Budgam',
@@ -203,7 +201,6 @@ Widget Budgam() {
       places: BudgamPlaceImages,
       things: BudgamThingImages);
 }
-
 Widget Srinagar() {
   return DestTemplate(
       placeName: 'Srinagar',

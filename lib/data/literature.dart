@@ -1,4 +1,4 @@
-import 'package:kaio/widgets/bookshape.dart';
+import 'package:kaio/Literature/BookShape.dart';
 
 import '../Literature/BookTemplate.dart';
 
@@ -15,7 +15,7 @@ List<BookShape> poetry = [
               'https://drive.google.com/file/d/1EaESB3vjDe6vHT5k9aw5WBvFn0nHRuce/view?usp=sharing',
           descriptionText:
               'Rasul Mir (Kashmiri: رَسوٗل میٖر) also known as Rasul Mir Shahabadi, was a romantic poet of Kashmir in the 19th century. He was born at Doru Shahabad, a historic town in Anantnag district of Kashmir. He is often referred to as imām-e-ishqiya shairi (The epitome of romantic poetry) for his literary contribution to Kashmiri romanticism. Mir was said to have been alive in around 1855 when Mahmood Gami and Soch Kral saeb died. He died a few years before Maqbool Shah Kralawari. Though, Muhammad Y. Taing, in his book کلیاتِ رسول میر /(Kulliyat-e-Rasul Mir/) mentions of a document from Revenue Department, Anantnag, dated 5 April 1889, acknowledging Rasul Mir as a muqdam (village chieftain, in accord to the agrarian system of Kashmir).He is one of the most celebrated Kashmiri poets and is popularly called as the John Keats of Kashmir. He formally inaugurated Gazal to Kashmiri poetry.'),
-      imagepath: 'assets/images/Literature/Poetry/museeki.jpg'),
+      imagepath: 'assets/images/Literature/Poetry/museeki.jpg',),
   BookShape(
       name: BookTemplate(
           genre: 'POETRY',

@@ -4,9 +4,8 @@
 import 'package:kaio/Destinations/Container.dart';
 import 'package:kaio/Destinations/Features.dart';
 import 'package:kaio/Destinations/carouselPage.dart';
+import 'package:kaio/Destinations/destinationFeature.dart';
 import 'package:kaio/MainScreens/destinations.dart';
-
-import '../widgets/destinationFeature.dart';
 
 List<String> BaramullaPlaceImages = [
   'assets/images/Destination/Baramulla/place/Gulmarg.png',

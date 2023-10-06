@@ -30,7 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+    
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -38,11 +38,15 @@ dependencies:
   carousel_slider: ^4.2.1
   url_launcher: ^6.1.12
   flip_carousel: ^0.0.3
-  page_view_dot_indicator: ^2.3.0
+  hive: ^2.0.4
+  hive_flutter: ^1.1.0
+  http: ^1.1.0
+  photo_view: ^0.14.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+    
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -68,6 +72,39 @@ flutter:
    - assets/images/Cuisine/Deserts/
    - assets/images/Cuisine/HomeMade/
    - assets/images/Cuisine/Wazwan/
+   - assets/images/Destination/Main/
+   - assets/images/Destination/Main/Carousel/
+   - assets/images/Destination/Srinagar/Carousel/
+   - assets/images/Destination/Srinagar/Place/
+   - assets/images/Destination/Srinagar/thing/
+   - assets/images/Destination/Budgam/place/
+   - assets/images/Destination/Budgam/carousel/
+   - assets/images/Destination/Budgam/thing/
+   - assets/images/Destination/Baramulla/place/
+   - assets/images/Destination/Baramulla/thing/
+   - assets/images/Destination/Baramulla/carousel/
+   - assets/images/Destination/Ganderbal/place/
+   - assets/images/Destination/Ganderbal/thing/ 
+   - assets/images/Destination/Ganderbal/carousel/
+   - assets/images/Destination/Bandipora/place/
+   - assets/images/Destination/Bandipora/thing/
+   - assets/images/Destination/Bandipora/carousel/
+   - assets/images/Destination/Kupwara/place/
+   - assets/images/Destination/Kupwara/thing/
+   - assets/images/Destination/Kupwara/carousel/
+   - assets/images/Destination/Kulgam/place/
+   - assets/images/Destination/Kulgam/carousel/
+   - assets/images/Destination/Kulgam/thing/
+   - assets/images/Destination/Pulwama/place/
+   - assets/images/Destination/Pulwama/carousel/
+   - assets/images/Destination/Pulwama/carousel/
+   - assets/images/Destination/Pulwama/thing/
+   - assets/images/Destination/Shopain/place/
+   - assets/images/Destination/Shopain/carousel/
+   - assets/images/Destination/Shopain/thing/
+   - assets/images/Destination/Anantnag/place/
+   - assets/images/Destination/Anantnag/thing/
+   - assets/images/Destination/Anantnag/carousel/
    - assets/images/Handicrafts/Carousel/Carpet/
    - assets/images/Handicrafts/Carousel/Copper/
    - assets/images/Handicrafts/Carousel/Paper-Mache/
@@ -79,42 +116,14 @@ flutter:
    - assets/images/Handicrafts/Embroidery/
    - assets/images/Handicrafts/Paper-Mache/
    - assets/images/Handicrafts/Wood/
-   - assets/images/Literature/Prose/
-   - assets/images/Literature/Poetry/
-   - assets/images/Literature/New/
    - assets/images/Literature/History/
-   - assets/images/Destination/Main/
-   - assets/images/Destination/Srinagar/Carousel/
-   - assets/images/Destination/Srinagar/Place/
-   - assets/images/Destination/Srinagar/thing/
-   - assets/images/Destination/Baramulla/place/
-   - assets/images/Destination/Baramulla/thing/
-   - assets/images/Destination/Baramulla/carousel/
-   - assets/images/Destination/Ganderbal/place/
-   - assets/images/Destination/Ganderbal/thing/
-   - assets/images/Destination/Ganderbal/carousel/
-   - assets/images/Destination/Bandipora/place/
-   - assets/images/Destination/Bandipora/thing/
-   - assets/images/Destination/Bandipora/carousel/
-   - assets/images/Destination/Kupwara/place/
-   - assets/images/Destination/Kupwara/thing/
-   - assets/images/Destination/Kupwara/carousel/
-   - assets/images/Destination/Kulgam/place/
-   - assets/images/Destination/Kulgam/thing/
-   - assets/images/Destination/Kulgam/carousel/
-   - assets/images/Destination/Pulwama/place/
-   - assets/images/Destination/Pulwama/thing/
-   - assets/images/Destination/Pulwama/carousel/
-   - assets/images/Destination/Shopain/place/
-   - assets/images/Destination/Shopain/thing/
-   - assets/images/Destination/Shopain/carousel/
-   - assets/images/Destination/Anantnag/place/
-   - assets/images/Destination/Anantnag/thing/
-   - assets/images/Destination/Anantnag/carousel/
-   - assets/images/Destination/Budgam/place/
-   - assets/images/Destination/Budgam/thing/
-   - assets/images/Destination/Budgam/carousel/
-   - assets/images/Destination/Main/Carousel/
+   - assets/images/Literature/New/
+   - assets/images/Literature/Poetry/
+   - assets/images/Literature/Prose/
+   - assets/images/Culture/Main/
+   - assets/images/Culture/Main/pages/
+   - assets/images/MainScreen/
+  #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -127,12 +136,11 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+    - family: NunitoSans
+      fonts:
+        - asset: fonts/static/NunitoSans_10pt-Regular.ttf
+        
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

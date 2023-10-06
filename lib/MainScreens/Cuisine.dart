@@ -5,7 +5,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:kaio/constants.dart';
 import 'package:kaio/data/cuisines.dart';
 import 'package:kaio/main.dart';
-import 'package:kaio/widgets/Recipe.dart';
 
 // ignore: must_be_immutable
 class Cuisine extends StatefulWidget {
@@ -20,78 +19,77 @@ class _CuisineState extends State<Cuisine> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      body: Column(
-        children: [
-          Container(
-            margin: EdgeInsets.all(20),
-            child: TextField(
-              decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search),
-                hintText: 'Search',
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(25),
-                    borderSide: BorderSide(color: Color(0xff85586F), width: 2)),
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(25),
-                    borderSide: BorderSide(color: Color(0xff85586F), width: 2)),
+           appBar: AppBar(
+          title: Text(
+            'Kaio',
+            style: kSubHeading,
+          ),
+          backgroundColor: Theme.of(context).primaryColor,
+        ),
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [ Colors.white,
+                Theme.of(context).scaffoldBackgroundColor,], 
+            ),),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0,left: 8.0,right: 8.0),
+              child: CarouselSlider(
+                items: carouselList,
+                options: CarouselOptions(
+                  height: 160.0,
+                  enlargeCenterPage: true,
+                  enlargeFactor: 0.5,
+                  aspectRatio: 16 / 9,
+                  enableInfiniteScroll: true,
+                  viewportFraction: 0.5,
+                ),
               ),
             ),
-          ),
-          CarouselSlider(
-            items: carouselList,
-            options: CarouselOptions(
-              height: 160.0,
-              enlargeCenterPage: true,
-              enlargeFactor: 0.5,
-              aspectRatio: 16 / 9,
-              enableInfiniteScroll: true,
-              viewportFraction: 0.5,
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          DefaultTabController(
-            length: 4,
-            child: Expanded(
-              child: Column(
-                children: [
-                  Container(
-                    height: 45,
-                    decoration: BoxDecoration(
-                        color: Colors.grey.shade200,
-                        borderRadius: BorderRadius.circular(25.0)),
-                    child: TabBar(
-                      // isScrollable: true,
-                      indicator: BoxDecoration(
-                          color: Color(0xff85586F),
-                          borderRadius: BorderRadius.circular(25.0)),
-                      tabs: [
-                        Tab(text: 'Beverages'),
-                        Tab(text: 'HomeMade'),
-                        Tab(text: 'Wazwan'),
-                        Tab(text: 'Deserts'),
-                        // Tab(text: 'Others'),
-                      ],
-                      labelColor: Colors.black,
+            DefaultTabController(
+              length: 4,
+              child: Expanded(
+                child: Column(
+                  children: [
+                    Theme(data: myTheme,
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: TabBar(
+                          isScrollable: true,
+                          indicator: BoxDecoration(
+                               color: Theme.of(context).primaryColor,
+                              borderRadius: BorderRadius.circular(15.0)),
+                          tabs: [
+                            Tab(text: 'Beverages'),
+                            Tab(text: 'HomeMade'),
+                            Tab(text: 'Wazwan'),
+                            Tab(text: 'Deserts'),
+                            
+                          ],
+                          
+                        ),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: TabBarView(
-                      children: [
-                        Beverages(),
-                        HomeMade(),
-                        Wazwan(),
-                        Deserts(),
-                        // Others()
-                      ],
+                    Expanded(
+                      child: TabBarView(
+                        children: [
+                          Beverages(),
+                          HomeMade(),
+                          Wazwan(),
+                          Deserts(),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     ));
   }
@@ -152,3 +150,8 @@ class Deserts extends StatelessWidget {
     );
   }
 }
+
+
+
+
+

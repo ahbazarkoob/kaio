@@ -1,55 +1,144 @@
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, annotate_overrides, prefer_const_constructors_in_immutables
 
-// ignore_for_file: prefer_const_constructors, file_names
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:kaio/constants.dart';
 
-import '../main.dart';
 
-class GalleryImage extends StatelessWidget {
-  const GalleryImage({super.key});
+
+class GalleryPage extends StatefulWidget {
+  @override
+  State<GalleryPage> createState() => _GalleryPageState();
+}
+
+class _GalleryPageState extends State<GalleryPage> {
+  late http.Response apiResp;
+  String url =
+      'https://api.unsplash.com/collections/68212178/photos/?client_id=HDun6AM7gvQPnGI-B6ei8xIaD5F6Y02ZPUUwDRYDkxU';
+
+  List data = [];
+  List<String> imgUrl = [];
+
+  getData() async {
+    apiResp = await http.get(Uri.parse(url));
+    data = jsonDecode(apiResp.body);
+    _assign();
+  }
+
+  _assign() {
+    for (var i = 0; i < data.length; i++) {
+      imgUrl.add(data.elementAt(i)["urls"]["regular"]);
+    }
+    setState(() {});
+  }
+
+
 
   @override
+  void initState() {
+    super.initState();
+    getData();
+  }
+
   Widget build(BuildContext context) {
-    return Scaffold(
-       backgroundColor: Colors.grey.shade400,
+    return SafeArea(
+      child: Scaffold(
         appBar: AppBar(
-          leading: IconButton(
-            onPressed: (){
-              Navigator.pop(context);},
-              icon: Icon(Icons.arrow_back_sharp),
-              color: Color(0xff85586F),
+          title: Text(
+            'Kaio',
+            style: kSubHeading,
           ),
-          title: const Text('GALLERY', style: kHeading),
-          centerTitle: true,
-          backgroundColor: Colors.transparent,
+          backgroundColor: Theme.of(context).primaryColor,
         ),
-        body: Column(
-          children: [
-            Container(
-        height: devW * 0.8,
-        width: devW * 0.9,
-        margin: EdgeInsets.all(devW * 0.01),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: Colors.black, width: 3),
-            image: DecorationImage(
-                image: AssetImage('assets/story1.jpg'), fit: BoxFit.fitWidth)
-            ),
-      ),
-      SizedBox(
-        height: devH*0.05,
-      ),
-            Text('DESCRIPTION',style: kHeading,),
-            SizedBox(
-        height: devH*0.05,
-      ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text('In 1950 James Cobb Burke - a writer, war correspondent and photojournalist was assigned to India as a part-time correspondent for Time-Life and became their full-time Bureau Chief in New Delhi in 1951. He visited Kashmir in 1964 and captured its beauty and life in some amazing pictures. Tragically, the same year James Burke slipped and fell to his death 60 miles north of Tezpur, Assam while trying to take a picture in the Himalayas. He was 49 years old and left behind a wife and three children.'),
-            )
-          ],
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [ Colors.white,
+                Theme.of(context).scaffoldBackgroundColor,], 
+            ),),
+          child: imgUrl.isEmpty
+              ? Center(
+                  child: CircularProgressIndicator(
+                  color: Theme.of(context).primaryColor,
+                ))
+              : GridView.builder(
+                  itemCount: data.length,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10.0,
+                    mainAxisSpacing: 10.0,
+                  ),
+                  itemBuilder: (context, index) {
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                FullImage(imageUrl: imgUrl.elementAt(index)),
+                          ),
+                        );
+                      },
+                      child: Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              image: DecorationImage(
+                                image: NetworkImage(imgUrl.elementAt(index)),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          )),
+                    );
+                  },
+                ),
         ),
+      ),
     );
   }
 }
+
+class FullImage extends StatelessWidget {
+  final String imageUrl;
+  FullImage({required this.imageUrl});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      // appBar: AppBar(
+      //     backgroundColor: Colors.transparent,
+      //     elevation: 0,
+          // actions: [
+          //   IconButton(onPressed: () {
+             
+          //   }, 
+          //   icon: Icon(Icons.download)
+          //   )
+          //   ],
+          // automaticallyImplyLeading: false),
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [ Colors.white,
+                Theme.of(context).scaffoldBackgroundColor,], 
+            ),),
+        child: Center(
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Image.network(imageUrl),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+

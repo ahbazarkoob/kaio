@@ -1,111 +1,56 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, prefer_typing_uninitialized_variables, unused_import, use_key_in_widget_constructors, sized_box_for_whitespace
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, prefer_typing_uninitialized_variables, unused_import, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
-import 'package:kaio/Destinations/carouselDescription.dart';
-import 'package:kaio/MainScreens/Culture.dart';
-import 'package:kaio/MainScreens/literature.dart';
-import 'package:kaio/MainScreens/Cuisine.dart';
-import 'package:kaio/MainScreens/destinations.dart';
-import 'package:kaio/MainScreens/handicrafts.dart';
-import 'package:kaio/Cuisines/recipe.dart';
-import 'package:kaio/Literature/litera.dart';
-import 'package:kaio/widgets/CultureCard.dart';
-import 'package:kaio/widgets/Recipe.dart';
-
-import 'Cuisines/cook.dart';
+import 'package:kaio/Literature/BookTemplate.dart';
+import 'package:kaio/SplashScreen.dart';
+import 'package:kaio/constants.dart';
+import 'package:kaio/mainScreen.dart';
+import 'MainScreens/Cuisine.dart';
+import 'MainScreens/Culture.dart';
+import 'MainScreens/destinations.dart';
+import 'MainScreens/handicrafts.dart';
+import 'MainScreens/literature.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: HomeScreen()),
+  runApp(
+    MaterialApp(theme: myTheme, home: HomeScreen()),
   );
 }
 
-var devH, devW;
+ThemeData myTheme = ThemeData(
+  scaffoldBackgroundColor: Color(0xffFBC757),
+  primaryColor: Color(0xff00A095),
+  tabBarTheme: TabBarTheme(
+    labelColor: Colors.black, 
+    labelStyle: kNormalTextBold,
+    unselectedLabelStyle: kNormalText  
+  ),
+);
+
+var devH, devW,button;
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
-  Widget build(BuildContext context) {
-    devH = MediaQuery.of(context).size.height;
-  devW = MediaQuery.of(context).size.width;
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Kashmir App'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Expanded(
-              child: OutlinedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => LiteraturePage(),
-                    ),
-                  );
-                },
-                child: Container(
-                  width: devW,
-                  child: Center(child: Text('Kashmiri Literature'))),
-              ),
-            ),
-            Expanded(
-              child: OutlinedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Cuisine()
-                    ),
-                  );
-                },
-                child: Container(child: Center(child: Text('Kashmiri Cuisine'))),
-              ),
-            ),
-           Expanded(
-             child: OutlinedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Handicraft(),
-                    ),
-                  );
-                },
-                child: Container(child: Center(child: Text('Kashmiri Handicrafts'))),
-              ),
-           ),
-            Expanded(
-              child: OutlinedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Destination(),
-                    ),
-                  );
-                },
-                child: Container(child: Center(child: Text('Destinations'))),
-              ),
-            ),
-             Expanded(
-               child: OutlinedButton (
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Culture(),
-                    ),
-                  );
-                },
-                child: Container(child: Center(child: Text('Kashmiri Culture'))),
-                         ),
-             ),
-          ],
-        ),
-      ),
-    );
-  }
+
+
   
+  Widget build(BuildContext context) {
+
+ button= ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                      Theme.of(context).primaryColor,
+                    ),
+                    shape: MaterialStateProperty.all(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                  );
+
+    devH = MediaQuery.of(context).size.height;
+    devW = MediaQuery.of(context).size.width;
+    return SplashScreen();
+  }
 }

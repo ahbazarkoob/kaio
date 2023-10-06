@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
+const kTitle = TextStyle(
+    fontSize: 30, fontWeight: FontWeight.bold,fontFamily: 'NunitoSans',color: Color(0xff473144));
 const kHeading = TextStyle(
-    fontSize: 30, color: Color(0xff85586F), fontWeight: FontWeight.bold);
-const kSelText = TextStyle(
-    fontSize: 15, color: Color(0xff85586F), fontWeight: FontWeight.w400);
+    fontSize: 30, fontWeight: FontWeight.bold,fontFamily: 'NunitoSans',color: Colors.black);
 const kSubHeading = TextStyle(
-    fontSize: 20, color: Color(0xff85586F), fontWeight: FontWeight.bold);
+    fontSize: 20, fontWeight: FontWeight.bold,fontFamily: 'NunitoSans',color: Colors.black);
+const kNormalText=TextStyle(
+  fontSize: 16, fontFamily:'NunitoSans', color: Colors.black 
+);
+const kNormalTextBold=TextStyle(
+  fontSize: 16, fontFamily:'NunitoSans' ,fontWeight: FontWeight.bold, color: Colors.black
+);
+

@@ -1,11 +1,8 @@
-// ignore_for_file: must_be_immutable, non_constant_identifier_names, use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, prefer_typing_uninitialized_variables, unused_import
+// ignore_for_file: must_be_immutable, non_constant_identifier_names, use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, prefer_typing_uninitialized_variables
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:kaio/MainScreens/Cuisine.dart';
 import 'package:kaio/constants.dart';
-
-import '../MainScreens/handicrafts.dart';
 import '../main.dart';
 
 class DestTemplate extends StatefulWidget {
@@ -79,7 +76,7 @@ class _DestTemplateState extends State<DestTemplate> {
                           child: Text(
                             widget.DescriptionPlace,
                             textAlign: TextAlign.justify,
-                            style: TextStyle(color: Colors.white),
+                            style: kNormalTextBold.copyWith(fontSize: 12,color: Colors.white)
                           ),
                         ),
                       ],
@@ -97,20 +94,19 @@ class _DestTemplateState extends State<DestTemplate> {
             child: Expanded(
               child: Column(
                 children: [
-                  Container(
-                    height: 45,
-                    decoration: BoxDecoration(
-                        color: Colors.grey.shade200,
-                        borderRadius: BorderRadius.circular(25.0)),
-                    child: TabBar(
-                      indicator: BoxDecoration(
-                          color: Color(0xff85586F),
-                          borderRadius: BorderRadius.circular(25.0)),
-                      tabs: [
-                        Tab(text: 'Places to visit'),
-                        Tab(text: 'Things to do'),
-                      ],
-                      labelColor: Colors.black,
+                  Theme(data: myTheme,
+                    child: Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: TabBar(
+                        indicator: BoxDecoration(
+                            color: Theme.of(context).primaryColor,
+                            borderRadius: BorderRadius.circular(15.0)),
+                        tabs: [
+                          Tab(text: 'Places to visit'),
+                          Tab(text: 'Things to do'),
+                        ],
+                        labelColor: Colors.black,
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -162,7 +158,7 @@ class PlaceCard extends StatelessWidget {
     return Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
-          side: BorderSide(color: Color(0xff85586F), width: 3),
+          side: BorderSide(color: Theme.of(context).primaryColor, width: 3),
         ),
         child: Container(
           height: devH * 0.3,

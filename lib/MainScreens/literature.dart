@@ -4,9 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:kaio/constants.dart';
 import 'package:kaio/data/literature.dart';
 import 'package:kaio/main.dart';
-import 'package:kaio/widgets/bookshape.dart';
-
-import '../Literature/Book.dart';
 
 class LiteraturePage extends StatefulWidget {
   LiteraturePage({super.key});
@@ -19,119 +16,117 @@ class _LiteraturePageState extends State<LiteraturePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Container(
-              margin: EdgeInsets.all(20),
-              child: TextField(
-                decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.search),
-                  hintText: 'Search',
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25),
-                      borderSide:
-                          BorderSide(color: Color(0xff85586F), width: 2)),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25),
-                      borderSide:
-                          BorderSide(color: Color(0xff85586F), width: 2)),
+        appBar: AppBar(
+          title: Text(
+            'Kaio',
+            style: kSubHeading,
+          ),
+          backgroundColor: Theme.of(context).primaryColor
+        ),
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [ Colors.white,
+                Theme.of(context).scaffoldBackgroundColor,], 
+            ),),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              // Container(
+              //   margin: EdgeInsets.all(20),
+              //   child: TextField(
+              //     decoration: InputDecoration(
+              //       prefixIcon: Icon(Icons.search),
+              //       hintText: 'Search',
+              //       hintStyle: kNormalText,
+              //       enabledBorder: OutlineInputBorder(
+              //           borderRadius: BorderRadius.circular(25),
+              //           borderSide:
+              //               BorderSide(color: Theme.of(context).primaryColor, width: 2)),
+              //       border: OutlineInputBorder(
+              //           borderRadius: BorderRadius.circular(25),
+              //           borderSide:
+              //               BorderSide(color: Theme.of(context).primaryColor, width: 2)),
+              //     ),
+              //   ),
+              // ),
+              Padding(
+                padding: const EdgeInsets.all(20),
+                child: Text('My Books', style: kHeading),
+              ),
+              SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                     children:poetry 
+                  )),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10.0),
+                child: Text(
+                  'Book Shelf',
+                  style: kHeading,
                 ),
               ),
-            ),
-            Text('My Books', style: kHeading),
-            SizedBox(
-              height: devH * 0.01,
-            ),
-            SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    BookShape(
-                        name: Book(),
-                        imagepath: 'assets/images/Literature/Poetry/argami.jpg'),
-                    BookShape(
-                        name: Book(),
-                        imagepath: 'assets/images/Literature/Poetry/rasol.jpg'),
-                    BookShape(
-                        name: Book(),
-                        imagepath: 'assets/images/Literature/Poetry/wali.jpg'),
-                    BookShape(
-                        name: Book(),
-                        imagepath: 'assets/images/Literature/Poetry/kral.jpg'),
-                    BookShape(
-                        name: Book(),
-                        imagepath: 'assets/images/Literature/Poetry/museeki.jpg'),
-                  ],
-                )),
-            SizedBox(
-              height: devH * 0.01,
-            ),
-            Text(
-              'Book Shelf',
-              style: kHeading,
-            ),
-            SizedBox(
-              height: devH * 0.01,
-            ),
-            DefaultTabController(
-              length: 4,
-              child: Expanded(
-                child: Column(
-                  children: [
-                    Container(
-                      height: 45,
-                      decoration: BoxDecoration(
-                          color: Colors.grey.shade200,
-                          borderRadius: BorderRadius.circular(25.0)),
-                      child: TabBar(
-                        indicator: BoxDecoration(
-                            color: Color(0xff85586F),
-                            borderRadius: BorderRadius.circular(25.0)),
-                        tabs: [
-                          Tab(text: 'Poetry'),
-                          Tab(text: 'Prose'),
-                          Tab(text: 'History'),
-                          Tab(text: 'New'),
-                        ],
-                        labelColor: Colors.black,
+              
+              DefaultTabController(
+                length: 4,
+                child: Expanded(
+                  child: Column(
+                    children: [
+                      Theme(
+                        data: myTheme,
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 5,left: 5),
+                          child: TabBar(
+                            indicator: BoxDecoration(
+                                color: Theme.of(context).primaryColor,
+                                borderRadius: BorderRadius.circular(30.0)),
+                            tabs: [
+                              Tab(
+                                text: 'Poetry',
+                              ),
+                              Tab(text: 'Prose'),
+                              Tab(text: 'History'),
+                              Tab(text: 'New'),
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
-                    Expanded(
-                      child: TabBarView(
-                        children: [
-                          Poetry(),
-                          Prose(),
-                          History(),
-                          New(),
-                        ],
+                      Expanded(
+                        child: TabBarView(
+                          children: [
+                            Poetry(),
+                            Prose(),
+                            History(),
+                            New(),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
 
-  Widget Poetry(){
+  Widget Poetry() {
     return GridView.count(crossAxisCount: 2, children: poetry);
   }
 
-  Widget History(){
+  Widget History() {
     return GridView.count(crossAxisCount: 2, children: history);
   }
 
-  Widget Prose(){
+  Widget Prose() {
     return GridView.count(crossAxisCount: 2, children: prose);
   }
 
-  Widget New(){
+  Widget New() {
     return GridView.count(crossAxisCount: 2, children: newbook);
   }
-
 }
-
