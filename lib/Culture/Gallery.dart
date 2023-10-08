@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, annotate_overrides, prefer_const_constructors_in_immutables
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, annotate_overrides, prefer_const_constructors_in_immutables, file_names
 
 import 'dart:convert';
 
@@ -16,7 +16,7 @@ class GalleryPage extends StatefulWidget {
 class _GalleryPageState extends State<GalleryPage> {
   late http.Response apiResp;
   String url =
-      'https://api.unsplash.com/collections/68212178/photos/?client_id=HDun6AM7gvQPnGI-B6ei8xIaD5F6Y02ZPUUwDRYDkxU';
+       'https://api.unsplash.com/collections/68212178/photos/?client_id=HDun6AM7gvQPnGI-B6ei8xIaD5F6Y02ZPUUwDRYDkxU';
 
   List data = [];
   List<String> imgUrl = [];
@@ -109,17 +109,6 @@ class FullImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //     backgroundColor: Colors.transparent,
-      //     elevation: 0,
-          // actions: [
-          //   IconButton(onPressed: () {
-             
-          //   }, 
-          //   icon: Icon(Icons.download)
-          //   )
-          //   ],
-          // automaticallyImplyLeading: false),
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(

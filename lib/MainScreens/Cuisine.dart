@@ -55,14 +55,15 @@ class _CuisineState extends State<Cuisine> {
               child: Expanded(
                 child: Column(
                   children: [
-                    Theme(data: myTheme,
+                   Theme(
+                      data: myTheme,
                       child: Padding(
-                        padding: const EdgeInsets.all(5.0),
+                        padding: const EdgeInsets.only(right: 5, left: 5),
                         child: TabBar(
                           isScrollable: true,
                           indicator: BoxDecoration(
-                               color: Theme.of(context).primaryColor,
-                              borderRadius: BorderRadius.circular(15.0)),
+                              color: Theme.of(context).primaryColor,
+                              borderRadius: BorderRadius.circular(30.0)),
                           tabs: [
                             Tab(text: 'Beverages'),
                             Tab(text: 'HomeMade'),

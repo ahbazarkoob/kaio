@@ -12,6 +12,19 @@ class BookShape extends StatelessWidget {
     required this.imagepath,
    
   });
+  Map<String, dynamic> toJson() {
+    return {
+      'name': name,
+      'imagepath': imagepath,
+    };
+  }
+
+  factory BookShape.fromJson(Map<String, dynamic> json) {
+    return BookShape(
+      name: json['name'],
+      imagepath: json['imagepath'],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {

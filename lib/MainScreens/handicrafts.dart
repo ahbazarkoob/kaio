@@ -54,14 +54,15 @@ class _HandicraftState extends State<Handicraft> {
                     child: Expanded(
                       child: Column(
               children: [
-                Theme(data: myTheme,
-                  child: Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: TabBar(
-                      isScrollable: true,
-                      indicator: BoxDecoration(
-                          color: Theme.of(context).primaryColor,
-                          borderRadius: BorderRadius.circular(15.0)),
+                Theme(
+                        data: myTheme,
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 5,left: 5),
+                          child: TabBar(
+                            isScrollable: true,
+                            indicator: BoxDecoration(
+                                color: Theme.of(context).primaryColor,
+                                borderRadius: BorderRadius.circular(30.0)),
                       tabs: [
                         Tab(text: 'Paper-Mache'),
                         Tab(text: 'Carpets, Rugs and Mats'),
@@ -198,28 +199,31 @@ class CarpetPage extends StatelessWidget {
           body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
-              height: 20,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Center(
+                  child: Text(
+                'Carpets Of Kashmir',
+                style: kHeading,
+              )),
             ),
-            Center(
-                child: Text(
-              'Carpets Of Kashmir',
-              style: kHeading,
-            )),
-            Container(
-              margin: EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  Text(
-                    'Kashmiri carpets are among the most exquisite and renowned handcrafted carpets in the world. These carpets are hand-knotted and woven in the picturesque region of Kashmir, located in the northern part of the Indian subcontinent. The art of carpet weaving in Kashmir has a long and illustrious history that dates back centuries. Known for their intricate designs, superior craftsmanship, and the use of premium materials, Kashmiri carpets have earned a special place in the realm of luxury home decor.',
-                    style: kNormalText,
-                    textAlign: TextAlign.justify,
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Image(image: AssetImage('assets/images/Handicrafts/Carousel/Carpet/Carpet.png'))
-                ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                margin: EdgeInsets.all(10.0),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 8.0),
+                      child: Text(
+                        'Kashmiri carpets are among the most exquisite and renowned handcrafted carpets in the world. These carpets are hand-knotted and woven in the picturesque region of Kashmir, located in the northern part of the Indian subcontinent. The art of carpet weaving in Kashmir has a long and illustrious history that dates back centuries. Known for their intricate designs, superior craftsmanship, and the use of premium materials, Kashmiri carpets have earned a special place in the realm of luxury home decor.',
+                        style: kNormalText,
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                    Image(image: AssetImage('assets/images/Handicrafts/Carousel/Carpet/Carpet.png'))
+                  ],
+                ),
               ),
             ),
             Container(
@@ -227,127 +231,137 @@ class CarpetPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'History',
-                    style: kHeading,
+                  Padding(
+                    padding: const EdgeInsets.only(bottom:8.0, left: 8.0),
+                    child: Text(
+                      'History',
+                      style: kHeading,
+                    ),
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    'The origins of Kashmiri carpets trace back to ancient times, with historical records suggesting that carpet weaving in the region began during the reign of Zain-ul-Abidin (Budshah) in the 15th century. However, the art form is believed to have been introduced even earlier, during the period of Hazrat Mir Syed Ali Hamdani, a Sufi mystic who brought skilled artisans from Persia to Kashmir via the silk route. This migration of artisans played a pivotal role in establishing Kashmir as a hub for exquisite carpet weaving.\n Over the centuries, the craft of carpet making in Kashmir flourished, and the weavers developed unique styles and motifs that reflected the region\'s cultural heritage. Kashmiri carpets gained recognition and acclaim worldwide, becoming highly sought-after luxury items in the global market.',
-                    style: kNormalText,
-                    textAlign: TextAlign.justify,
+                  Padding(
+                    padding: const EdgeInsets.only(left:8.0,top: 8.0,right: 8.0),
+                    child: Text(
+                      'The origins of Kashmiri carpets trace back to ancient times, with historical records suggesting that carpet weaving in the region began during the reign of Zain-ul-Abidin (Budshah) in the 15th century. However, the art form is believed to have been introduced even earlier, during the period of Hazrat Mir Syed Ali Hamdani, a Sufi mystic who brought skilled artisans from Persia to Kashmir via the silk route. This migration of artisans played a pivotal role in establishing Kashmir as a hub for exquisite carpet weaving.\n Over the centuries, the craft of carpet making in Kashmir flourished, and the weavers developed unique styles and motifs that reflected the region\'s cultural heritage. Kashmiri carpets gained recognition and acclaim worldwide, becoming highly sought-after luxury items in the global market.',
+                      style: kNormalText,
+                      textAlign: TextAlign.justify,
+                    ),
                   )
                 ],
               ),
             ),
-            Container(
-              margin: EdgeInsets.all(10.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'The  Process of Carpet Making',
-                    style: kHeading,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    'The creation of a Kashmiri carpet is a painstaking and time-consuming process, involving multiple skilled artisans. The process can be broken down into three main steps: Designing, Dyeing, and Weaving.',
-                    style: kNormalText,
-                    textAlign: TextAlign.justify,
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Text(
-                    'Designing a Carpet (Talim)',
-                    style: kSubHeading,
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Text(
-                    'The process begins with designing the carpet. Talented designers finalize the patterns, motifs, and color combinations that will be used in the carpet. The intricate details are carefully planned, and the final layout is determined. The weavers follow a written code known as "Talim", which acts as a blueprint for creating the carpet.',
-                    style: kNormalText,
-                    textAlign: TextAlign.justify,
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Image(image: AssetImage('assets/images/Handicrafts/Carousel/Carpet/Talim.png')),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'Dyeing',
-                    style: kSubHeading,
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Text(
-                    'Once the design is established, the yarn is sent for dyeing. The selection of high-quality dyes is crucial, as it determines the vibrancy and longevity of the colors in the carpet. Azo-free, chrome, and eco-friendly dyes are preferred to ensure environmental sustainability. After dyeing, the yarn is left to dry under the sunlight, enhancing the natural beauty of the colors.',
-                    style: kNormalText,
-                    textAlign: TextAlign.justify,
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Image(image: AssetImage('assets/images/Handicrafts/Carousel/Carpet/Yarn.png')),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'Weaving',
-                    style: kSubHeading,
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Text(
-                    'The most critical phase of carpet making is the weaving process, where skilled weavers bring the design to life. The process can take several months to years, depending on the size and complexity of the carpet. Here\'s an overview of the weaving process:',
-                    style: kNormalText,
-                    textAlign: TextAlign.justify,
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Image(image: AssetImage('assets/images/Handicrafts/Carousel/Carpet/Weave.png')),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    '- The weaver sets up a loom and prepares a strong foundation of vertical threads known as "warp" and horizontal threads called "weft." The warp runs vertically through the loom, while the weft runs horizontally.\n - Weaving usually starts from the bottom of the loom, with several wefts passed through the warps to create a sturdy base.\n - The dyed yarn is then meticulously knotted around consecutive sets of adjacent warps, forming rows of knots. As more rows are tied, the knots become the pile of the carpet, creating its unique texture. \n - Between each row of knots, additional shots of weft are passed to secure the knots firmly in place.\n - To ensure a tight and even finish, the wefts are beaten down using a comb-like instrument known as the "comb beater." \n - Upon completing the weaving, the warp ends from the fringes, which may be weft-faced, tasseled, or otherwise treated.',
-                    style: kNormalText,
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Image(image: AssetImage('assets/images/Handicrafts/Carousel/Carpet/Weave1.png')),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'The craftsmanship and dedication involved in creating a Kashmiri carpet result in a masterpiece that is cherished by homeowners and collectors alike. These carpets adorn living rooms, bedrooms, foyers, and coffee tables, adding elegance and luxury to any space.',
-                    style: kNormalText,
-                    textAlign: TextAlign.justify,
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Image(image: AssetImage('assets/images/Handicrafts/Carousel/Carpet/kaleen.png')),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'In conclusion, Kashmiri carpets represent the epitome of artistry and tradition. Their history, deeply rooted in the rich culture of Kashmir, continues to captivate people worldwide. From the design stage to the final weaving, each step is meticulously executed, resulting in a true masterpiece that stands as a testament to the skill and creativity of Kashmiri artisans.',
-                    style: kNormalText,
-                    textAlign: TextAlign.justify,
-                  )
-                ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                margin: EdgeInsets.all(10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom:8.0),
+                      child: Text(
+                        'The  Process of Carpet Making',
+                        style: kHeading,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom:8.0),
+                      child: Text(
+                        'The creation of a Kashmiri carpet is a painstaking and time-consuming process, involving multiple skilled artisans. The process can be broken down into three main steps: Designing, Dyeing, and Weaving.',
+                        style: kNormalText,
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Text(
+                        'Designing a Carpet (Talim)',
+                        style: kSubHeading,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Text(
+                        'The process begins with designing the carpet. Talented designers finalize the patterns, motifs, and color combinations that will be used in the carpet. The intricate details are carefully planned, and the final layout is determined. The weavers follow a written code known as "Talim", which acts as a blueprint for creating the carpet.',
+                        style: kNormalText,
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 12.0, bottom: 12.0),
+                      child: Image(image: AssetImage('assets/images/Handicrafts/Carousel/Carpet/Talim.png')),
+                    ),
+                    
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Text(
+                        'Dyeing',
+                        style: kSubHeading,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Text(
+                        'Once the design is established, the yarn is sent for dyeing. The selection of high-quality dyes is crucial, as it determines the vibrancy and longevity of the colors in the carpet. Azo-free, chrome, and eco-friendly dyes are preferred to ensure environmental sustainability. After dyeing, the yarn is left to dry under the sunlight, enhancing the natural beauty of the colors.',
+                        style: kNormalText,
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 12.0, bottom: 12.0),
+                      child: Image(image: AssetImage('assets/images/Handicrafts/Carousel/Carpet/Yarn.png')),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Text(
+                        'Weaving',
+                        style: kSubHeading,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Text(
+                        'The most critical phase of carpet making is the weaving process, where skilled weavers bring the design to life. The process can take several months to years, depending on the size and complexity of the carpet. Here\'s an overview of the weaving process:',
+                        style: kNormalText,
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 12.0, bottom: 12.0),
+                      child: Image(image: AssetImage('assets/images/Handicrafts/Carousel/Carpet/Weave.png')),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Text(
+                        '- The weaver sets up a loom and prepares a strong foundation of vertical threads known as "warp" and horizontal threads called "weft." The warp runs vertically through the loom, while the weft runs horizontally.\n - Weaving usually starts from the bottom of the loom, with several wefts passed through the warps to create a sturdy base.\n - The dyed yarn is then meticulously knotted around consecutive sets of adjacent warps, forming rows of knots. As more rows are tied, the knots become the pile of the carpet, creating its unique texture. \n - Between each row of knots, additional shots of weft are passed to secure the knots firmly in place.\n - To ensure a tight and even finish, the wefts are beaten down using a comb-like instrument known as the "comb beater." \n - Upon completing the weaving, the warp ends from the fringes, which may be weft-faced, tasseled, or otherwise treated.',
+                        style: kNormalText,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 12.0, bottom: 12.0),
+                      child: Image(image: AssetImage('assets/images/Handicrafts/Carousel/Carpet/Weave1.png')),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Text(
+                        'The craftsmanship and dedication involved in creating a Kashmiri carpet result in a masterpiece that is cherished by homeowners and collectors alike. These carpets adorn living rooms, bedrooms, foyers, and coffee tables, adding elegance and luxury to any space.',
+                        style: kNormalText,
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 12.0, bottom: 12.0),
+                      child: Image(image: AssetImage('assets/images/Handicrafts/Carousel/Carpet/kaleen.png')),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Text(
+                        'In conclusion, Kashmiri carpets represent the epitome of artistry and tradition. Their history, deeply rooted in the rich culture of Kashmir, continues to captivate people worldwide. From the design stage to the final weaving, each step is meticulously executed, resulting in a true masterpiece that stands as a testament to the skill and creativity of Kashmiri artisans.',
+                        style: kNormalText,
+                        textAlign: TextAlign.justify,
+                      ),
+                    )
+                  ],
+                ),
               ),
             )
           ],

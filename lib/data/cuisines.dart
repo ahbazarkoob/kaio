@@ -1583,10 +1583,3 @@ List <StepCard>  tosha= [
   StepCard(Step: 'Step23', body: 'Spread and roll poppy seeds on them.'),
  StepCard(Step: 'Step24', body: 'Lastly,ready and serve tosha to all.'),
 ];
-
-
-
-
-
-
-

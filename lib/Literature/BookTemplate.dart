@@ -1,6 +1,9 @@
 // ignore_for_file: must_be_immutable, prefer_const_constructors, file_names, use_key_in_widget_constructors
 
+
 import 'package:flutter/material.dart';
+import 'package:kaio/Literature/BookShape.dart';
+import 'package:kaio/MainScreens/literature.dart';
 import 'package:kaio/constants.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import '../../main.dart';
@@ -46,7 +49,11 @@ class BookTemplate extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {
+            onPressed: ()  {
+              books.add(BookShape(name: bookName, imagepath: finalPath));
+                // final prefs = await SharedPreferences.getInstance();
+                // prefs.setString('books', books as String);
+              
               Navigator.pop(context);
             },
             icon: Icon(Icons.arrow_back_sharp),
@@ -79,7 +86,8 @@ class BookTemplate extends StatelessWidget {
                           style: ButtonStyle(
                             backgroundColor:
                                 MaterialStatePropertyAll(Color(0xffFBC757)),
-                            shadowColor: MaterialStatePropertyAll(Color(0xff473144)),
+                            shadowColor:
+                                MaterialStatePropertyAll(Color(0xff473144)),
                           ),
                           onPressed: () async {
                             {

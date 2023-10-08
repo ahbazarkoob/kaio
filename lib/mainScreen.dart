@@ -110,18 +110,6 @@ class OurServices extends StatelessWidget {
               style: kSubHeading,
             ),
           ),
-          ElevatedButton(
-              style: button,
-              onPressed: () {
-                Scaffold.of(context).openEndDrawer();
-              },
-              child: const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text(
-                  'View All Services',
-                  style: kNormalText,
-                ),
-              )),
           Column(children: ServiceList)
         ],
       ),
