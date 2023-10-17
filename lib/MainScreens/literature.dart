@@ -7,7 +7,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:kaio/Literature/BookShape.dart';
 import 'package:kaio/Literature/BookTemplate.dart';
-import 'package:kaio/Literature/FetchLibrary.dart';
 import 'package:kaio/Literature/Recents.dart';
 import 'package:kaio/Literature/carouselCard.dart';
 import 'package:kaio/constants.dart';
@@ -37,14 +36,15 @@ class _LiteraturePageState extends State<LiteraturePage> {
       for (var card in dataList) {
         // print(card['Library-Id'].toString());
         ListTile tile = ListTile(
-          title: Text(card['LibraryName'].toString()),
-          subtitle: Text(card['LibraryAddress'].toString()),
-          leading: IconButton(
-            icon: Icon(Icons.location_city),
-            onPressed: () {
-              // Handle button click for this item
-            },
-          ),
+          // title: Text(card['LibraryName'].toString()),
+          subtitle: LibraryCard(urlLink: card['LibraryLocation'], LibraryName: card['LibraryName'], LibraryAddress: card['LibraryAddress'])
+          // Text(card['LibraryAddress'].toString()),
+          // leading: IconButton(
+          //   icon: Icon(Icons.location_city),
+          //   onPressed: () {
+          //     // Handle button click for this item
+          //   },
+          // ),
         );
         listname.add(tile);
       }
@@ -53,13 +53,6 @@ class _LiteraturePageState extends State<LiteraturePage> {
       print("Error getting data from Firestore: $e");
       return null;
     }
-  }
-
-  @override
-  void initState() {
-    // List<Map<String, dynamic>> data =  getDataFromFirestore();
-
-    super.initState();
   }
 
   @override
