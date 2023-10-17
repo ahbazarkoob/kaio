@@ -1,0 +1,85 @@
+Date : 2023-10-08 16:02:14
+Directory : c:\Users\ahbaz\StudioProjects\kaio
+Total : 46 files,  1238 codes, -53 comments, 97 blanks, all 1282 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |         44 |      1,221 |        -48 |         97 |      1,270 |
+| YAML     |          1 |         13 |         -5 |          0 |          8 |
+| Swift    |          1 |          4 |          0 |          0 |          4 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                             | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                |         46 |      1,238 |        -53 |         97 |      1,282 |
+| . (Files)                                                                        |          1 |         13 |         -5 |          0 |          8 |
+| lib                                                                              |         44 |      1,221 |        -48 |         97 |      1,270 |
+| lib (Files)                                                                      |          4 |        251 |          2 |         28 |        281 |
+| lib\Cuisines                                                                     |          4 |         18 |        -21 |         -9 |        -12 |
+| lib\Culture                                                                      |          3 |        103 |        -35 |         15 |         83 |
+| lib\Destinations                                                                 |          6 |       -162 |          1 |          3 |       -158 |
+| lib\Handicrafts                                                                  |          3 |        -79 |         -1 |         -4 |        -84 |
+| lib\Literature                                                                   |          6 |       -123 |          2 |         -2 |       -123 |
+| lib\MainScreens                                                                  |          5 |     -1,217 |         22 |         11 |     -1,184 |
+| lib\data                                                                         |          6 |      2,713 |          4 |        100 |      2,817 |
+| lib\widgets                                                                      |          7 |       -283 |        -22 |        -45 |       -350 |
+| macos                                                                            |          1 |          4 |          0 |          0 |          4 |
+| macos\Flutter                                                                    |          1 |          4 |          0 |          0 |          4 |
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                         | language | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Cuisines\FlipCarousel.dart                | Dart     |         -1 |          3 |         -1 |          1 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Cuisines\RecipeImage.dart                 | Dart     |         29 |          1 |          7 |         37 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Cuisines\cook.dart                        | Dart     |        -46 |        -24 |        -17 |        -87 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Cuisines\recipe.dart                      | Dart     |         36 |         -1 |          2 |         37 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Culture\CultureSelection.dart             | Dart     |        -48 |        -36 |         -5 |        -89 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Culture\Gallery.dart                      | Dart     |         67 |          0 |         11 |         78 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Culture\carouselpage.dart                 | Dart     |         84 |          1 |          9 |         94 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\DestinationSecondPage.dart   | Dart     |       -210 |         -1 |         -8 |       -219 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\Features.dart                | Dart     |         15 |          0 |          3 |         18 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\Tab.dart                     | Dart     |        -45 |         -1 |         -3 |        -49 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\carouselPage.dart            | Dart     |         39 |          1 |          7 |         47 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\destinationFeature.dart      | Dart     |         48 |          2 |          5 |         55 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Destinations\desttemplate.dart            | Dart     |         -9 |          0 |         -1 |        -10 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Handicrafts\Hc_papermachie.dart           | Dart     |        -91 |         -1 |         -4 |        -96 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Handicrafts\craft.dart                    | Dart     |         30 |          1 |          6 |         37 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Handicrafts\desc_Hc_pprmche.dart          | Dart     |        -18 |         -1 |         -6 |        -25 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Literature\Book.dart                      | Dart     |        -40 |          0 |          1 |        -39 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Literature\BookShape.dart                 | Dart     |         43 |          1 |          8 |         52 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Literature\BookShape2.dart                | Dart     |         24 |          1 |          7 |         32 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Literature\BookTemplate.dart              | Dart     |         18 |          2 |          2 |         22 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Literature\Widget_Book.dart               | Dart     |        -20 |         -1 |         -6 |        -27 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\Literature\litera.dart                    | Dart     |       -148 |         -1 |        -14 |       -163 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\MainScreens\Cuisine.dart                  | Dart     |       -806 |         -3 |          7 |       -802 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\MainScreens\Culture.dart                  | Dart     |        159 |          0 |         33 |        192 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\MainScreens\destinations.dart             | Dart     |       -228 |          0 |        -25 |       -253 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\MainScreens\handicrafts.dart              | Dart     |         25 |          2 |          1 |         28 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\MainScreens\literature.dart               | Dart     |       -367 |         23 |         -5 |       -349 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\SplashScreen.dart                         | Dart     |         41 |          1 |          7 |         49 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\constants.dart                            | Dart     |         16 |          0 |          0 |         16 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\data\MainScreen.dart                      | Dart     |         46 |          1 |          4 |         51 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\data\cuisines.dart                        | Dart     |      1,533 |          1 |         51 |      1,585 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\data\culture.dart                         | Dart     |        264 |          0 |         11 |        275 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\data\destination.dart                     | Dart     |        449 |          1 |         22 |        472 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\data\handicrafts.dart                     | Dart     |         70 |          1 |          6 |         77 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\data\literature.dart                      | Dart     |        351 |          0 |          6 |        357 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\main.dart                                 | Dart     |        -60 |          0 |          5 |        -55 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\mainScreen.dart                           | Dart     |        254 |          1 |         16 |        271 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\CookCard.dart                     | Dart     |        -20 |         -2 |         -3 |        -25 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\CultureCard.dart                  | Dart     |        -99 |        -14 |        -20 |       -133 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\Recipe.dart                       | Dart     |        -61 |         -1 |         -4 |        -66 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\ReviewCard.dart                   | Dart     |        -19 |         -2 |         -3 |        -24 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\bookshape.dart                    | Dart     |        -35 |         -1 |         -8 |        -44 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\craft.dart                        | Dart     |        -31 |         -1 |         -3 |        -35 |
+| c:\Users\ahbaz\StudioProjects\kaio\lib\widgets\selection.dart                    | Dart     |        -18 |         -1 |         -4 |        -23 |
+| c:\Users\ahbaz\StudioProjects\kaio\macos\Flutter\GeneratedPluginRegistrant.swift | Swift    |          4 |          0 |          0 |          4 |
+| c:\Users\ahbaz\StudioProjects\kaio\pubspec.yaml                                  | YAML     |         13 |         -5 |          0 |          8 |
+| Total                                                                            |          |      1,238 |        -53 |         97 |      1,282 |
++----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

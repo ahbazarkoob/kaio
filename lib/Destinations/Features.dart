@@ -1,29 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, file_names, sized_box_for_whitespace, must_be_immutable, camel_case_types, use_key_in_widget_constructors, non_constant_identifier_names, prefer_typing_uninitialized_variables
 
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:kaio/data/destination.dart';
 import '../main.dart';
-
-class DestinationFeatures extends StatelessWidget {
-  const DestinationFeatures({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        CarouselSlider(
-          items: destinationCarousel,
-          options: CarouselOptions(
-              autoPlay: true,
-              autoPlayInterval: Duration(seconds: 2),
-              scrollDirection: Axis.horizontal),
-        ),
-      ],
-    );
-  }
-}
 
 class featureContainer extends StatefulWidget {
   String imagePath;

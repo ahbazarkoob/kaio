@@ -1,4 +1,3 @@
-
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:kaio/Destinations/Container.dart';
@@ -250,8 +249,6 @@ List<DestinationContainer> central = [
   ),
 ];
 
-
-
 List<FeatureCard> wildlife = [
   FeatureCard(
     heading: 'Dachigam',
@@ -263,7 +260,8 @@ List<FeatureCard> wildlife = [
       heading: 'Hemis High Altitude Wildlife Sanctuary',
       description:
           'A renowned sanctuary of Ladakh, Hemis is popular for Snow Leopards, Shapu, Bharal, Wild Sheeps and Goats. Being the largest park in South Asia and highest in the world, the Hemis High Altitude Wildlife Sanctuary covers an area of about 3,350 sq. Km and is located at 12000 feet from sea level. During winter, the nearby Zanskar River and its tributaries become frozen and the temperature drops typically to -15°C to -20°C at night. Although summer temperatures can reach upto 30°C in the lower elevations, snowfall can occur at any time of year. The best time for mammal and bird viewing is considered September to March, and March to May respctively. Trekking routes are also open from mid June to mid October. Take a jeep or elephant safari to spot various rare animals and explore the dense woods.',
-      imagePath: 'assets/images/Destination/Main/Carousel/gulmargBiosphere.jpeg'),
+      imagePath:
+          'assets/images/Destination/Main/Carousel/gulmargBiosphere.jpeg'),
   FeatureCard(
       heading: 'Kishtwar High Altitude National Park',
       description:
@@ -357,7 +355,8 @@ List<FeatureCard> heritage = [
     heading: 'Akhund Mullah Shah Masjid',
     description:
         'Akhund Mullah Shah Masjid, also known as Dara Shikoh Masjid, is known better locally as the Mala Shah Masjid. Built in 1649 by Shah Jahan\'s eldest son, Dara Shikoh, for his spiritual mentor, this is a mosque within a mosque. It was built using grey limestone, featuring a glossy texture. The sanctuary is separated from the main building by a surrounding courtyard. A stone lotus with an inscription crowns the mosque’s podium.',
-    imagePath: 'assets/images/Destination/Main/Carousel/akhundmullahshahmasjid.jpg',
+    imagePath:
+        'assets/images/Destination/Main/Carousel/akhundmullahshahmasjid.jpg',
   ),
   FeatureCard(
     heading: 'Burzahom',
@@ -413,59 +412,61 @@ List<FeatureCard> shrine = [
 List<FeatureCard> pilgrim = [
   FeatureCard(
     heading: 'Amarnath Temple',
-    description: 'Surrounded by fairly steep hills, the Amarnath temple is considered to be Kashmir\'s oldest existing temple, dating back to the 5th century. This Shiva temple is situated in a narrow gorge on the far end of Lidder Valley at an altitude of 3888 m. The \'Yatra\' to Amarnath, one of the principal Hindu Dhams, starts from Chandanwari (2,895 m), 16 kms from Pahalgam, in the month of Sawan (July to August). The temple is famous for a \'Shiva-Lingam\', (a natural formation of ice, during the months of July/August) believed to wax and wane according the moon\'s cycle',
-   imagePath:'assets/images/Destination/Main/Carousel/amarnath.avif',
+    description:
+        'Surrounded by fairly steep hills, the Amarnath temple is considered to be Kashmir\'s oldest existing temple, dating back to the 5th century. This Shiva temple is situated in a narrow gorge on the far end of Lidder Valley at an altitude of 3888 m. The \'Yatra\' to Amarnath, one of the principal Hindu Dhams, starts from Chandanwari (2,895 m), 16 kms from Pahalgam, in the month of Sawan (July to August). The temple is famous for a \'Shiva-Lingam\', (a natural formation of ice, during the months of July/August) believed to wax and wane according the moon\'s cycle',
+    imagePath: 'assets/images/Destination/Main/Carousel/amarnath.avif',
   ),
   FeatureCard(
     heading: 'Shankaracharya Temple',
-    description: 'Shankaracharya Temple, located in the south-eastern part of Kashmir, is an excellent example to showcase the ancient Kashmiri architecture. Built on the picturesque location of Gopadari Hill, this Shiva temple stands on a solid rock and consists of an octagonal basement of 13 layers. The temple was built in 371 B.C. Since then, it has been repaired and renovated several times, yet it boasts of the architectural style of those times. The main shrine is built in a circular chamber and offers a wonderful view of Kashmir Valley, comprising of enchanting lakes and the majestic Himalayas.',
+    description:
+        'Shankaracharya Temple, located in the south-eastern part of Kashmir, is an excellent example to showcase the ancient Kashmiri architecture. Built on the picturesque location of Gopadari Hill, this Shiva temple stands on a solid rock and consists of an octagonal basement of 13 layers. The temple was built in 371 B.C. Since then, it has been repaired and renovated several times, yet it boasts of the architectural style of those times. The main shrine is built in a circular chamber and offers a wonderful view of Kashmir Valley, comprising of enchanting lakes and the majestic Himalayas.',
     imagePath: 'assets/images/Destination/Main/Carousel/shankracharya.jpg',
   ),
   FeatureCard(
     heading: 'Kheer Bhawani',
-    description: 'This Hindu shrine, devoted to Goddess Ragnya Devi (a form of Maa Durga Bhagwati) is visited by a number of Muslims as well. The temple is called Kheer Bhawani because of numerous devotees who offer milk and kheer (a desert made of rice, milk and sugar) to the Goddess. Situated 27 km from Srinagar, the temple was built by King Maharana Pratap Singh in 1912.Another major charm of the temple is a hexagonal spring, which changes colour from time to time to various shades like red, pink, orange, green, blue, or milky white.',
+    description:
+        'This Hindu shrine, devoted to Goddess Ragnya Devi (a form of Maa Durga Bhagwati) is visited by a number of Muslims as well. The temple is called Kheer Bhawani because of numerous devotees who offer milk and kheer (a desert made of rice, milk and sugar) to the Goddess. Situated 27 km from Srinagar, the temple was built by King Maharana Pratap Singh in 1912.Another major charm of the temple is a hexagonal spring, which changes colour from time to time to various shades like red, pink, orange, green, blue, or milky white.',
     imagePath: 'assets/images/Destination/Main/Carousel/kheerbawani.jpg',
   ),
   FeatureCard(
     heading: 'Sikh Gurudwara Chhatti Padshahi',
-    description: 'Chhatti Padshahi Gurudwara is one of the most peaceful and sacred places and the most important Sikh religious place in Kashmir. Located in Rainwadi, Srinagar, it is an important site for Sikh devotees who assemble here to offer prayers. The shrine is located on the southern gate of Hari Parbat Fort, i.e. Kathi Darwaza. This is the most important Gurudwara built by the sixth guru of Sikhs. A gurudwara has been built at every spot he had halted to preach, while travelling through Kashmir  The most important one among these is Chhatti Padshahi gurudwara.',
+    description:
+        'Chhatti Padshahi Gurudwara is one of the most peaceful and sacred places and the most important Sikh religious place in Kashmir. Located in Rainwadi, Srinagar, it is an important site for Sikh devotees who assemble here to offer prayers. The shrine is located on the southern gate of Hari Parbat Fort, i.e. Kathi Darwaza. This is the most important Gurudwara built by the sixth guru of Sikhs. A gurudwara has been built at every spot he had halted to preach, while travelling through Kashmir  The most important one among these is Chhatti Padshahi gurudwara.',
     imagePath: 'assets/images/Destination/Main/Carousel/chattipadshahi.jpg',
   ),
   FeatureCard(
     heading: 'Sharika Devi Temple',
-    description: 'Sharika Devi Temple is situated on Hari Parbat in Srinagar and it is dedicated to Goddess Jagadamba Sharika Bhagwati. The holy idol of Goddess is having 18 arms who is sitting on Shri Chakra. This temple is regarded as one of the sacred sites for Kashmiri Pandits and also holds utmost importance by Hindu followers. The temple is visited by devotees in large number on the birthday of Goddess Sharika Bhagwati.',
+    description:
+        'Sharika Devi Temple is situated on Hari Parbat in Srinagar and it is dedicated to Goddess Jagadamba Sharika Bhagwati. The holy idol of Goddess is having 18 arms who is sitting on Shri Chakra. This temple is regarded as one of the sacred sites for Kashmiri Pandits and also holds utmost importance by Hindu followers. The temple is visited by devotees in large number on the birthday of Goddess Sharika Bhagwati.',
     imagePath: 'assets/images/Destination/Main/Carousel/sharikadevi.jpg',
   ),
 ];
-
-
 
 List<featureContainer> destinationCarousel = [
   featureContainer(
     imagePath: 'assets/images/Destination/Main/kashWidlife.png',
     NextPage: CarouselPage(
         imagePath: 'assets/images/Destination/Main/kashWidlife.png',
-        listname: wildlife),
+        listname: 'Wildlife'),
   ),
   featureContainer(
       imagePath: 'assets/images/Destination/Main/kashShrines.png',
       NextPage: CarouselPage(
           imagePath: 'assets/images/Destination/Main/kashShrines.png',
-          listname: shrine)),
+          listname: 'Shrine')),
   featureContainer(
       imagePath: 'assets/images/Destination/Main/kashTreks.png',
       NextPage: CarouselPage(
-          imagePath: 'assets/images/Destination/Main/kashTreks.png', 
-          listname: treks)),
+          imagePath: 'assets/images/Destination/Main/kashTreks.png',
+          listname: 'Treks')),
   featureContainer(
       imagePath: 'assets/images/Destination/Main/kashPilgrims.png',
       NextPage: CarouselPage(
           imagePath: 'assets/images/Destination/Main/kashPilgrims.png',
-          listname: pilgrim)),
+          listname: 'Pilgrim')),
   featureContainer(
       imagePath: 'assets/images/Destination/Main/kashHeriatge.png',
       NextPage: CarouselPage(
           imagePath: 'assets/images/Destination/Main/kashHeriatge.png',
-          listname: heritage)),
+          listname: 'Heritage')),
 ];
-

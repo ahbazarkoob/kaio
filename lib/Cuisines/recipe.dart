@@ -3,13 +3,18 @@
 import 'package:flutter/material.dart';
 import 'package:kaio/constants.dart';
 import '../main.dart';
+import 'dart:convert';
 
 class Recipe extends StatelessWidget {
-  String RecipeName = '', RecipeDescription = '', Category = '';
+  String RecipeName = '', RecipeDescription = '', Category = '', listname = '';
   int itemCount;
   var imagePath;
   List buttonTexts = [];
-  List<StepCard> listname = [];
+  List<String> split_string_into_lines(String string) {
+    List<String> string_list = string.split(".");
+    return string_list;
+  }
+
   Recipe(
       {required this.Category,
       required this.imagePath,
@@ -23,6 +28,8 @@ class Recipe extends StatelessWidget {
   Widget build(BuildContext context) {
     devH = MediaQuery.of(context).size.height;
     devW = MediaQuery.of(context).size.width;
+    String stepsData = listname;
+    List<String> string_list = split_string_into_lines(stepsData);
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -44,14 +51,22 @@ class Recipe extends StatelessWidget {
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        CircleAvatar(
-                          radius: devW * 0.36,
-                          child: CircleAvatar(
-                            backgroundImage: AssetImage(imagePath),
-                            radius: devW * 0.35,
-                          ), 
-                          backgroundColor: Theme.of(context).primaryColor,
-                        ),
+                        Container(
+                            height: devH * 0.3,
+                            width: devW * 0.9,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: Theme.of(context).primaryColor,
+                                  width: 3),
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(15.0),
+                              child: Image(
+                                fit: BoxFit.fill,
+                                image: NetworkImage(imagePath),
+                              ),
+                            )),
                         Padding(
                           padding: EdgeInsets.all(devW * 0.009),
                           child: Text(
@@ -66,69 +81,81 @@ class Recipe extends StatelessWidget {
                             style: kNormalTextBold,
                           ),
                         ),
-                       Padding(
-                         padding: EdgeInsets.all(devW * 0.02),
-                         child: Text(
-                           'Ingredients:',
-                           style: kSubHeading,
-                         ),
-                       ),
-                       Container(
-                         width: devW,
-                         height: devH * 0.25,
-                         child: GridView.builder(
-                           itemCount: itemCount,
-                           gridDelegate:
-                          SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                        childAspectRatio: 2,
-                           ),
-                           itemBuilder: (context, index) {
-                        buttonTexts;
-                        return Padding(
-                          padding: const EdgeInsets.all(2.0),
-                          child: OutlinedButton(
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
-                                Theme.of(context).primaryColor,
-                              ),
-                              shape: MaterialStateProperty.all(
-                                RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.circular(10.0),
-                                ),
-                              ),
-                            ),
-                            child: Center(
-                              child: Text(buttonTexts[index],
-                                  style: kNormalText),
-                            ),
-                            onPressed: () {},
+                        Padding(
+                          padding: EdgeInsets.all(devW * 0.02),
+                          child: Text(
+                            'Ingredients:',
+                            style: kSubHeading,
                           ),
-                        );
-                           },
-                         ),
-                       ),
-                       Padding(
-                         padding: const EdgeInsets.all(2.0),
-                         child: Container(decoration: BoxDecoration(color:Theme.of(context).scaffoldBackgroundColor, ),
-                           child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.all(10.0),
-                                child: Text(
-                                  'Recipe:',
-                                  style: kSubHeading,
+                        ),
+                        Container(
+                          width: devW,
+                          height: devH * 0.25,
+                          child: GridView.builder(
+                            itemCount: itemCount,
+                            gridDelegate:
+                                SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 3,
+                              childAspectRatio: 2,
+                            ),
+                            itemBuilder: (context, index) {
+                              buttonTexts;
+                              return Padding(
+                                padding: const EdgeInsets.all(2.0),
+                                child: OutlinedButton(
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all(
+                                      Theme.of(context).primaryColor,
+                                    ),
+                                    shape: MaterialStateProperty.all(
+                                      RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
+                                      ),
+                                    ),
+                                  ),
+                                  child: Center(
+                                    child: Text(buttonTexts[index],
+                                        style: kNormalText),
+                                  ),
+                                  onPressed: () {},
                                 ),
-                              ),
-                              Column(
-                                children: listname,
-                              )
-                            ],
-                           ),
-                         ),
-                       )
+                              );
+                            },
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(2.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Theme.of(context).scaffoldBackgroundColor,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Text(
+                                    'Recipe:',
+                                    style: kSubHeading,
+                                  ),
+                                ),
+                                Text.rich(
+                                  TextSpan(
+                                    children: string_list
+                                        .map((line) =>
+                                            TextSpan(text: line + "\n"))
+                                        .toList(),
+                                  ),
+                                ),
+
+                                // Column(
+                                //   children: listname,
+                                // )
+                              ],
+                            ),
+                          ),
+                        )
                       ]))),
         ));
   }
@@ -141,7 +168,7 @@ class StepCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: devW*0.9,
+      width: devW * 0.9,
       child: Card(
         color: Theme.of(context).primaryColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),

@@ -22,6 +22,3 @@ const kNormalTextBold = TextStyle(
     fontFamily: 'NunitoSans',
     fontWeight: FontWeight.bold,
     color: Colors.black);
-// const kBottomPadding = Padding(
-//   padding: EdgeInsets.only(bottom: 8.0),
-// );

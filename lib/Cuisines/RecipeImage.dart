@@ -8,7 +8,9 @@ import 'package:kaio/main.dart';
 class RecipeImage extends StatefulWidget {
   var name;
   String assetName;
-  RecipeImage({required this.name, required this.assetName, required String recipeName});
+  RecipeImage({
+    required this.name, 
+    required this.assetName, required String recipeName});
   @override
   State<RecipeImage> createState() => _RecipeImageState();
 }
@@ -27,7 +29,7 @@ return GestureDetector( onTap: () {
             width: devW * 0.9,
             decoration: BoxDecoration(border: Border.all(color: Theme.of(context).primaryColor,width: 2),borderRadius: BorderRadius.circular(15.0)),
             child: ClipRRect(borderRadius: BorderRadius.circular(15.0),
-              child: Image(fit: BoxFit.fill, image: AssetImage(widget.assetName),
+              child: Image(fit: BoxFit.fill, image: NetworkImage(widget.assetName),
               ),
             )),
       ),);

@@ -6,13 +6,18 @@ import '../constants.dart';
 import '../main.dart';
 
 // ignore: must_be_immutable
-class FeatureCard extends StatelessWidget {
+class FeatureCard extends StatefulWidget {
   String heading, description, imagePath;
   FeatureCard(
       {required this.heading,
       required this.description,
       required this.imagePath});
 
+  @override
+  State<FeatureCard> createState() => _FeatureCardState();
+}
+
+class _FeatureCardState extends State<FeatureCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -24,7 +29,7 @@ class FeatureCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                heading,
+                widget.heading,
                 style: kHeading,
               ),
               SizedBox(
@@ -35,15 +40,15 @@ class FeatureCard extends StatelessWidget {
               width: devW*0.9,
                 child: Image(
                     fit: BoxFit.fill,
-                    image: AssetImage(
-                      imagePath,
+                    image: NetworkImage(
+                      widget.imagePath,
                     )),
               ),
               SizedBox(
                 height: devH * 0.02,
               ),
               Text(
-                description,
+                widget.description,
                 textAlign: TextAlign.justify,
                 style: kNormalText,
               )

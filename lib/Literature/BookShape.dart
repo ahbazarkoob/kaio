@@ -10,21 +10,7 @@ class BookShape extends StatelessWidget {
   BookShape({
     required this.name,
     required this.imagepath,
-   
   });
-  Map<String, dynamic> toJson() {
-    return {
-      'name': name,
-      'imagepath': imagepath,
-    };
-  }
-
-  factory BookShape.fromJson(Map<String, dynamic> json) {
-    return BookShape(
-      name: json['name'],
-      imagepath: json['imagepath'],
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,19 +18,21 @@ class BookShape extends StatelessWidget {
     devW = MediaQuery.of(context).size.width;
     return GestureDetector(
       onTap: () {
-       
-        Navigator.push(context, MaterialPageRoute(builder: (context) => name),
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => name),
         );
       },
       child: Container(
         height: devW * 0.4,
         width: devW * 0.3,
         margin: EdgeInsets.all(10),
-        decoration: BoxDecoration(boxShadow: [BoxShadow(blurRadius: 5,offset:Offset(5, 5))],
+        decoration: BoxDecoration(
+            boxShadow: [BoxShadow(blurRadius: 5, offset: Offset(5, 5))],
             borderRadius: BorderRadius.circular(5),
             border: Border.all(color: Colors.black, width: 1),
             image: DecorationImage(
-                image: AssetImage(imagepath), fit: BoxFit.fill)),
+                image: NetworkImage(imagepath), fit: BoxFit.fill)),
       ),
     );
   }

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1030518412685",
+    "project_id": "k-aio-2ec51",
+    "storage_bucket": "k-aio-2ec51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030518412685:android:60ecf0b4e6ff28655599c4",
+        "android_client_info": {
+          "package_name": "com.example.kaio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJiOqd8v9FzQyJRBpK7ejRQWicTq6XlDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030518412685:android:e58d21845fe07e945599c4",
+        "android_client_info": {
+          "package_name": "com.example.quizzler"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJiOqd8v9FzQyJRBpK7ejRQWicTq6XlDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

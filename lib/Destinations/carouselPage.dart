@@ -1,46 +1,48 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, non_constant_identifier_names, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, must_be_immutable, use_key_in_widget_constructors, file_names
 
 import 'package:flutter/material.dart';
-import 'package:kaio/Destinations/destinationFeature.dart';
+import 'package:kaio/MainScreens/explore.dart';
 import '../main.dart';
 
-class CarouselPage extends StatelessWidget {
-  String imagePath='';
-  List<FeatureCard> listname=[];
-  CarouselPage({required this.imagePath,required this.listname});
+class CarouselPage extends StatefulWidget {
+  String listname = '', imagePath;
+  CarouselPage({required this.listname, required this.imagePath});
 
+  @override
+  State<CarouselPage> createState() => _CarouselPageState();
+}
+
+class _CarouselPageState extends State<CarouselPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          BackgroundImage(imagePath: imagePath), 
-          ForegroundImage(listname: listname)],
-      ),
-    );
-  }
-  
- Widget BackgroundImage({required String imagePath}) {
-    return SizedBox(
-      height: devH * 0.5,
-      width: devW,
-      child: Image(
-          fit: BoxFit.cover,
-          image: AssetImage(imagePath)),
-    );
-  }
-Widget ForegroundImage({required List <FeatureCard> listname}) {
-    return SingleChildScrollView(
-      child: Column(children: [
-        SizedBox(
-          height: devH * 0.4,
+        body: Stack(
+      children: [
+        BackgroundImage(imagePath: widget.imagePath),
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            height: devH * 0.6,
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    stops: [0.65, 1.0],
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter,
+                    colors: [Colors.white, Colors.grey])),
+          ),
         ),
-        Column(
-          children: listname,
+        Explore(
+          listname: widget.listname,
         )
-      ]),
-    );
+      ],
+    ));
   }
-} 
+}
 
-
+Widget BackgroundImage({required imagePath}) {
+  return SizedBox(
+    height: devH * 0.5,
+    width: devW,
+    child: Image(fit: BoxFit.cover, image: AssetImage(imagePath)),
+  );
+}

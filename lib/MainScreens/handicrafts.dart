@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, unused_import, non_constant_identifier_names, prefer_typing_uninitialized_variables, prefer_const_literals_to_create_immutables, prefer_const_constructors_in_immutables, must_be_immutable, use_key_in_widget_constructors, avoid_unnecessary_containers
 
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:kaio/Handicrafts/craft.dart';
 import 'package:kaio/MainScreens/literature.dart';
 import 'package:kaio/data/handicrafts.dart';
 import '../constants.dart';
@@ -101,10 +103,26 @@ class PaperMac extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Column(children: papermac),
-    );
+    return StreamBuilder<QuerySnapshot>(
+        stream: FirebaseFirestore.instance.collection('handicraft').where('Category', isEqualTo: 'Paper-Mache')
+        .snapshots(),
+        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (snapshot.hasError) {
+            return Text('Something went wrong');
+          }
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Text("Loading");
+          }
+          return ListView(
+            children: snapshot.data!.docs.map((DocumentSnapshot document) {
+              Map<String, dynamic> data =
+                  document.data()! as Map<String, dynamic>;
+              return ListTile(
+                subtitle: CraftCard(imagePath: data['CraftImage'], urlLink: data['CraftURL'])
+              );
+            }).toList(),
+          );
+        });
   }
 }
 
@@ -113,10 +131,28 @@ class CRM extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Column(children: crm),
-    );
+    return StreamBuilder<QuerySnapshot>(
+        stream: FirebaseFirestore.instance.collection('handicraft')
+            .where('Category', isEqualTo: 'Carpets, Rugs amd Mats')
+            .snapshots(),
+        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (snapshot.hasError) {
+            return Text('Something went wrong');
+          }
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Text("Loading");
+          }
+          return ListView(
+            children: snapshot.data!.docs.map((DocumentSnapshot document) {
+              Map<String, dynamic> data =
+                  document.data()! as Map<String, dynamic>;
+              return ListTile(
+                  subtitle: CraftCard(
+                      imagePath: data['CraftImage'],
+                      urlLink: data['CraftURL']));
+            }).toList(),
+          );
+        });
   }
 }
 
@@ -125,10 +161,27 @@ class Embroidery extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Column(children: embroidery),
-    );
+    return StreamBuilder<QuerySnapshot>(
+        stream: FirebaseFirestore.instance.collection('handicraft')
+            .where('Category', isEqualTo: 'Embroidery Work')
+            .snapshots(),
+        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (snapshot.hasError) {
+            return Text('Something went wrong');
+          }
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Text("Loading");
+          }
+          return ListView(
+            children: snapshot.data!.docs.map((DocumentSnapshot document) {
+              Map<String, dynamic> data =
+                  document.data()! as Map<String, dynamic>;
+              return ListTile(
+                subtitle: CraftCard(imagePath: data['CraftImage'], urlLink: data['CraftURL'])
+              );
+            }).toList(),
+          );
+        });
   }
 }
 
@@ -137,22 +190,57 @@ class CopperWork extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Column(children: copperWork),
-    );
+    return StreamBuilder<QuerySnapshot>(
+        stream: FirebaseFirestore.instance.collection('handicraft')
+            .where('Category', isEqualTo: 'Copper Work')
+            .snapshots(),
+        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (snapshot.hasError) {
+            return Text('Something went wrong');
+          }
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Text("Loading");
+          }
+          return ListView(
+            children: snapshot.data!.docs.map((DocumentSnapshot document) {
+              Map<String, dynamic> data =
+                  document.data()! as Map<String, dynamic>;
+              return ListTile(
+                  subtitle: CraftCard(
+                      imagePath: data['CraftImage'],
+                      urlLink: data['CraftURL']));
+            }).toList(),
+          );
+        });
   }
 }
-
 class WoodCarving extends StatelessWidget {
   const WoodCarving({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Column(children: woodcarving),
-    );
+    return StreamBuilder<QuerySnapshot>(
+        stream: FirebaseFirestore.instance.collection('handicraft')
+            .where('Category', isEqualTo: 'Wood Carving')
+            .snapshots(),
+        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (snapshot.hasError) {
+            return Text('Something went wrong');
+          }
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Text("Loading");
+          }
+          return ListView(
+            children: snapshot.data!.docs.map((DocumentSnapshot document) {
+              Map<String, dynamic> data =
+                  document.data()! as Map<String, dynamic>;
+              return ListTile(
+                  subtitle: CraftCard(
+                      imagePath: data['CraftImage'],
+                      urlLink: data['CraftURL']));
+            }).toList(),
+          );
+        });
   }
 }
 
@@ -979,6 +1067,8 @@ class CopperPage extends StatelessWidget {
     );
   }
 }
+
+
 /////////////////////////////////////TILLA WORK///////////////////////
 
 class TillaPage extends StatelessWidget {
@@ -1008,9 +1098,12 @@ class TillaPage extends StatelessWidget {
                 ),
               ),
             ),
-            Image(
-                image: AssetImage(
-                    'assets/images/Handicrafts/Carousel/Tilla/tilla.png')),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image(
+                  image: AssetImage(
+                      'assets/images/Handicrafts/Carousel/Tilla/tilla.png')),
+            ),
             Container(
               margin: EdgeInsets.all(10.0),
               child: Column(
@@ -1062,15 +1155,20 @@ class TillaPage extends StatelessWidget {
                 ],
               ),
             ),
-            Image(
-                image: AssetImage(
-                    'assets/images/Handicrafts/Carousel/Tilla/Tilla1.webp')),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image(
+                  image: AssetImage(
+                      'assets/images/Handicrafts/Carousel/Tilla/Tilla1.webp')),
+            ),
           ],
         ),
       )),
     );
   }
 }
+
+
 ///////////////////////WOODCARVINGPAGE////////////////////////////
 
 class WoodCarvingPage extends StatelessWidget {
@@ -1083,17 +1181,14 @@ class WoodCarvingPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
-                height: 10,
-              ),
               Center(
-                child: Text(
-                  'Wood Carving',
-                  style: kHeading,
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0, top: 8.0),
+                  child: Text(
+                    'Wood Carving',
+                    style: kHeading,
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 10,
               ),
               Container(
                 margin: EdgeInsets.all(10),
@@ -1108,24 +1203,24 @@ class WoodCarvingPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 10,
-              ),
-              Image(
-                image: AssetImage(
-                    'assets/images/Handicrafts/Carousel/Wood/Wood.png'),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image(
+                  image: AssetImage(
+                      'assets/images/Handicrafts/Carousel/Wood/Wood.png'),
+                ),
               ),
               Container(
                 margin: EdgeInsets.all(10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'History',
-                      style: kHeading,
-                    ),
-                    SizedBox(
-                      height: 10,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Text(
+                        'History',
+                        style: kHeading,
+                      ),
                     ),
                     Text(
                       'The history of wood carving in Kashmir can be traced back to ancient times when skilled artisans carved wooden structures for temples, palaces, and other architectural marvels. The artform gained significant patronage and encouragement during the Mughal era, which lasted from the 15th to the 18th century. The Mughal emperors, particularly Emperor Akbar, admired the intricate woodwork of the region and encouraged the growth of this craft.During the Mughal period, the craft of wood carving reached its zenith, with artisans showcasing their expertise by adorning various structures and artifacts with mesmerizing carvings. Over time, wood carving evolved and integrated with local Kashmiri culture, blending traditional motifs and Islamic designs, which gave the craft a distinct identity of its own.Despite facing challenges and changes throughout history, Kashmiri wood carving has managed to retain its artistic brilliance, and today it stands as a symbol of the region\'s cultural heritage and artistic prowess.',
@@ -1140,189 +1235,170 @@ class WoodCarvingPage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'The Process of Making Kashmiri Wood Carving',
-                      style: kHeading,
-                    ),
-                    SizedBox(
-                      height: 10,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Text(
+                        'The Process of Making Kashmiri Wood Carving',
+                        style: kHeading,
+                      ),
                     ),
                     Text(
                       'Kashmiri wood carving is a painstaking and intricate process that requires immense skill, precision, and patience. The artisans, known as "Kashmiri Karkhanedars," follow a step-by-step approach to transform raw blocks of wood into finely detailed carved pieces. Here is an overview of the traditional process:',
                       style: kNormalText,
                       textAlign: TextAlign.justify,
                     ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      '1.   Wood Selection:',
-                      style: kSubHeading,
-                    ),
-                    SizedBox(
-                      height: 5,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 5.0, top: 5.0),
+                      child: Text(
+                        '1.   Wood Selection:',
+                        style: kSubHeading,
+                      ),
                     ),
                     Text(
                       'The process begins with selecting the appropriate wood for carving. The artisans often use softwood varieties like walnut, deodar, or chinar for their work. These woods are chosen for their fine grain, which makes carving intricate patterns easier.',
                       style: kNormalText,
                       textAlign: TextAlign.justify,
                     ),
-                    SizedBox(
-                      height: 20,
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20, bottom: 20),
+                      child: Image(
+                          image: AssetImage(
+                              'assets/images/Handicrafts/Carousel/Wood/woodselection.jpeg')),
                     ),
-                    Image(
-                        image: AssetImage(
-                            'assets/images/Handicrafts/Carousel/Wood/woodselection.jpeg')),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      '2.   Design Creation:',
-                      style: kSubHeading,
-                    ),
-                    SizedBox(
-                      height: 5,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 5.0, top: 5.0),
+                      child: Text(
+                        '2.   Design Creation:',
+                        style: kSubHeading,
+                      ),
                     ),
                     Text(
                       'The next step involves designing the patterns and motifs that will adorn the wooden piece. The designs are usually based on traditional Kashmiri motifs, such as the chinar leaf, floral patterns, birds, and geometric shapes. The artisans meticulously draw the designs on the wood surface as a reference for carving.',
                       style: kNormalText,
                       textAlign: TextAlign.justify,
                     ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Center(
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20, bottom: 20),
+                      child: SizedBox(
+                        width: devW * 0.95,
                         child: Image(
-                            image: AssetImage(
-                                'assets/images/Handicrafts/Carousel/Wood/designcreation.jpg'))),
-                    SizedBox(
-                      height: 20,
+                          image: AssetImage(
+                              'assets/images/Handicrafts/Carousel/Wood/designcreation.jpg'),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
                     ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      '3.   Wood Blocking:',
-                      style: kSubHeading,
-                    ),
-                    SizedBox(
-                      height: 5,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 5.0, top: 5.0),
+                      child: Text(
+                        '3.   Wood Blocking:',
+                        style: kSubHeading,
+                      ),
                     ),
                     Text(
                       'The wooden block is roughly shaped according to the intended design. The artisan uses traditional tools like chisels, gouges, and mallets to carve out the basic form of the piece.',
                       style: kNormalText,
                       textAlign: TextAlign.justify,
                     ),
-                    SizedBox(
-                      height: 20,
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20, bottom: 20),
+                      child: Image(
+                          image: AssetImage(
+                              'assets/images/Handicrafts/Carousel/Wood/woodblocking.jpeg')),
                     ),
-                    Image(
-                        image: AssetImage(
-                            'assets/images/Handicrafts/Carousel/Wood/woodblocking.jpeg')),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      '4.   Intricate Carving:',
-                      style: kSubHeading,
-                    ),
-                    SizedBox(
-                      height: 5,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 5.0, top: 5.0),
+                      child: Text(
+                        '4.   Intricate Carving:',
+                        style: kSubHeading,
+                      ),
                     ),
                     Text(
                       'With the basic outline complete, the artisan moves on to the intricate carving stage. This is a highly skilled and time-consuming process, where the artisan carves delicate and detailed patterns into the wood, following the drawn designs.',
                       style: kNormalText,
                       textAlign: TextAlign.justify,
                     ),
-                    SizedBox(
-                      height: 20,
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20, bottom: 20),
+                      child: Image(
+                          image: AssetImage(
+                              'assets/images/Handicrafts/Carousel/Wood/intricatecarving.jpeg')),
                     ),
-                    Image(
-                        image: AssetImage(
-                            'assets/images/Handicrafts/Carousel/Wood/intricatecarving.jpeg')),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      '5.   Finishing and Polishing:',
-                      style: kSubHeading,
-                    ),
-                    SizedBox(
-                      height: 5,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 5.0, top: 5.0),
+                      child: Text(
+                        '5.   Finishing and Polishing:',
+                        style: kSubHeading,
+                      ),
                     ),
                     Text(
                       'Once the carving is complete, the wooden piece undergoes a thorough sanding process to smoothen the surface and refine the details. The artisan uses fine sandpaper and abrasive materials to achieve a flawless finish.',
                       style: kNormalText,
                       textAlign: TextAlign.justify,
                     ),
-                    SizedBox(
-                      height: 20,
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20, bottom: 20),
+                      child: Image(
+                          image: AssetImage(
+                              'assets/images/Handicrafts/Carousel/Wood/finishingandpolishing.jpeg')),
                     ),
-                    Image(
-                        image: AssetImage(
-                            'assets/images/Handicrafts/Carousel/Wood/finishingandpolishing.jpeg')),
-                    SizedBox(
-                      height: 20,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 5.0, top: 5.0),
+                      child: Text(
+                        '6.   Staining and Varnishing:',
+                        style: kSubHeading,
+                      ),
                     ),
-                    Text(
-                      '6.   Staining and Varnishing:',
-                      style: kSubHeading,
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20, bottom: 20),
+                      child: Text(
+                        'After sanding, the wood carving is stained to enhance its color and bring out the natural beauty of the wood. Then, a coat of varnish or lacquer is applied to protect the surface and provide a glossy appearance.',
+                        style: kNormalText,
+                        textAlign: TextAlign.justify,
+                      ),
                     ),
-                    SizedBox(
-                      height: 5,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 5.0, top: 5.0),
+                      child: Text(
+                        '7.   Assembling (if applicable):',
+                        style: kSubHeading,
+                      ),
                     ),
-                    Text(
-                      'After sanding, the wood carving is stained to enhance its color and bring out the natural beauty of the wood. Then, a coat of varnish or lacquer is applied to protect the surface and provide a glossy appearance.',
-                      style: kNormalText,
-                      textAlign: TextAlign.justify,
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20, bottom: 20),
+                      child: Text(
+                        ' In some cases, Kashmiri wood carvings are used to decorate furniture, doors, windows, or other wooden structures. In such cases, the carved components are assembled to create the final product.',
+                        style: kNormalText,
+                        textAlign: TextAlign.justify,
+                      ),
                     ),
-                    SizedBox(
-                      height: 20,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 5.0, top: 5.0),
+                      child: Text(
+                        '8.   Final Inspection:',
+                        style: kSubHeading,
+                      ),
                     ),
-                    // Image(image: AssetImage('assets/images/Handicrafts/Carousel/Copper/CopperKalai.png')),
-                    // SizedBox(
-                    //   height: 20,
-                    // ),
-                    Text(
-                      '7.   Assembling (if applicable):',
-                      style: kSubHeading,
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      ' In some cases, Kashmiri wood carvings are used to decorate furniture, doors, windows, or other wooden structures. In such cases, the carved components are assembled to create the final product.',
-                      style: kNormalText,
-                      textAlign: TextAlign.justify,
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      '8.   Final Inspection:',
-                      style: kSubHeading,
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      'The completed wood carving undergoes a final inspection to ensure the quality and craftsmanship meet the highest standards.',
-                      style: kNormalText,
-                      textAlign: TextAlign.justify,
-                    ),
-                    SizedBox(
-                      height: 20,
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20, bottom: 20),
+                      child: Text(
+                        'The completed wood carving undergoes a final inspection to ensure the quality and craftsmanship meet the highest standards.',
+                        style: kNormalText,
+                        textAlign: TextAlign.justify,
+                      ),
                     ),
                     Image(
                         image: AssetImage(
                             'assets/images/Handicrafts/Carousel/Wood/finalproductwood.png')),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      'Kashmiri wood carving stands as a testament to the artistic excellence and cultural heritage of the region. The dedication of the artisans, combined with the timeless beauty of the craft, continues to captivate art enthusiasts and collectors worldwide, making it a cherished and valued form of art.',
-                      style: kNormalText,
-                      textAlign: TextAlign.justify,
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        top: 5.0,
+                      ),
+                      child: Text(
+                        'Kashmiri wood carving stands as a testament to the artistic excellence and cultural heritage of the region. The dedication of the artisans, combined with the timeless beauty of the craft, continues to captivate art enthusiasts and collectors worldwide, making it a cherished and valued form of art.',
+                        style: kNormalText,
+                        textAlign: TextAlign.justify,
+                      ),
                     )
                   ],
                 ),
