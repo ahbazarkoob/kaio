@@ -124,8 +124,6 @@ class Beverages extends StatelessWidget {
                 children: snapshot.data!.docs.map((DocumentSnapshot document) {
                   Map<String, dynamic> data =
                       document.data()! as Map<String, dynamic>;
-                     
-                      //  final String userId = FirebaseAuth.instance.currentUser.uid;
                   return ListTile(
                     subtitle: RecipeImage(
                  name: Recipe(
@@ -169,7 +167,14 @@ class HomeMade extends StatelessWidget {
                   document.data()! as Map<String, dynamic>;
               return ListTile(
                 subtitle: RecipeImage(
-                  name: LiteraturePage(),
+                  name: Recipe(
+                        Category: data['Category'].toString(),
+                        imagePath: data['RecipeImage'],
+                        RecipeName: data['RecipeName'],
+                        RecipeDescription: data['RecipeDescription'],
+                        itemCount: data['Ingredients'].length,
+                        buttonTexts: data['Ingredients'],
+                        listname: data['Steps']),
                     assetName: data['RecipeImage'],
                     recipeName: data['RecipeName']),
               );
@@ -201,7 +206,14 @@ class Wazwan extends StatelessWidget {
                   document.data()! as Map<String, dynamic>;
               return ListTile(
                 subtitle: RecipeImage(
-                  name: LiteraturePage(),
+                  name: Recipe(
+                        Category: data['Category'].toString(),
+                        imagePath: data['RecipeImage'],
+                        RecipeName: data['RecipeName'],
+                        RecipeDescription: data['RecipeDescription'],
+                        itemCount: data['Ingredients'].length,
+                        buttonTexts: data['Ingredients'],
+                        listname: data['Steps']),
                     assetName: data['RecipeImage'],
                     recipeName: data['RecipeName']),
               );
@@ -233,7 +245,14 @@ class Deserts extends StatelessWidget {
                   document.data()! as Map<String, dynamic>;
               return ListTile(
                 subtitle: RecipeImage(
-                  name: LiteraturePage(),
+                  name: Recipe(
+                        Category: data['Category'].toString(),
+                        imagePath: data['RecipeImage'],
+                        RecipeName: data['RecipeName'],
+                        RecipeDescription: data['RecipeDescription'],
+                        itemCount: data['Ingredients'].length,
+                        buttonTexts: data['Ingredients'],
+                        listname: data['Steps']),
                     assetName: data['RecipeImage'],
                     recipeName: data['RecipeName']),
               );

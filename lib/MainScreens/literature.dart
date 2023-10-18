@@ -1,19 +1,15 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, empty_constructor_bodies, must_be_immutable, prefer_const_constructors_in_immutables, non_constant_identifier_names, prefer_typing_uninitialized_variables, sized_box_for_whitespace, avoid_print, unused_element, unnecessary_string_escapes
-
-// import 'dart:convert';
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, empty_constructor_bodies, must_be_immutable, prefer_const_constructors_in_immutables, non_constant_identifier_names, prefer_typing_uninitialized_variables, sized_box_for_whitespace, avoid_print, unused_element, unnecessary_string_escapes, unused_import
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:kaio/Literature/BookShape.dart';
 import 'package:kaio/Literature/BookTemplate.dart';
-import 'package:kaio/Literature/Recents.dart';
-import 'package:kaio/Literature/carouselCard.dart';
+import 'package:kaio/Literature/FetchLibrary.dart';
 import 'package:kaio/constants.dart';
 import 'package:kaio/main.dart';
 
 List<String> books = ['Poetry', 'Prose', 'History', 'New'];
-List<ListTile> listname = [];
 
 class LiteraturePage extends StatefulWidget {
   LiteraturePage({super.key});
@@ -22,59 +18,14 @@ class LiteraturePage extends StatefulWidget {
 }
 
 class _LiteraturePageState extends State<LiteraturePage> {
-  Future<List<Map<String, dynamic>>?> getDataFromFirestore() async {
-    List<Map<String, dynamic>> dataList = [];
-    try {
-      QuerySnapshot querySnapshot =
-          await FirebaseFirestore.instance.collection('addlibrary').get();
-
-      for (QueryDocumentSnapshot doc in querySnapshot.docs) {
-        // Convert the document data to a Map
-        Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
-        dataList.add(data);
-      }
-      for (var card in dataList) {
-        // print(card['Library-Id'].toString());
-        ListTile tile = ListTile(
-          // title: Text(card['LibraryName'].toString()),
-          subtitle: LibraryCard(urlLink: card['LibraryLocation'], LibraryName: card['LibraryName'], LibraryAddress: card['LibraryAddress'])
-          // Text(card['LibraryAddress'].toString()),
-          // leading: IconButton(
-          //   icon: Icon(Icons.location_city),
-          //   onPressed: () {
-          //     // Handle button click for this item
-          //   },
-          // ),
-        );
-        listname.add(tile);
-      }
-      return dataList;
-    } catch (e) {
-      print("Error getting data from Firestore: $e");
-      return null;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
-    getDataFromFirestore();
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Kaio',
-                style: kSubHeading,
-              ),
-              IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => Recent()));
-                  },
-                  icon: Icon(Icons.history))
-            ],
+          title: Text(
+            'Kaio',
+            style: kSubHeading,
           ),
           backgroundColor: Theme.of(context).primaryColor,
         ),
@@ -93,29 +44,31 @@ class _LiteraturePageState extends State<LiteraturePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  'Libraries near me',
-                  style: kSubHeading.copyWith(
-                      color: Theme.of(context).primaryColor),
-                ),
-              ),
-              //LibraryCard(urlLink: 'https://bard.google.com/chat/4c5758165facedc1?utm_source=sem&utm_medium=paid-media&utm_campaign=q3enIN_sem6',),
-              CarouselSlider(
-                items: listname,
-                options: CarouselOptions(
-                    autoPlay: true,
-                    autoPlayInterval: Duration(seconds: 2),
-                    scrollDirection: Axis.horizontal),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  'Book Shelf',
-                  style: kSubHeading.copyWith(
-                      color: Theme.of(context).primaryColor),
-                ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(devH * 0.02),
+                    child: Text(
+                      'Libraries',
+                      style: kHeading.copyWith(
+                          color: Theme.of(context).primaryColor),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: FetchLibrary(),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(devH * 0.02),
+                    child: Text(
+                      'Book Shelf',
+                      style: kHeading.copyWith(
+                          color: Theme.of(context).primaryColor),
+                    ),
+                  )
+                ],
               ),
               DefaultTabController(
                 length: 4,

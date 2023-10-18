@@ -14,8 +14,6 @@ import 'MainScreens/literature.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:device_info/device_info.dart';
 
-
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -36,14 +34,10 @@ ThemeData myTheme = ThemeData(
 var devH, devW, button;
 
 class HomeScreen extends StatelessWidget {
-  
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-  
-   
-
     button = ButtonStyle(
       backgroundColor: MaterialStateProperty.all(
         Theme.of(context).primaryColor,

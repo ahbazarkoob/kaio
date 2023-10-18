@@ -29,18 +29,13 @@ class _SplashScreenState extends State<SplashScreen> {
       child: Scaffold(
           body: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Colors.white,
-              Theme.of(context).scaffoldBackgroundColor,
-            ],
-          ),
+        color: Colors.white
         ),
-        child: SizedBox(
-               height: devH,
-                child: Image.asset('assets/story1.jpg', fit: BoxFit.fill,)),
+        child: Center(
+          child: SizedBox(
+                 height: devH*0.5,
+                  child: Image.asset('assets/logo.png', fit: BoxFit.fill,)),
+        ),
       )
       )
     );

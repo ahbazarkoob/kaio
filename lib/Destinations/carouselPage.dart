@@ -19,18 +19,18 @@ class _CarouselPageState extends State<CarouselPage> {
         body: Stack(
       children: [
         BackgroundImage(imagePath: widget.imagePath),
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: Container(
-            height: devH * 0.6,
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    stops: [0.65, 1.0],
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.topCenter,
-                    colors: [Colors.white, Colors.grey])),
-          ),
-        ),
+        // Align(
+        //   alignment: Alignment.bottomCenter,
+        //   child: Container(
+        //     height: devH * 0.6,
+        //     decoration: BoxDecoration(
+        //         gradient: LinearGradient(
+        //             stops: [0.65, 1.0],
+        //             begin: Alignment.bottomCenter,
+        //             end: Alignment.topCenter,
+        //             colors: [Colors.white, Colors.grey])),
+        //   ),
+        // ),
         Explore(
           listname: widget.listname,
         )
@@ -41,8 +41,8 @@ class _CarouselPageState extends State<CarouselPage> {
 
 Widget BackgroundImage({required imagePath}) {
   return SizedBox(
-    height: devH * 0.5,
+    height: devH,
     width: devW,
-    child: Image(fit: BoxFit.cover, image: AssetImage(imagePath)),
+    child: Image(fit: BoxFit.fill, image: AssetImage(imagePath)),
   );
 }

@@ -453,7 +453,7 @@ List<featureContainer> destinationCarousel = [
       imagePath: 'assets/images/Destination/Main/kashShrines.png',
       NextPage: CarouselPage(
           imagePath: 'assets/images/Destination/Main/kashShrines.png',
-          listname: 'Shrine')),
+          listname: 'Shrines')),
   featureContainer(
       imagePath: 'assets/images/Destination/Main/kashTreks.png',
       NextPage: CarouselPage(
@@ -463,10 +463,10 @@ List<featureContainer> destinationCarousel = [
       imagePath: 'assets/images/Destination/Main/kashPilgrims.png',
       NextPage: CarouselPage(
           imagePath: 'assets/images/Destination/Main/kashPilgrims.png',
-          listname: 'Pilgrim')),
+          listname: 'Pilgrims')),
   featureContainer(
       imagePath: 'assets/images/Destination/Main/kashHeriatge.png',
       NextPage: CarouselPage(
           imagePath: 'assets/images/Destination/Main/kashHeriatge.png',
-          listname: 'Heritage')),
+          listname: 'Heritage Sites')),
 ];

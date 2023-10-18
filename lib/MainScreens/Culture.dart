@@ -7,11 +7,8 @@ import 'package:kaio/constants.dart';
 import 'package:kaio/data/culture.dart';
 import 'package:kaio/main.dart';
 
-// PageController controller = PageController();
 
 class Culture extends StatelessWidget {
-  // final controller = PageController();
-  // int selectedPage = 0;
 
   Culture({super.key});
 
