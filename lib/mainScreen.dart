@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:kaio/constants.dart';
 import 'package:kaio/data/MainScreen.dart';
 import 'package:kaio/main.dart';
+import 'package:share/share.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreen({super.key});
@@ -88,8 +90,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           },
         ),
       ],
-      actionsIconTheme: IconThemeData(
-          color: Color(0xff473144), size: 25),
+      actionsIconTheme: IconThemeData(color: Color(0xff473144), size: 25),
     );
   }
 }
@@ -200,7 +201,7 @@ class AppDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           Container(
-            height: devH*0.1,
+            height: devH * 0.1,
             child: DrawerHeader(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -215,25 +216,25 @@ class AppDrawer extends StatelessWidget {
               child: Row(
                 children: [
                   IconButton(
-                    icon: Icon(Icons.arrow_back_ios,
-                    color: Color(0xff473144),
+                    icon: Icon(
+                      Icons.arrow_back_ios,
+                      color: Color(0xff473144),
                     ),
                     onPressed: () {
                       Scaffold.of(context).closeEndDrawer();
                     },
                   ),
-                  
                   Padding(
-                    padding: EdgeInsets.only(left: devW*0.15),
+                    padding: EdgeInsets.only(left: devW * 0.15),
                     child: Text('K-AIO', style: kTitle),
                   ),
                 ],
               ),
             ),
           ),
-       Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
+          Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
@@ -241,30 +242,83 @@ class AppDrawer extends StatelessWidget {
                     Theme.of(context).scaffoldBackgroundColor,
                   ],
                 ),
-        ),
-        child: Column(children: items,))
+              ),
+              child: Column(
+                children: [
+                  Column(
+                    children: items,
+                  ),
+                  ShareTile(),
+                   DeveloperTile(
+                    developerName: 'Contact Developer(Raahat)',
+                    linkedInProfile:
+                        'https://www.linkedin.com/in/raahat-khurshid-38439025a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+                  ),
+                  DeveloperTile(
+                    developerName: 'Contact Developer(Ahba)',
+                    linkedInProfile:
+                        'https://www.linkedin.com/in/ahba-lateef-zarkoob-9a503920b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+                  ),
+                  
+                ],
+              )),
         ],
       ),
     );
   }
 }
 
-
 class DrawerItems extends StatelessWidget {
   IconData icon;
   String title;
   var nextpage;
- DrawerItems({required this.icon, required this.title,required this.nextpage});
+  DrawerItems(
+      {required this.icon, required this.title, required this.nextpage});
 
   @override
   Widget build(BuildContext context) {
-   return ListTile(
-    leading: Icon(icon),
-    title: Text(title),
-    onTap: (){
-      Navigator.push(context,MaterialPageRoute(builder: (_) => nextpage));
-    },
-  );
+    return ListTile(
+      leading: Icon(icon),
+      title: Text(title),
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (_) => nextpage));
+      },
+    );
+  }
 }
+
+class ShareTile extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Icon(Icons.share),
+      title: Text('Share This App'),
+      onTap: () {
+        Share.share('com.example.kaio');
+      },
+    );
+  }
+}
+
+class DeveloperTile extends StatelessWidget {
+  final String developerName;
+  final String linkedInProfile;
+
+  DeveloperTile({required this.developerName, required this.linkedInProfile});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Icon(Icons.account_circle),
+      title: Text(developerName),
+      onTap: () async {
+        if (!await canLaunchUrlString(linkedInProfile)) {
+          await launchUrlString(linkedInProfile);
+        } else {
+          throw 'Could not launch $linkedInProfile';
+        }
+      },
+    );
+  }
 }
 

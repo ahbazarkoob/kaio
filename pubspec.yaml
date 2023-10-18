@@ -49,6 +49,7 @@ dependencies:
   flutter_launcher_icons: ^0.13.1
   firebase_auth: ^4.10.1
   device_info: ^2.0.3
+  share: ^2.0.4
 
 dev_dependencies:
   flutter_test:
