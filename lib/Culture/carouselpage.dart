@@ -1,12 +1,15 @@
 // ignore_for_file: non_constant_identifier_names, must_be_immutable, use_key_in_widget_constructors, prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:kaio/Culture/CultureFetch.dart';
+import 'package:kaio/Destinations/destinationFeature.dart';
 import 'package:kaio/constants.dart';
 import 'package:kaio/main.dart';
 
+import '../MainScreens/explore.dart';
+
 class CarouselPage extends StatelessWidget {
-  String imagePath='';
-  List<Culturecard> listname=[];
+  String imagePath='', listname ='';
   CarouselPage({required this.imagePath,required this.listname});
 
   @override
@@ -15,7 +18,10 @@ class CarouselPage extends StatelessWidget {
       body: Stack(
         children: [
           BackgroundImage(imagePath: imagePath), 
-          ForegroundImage(listname: listname)],
+          CultureFetch(
+            listname: listname,
+          )
+          ],
       ),
     );
   }
@@ -23,25 +29,14 @@ class CarouselPage extends StatelessWidget {
   
  Widget BackgroundImage({required String imagePath}) {
     return SizedBox(
-      height: devH * 0.5,
+      height: devH,
       width: devW,
       child: Image(
-          fit: BoxFit.cover,
+          fit: BoxFit.fill,
           image: AssetImage(imagePath)),
     );
   }
-Widget ForegroundImage({required List <Culturecard> listname}) {
-    return SingleChildScrollView(
-      child: Column(children: [
-        SizedBox(
-          height: devH * 0.4,
-        ),
-        Column(
-          children: listname,
-        )
-      ]),
-    );
-  }
+
 
 
 

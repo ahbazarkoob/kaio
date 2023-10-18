@@ -6,38 +6,38 @@ List<carouselContainer> cultureCarousel = [
     imagePath: 'assets/images/Culture/Main/language.png',
     NextPage: CarouselPage(
         imagePath: 'assets/images/Culture/Main/language.png',
-        listname: language),
+        listname: 'Language'),
   ),
   carouselContainer(
       imagePath: 'assets/images/Culture/Main/religion.png',
       NextPage: CarouselPage(
           imagePath: 'assets/images/Culture/Main/religion.png',
-          listname: religion)),
+          listname: 'Religion')),
   carouselContainer(
       imagePath: 'assets/images/Culture/Main/artscrafts.png',
       NextPage: CarouselPage(
           imagePath: 'assets/images/Culture/Main/artscrafts.png',
-          listname: artscrafts)),
+          listname: 'Arts & Craft')),
   carouselContainer(
       imagePath: 'assets/images/Culture/Main/customs.png',
       NextPage: CarouselPage(
           imagePath: 'assets/images/Culture/Main/customs.png',
-          listname: customs)),
+          listname: 'Customs')),
   carouselContainer(
       imagePath: 'assets/images/Culture/Main/festivals.png',
       NextPage: CarouselPage(
           imagePath: 'assets/images/Culture/Main/festivals.png',
-          listname: festivals)),
+          listname: 'Festivals')),
   carouselContainer(
       imagePath: 'assets/images/Culture/Main/food.png',
       NextPage: CarouselPage(
           imagePath: 'assets/images/Culture/Main/food.png',
-          listname: food)),
+          listname: 'Food')),
   carouselContainer(
       imagePath: 'assets/images/Culture/Main/musicdance.png',
       NextPage: CarouselPage(
           imagePath: 'assets/images/Culture/Main/musicdance.png',
-          listname: musicdance)),
+          listname: 'Music & Dance')),
 ];
 
 List<Culturecard> language = [
