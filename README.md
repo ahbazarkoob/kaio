@@ -1,16 +1,6 @@
 # kaio
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The "Kashmir- All In One” app is a mobile application that serves as a gateway to the vibrant and enchanting world of Kashmiri literature, cuisine, heritage, tourist attractions, and culture.
+This App showcases the usage of various flutter packages like the URL Launcher, tab bar view, Carousel Sliders, etc.
+Firebase is used to add, view, and update the data from the Admin app to the user app.
+Admin And repository:
